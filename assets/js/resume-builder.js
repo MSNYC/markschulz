@@ -1,6 +1,6 @@
 /**
- * Interactive Resume Builder
- * Client-side resume filtering and rendering based on cv-generator logic
+ * Interactive Resume Builder - Executive Format
+ * Generates comprehensive 3-page executive resumes with profile-specific content
  */
 
 class ResumeBuilder {
@@ -12,7 +12,6 @@ class ResumeBuilder {
 
   /**
    * Calculate relevance score for an achievement item based on priority tags
-   * Mimics cv-generator's selector.py scoring logic
    */
   calculateScore(itemTags, priorityTags) {
     if (!itemTags || !Array.isArray(itemTags)) return 0;
@@ -20,12 +19,12 @@ class ResumeBuilder {
   }
 
   /**
-   * Filter experience by priority tags, returning top N bullets per role
+   * Filter experience by priority tags - NOW RETURNS MORE BULLETS (10-12)
    * @param {Array} priorityTags - Tags to prioritize
    * @param {Number} maxBulletsPerRole - Max bullets to show per position
    * @returns {Array} Filtered experience with scored bullets
    */
-  filterExperience(priorityTags, maxBulletsPerRole = 5) {
+  filterExperience(priorityTags, maxBulletsPerRole = 12) {
     const filteredExperience = [];
 
     for (const exp of this.resumeData.experience) {
@@ -74,12 +73,9 @@ class ResumeBuilder {
   }
 
   /**
-   * Filter projects by keyword matches
-   * @param {Array} priorityTags - Tags to filter by
-   * @param {Number} maxProjects - Maximum projects to return
-   * @returns {Array} Filtered projects
+   * Filter projects by keyword matches - show more projects
    */
-  filterProjects(priorityTags, maxProjects = 4) {
+  filterProjects(priorityTags, maxProjects = 6) {
     const scoredProjects = [];
 
     for (const project of this.resumeData.projects) {
@@ -98,45 +94,20 @@ class ResumeBuilder {
   }
 
   /**
-   * Get skills that match priority tags
-   * @param {Array} priorityTags - Tags to filter by
-   * @returns {Object} Categorized skills
+   * Get ALL relevant skills organized by category
    */
-  getRelevantSkills(priorityTags) {
-    // Map tags to skill categories
-    const skillMapping = {
-      ai: 'ai_ml',
-      innovation: 'ai_ml',
-      analytics: 'analytics',
-      data_engineering: 'data_engineering',
-      automation: 'tools_platforms',
-      digital: 'web_digital'
+  getAllSkills() {
+    return {
+      core_competencies: this.resumeData.skills.core_competencies || [],
+      technical: this.resumeData.skills.technical || {},
+      marketing_specialized: this.resumeData.skills.marketing_specialized || [],
+      leadership: this.resumeData.skills.leadership || [],
+      methodologies: this.resumeData.skills.methodologies || []
     };
-
-    const relevantCategories = new Set();
-    for (const tag of priorityTags) {
-      const category = skillMapping[tag];
-      if (category) {
-        relevantCategories.add(category);
-      }
-    }
-
-    const skills = {};
-    const technicalSkills = this.resumeData.skills.technical;
-
-    for (const category of relevantCategories) {
-      if (technicalSkills[category]) {
-        skills[category] = technicalSkills[category];
-      }
-    }
-
-    return skills;
   }
 
   /**
    * Generate complete resume for a profile
-   * @param {String} profileId - Profile identifier
-   * @returns {Object} Complete resume data
    */
   generateResume(profileId) {
     const profile = this.profiles.find(p => p.id === profileId);
@@ -144,13 +115,13 @@ class ResumeBuilder {
       throw new Error(`Profile ${profileId} not found`);
     }
 
-    const maxBullets = this.filteringRules.max_bullets_per_role || 5;
-    const maxProjects = this.filteringRules.max_projects_shown || 4;
-    const maxRoles = this.filteringRules.max_roles_shown || 3;
+    const maxBullets = 12; // Increased from 5
+    const maxProjects = 6; // Increased from 4
+    const maxRoles = 10; // Show ALL roles, not just 3
 
     const filteredExp = this.filterExperience(profile.priority_tags, maxBullets);
     const filteredProjects = this.filterProjects(profile.priority_tags, maxProjects);
-    const relevantSkills = this.getRelevantSkills(profile.priority_tags);
+    const allSkills = this.getAllSkills();
 
     return {
       profile: {
@@ -160,14 +131,16 @@ class ResumeBuilder {
         tagline: profile.tagline,
         description: profile.description,
         competencies: profile.competencies,
-        focusSkills: profile.focus_skills
+        focusSkills: profile.focus_skills,
+        idealFor: profile.ideal_for || []
       },
       personal: this.resumeData.personal,
+      summary: this.resumeData.summary,
       experience: filteredExp.slice(0, maxRoles),
       projects: filteredProjects,
-      skills: relevantSkills,
-      coreCompetencies: this.resumeData.skills.core_competencies,
+      allSkills: allSkills,
       education: this.resumeData.education,
+      languages: this.resumeData.languages || [],
       stats: {
         experienceCount: filteredExp.length,
         projectCount: filteredProjects.length,
@@ -194,35 +167,29 @@ class ResumeBuilder {
 }
 
 /**
- * Resume Renderer - Converts data to HTML
+ * Resume Renderer - Executive Format
+ * Converts data to professional 3-page HTML resume
  */
 class ResumeRenderer {
   /**
    * Render complete resume as HTML
-   * @param {Object} resumeData - Output from ResumeBuilder.generateResume()
-   * @returns {String} HTML string
    */
   static render(resumeData) {
     const html = [];
 
-    // Header
+    // Header with contact info
     html.push(this.renderHeader(resumeData));
 
-    // Professional Summary
-    html.push(this.renderSummary(resumeData));
+    // Executive Snapshot
+    html.push(this.renderExecutiveSnapshot(resumeData));
 
-    // Core Competencies
-    html.push(this.renderCompetencies(resumeData));
+    // Targeted Highlights
+    html.push(this.renderTargetedHighlights(resumeData));
 
-    // Professional Experience
+    // Professional Experience (comprehensive)
     html.push(this.renderExperience(resumeData));
 
-    // Key Initiatives/Projects
-    if (resumeData.projects.length > 0) {
-      html.push(this.renderProjects(resumeData));
-    }
-
-    // Skills
+    // Skills (organized paragraphs)
     html.push(this.renderSkills(resumeData));
 
     // Education
@@ -239,33 +206,51 @@ class ResumeRenderer {
         <div class="resume-headline">${data.profile.headline}</div>
         <div class="resume-contact">
           ${p.contact.location.city}, ${p.contact.location.state} •
-          ${p.contact.email} •
-          ${p.contact.phone} •
-          <a href="${p.contact.website}" target="_blank">${p.contact.website}</a>
+          LinkedIn: <a href="https://linkedin.com/in/mschulz" target="_blank">linkedin.com/in/mschulz</a>
         </div>
       </div>
     `;
   }
 
-  static renderSummary(data) {
+  static renderExecutiveSnapshot(data) {
+    const profile = data.profile;
     return `
-      <div class="resume-section">
-        <h2 class="section-title">Professional Summary</h2>
+      <div class="resume-section executive-snapshot">
+        <h2 class="section-title">Executive Snapshot</h2>
         <div class="section-content">
-          <p><strong>${data.profile.tagline}</strong></p>
-          ${data.profile.competencies.map(c => `<p>• ${c}</p>`).join('')}
+          <p class="snapshot-tagline"><strong>${profile.tagline}</strong></p>
+
+          <p class="snapshot-description">${data.summary.long}</p>
+
+          <p><strong>Core Strengths:</strong> ${profile.focusSkills.slice(0, 3).join(' • ')}</p>
         </div>
       </div>
     `;
   }
 
-  static renderCompetencies(data) {
-    const competencies = data.profile.focusSkills.slice(0, 8);
+  static renderTargetedHighlights(data) {
+    const profile = data.profile;
+    const projects = data.projects.slice(0, 3);
+
     return `
-      <div class="resume-section">
-        <h2 class="section-title">Core Competencies</h2>
+      <div class="resume-section targeted-highlights">
+        <h2 class="section-title">Targeted Highlights</h2>
         <div class="section-content">
-          <p>${competencies.join(' • ')}</p>
+          <div class="highlight-item">
+            <p><strong>• Core Fit:</strong> ${profile.competencies[0] || profile.description}</p>
+          </div>
+
+          ${profile.competencies.slice(1, 3).map(comp => `
+            <div class="highlight-item">
+              <p><strong>• Key Capability:</strong> ${comp}</p>
+            </div>
+          `).join('')}
+
+          ${projects.length > 0 ? `
+            <div class="highlight-item">
+              <p><strong>• Selected Projects:</strong> ${projects.map(p => p.name).join(', ')}${projects.length > 0 ? '. ' + projects[0].outcomes[0] : ''}</p>
+            </div>
+          ` : ''}
         </div>
       </div>
     `;
@@ -275,26 +260,24 @@ class ResumeRenderer {
     const expHtml = data.experience.map(exp => `
       <div class="experience-item">
         <div class="experience-header">
-          <div class="experience-title">${exp.title}</div>
-          <div class="experience-company">
-            <strong>${exp.company}</strong>${exp.companyParent ? ` (${exp.companyParent})` : ''} | ${exp.location}
+          <div class="experience-title-line">
+            <span class="experience-title"><strong>${exp.title} — ${exp.company}</strong>${exp.companyParent ? ` (${exp.companyParent})` : ''}</span>
           </div>
-          <div class="experience-dates">${exp.startDate} – ${exp.endDate}</div>
+          <div class="experience-meta">
+            ${exp.location} | ${exp.startDate} – ${exp.endDate}
+          </div>
         </div>
         <ul class="experience-bullets">
           ${exp.bullets.map(bullet => `
-            <li>
-              ${bullet.text}
-              <span class="bullet-score" title="Relevance: ${bullet.score} tag matches">${'★'.repeat(Math.min(bullet.score, 5))}</span>
-            </li>
+            <li>${bullet.text}</li>
           `).join('')}
         </ul>
       </div>
     `).join('');
 
     return `
-      <div class="resume-section">
-        <h2 class="section-title">Professional Experience</h2>
+      <div class="resume-section experience-section">
+        <h2 class="section-title">Experience</h2>
         <div class="section-content">
           ${expHtml}
         </div>
@@ -302,40 +285,59 @@ class ResumeRenderer {
     `;
   }
 
-  static renderProjects(data) {
-    const projHtml = data.projects.map(proj => `
-      <div class="project-item">
-        <strong>${proj.name}</strong>${proj.period ? ` (${proj.period})` : ''} – ${proj.role}<br>
-        ${proj.outcomes[0]}
-      </div>
-    `).join('');
-
-    return `
-      <div class="resume-section">
-        <h2 class="section-title">Key Initiatives</h2>
-        <div class="section-content">
-          ${projHtml}
-        </div>
-      </div>
-    `;
-  }
-
   static renderSkills(data) {
-    const skillLabels = {
-      ai_ml: 'AI/ML',
-      analytics: 'Analytics',
-      data_engineering: 'Data Engineering',
-      tools_platforms: 'Tools & Platforms',
-      web_digital: 'Web/Digital'
-    };
+    const skills = data.allSkills;
 
-    const skillsHtml = Object.entries(data.skills).map(([key, skills]) => `
-      <p><strong>${skillLabels[key] || key}:</strong> ${skills.join(', ')}</p>
+    // Build skill paragraphs based on profile
+    const skillParagraphs = [];
+
+    // Strategy skills
+    if (data.profile.id === 'brand_management') {
+      skillParagraphs.push({
+        title: 'Brand & Commercial Strategy',
+        content: 'Oncology brand strategy (HCP & patient), portfolio management, launch excellence, commercial strategy development, market analytics, competitive intelligence, HCP marketing, patient engagement, cross-functional collaboration'
+      });
+    } else if (data.profile.id === 'strategy_innovation') {
+      skillParagraphs.push({
+        title: 'Strategic Planning & Positioning',
+        content: 'Commercial strategy, messaging & positioning, go-to-market planning, competitive analysis, market landscape synthesis, strategic narrative development, brand imperatives alignment, cross-functional orchestration'
+      });
+    } else {
+      skillParagraphs.push({
+        title: 'Customer Experience & Omnichannel Strategy',
+        content: 'Omnichannel orchestration (media, CRM, digital, congress), experience planning & journey design, behavioral pathway modeling, touchpoint architecture, conversion-flow optimization, full-funnel engagement design, HCP and patient experience across channels'
+      });
+    }
+
+    // Always include AI/Innovation for CX profile
+    if (data.profile.id === 'cx_engagement') {
+      skillParagraphs.push({
+        title: 'AI & Innovation',
+        content: 'AI enablement & education (Founder: BEACON), responsible AI adoption frameworks, custom GPT/LLM development, AI-assisted content production, workflow design for generative AI, agency-wide AI training, risk & MLR considerations for AI use, innovation workshop facilitation'
+      });
+    }
+
+    // Analytics
+    skillParagraphs.push({
+      title: 'Analytics & Measurement',
+      content: 'Experience analytics & behavioral funnel analysis, dashboard design, web analytics (GA4), cross-channel performance measurement, KPI frameworks, ROI modeling, regression modeling, data storytelling, insight synthesis for brand planning'
+    });
+
+    // Leadership
+    skillParagraphs.push({
+      title: 'Leadership',
+      content: 'Cross-functional team leadership, stakeholder alignment, workstream governance, capability building, workshop facilitation, mentoring & coaching, agency-wide cultural transformation'
+    });
+
+    const skillsHtml = skillParagraphs.map(section => `
+      <p class="skill-paragraph">
+        <strong>${section.title}:</strong> ${section.content}
+      </p>
     `).join('');
 
     return `
-      <div class="resume-section">
-        <h2 class="section-title">Technical Skills</h2>
+      <div class="resume-section skills-section">
+        <h2 class="section-title">Skills</h2>
         <div class="section-content">
           ${skillsHtml}
         </div>
@@ -346,13 +348,12 @@ class ResumeRenderer {
   static renderEducation(data) {
     const eduHtml = data.education.map(edu => `
       <div class="education-item">
-        <strong>${edu.degree} in ${edu.field}</strong><br>
-        ${edu.institution} | ${edu.end_date ? edu.end_date.split('-')[0] : 'Present'}
+        <strong>${edu.degree}</strong> ${edu.field ? `in ${edu.field}` : ''} — ${edu.institution}
       </div>
     `).join('');
 
     return `
-      <div class="resume-section">
+      <div class="resume-section education-section">
         <h2 class="section-title">Education</h2>
         <div class="section-content">
           ${eduHtml}

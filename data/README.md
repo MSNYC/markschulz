@@ -98,16 +98,45 @@ From this databank, you can generate:
 
 - **1.0.0** (2024-12-03): Initial databank created from resume.pdf and accomplishments documents
 
+## 🔥 Achievement Extraction System
+
+**NEW:** Automated tool for extracting achievements from old resumes and performance reviews using Claude API.
+
+### Quick Start
+1. **Install:** `pip install -r requirements.txt`
+2. **Setup API:** `export ANTHROPIC_API_KEY='your-key'`
+3. **Extract:** See [QUICK_START.md](QUICK_START.md) for detailed guide
+4. **Verify:** `python verify_achievements.py`
+
+### Documentation
+- **[QUICK_START.md](QUICK_START.md)** - Setup and basic usage
+- **[POSITION_REFERENCE.md](POSITION_REFERENCE.md)** - Position IDs and commands
+- **[EXTRACTION_INSTRUCTIONS.md](EXTRACTION_INSTRUCTIONS.md)** - Detailed methodology
+- **[achievement_extraction_schema.json](achievement_extraction_schema.json)** - JSON schema
+
+### Tools
+- ✅ **`extract_and_load.py`** - AI-powered extraction from PDF/DOCX/TXT
+- ✅ **`verify_achievements.py`** - Coverage analysis and gap identification
+- ✅ **`load_achievements.py`** - Manual JSON loader
+
+### Example Usage
+```bash
+python extract_and_load.py ~/Documents/old_resume_2019.pdf \
+  --company "WebMD/Medscape" \
+  --title "Team Leader, Sr. Dir., Commercial Clinical Strategy" \
+  --start-date 2018-01 --end-date 2019-12 --exp-id exp_003
+```
+
 ## Future Enhancements
 
-- [ ] Python script to validate JSON schema
+- [x] ~~Python script to validate JSON schema~~ ✅ Built into extract_and_load.py
+- [x] ~~Extraction pipeline for performance reviews~~ ✅ extract_and_load.py
 - [ ] Script to generate markdown resume from JSON
 - [ ] Script to generate LaTeX/PDF resume
 - [ ] LinkedIn profile generator
 - [ ] Cover letter template system
 - [ ] ATS keyword optimizer
 - [ ] Diff tool to compare versions over time
-- [ ] Extraction pipeline for performance reviews
 
 ## File Naming Conventions
 

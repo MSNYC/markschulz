@@ -1,6 +1,6 @@
 /**
- * Interactive Resume Builder Styles
- * Dark mode compatible, matches main site theme
+ * Interactive Resume Builder Styles - Executive Format
+ * Professional layout optimized for print and screen
  */
 
 :root {
@@ -67,10 +67,8 @@
   cursor: pointer;
   display: block;
   transition: transform 0.3s ease;
-}
-
-.profile-card input[type="radio"] {
-  display: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .profile-card .card-content {
@@ -84,38 +82,32 @@
   flex-direction: column;
 }
 
-.profile-card:hover .card-content {
+.profile-card:hover {
   transform: translateY(-4px);
-  border-color: var(--builder-accent-purple);
-  box-shadow: var(--builder-glow-purple);
 }
 
-.profile-card input[type="radio"]:checked + .card-content {
+.profile-card:hover .card-content {
   border-color: var(--builder-accent-cyan);
   box-shadow: var(--builder-glow-cyan);
-  background: linear-gradient(135deg,
-    var(--builder-bg-secondary),
-    rgba(0, 240, 255, 0.05)
-  );
 }
 
 .card-icon {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .card-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-  color: var(--builder-text-primary);
+  color: var(--builder-accent-cyan);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .card-content p {
-  font-size: 0.95rem;
   color: var(--builder-text-secondary);
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
   flex-grow: 1;
+  margin-bottom: 1rem;
 }
 
 .card-tags {
@@ -124,14 +116,12 @@
   gap: 0.5rem;
 }
 
-.card-tags .tag {
+.tag {
   background: rgba(0, 240, 255, 0.1);
-  border: 1px solid rgba(0, 240, 255, 0.3);
   color: var(--builder-accent-cyan);
   padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  border-radius: 4px;
+  font-size: 0.8rem;
 }
 
 /* Generate Button */
@@ -140,211 +130,293 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
   padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--builder-bg-primary);
   background: linear-gradient(135deg, var(--builder-accent-cyan), var(--builder-accent-purple));
+  color: #0A0E27;
   border: none;
   border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(0, 240, 255, 0.3);
 }
 
 .generate-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.5);
 }
 
-.generate-btn:active {
-  transform: translateY(0);
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
-.generate-btn .btn-icon {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.generate-btn:hover .btn-icon {
-  transform: translateX(4px);
-}
-
-/* Resume Preview */
+/* Resume Preview Container */
 .resume-preview {
-  margin-top: 4rem;
-  animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-top: 3rem;
+  background: #f5f5f5;
+  color: #000000;
+  padding: 2rem;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .preview-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .preview-header h2 {
-  font-size: 2rem;
-  color: var(--builder-text-primary);
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .preview-stats {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #666;
   font-size: 0.9rem;
-  color: var(--builder-text-secondary);
 }
 
-.preview-stats .stat {
+.stat {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.preview-stats .stat-icon {
-  color: var(--builder-accent-cyan);
+.export-buttons {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* Resume Content */
+.export-btn {
+  padding: 0.6rem 1.2rem;
+  background: #1a365d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.export-btn:hover {
+  background: #0f2342;
+}
+
+/* EXECUTIVE RESUME STYLES - Clean white page */
 .resume-content {
-  background: white;
-  color: #1a1a1a;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  font-family: 'Georgia', 'Times New Roman', serif;
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.3;
+  color: #000;
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 1in 0.75in;
+  background: #ffffff;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 0;
 }
 
-/* Resume Sections */
+/* Header */
 .resume-header {
-  text-align: center;
-  padding-bottom: 1.5rem;
-  border-bottom: 2px solid #333;
-  margin-bottom: 2rem;
+  text-align: left;
+  margin: 0 0 0.75rem 0;
+  padding: 0 0 0.5rem 0;
+  border-bottom: 1px solid #999;
 }
 
 .resume-name {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 0.5rem;
+  font-family: 'Futura', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+  font-size: 24pt;
+  font-weight: 500;
+  color: #1a365d;
+  margin: 0 0 0.15rem 0;
+  padding: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
 .resume-headline {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0066cc;
-  margin-bottom: 0.75rem;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  color: #000;
+  margin: 0 0 0.15rem 0;
+  padding: 0;
+  font-weight: normal;
+  line-height: 1.3;
 }
 
 .resume-contact {
-  font-size: 0.95rem;
-  color: #555;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
 }
 
 .resume-contact a {
-  color: #0066cc;
+  color: #000;
   text-decoration: none;
 }
 
+/* Section Styling */
 .resume-section {
-  margin-bottom: 2rem;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+  page-break-inside: avoid;
+  text-align: left;
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  border-bottom: 2px solid #0066cc;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  font-family: 'Futura', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+  font-size: 14pt;
+  font-weight: 500;
+  color: #1a365d;
+  margin: 0 0 0.3rem 0;
+  padding: 0;
+  border-bottom: none;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  text-align: left;
 }
 
 .section-content {
-  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
-/* Experience Items */
+/* Executive Snapshot */
+.executive-snapshot .snapshot-tagline {
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+.executive-snapshot .snapshot-description {
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+.executive-snapshot p {
+  margin: 0 0 0.4rem 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+/* Targeted Highlights */
+.targeted-highlights .highlight-item {
+  margin: 0 0 0.3rem 0;
+  padding: 0;
+}
+
+.targeted-highlights p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+/* Experience */
 .experience-item {
-  margin-bottom: 2rem;
+  margin: 0 0 0.6rem 0;
+  padding: 0;
+  page-break-inside: avoid;
+  text-align: left;
 }
 
 .experience-header {
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.2rem 0;
+  padding: 0;
+}
+
+.experience-title-line {
+  margin: 0 0 0.05rem 0;
+  padding: 0;
 }
 
 .experience-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
 }
 
-.experience-company {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 0.25rem;
-}
-
-.experience-dates {
-  font-size: 0.95rem;
-  color: #666;
-  font-style: italic;
-  margin-top: 0.25rem;
+.experience-meta {
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  color: #000;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
 }
 
 .experience-bullets {
+  margin: 0.2rem 0 0 0;
+  padding: 0 0 0 1.1rem;
   list-style-type: disc;
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
+  list-style-position: outside;
 }
 
 .experience-bullets li {
-  margin-bottom: 0.5rem;
-  position: relative;
+  margin: 0 0 0.2rem 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  text-align: left;
 }
 
-.bullet-score {
-  color: #ffa500;
-  font-size: 0.85rem;
-  margin-left: 0.5rem;
-  opacity: 0.7;
+/* Skills Section */
+.skills-section .skill-paragraph {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  text-align: left;
 }
 
-/* Projects */
-.project-item {
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid #0066cc;
+.skills-section .skill-paragraph strong {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #000;
 }
 
 /* Education */
 .education-item {
-  margin-bottom: 1rem;
+  margin: 0 0 0.25rem 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.3;
+  text-align: left;
 }
 
-/* Actions */
+/* Action Buttons */
 .resume-actions {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--builder-border);
 }
 
 .action-btn {
@@ -352,144 +424,305 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  border-radius: 6px;
   font-weight: 600;
-  border: 2px solid;
-  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .action-btn.primary {
   background: var(--builder-accent-cyan);
-  border-color: var(--builder-accent-cyan);
-  color: var(--builder-bg-primary);
-}
-
-.action-btn.primary:hover {
-  background: transparent;
-  color: var(--builder-accent-cyan);
-  box-shadow: var(--builder-glow-cyan);
+  color: #0A0E27;
 }
 
 .action-btn.secondary {
-  background: transparent;
-  border-color: var(--builder-accent-purple);
+  background: var(--builder-bg-secondary);
   color: var(--builder-text-primary);
-}
-
-.action-btn.secondary:hover {
-  background: var(--builder-accent-purple);
-  color: var(--builder-bg-primary);
-  box-shadow: var(--builder-glow-purple);
+  border: 1px solid var(--builder-border);
 }
 
 .action-btn.tertiary {
   background: transparent;
-  border-color: var(--builder-border);
-  color: var(--builder-text-secondary);
+  color: var(--builder-accent-purple);
+  border: 1px solid var(--builder-accent-purple);
 }
 
-.action-btn.tertiary:hover {
-  border-color: var(--builder-text-primary);
-  color: var(--builder-text-primary);
-}
-
-/* How It Works */
-.how-it-works {
-  margin-top: 4rem;
-  padding: 2rem;
-  background: var(--builder-bg-secondary);
-  border-radius: 12px;
-  border: 1px solid var(--builder-border);
-}
-
-.how-it-works h3 {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--builder-text-primary);
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.info-item {
-  text-align: center;
-}
-
-.info-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.info-item h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-  color: var(--builder-text-primary);
-}
-
-.info-item p {
-  font-size: 0.95rem;
-  color: var(--builder-text-secondary);
-  line-height: 1.6;
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .builder-intro h1 {
-    font-size: 2rem;
-  }
-
   .profile-options {
     grid-template-columns: 1fr;
   }
 
-  .resume-content {
-    padding: 2rem 1.5rem;
+  .resume-preview {
+    padding: 1.5rem;
   }
 
-  .resume-name {
-    font-size: 2rem;
-  }
-
-  .resume-actions {
+  .preview-stats {
     flex-direction: column;
-  }
-
-  .action-btn {
-    width: 100%;
-    justify-content: center;
+    gap: 0.5rem;
   }
 }
 
-/* Print Styles */
+/* PRINT STYLES - Executive Format */
 @media print {
-  .profile-selector,
-  .resume-actions,
-  .preview-header,
-  .how-it-works {
-    display: none !important;
-  }
-
-  .resume-preview {
-    margin-top: 0;
-  }
-
-  .resume-content {
-    box-shadow: none;
-    padding: 0;
+  body {
     background: white;
+    margin: 0;
+    padding: 0;
   }
 
-  .bullet-score {
+  /* Hide non-resume elements */
+  .sticky-nav,
+  .hero-section,
+  #behind-the-tool,
+  #about,
+  #contact,
+  .export-buttons,
+  .profile-selector,
+  .preview-header,
+  .resume-actions,
+  .builder-intro,
+  .tool-intro,
+  .generate-btn,
+  .profile-options,
+  footer,
+  .site-header,
+  .site-footer {
     display: none;
   }
 
-  body {
+  /* Resume container */
+  .resume-preview {
     background: white;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  /* Resume content */
+  .resume-content {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    max-width: 100%;
+    width: 8.5in;
+    margin: 0 auto;
+    padding: 0.5in 0.75in;
+    line-height: 1.3;
+    background: white;
+    color: #000;
+    box-shadow: none;
+  }
+
+  /* Header styling */
+  .resume-header {
+    border-bottom: 1px solid #999;
+    margin: 0 0 0.6rem 0;
+    padding: 0 0 0.4rem 0;
+    text-align: left;
+  }
+
+  .resume-name {
+    font-family: 'Futura', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-size: 22pt;
+    font-weight: 500;
+    color: #1a365d;
+    margin: 0 0 0.12rem 0;
+    padding: 0;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .resume-headline {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #000;
+    font-weight: normal;
+    margin: 0 0 0.12rem 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  .resume-contact {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  /* Section styling */
+  .resume-section {
+    margin: 0 0 0.65rem 0;
+    padding: 0;
+    page-break-inside: avoid;
+    text-align: left;
+  }
+
+  .section-title {
+    font-family: 'Futura', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-size: 13pt;
+    font-weight: 500;
+    color: #1a365d;
+    border-bottom: none;
+    padding: 0;
+    margin: 0 0 0.25rem 0;
+    page-break-after: avoid;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+
+  .section-content {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Executive Snapshot */
+  .executive-snapshot .snapshot-tagline {
+    margin: 0 0 0.35rem 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  .executive-snapshot .snapshot-description {
+    margin: 0 0 0.35rem 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  .executive-snapshot p {
+    margin: 0 0 0.35rem 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  /* Targeted Highlights */
+  .targeted-highlights .highlight-item {
+    margin: 0 0 0.25rem 0;
+    padding: 0;
+  }
+
+  .targeted-highlights p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  /* Experience items */
+  .experience-item {
+    margin: 0 0 0.55rem 0;
+    padding: 0;
+    page-break-inside: avoid;
+    text-align: left;
+  }
+
+  .experience-header {
+    margin: 0 0 0.15rem 0;
+    padding: 0;
+  }
+
+  .experience-title-line {
+    margin: 0 0 0.05rem 0;
+    padding: 0;
+  }
+
+  .experience-title {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  .experience-meta {
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #000;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+
+  .experience-bullets {
+    margin: 0.18rem 0 0 0;
+    padding: 0 0 0 1.1rem;
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+
+  .experience-bullets li {
+    margin: 0 0 0.18rem 0;
+    padding: 0;
+    line-height: 1.3;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+  }
+
+  /* Skills section */
+  .skill-paragraph {
+    margin: 0 0 0.45rem 0;
+    padding: 0;
+    line-height: 1.3;
+    page-break-inside: avoid;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  .skill-paragraph strong {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #000;
+  }
+
+  /* Education */
+  .education-item {
+    margin: 0 0 0.2rem 0;
+    padding: 0;
+    line-height: 1.3;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    text-align: left;
+  }
+
+  /* Ensure colors print correctly for headings only */
+  .section-title,
+  .resume-name {
+    color: #1a365d !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Links should be black and not underlined */
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* Prevent orphaned headings */
+  h2, h3, .section-title, .experience-title {
+    page-break-after: avoid;
+  }
+
+  /* Allow strategic page breaks for long resumes */
+  .experience-section .experience-item:nth-child(3),
+  .experience-section .experience-item:nth-child(6) {
+    page-break-before: auto;
+  }
+
+  /* Optimize spacing for 3-page format */
+  @page {
+    size: letter;
+    margin: 0;
   }
 }
