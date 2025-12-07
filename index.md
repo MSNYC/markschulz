@@ -432,8 +432,7 @@ html {
   <div class="resume-builder-container">
     <div class="profile-selector">
       <div class="profile-options">
-        <label class="profile-card" data-profile="brand_management">
-          <input type="radio" name="profile" value="brand_management" checked>
+        <a href="/resume/brand-management/" class="profile-card" target="_blank">
           <div class="card-content">
             <div class="card-icon">💊</div>
             <h3>Brand Management</h3>
@@ -445,10 +444,9 @@ html {
               <span class="tag">Portfolio</span>
             </div>
           </div>
-        </label>
+        </a>
 
-        <label class="profile-card" data-profile="strategy_innovation">
-          <input type="radio" name="profile" value="strategy_innovation">
+        <a href="/resume/strategic-planning/" class="profile-card" target="_blank">
           <div class="card-content">
             <div class="card-icon">📋</div>
             <h3>Strategic Planning & Positioning</h3>
@@ -460,10 +458,9 @@ html {
               <span class="tag">Analytics</span>
             </div>
           </div>
-        </label>
+        </a>
 
-        <label class="profile-card" data-profile="cx_engagement">
-          <input type="radio" name="profile" value="cx_engagement">
+        <a href="/resume/cx-engagement/" class="profile-card" target="_blank">
           <div class="card-content">
             <div class="card-icon">🚀</div>
             <h3>Customer Experience (CX) & Omnichannel Innovation</h3>
@@ -475,47 +472,14 @@ html {
               <span class="tag">Innovation</span>
             </div>
           </div>
-        </label>
+        </a>
       </div>
 
-      <button id="generateBtn" class="generate-btn">
-        <span class="btn-text">Generate Tailored Resume</span>
-        <span class="btn-icon">→</span>
-      </button>
+      <p style="text-align: center; color: var(--builder-text-secondary); margin-top: 1rem; font-size: 0.95rem;">
+        Click any card above to view that tailored resume →
+      </p>
     </div>
 
-    <div id="resumePreview" class="resume-preview" style="display:none;">
-      <div class="preview-header">
-        <h2>Your Tailored Resume</h2>
-        <div class="preview-stats" id="resumeStats"></div>
-      </div>
-
-      <div class="export-buttons">
-        <button id="printPdfBtn" class="export-btn">
-          <span class="icon">🖨️</span>
-          <span>Print to PDF</span>
-        </button>
-        <button id="copyTextBtn" class="export-btn">
-          <span class="icon">📋</span>
-          <span>Copy to Clipboard</span>
-        </button>
-        <button id="copyLinkBtn" class="export-btn">
-          <span class="icon">🔗</span>
-          <span>Copy Shareable Link</span>
-        </button>
-      </div>
-
-      <div id="resumeContent" class="resume-content">
-        <!-- Dynamically rendered resume content goes here -->
-      </div>
-
-      <div class="resume-actions">
-        <button id="regenerateBtn" class="action-btn tertiary">
-          <span class="btn-icon">↻</span>
-          <span class="btn-text">Try Another Profile</span>
-        </button>
-      </div>
-    </div>
   </div>
 </section>
 

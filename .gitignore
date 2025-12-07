@@ -9,3 +9,10 @@ Gemfile.lock
 *.swp
 *.swo
 *~
+
+# Environment variables (contains API keys)
+.env
+.env.local
+
+# Resume data backups
+data/resume_backup_*.json
