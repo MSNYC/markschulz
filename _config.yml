@@ -1,19 +1,21 @@
 # Site Settings
 title: Mark Schulz
-email: your.email@example.com
+email: contact@markschulz.me # Private - do not display publicly
 description: >-
-  Marketing and advertising professional with expertise in strategic campaigns,
-  brand development, and digital marketing. Portfolio and professional experience.
+  Pharmaceutical marketing and advertising professional with 20+ years of experience
+  spanning Creative Agency, Manufacturer, and Publisher perspectives. Expertise in
+  AI/ML integration, brand strategy, and omnichannel engagement.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # Add your domain here, e.g. https://markschulz.com
+url: "https://www.markschulz.me" # Production URL
 
 # Author Information
 author:
   name: Mark Schulz
-  bio: Marketing & Advertising Professional
-  location: Your City, State
-  linkedin: your-linkedin-username
-  email: your.email@example.com
+  bio: Pharmaceutical Marketing & Advertising Professional
+  location: New York, NY
+  linkedin: mschulz
+  linkedin_url: https://linkedin.com/in/mschulz
+  email: contact@markschulz.me # Private - do not display publicly
 
 # Build Settings
 markdown: kramdown
@@ -43,14 +45,10 @@ defaults:
     values:
       layout: "portfolio-item"
 
-# Navigation
+# Navigation (One-page site with anchor links)
+# Custom navigation defined in index.md
 header_pages:
   - index.md
-  - resume-interactive.html
-  - about.md
-  - portfolio.md
-  - blog.md
-  - contact.md
 
 # Exclude from processing
 exclude:
