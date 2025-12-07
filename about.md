@@ -6,87 +6,79 @@ permalink: /about/
 
 # About Me
 
-I'm a marketing and advertising professional with [X] years of experience helping brands connect with their audiences through strategic, creative, and data-driven campaigns.
+I'm a pharmaceutical marketing and advertising professional with 20+ years of experience spanning three major industry perspectives: **Creative Agency**, **Manufacturer**, and **Publisher**. This unique combination allows me to approach challenges with a comprehensive understanding of the entire pharmaceutical marketing ecosystem.
 
 ## Professional Background
 
-[Add your professional story here - your journey, what drives you, your approach to marketing and advertising]
+My career has been defined by bridging creativity with technology, and strategy with execution. I've worked across the full spectrum of pharmaceutical marketing—from HCP strategy and positioning to patient engagement, from AI/ML integration to omnichannel experience design. Whether developing brand strategies for oncology therapeutics or pioneering AI adoption across organizations, I focus on delivering measurable impact through innovation and collaboration.
+
+## My Approach
+
+I believe the future of pharmaceutical marketing lies at the intersection of human insight and technological capability. That's why I've dedicated significant effort to democratizing AI/ML tools, building custom GPTs, and creating data pipelines that turn complex information into actionable intelligence. My goal is always to make sophisticated capabilities accessible and practical for the teams I work with.
 
 ## Skills & Expertise
 
-### Marketing Strategy
-- Strategic planning and market analysis
-- Brand positioning and development
-- Go-to-market strategy
-- Marketing analytics and ROI optimization
+### Strategic Marketing
+- Brand Strategy & Positioning
+- Portfolio Management
+- Launch Excellence
+- Omnichannel Marketing
+- HCP & Patient Marketing
+- Experience Planning
+- Market Analytics & Insights
 
-### Digital Marketing
-- Social media marketing and management
-- Content marketing and SEO
-- Email marketing campaigns
-- Digital advertising (PPC, display, social)
+### AI/ML & Innovation
+- Custom GPT Development
+- AI Strategy & Implementation
+- Enterprise AI Education & Adoption
+- Machine Learning Applications
+- Innovation Leadership
 
-### Campaign Management
-- Integrated campaign development
-- Creative direction and execution
-- Cross-channel coordination
-- Performance tracking and reporting
+### Data & Analytics
+- Data Engineering (Python, DuckDB, SQL)
+- ETL Pipeline Development
+- Predictive Analytics
+- ROI Modeling
+- Advanced Targeting
+- Data Visualization
 
-### Tools & Platforms
-- Marketing automation platforms (HubSpot, Marketo, etc.)
-- Analytics tools (Google Analytics, Adobe Analytics)
-- Social media management tools
-- CRM systems
-- Design and creative tools
+### Technical Capabilities
+- **AI/ML**: ChatGPT, Claude, Custom GPTs, Prompt Engineering
+- **Analytics**: Python, DuckDB, SQL, Pandas, Excel, Tableau
+- **Data Engineering**: ETL Pipelines, Data Warehousing, API Integration
+- **Tools**: Veeva CRM, Salesforce, Marketing Cloud, Adobe Experience Manager
+- **Web/Digital**: HTML, CSS, JavaScript, WordPress, Analytics Implementation
 
-## Resume {#resume}
+## Therapeutic Area Expertise
 
-### Professional Experience
+- **Oncology** (17 years) - Advanced experience
+- **Cardiovascular** (8 years) - Intermediate experience
+- **HIV/AIDS** (4 years) - Intermediate experience
+- **Men's Health** (3 years) - Basic experience
 
-#### [Current/Recent Position]
-**[Company Name]** | [City, State] | [Start Date] - Present
-- Achievement or responsibility highlighting impact
-- Key project or campaign with measurable results
-- Leadership or collaboration example
-- Strategic initiative you led
+## Education
 
-#### [Previous Position]
-**[Company Name]** | [City, State] | [Start Date] - [End Date]
-- Major accomplishment with metrics
-- Campaign or project highlight
-- Team leadership or collaboration
-- Process improvement or innovation
+**Bachelor of Arts in English & Communications**
+Loyola University Maryland | 2001
 
-#### [Earlier Position]
-**[Company Name]** | [City, State] | [Start Date] - [End Date]
-- Key responsibilities and achievements
-- Notable campaigns or projects
-- Skills developed
+## Professional Interests
 
-### Education
-
-**[Degree]** in [Field]
-[University Name] | [Graduation Year]
-
-### Certifications & Training
-- [Relevant certification]
-- [Professional development course]
-- [Industry training or credential]
-
-### Professional Affiliations
-- [Professional organization memberships]
-- [Industry groups or associations]
-
----
-
-## Download Resume
-
-<a href="/assets/files/resume.pdf" class="button" download>Download PDF Resume</a>
-
-**Privacy Note:** This resume contains professional information only. For detailed work history or references, please [contact me](/contact/) directly.
+- AI/ML in Healthcare Marketing
+- Data-Driven Decision Making
+- Omnichannel Strategy & Execution
+- Innovation in Pharmaceutical Marketing
+- Marketing Technology Integration
 
 ---
 
 ## Let's Connect
 
-Want to discuss a project or opportunity? [Get in touch](/contact/).
+Interested in discussing pharmaceutical marketing, AI/ML integration, or potential collaborations?
+
+- **[View Interactive Resume](/resume-interactive/)** - Explore my experience tailored to different roles
+- **[Connect on LinkedIn](https://linkedin.com/in/mschulz)** - Let's connect professionally
+- **[Contact Me](/contact/)** - Send a message through my contact form
+
+---
+
+**Privacy Note:** This page contains professional information only. For privacy reasons, I do not publicly display my email address, phone number, or mailing address. Please use the contact form or LinkedIn to get in touch.

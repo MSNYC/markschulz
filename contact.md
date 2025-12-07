@@ -48,14 +48,13 @@ Interested in working together, discussing a project, or learning more about my 
 
 ## Other Ways to Connect
 
-- **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- **Email:** [your.email@example.com](mailto:your.email@example.com)
-- **Location:** Your City, State
+- **LinkedIn:** [Connect with me on LinkedIn](https://linkedin.com/in/mschulz)
+- **Location:** New York, NY
 
 ---
 
 **Privacy & Contact Form**
 
-This contact form is powered by [Formspree](https://formspree.io/), a secure form handling service. Your information is transmitted securely and only used to respond to your inquiry.
+This contact form is powered by [Formspree](https://formspree.io/), a secure form handling service. Your information is transmitted securely and only used to respond to your inquiry. I do not publicly display my email address or phone number for privacy reasons.
 
-**Setup Instructions:** After deploying your site, visit [Formspree.io](https://formspree.io/), create a free account, set up a form, and replace `YOUR_FORM_ID` in this page with your actual form ID.
+**Setup Instructions:** To activate the form above, visit [Formspree.io](https://formspree.io/), create a free account, set up a form, and replace `YOUR_FORM_ID` on line 15 with your actual form ID. You'll receive email notifications when someone submits the form.
