@@ -437,9 +437,9 @@ html {
           <div class="card-content">
             <div class="card-icon">💊</div>
             <h3>Brand Management</h3>
-            <p>Pharmaceutical brand strategy, launch excellence, and portfolio management</p>
+            <p>Brand strategy, portfolio management, launch excellence, and HCP/patient marketing</p>
             <div class="card-tags">
-              <span class="tag">Strategy</span>
+              <span class="tag">Brand Strategy</span>
               <span class="tag">Oncology</span>
               <span class="tag">Launch</span>
               <span class="tag">Portfolio</span>
@@ -450,14 +450,14 @@ html {
         <label class="profile-card" data-profile="strategy_innovation">
           <input type="radio" name="profile" value="strategy_innovation">
           <div class="card-content">
-            <div class="card-icon">🚀</div>
-            <h3>Strategy & Innovation</h3>
-            <p>Digital transformation, AI/ML implementation, and strategic planning</p>
+            <div class="card-icon">📋</div>
+            <h3>Strategic Planning & Positioning</h3>
+            <p>Commercial strategy, messaging & positioning, go-to-market planning, and market analysis</p>
             <div class="card-tags">
-              <span class="tag">AI/ML</span>
-              <span class="tag">Innovation</span>
+              <span class="tag">Strategy</span>
+              <span class="tag">Positioning</span>
+              <span class="tag">Planning</span>
               <span class="tag">Analytics</span>
-              <span class="tag">Digital</span>
             </div>
           </div>
         </label>
@@ -465,14 +465,14 @@ html {
         <label class="profile-card" data-profile="cx_engagement">
           <input type="radio" name="profile" value="cx_engagement">
           <div class="card-content">
-            <div class="card-icon">🎯</div>
-            <h3>Customer Experience</h3>
-            <p>Omnichannel engagement, experience planning, and journey optimization</p>
+            <div class="card-icon">🚀</div>
+            <h3>Customer Experience (CX) & Omnichannel Innovation</h3>
+            <p>Omnichannel strategy, experience design, AI/ML implementation, and innovative engagement</p>
             <div class="card-tags">
               <span class="tag">CX</span>
               <span class="tag">Omnichannel</span>
-              <span class="tag">Journey Mapping</span>
-              <span class="tag">HCP</span>
+              <span class="tag">AI/ML</span>
+              <span class="tag">Innovation</span>
             </div>
           </div>
         </label>
