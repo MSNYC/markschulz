@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="portfolio-item">
+  <header class="portfolio-header">
+    <h1>{{ page.title }}</h1>
+    <div class="portfolio-meta">
+      <span class="client">{{ page.client }}</span>
+      <span class="separator">|</span>
+      <span class="industry">{{ page.industry }}</span>
+      {% if page.date %}
+      <span class="separator">|</span>
+      <span class="date">{{ page.date | date: "%Y" }}</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="portfolio-content">
+    {{ content }}
+  </div>
+
+  <footer class="portfolio-footer">
+    <a href="/portfolio/" class="back-link">← Back to Portfolio</a>
+    <a href="/contact/" class="button">Discuss Your Project</a>
+  </footer>
+</article>

@@ -1,0 +1,255 @@
+MODEL SET CONTEXT — COMPLETE EXPORT
+
+(Everything ChatGPT currently “remembers” about your work, projects, capabilities, and ongoing initiatives.)
+
+1. (2024-08-06)
+You analyze and quantify engagement datasets by: identifying periods of change, computing averages, comparing equal timeframes, and summarizing core findings with clarity.
+
+2. (2024-08-15)
+Your dataset units were in millions of USD.
+
+3. (2024-08-19)
+You work with clients wanting to “use AI” broadly in their marketing operations.
+
+4. (2024-08-19)
+You work on projects about how video increases accessibility and supports different learning styles, especially to humanize static content.
+
+5. (2024-08-20)
+You prepare presentations on how creative agencies support brand initiatives across video, omnichannel segmentation, AI, and experiential congress marketing.
+
+6. (2024-08-21)
+You dislike Microsoft To-Do on Mac due to feature limitations, needing a secure alternative integrating well with Outlook.
+
+7. (2024-08-21)
+You seek expertise in competitive media monitoring in pharma marketing, focused on patient-facing drug ads.
+
+8. (2024-08-21)
+You're meeting with 8th Wall on AR capabilities for physical-to-WebAR triggers.
+
+9. (2024-08-21)
+You're exploring game-based interactive experiences in advertising.
+
+10. (2024-08-26)
+You're writing non-trivial ranking poll questions to measure what truly matters to users.
+
+11. (2024-08-30)
+You brainstorm names for a program inspired by “Choose Your Own Adventure” but clinically relevant to patient prognosis.
+
+12. (2024-09-03)
+You work on HCP influencer strategy in pharma marketing.
+
+13. (2024-09-03)
+You’re developing a combined year-in-review data claim list + geo-targeted messaging program.
+
+14. (2024-09-09)
+You’re setting up a local GPT using SPO folders and exploring knowledge organization structure.
+
+15. (2024-09-11)
+You’re developing a GPT trained on promotional channels, UX best practices, insights, and trends to serve as a strategic brainstorming assistant.
+
+16. (2024-09-16)
+You’re creating a Word bibliography using consistent XML-formatted references.
+
+17. (2024-09-18)
+You're using Adobe Acrobat Pro on Mac.
+
+18. (2024-09-19)
+You're extracting text between repeated “Hi” and “Important Safety Information” blocks.
+
+19. (2024-09-30)
+You're exploring a custom GPT integrated with Google Analytics via API/OAuth.
+
+20. (2024-10-01)
+Concern that custom GPT may not recognize oncology terminology; planning acronym extraction and clarification.
+
+21. (2024-10-01)
+Planning to use existing slide formats in a GPT’s knowledge base.
+
+22. (2024-10-01)
+Building a GPT expert on customer journeys in JSON format.
+
+23. (2024-10-01)
+Exploring optimal file formats for GPT knowledge bases using PPT tables.
+
+24. (2024-10-01)
+You built a custom GPT with two JSON journey files to support oncology HCP marketing.
+
+25. (2024-10-01)
+You've chosen JSON as standard for custom GPT development.
+
+26. (2024-10-01)
+You're testing GPT ability to create or improve customer journeys.
+
+27. (2024-10-02)
+You're posting to Teams about converting heavy files into JSON/XML for GPT optimization.
+
+28. (2024-10-02)
+Exploring custom GPT “actions” and Figma API integrations.
+
+29. (2024-10-02)
+You prefer visualizing exported JSON/CSV in Excel rather than Python.
+
+30. (2024-10-02)
+Exploring Figma API or Mermaid.js for diagram generation.
+
+31. (2024-10-03)
+Your GPT queries only one GA4 property.
+
+32. (2024-10-10)
+You found and used a brand-relationship phase model from Awareness to Evangelism.
+
+33. (2024-10-10)
+Web crawler project: avoid scraping repeated bottom sections.
+
+34. (2024-10-10)
+Ensuring crawler hits all pages.
+
+35. (2024-10-10)
+Python + BeautifulSoup crawler organizing text by URLs.
+
+36. (2024-10-11)
+Now using VBA to batch-export PPT slides to PNG for OCR processing.
+
+37. (2024-10-11)
+You avoid Homebrew on work Mac for security reasons.
+
+38. (2024-10-11)
+LibreOffice via MacPorts failed; seeking alternatives for your Python workflow.
+
+39. (2024-10-11)
+You prefer direct PPT→PNG conversion, avoiding intermediate PDFs.
+
+40. (2024-10-17)
+Seeking a storage + analytics solution for GA4 data; you use R.
+
+41. (2024-10-22)
+You're patching GA4 blackout periods using regression between server logs and session counts.
+
+42. (2024-10-22)
+Biolumina purchased 5 seats to continue GPT testing.
+
+43. (2024-10-22)
+You want to introduce Omnicom’s OpenAI enterprise pilot in presentations.
+
+44. (2024-10-22)
+Pilot lasts through October; feedback will guide leadership decisions.
+
+45. (2024-10-22)
+You're preparing an internal ChatGPT overview covering security, LLM basics, pilot context, and custom GPT benefits.
+
+46. (2024-10-23)
+You have a new dataset splitting sessions into ADJUSTED HCP and Patient sessions; brainstorming analyses.
+
+47. (2024-10-23)
+You're designing a Python program to ingest Excel, request date ranges, run analyses, and export text+graphs.
+
+48. (2024-10-23)
+Summary section includes YTD HCP & Patient visit totals, broken out monthly.
+
+49. (2024-10-23)
+You emphasize meaningful differences, not repetitive findings.
+
+50. (2024-10-23)
+You focus heavily on HCP vs Patient behavior comparisons (weekends, patterns).
+
+51. (2024-10-23)
+You want similar analyses for latest quarter.
+
+52. (2024-10-27)
+Analyzing Q3 2024 bounce rate and session duration vs rest of year.
+
+53. (2024-10-27)
+Sessions-per-user analysis: looking for anomalies and interpreting values below one.
+
+54. (2024-10-29)
+You prefer using Power Query for table transformations.
+
+55. (2024-10-30)
+Creating a slide explaining AI vs ML vs LLM.
+
+56. (2024-10-31)
+Encountered a pandas length mismatch error in the Python script.
+
+57. (2024-11-11)
+Clarifying GA4 engagement rate and components, especially around video views.
+
+58. (2024-11-11)
+Exploring free-market dynamics and news echo chambers.
+
+59. (2024-11-11)
+Studying the impact of video on GA4 engagement + session duration.
+
+60. (2024-11-12)
+Exploring GPT + DAM system to identify image themes vs ads.
+
+61. (2024-11-13)
+Working on SEO + keyword optimization + metric tags for website updates.
+
+62. (2024-11-14)
+Adjusting server log data → GA session estimates via linear regression.
+
+63. (2024-11-14)
+Highlighting flat performance trends and standout recent increases.
+
+64. (2024-11-15)
+Creating GA segments based on HCP vs Patient URL patterns.
+
+65. (2024-12-05)
+Mac shortcut: Step Into in VBA = Shift + Command + I.
+
+66. (2025-01-13)
+Naming a custom GPT for a branded drug; prefers expert/mentor “O” names and long-U sounds.
+
+67. (2025-02-04)
+Creating a multi-chapter ChatGPT orientation video series for SharePoint.
+
+68. (2025-02-09)
+Exploring SharePoint Lists as relational data management.
+
+69. (2025-04-08)
+Building GPT that guides creative idea development using frameworks (AIDA, PAS, FOMO, SCAMPER, FAB, StoryBrand, Aware-stages).
+
+70. (2025-04-09)
+Your Python script must compare reporting periods to prior quarters and YoY equivalents.
+
+71. (2025-04-10)
+You prefer Feynman-style simple explanations.
+
+72. (2025-04-15)
+You revised and ran the campaign analysis script and want narrative insights + graph recommendations.
+
+73. (2025-04-18)
+You’re creating the “Byte by Bite” educational AI video series with a defined color palette.
+
+74. (2025-04-20)
+Your oncology drug label GPT instructions must be 8 segments of 1000 characters.
+
+75. (2025-04-22)
+You’re preparing a general web analytics data requirement list.
+
+76. (2025-04-25)
+Refining naming and presentation of the Curiosity-Driven Innovation Initiative (formerly Project X).
+
+77. (2025-05-08)
+Creating a monthly AI/innovation update for colleagues tied to BEACON task force.
+
+78. (2025-05-09)
+Building Power Automate flow using AI Builder to summarize daily reports mentioning your function.
+
+79. (2025-06-06)
+ASCO 2025 reporting must align with 4 pillars: Association, Interest During, Interest Post, Reputation — with prior format cues and lean staffing.
+
+80. (2025-06-12)
+You work at Biolumina.
+
+81. (2025-07-07)
+Your custom GPT now uses OpenFDA, DailyMed SPL, and RxNorm APIs, choosing contextually.
+
+82. (2025-07-09)
+Analyzing 36k-row rep-triggered email dataset for subject line effectiveness.
+
+83. (2025-07-14)
+Your assistant “Pharmetheus” is powered by BrandBuilder, reflecting Biolumina’s philosophy.
+
+84. (2025-08-05)
+Preparing a spreadsheet of AI use cases across operations and client-facing initiatives, including OmniAI, ChatGPT Enterprise, HeyGen, CoPilot, Firefly, internal TTS, covering ideation, tactical planning, internal communications, HCP/patient content, and more.

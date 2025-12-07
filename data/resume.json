@@ -1,0 +1,1187 @@
+{
+  "meta": {
+    "version": "2.1.0",
+    "last_updated": "2024-12-03",
+    "schema_version": "2.0",
+    "notes": "Phase 1 enhancements complete + Document extraction complete: Added pharma keywords taxonomy, therapeutic areas, regulatory compliance tracking, resume version configurations, metrics bank, ATS metadata, executive search firm tracking, and 6 new innovation projects from ChatGPT/Codex histories. Aligned with 2024-2025 executive resume best practices per optimization report."
+  },
+  "personal": {
+    "name": {
+      "first": "Mark",
+      "last": "Schulz",
+      "full": "Mark Schulz"
+    },
+    "title": "Pharmaceutical Marketing & Advertising Professional",
+    "tagline": "Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives",
+    "contact": {
+      "phone": "+16463374999",
+      "email": "markschulz@mac.com",
+      "website": "https://www.markschulz.me",
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "country": "USA"
+      }
+    },
+    "profiles": {
+      "linkedin": "",
+      "github": "",
+      "twitter": ""
+    }
+  },
+  "summary": {
+    "short": "Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives: Creative Agency, Manufacturer, and Publisher.",
+    "long": "Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives:\n• Creative Agency: Experience planning, account, and digital project management\n• Manufacturer: US brand management; HCP strategy, positioning, and execution across all channels\n• Publisher: Media expertise, Rx impact analysis, partnership strategy, ROI modeling, and advanced targeting",
+    "perspectives": [
+      {
+        "category": "Creative Agency",
+        "description": "Experience planning, account, and digital project management"
+      },
+      {
+        "category": "Manufacturer",
+        "description": "US brand management; HCP strategy, positioning, and execution across all channels"
+      },
+      {
+        "category": "Publisher",
+        "description": "Media expertise, Rx impact analysis, partnership strategy, ROI modeling, and advanced targeting"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": "exp_001",
+      "company": "Biolumina",
+      "company_parent": "Omnicom",
+      "location": "New York, NY",
+      "positions": [
+        {
+          "title": "VP, Experience Planner",
+          "start_date": "2021-01",
+          "end_date": null,
+          "current": true,
+          "responsibilities": [
+            "Planned strategic alignment of channel activations and tactic types to brand imperatives and segmentation",
+            "Led XP for 9 oncology accounts across 6 clients, spanning HCP and Patient/Caregiver audiences",
+            "Optimized CRM programming and performance reporting",
+            "Evangelized XP internally to drive awareness, understanding, and integration with agency processes"
+          ],
+          "achievements": [
+            {
+              "category": "AI Innovation & Enterprise Enablement",
+              "items": [
+                {
+                  "text": "Led creation, testing, and deployment of multiple custom GPTs for Biolumina and oncology-focused brands",
+                  "tags": ["ai", "innovation", "leadership", "oncology", "brand", "digital"]
+                },
+                {
+                  "text": "Developed GPTs using JSON knowledge bases, structured prompt engineering, and API integrations (OpenFDA, DailyMed SPL, RxNorm)",
+                  "tags": ["ai", "innovation", "data_engineering", "oncology"]
+                },
+                {
+                  "text": "Created internal education materials explaining AI, ML, LLMs, and enterprise privacy/security principles",
+                  "tags": ["ai", "leadership", "innovation", "education"]
+                },
+                {
+                  "text": "Helped guide Omnicom's enterprise ChatGPT pilot by evaluating workflows, summarizing feedback, and developing internal-facing documentation",
+                  "tags": ["ai", "strategy", "leadership", "digital"]
+                },
+                {
+                  "text": "Built a multi-chapter ChatGPT orientation video series ('Byte by Bite') to improve AI literacy across the agency",
+                  "tags": ["ai", "leadership", "innovation", "education"]
+                },
+                {
+                  "text": "Explored workflows for integrating GPT with DAM systems to analyze visual themes in assets",
+                  "tags": ["ai", "innovation", "digital", "automation"]
+                },
+                {
+                  "text": "Created an AI ideation GPT using AIDA, PAS, FOMO, SCAMPER, FAB, StoryBrand, and more",
+                  "tags": ["ai", "innovation", "strategy", "brand"]
+                },
+                {
+                  "text": "Assisted in developing AI use case spreadsheets spanning tactical planning, internal communications, HCP/patient content, and operational automation",
+                  "tags": ["ai", "strategy", "hcp", "patient", "automation"]
+                }
+              ]
+            },
+            {
+              "category": "Strategy & Oncology Marketing Expertise",
+              "items": [
+                {
+                  "text": "Built a GPT specializing in oncology HCP customer journeys using JSON-trained data",
+                  "tags": ["ai", "oncology", "hcp", "journey_mapping", "cx", "xp", "innovation"]
+                },
+                {
+                  "text": "Developed methodology for evaluating HCP influencers within pharma marketing",
+                  "tags": ["strategy", "hcp", "oncology", "analytics"]
+                },
+                {
+                  "text": "Supported client brand initiatives by designing omnichannel, segmentation, CTV/OTT, and experiential congress frameworks",
+                  "tags": ["strategy", "omnichannel", "brand", "oncology", "experience_planning", "xp", "launch"]
+                },
+                {
+                  "text": "Designed interactive game-based advertising concepts and WebAR strategies with 8th Wall",
+                  "tags": ["innovation", "digital", "cx", "experience_planning"]
+                },
+                {
+                  "text": "Contributed to naming and ideation for oncology-branded GPT assistants",
+                  "tags": ["brand", "oncology", "ai", "innovation", "strategy"]
+                }
+              ]
+            },
+            {
+              "category": "Data Engineering & Analytics Leadership",
+              "items": [
+                {
+                  "text": "Created advanced Google Analytics workflows including regression-based reconstruction of corrupted GA4 session data using server logs",
+                  "tags": ["analytics", "data_engineering", "innovation", "digital"]
+                },
+                {
+                  "text": "Analysis of session segmentation (HCP vs Patient), including weekend behavior",
+                  "tags": ["analytics", "hcp", "patient", "cx"]
+                },
+                {
+                  "text": "Quarter-over-quarter and year-over-year comparative models",
+                  "tags": ["analytics", "strategy"]
+                },
+                {
+                  "text": "Advanced bounce rate and session duration monitoring",
+                  "tags": ["analytics", "cx", "digital"]
+                },
+                {
+                  "text": "Session-per-user anomaly detection",
+                  "tags": ["analytics", "data_engineering", "innovation"]
+                },
+                {
+                  "text": "Developed a Python program that ingests Excel files, requests date ranges, computes analyses, and outputs reports with graphs",
+                  "tags": ["data_engineering", "analytics", "automation", "innovation"]
+                },
+                {
+                  "text": "Explored R-based data storage solutions for long-term GA4 datasets",
+                  "tags": ["data_engineering", "analytics", "innovation"]
+                },
+                {
+                  "text": "Built Power Query pipelines for data transformation",
+                  "tags": ["data_engineering", "automation", "analytics"]
+                },
+                {
+                  "text": "Analyzed 36,000-row rep-triggered email dataset to understand subject-line performance",
+                  "tags": ["analytics", "hcp", "strategy"]
+                },
+                {
+                  "text": "Guided the end-to-end design of a reusable DuckDB pipeline replacing one-off Excel scripts",
+                  "tags": ["data_engineering", "analytics", "leadership", "automation"]
+                },
+                {
+                  "text": "Structured ETL flow across loaders for traffic, downloads, sources, pages, devices, and engagement",
+                  "tags": ["data_engineering", "analytics", "strategy"]
+                }
+              ]
+            },
+            {
+              "category": "Automation & Workflow Optimization",
+              "items": [
+                {
+                  "text": "Designed VBA tools to batch-export PPT slides to PNG for OCR processing",
+                  "tags": ["automation", "innovation", "data_engineering"]
+                },
+                {
+                  "text": "Built Python + BeautifulSoup website crawlers with URL-structured extraction and repeated-section de-duplication",
+                  "tags": ["automation", "data_engineering", "innovation", "digital"]
+                },
+                {
+                  "text": "Created processes for converting heavy PDFs, PPTs, and Word files into lighter JSON/XML structures",
+                  "tags": ["automation", "data_engineering", "innovation"]
+                },
+                {
+                  "text": "Supported SharePoint List exploration as a relational database alternative for message management",
+                  "tags": ["automation", "data_engineering", "strategy"]
+                },
+                {
+                  "text": "Designed Power Automate flows using AI Builder to detect daily mentions and trigger summaries",
+                  "tags": ["automation", "ai", "innovation", "digital"]
+                }
+              ]
+            },
+            {
+              "category": "Technical Problem-Solving & Tool Development",
+              "items": [
+                {
+                  "text": "Provided cross-platform expertise (Mac, Office 365, Adobe Acrobat Pro, Python, R, VBA)",
+                  "tags": ["data_engineering", "automation", "leadership"]
+                },
+                {
+                  "text": "Solved debugging challenges in Python (length mismatch errors, library conflicts)",
+                  "tags": ["data_engineering", "innovation"]
+                },
+                {
+                  "text": "Ensured secure environments by avoiding Homebrew and managing MacPorts limitations",
+                  "tags": ["data_engineering", "strategy"]
+                },
+                {
+                  "text": "Evaluated Figma API and Mermaid.js workflows for visualization",
+                  "tags": ["innovation", "digital", "cx"]
+                }
+              ]
+            },
+            {
+              "category": "Innovation & Digital Transformation",
+              "items": [
+                {
+                  "text": "Pioneered AI integration with Pharmetheus GPT assistant, democratizing 15+ years of brand strategy insights—first internal AI tool for brand planning at agency",
+                  "tags": ["ai", "innovation", "brand", "strategy", "leadership", "digital"]
+                },
+                {
+                  "text": "Led Curiosity-Driven Innovation Initiative with 12 team members over 18 months, generating 5 client-facing innovations and fostering culture of continuous learning",
+                  "tags": ["leadership", "innovation", "strategy", "digital"]
+                },
+                {
+                  "text": "Built WebReportingHub analytics platform reducing cross-brand reporting time 60% for 9-brand portfolio using DuckDB and Python automation",
+                  "tags": ["analytics", "data_engineering", "automation", "innovation", "brand", "oncology", "portfolio"]
+                }
+              ]
+            },
+            {
+              "category": "Process & Operational Excellence",
+              "items": [
+                {
+                  "text": "Designed ASCO 2025 Congress reporting framework standardizing medical insights delivery across 6 oncology brands, reducing prep time 40%",
+                  "tags": ["strategy", "oncology", "brand", "automation"]
+                },
+                {
+                  "text": "Created Promo Fingerprint Visualizer for MLR compliance tracking, contributing to 15% reduction in review cycle time",
+                  "tags": ["compliance", "mlr", "analytics", "innovation", "automation"]
+                }
+              ]
+            }
+          ],
+          "skills_used": [
+            "Experience Planning",
+            "AI/ML Strategy",
+            "Custom GPT Development",
+            "Google Analytics 4",
+            "Python",
+            "Data Analytics",
+            "CRM Optimization",
+            "Oncology Marketing",
+            "Omnichannel Strategy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exp_002",
+      "company": "Harrison & Star",
+      "company_parent": "Omnicom",
+      "location": "New York, NY",
+      "positions": [
+        {
+          "title": "VP, Group Account Supervisor",
+          "start_date": "2020-01",
+          "end_date": "2021-01",
+          "current": false,
+          "responsibilities": [
+            "Led multiple tactics comprising a new mini-campaign launch for a leading HIV treatment"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Account Management",
+            "Campaign Launch",
+            "HIV Marketing",
+            "Client Relations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exp_003",
+      "company": "WebMD/Medscape",
+      "company_parent": "Internet Brands",
+      "location": "New York, NY",
+      "positions": [
+        {
+          "title": "Team Leader, Sr. Dir., Commercial Clinical Strategy",
+          "start_date": "2018-01",
+          "end_date": "2019-12",
+          "current": false,
+          "responsibilities": [
+            "Managed ~30 strategic deals (those of high investment, exposure, or risk) per year, totaling $30M+ in sales",
+            "Supervised direct reports: 3 Assoc. Directors, 1 Analyst",
+            "Defined strategy for accounts throughout entire sales lifecycle: ROI modeling, pitch, media configuration, contracting, execution, impact analysis with IQVIA, optimizations, and renewals"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Strategic Deal Management",
+            "ROI Modeling",
+            "IQVIA Analytics",
+            "Team Leadership",
+            "Sales Strategy",
+            "Media Configuration"
+          ]
+        },
+        {
+          "title": "Director, Commercial Clinical Strategy",
+          "start_date": "2016-01",
+          "end_date": "2018-01",
+          "current": false,
+          "responsibilities": [
+            "Managed strategic pharmaceutical partnerships",
+            "Conducted impact analysis with IQVIA",
+            "Developed media strategies for clinical brands"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Commercial Strategy",
+            "Clinical Marketing",
+            "Partnership Development",
+            "Impact Analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exp_004",
+      "company": "Patients & Purpose",
+      "company_parent": "Omnicom",
+      "location": "New York, NY",
+      "positions": [
+        {
+          "title": "VP, Project Management, Group Supervisor",
+          "start_date": "2015-01",
+          "end_date": "2016-12",
+          "current": false,
+          "responsibilities": [
+            "PM team served as digital evangelists and solution consultants in addition to handling all brand staffing, finances, and timelines",
+            "Drafted and facilitated approval of five $1M+ SOWs per year",
+            "Direct reports: 2 Sr PM's, 1 PM, 1 Assoc. PM, 1 BC",
+            "Introduced and ran department-wide growth and collaboration efforts to enhance department culture and provide guidance to PMs at all levels"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Project Management",
+            "Team Leadership",
+            "Budget Management",
+            "Digital Strategy",
+            "SOW Development",
+            "Department Culture Building"
+          ]
+        },
+        {
+          "title": "Project Management, Group Supervisor",
+          "start_date": "2014-01",
+          "end_date": "2015-01",
+          "current": false,
+          "responsibilities": [
+            "Supervised project management team for pharmaceutical brands",
+            "Managed digital project timelines and budgets"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Project Management",
+            "Digital Marketing",
+            "Team Supervision"
+          ]
+        },
+        {
+          "title": "Senior Project Manager",
+          "start_date": "2012-01",
+          "end_date": "2014-01",
+          "current": false,
+          "responsibilities": [
+            "Managed digital projects for pharmaceutical clients",
+            "Coordinated cross-functional teams"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Project Management",
+            "Digital Marketing",
+            "Cross-functional Coordination"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exp_005",
+      "company": "Pfizer",
+      "location": "New York, NY",
+      "positions": [
+        {
+          "title": "Marketing Manager - LIPITOR / CADUET",
+          "start_date": "2008-01",
+          "end_date": "2012-01",
+          "current": false,
+          "responsibilities": [
+            "Managed a $10M+ portion of US HCP LIPITOR & CADUET marketing budget to efficiently target print and digital promotion to US healthcare professionals, ensuring alignment to core brand strategies, particularly for LIPITOR as it approached LOE",
+            "Pioneered digital solutions new to Pfizer and the industry: EMR-based competitive blunting triggered messaging capability with AllScripts, first-ever branded podcast solution for Pfizer",
+            "Brand marketing responsibilities included: Review Committee Marketing Captain, convention management, positioning and new campaign launch, POA rep trainings, savings card, digital multichannel, eDetailing rollout captain"
+          ],
+          "achievements": [
+            "Managed $10M+ marketing budget",
+            "Pioneered first-ever branded podcast for Pfizer",
+            "Developed EMR-based competitive messaging with AllScripts (industry first)",
+            "Led digital multichannel transformation for legacy brand approaching LOE"
+          ],
+          "skills_used": [
+            "Brand Management",
+            "Budget Management",
+            "Digital Innovation",
+            "HCP Marketing",
+            "Campaign Launch",
+            "Convention Management",
+            "eDetailing"
+          ]
+        },
+        {
+          "title": "Associate Marketing Manager, VIAGRA",
+          "start_date": "2004-01",
+          "end_date": "2008-01",
+          "current": false,
+          "responsibilities": [
+            "Supported VIAGRA brand marketing initiatives",
+            "Managed tactical marketing programs"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Brand Marketing",
+            "Tactical Marketing",
+            "HCP Communications"
+          ]
+        },
+        {
+          "title": "Administrative Assistant, VIAGRA",
+          "start_date": "1998-01",
+          "end_date": "2004-01",
+          "current": false,
+          "responsibilities": [
+            "Provided administrative support to VIAGRA brand team",
+            "Coordinated marketing operations"
+          ],
+          "achievements": [],
+          "skills_used": [
+            "Administrative Support",
+            "Operations Coordination",
+            "Brand Team Support"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Phoenix",
+      "degree": "Master of Business Administration",
+      "degree_short": "MBA",
+      "field": "Business Administration",
+      "start_date": null,
+      "end_date": null,
+      "gpa": null,
+      "honors": null,
+      "relevant_coursework": []
+    },
+    {
+      "institution": "New York University, Tisch School of the Arts",
+      "degree": "Bachelor of Fine Arts",
+      "degree_short": "BFA",
+      "field": "Arts",
+      "start_date": null,
+      "end_date": null,
+      "gpa": null,
+      "honors": null,
+      "relevant_coursework": []
+    }
+  ],
+  "skills": {
+    "core_competencies": [
+      "Experience Planning & Strategy",
+      "Pharmaceutical Marketing",
+      "Brand Management",
+      "Oncology Marketing",
+      "HCP & Patient Marketing",
+      "Omnichannel Marketing",
+      "Digital Transformation",
+      "Team Leadership",
+      "Budget Management",
+      "Project Management"
+    ],
+    "technical": {
+      "ai_ml": [
+        "Custom GPT Development",
+        "Prompt Engineering",
+        "LLM Strategy",
+        "AI/ML Implementation",
+        "AI Tool Implementation",
+        "Knowledge Base Architecture",
+        "API Integration (OpenFDA, DailyMed SPL, RxNorm)"
+      ],
+      "analytics": [
+        "Google Analytics 4",
+        "IQVIA Analytics",
+        "ROI Modeling",
+        "Data Analysis",
+        "Regression Modeling",
+        "Segmentation Analysis",
+        "Performance Reporting",
+        "Impact Analysis"
+      ],
+      "data_engineering": [
+        "Python (pandas, DuckDB, BeautifulSoup)",
+        "R",
+        "SQL",
+        "ETL Pipeline Design",
+        "Data Normalization",
+        "Power Query",
+        "Data Visualization (Plotly, Sunburst Charts)",
+        "Hierarchical Data Visualization",
+        "Interactive Dashboards"
+      ],
+      "tools_platforms": [
+        "Streamlit",
+        "VBA",
+        "Power Automate",
+        "SharePoint",
+        "YAML",
+        "Git",
+        "Office 365",
+        "Adobe Acrobat Pro",
+        "CRM Systems",
+        "DAM Systems",
+        "Quarto",
+        "Beamer"
+      ],
+      "web_digital": [
+        "WebAR (8th Wall)",
+        "Digital Project Management",
+        "eDetailing",
+        "CTV/OTT Strategy",
+        "Interactive Advertising",
+        "Website Crawling"
+      ],
+      "creative_frameworks": [
+        "AIDA",
+        "PAS",
+        "FOMO",
+        "SCAMPER",
+        "FAB",
+        "StoryBrand"
+      ]
+    },
+    "marketing_specialized": [
+      "HCP Customer Journey Mapping",
+      "Congress Strategy (ASCO)",
+      "CRM Optimization",
+      "Segmentation & Targeting",
+      "Campaign Launch & Execution",
+      "Convention Management",
+      "Competitive Intelligence",
+      "Partnership Strategy",
+      "Influencer Evaluation"
+    ],
+    "leadership": [
+      "Team Management",
+      "Cross-functional Collaboration",
+      "Change Management",
+      "Innovation Culture",
+      "Stakeholder Management",
+      "Training & Development",
+      "Process Optimization",
+      "Strategic Planning"
+    ],
+    "methodologies": [
+      "Agile",
+      "Waterfall",
+      "Omnichannel Planning",
+      "AI-Assisted Development",
+      "Knowledge Management",
+      "Workflow Optimization",
+      "Documentation Architecture"
+    ]
+  },
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Native"
+    },
+    {
+      "language": "French",
+      "proficiency": "Intermediate/Advanced"
+    },
+    {
+      "language": "Italian",
+      "proficiency": "Beginner"
+    }
+  ],
+  "professional_interests": [
+    "Data management and analysis",
+    "Systems design and optimization",
+    "Growing and guiding talent",
+    "Organizational behavior",
+    "Project management (agile vs waterfall)",
+    "Knowledge management",
+    "Targeting and segmentation",
+    "Learning and application of Python and SQL",
+    "AI/ML innovation and enterprise enablement"
+  ],
+  "certifications": [],
+  "publications": [],
+  "speaking": [],
+  "awards": [],
+  "projects": [
+    {
+      "name": "Custom GPT Suite for Oncology Marketing",
+      "description": "Led creation, testing, and deployment of multiple custom GPTs for Biolumina and oncology-focused brands using JSON knowledge bases, structured prompt engineering, and API integrations",
+      "role": "Technical Lead & Strategist",
+      "technologies": ["GPT-4", "JSON", "OpenFDA API", "DailyMed SPL", "RxNorm"],
+      "outcomes": [
+        "Improved agency AI capabilities",
+        "Enabled oncology-specific HCP customer journey analysis",
+        "Created reusable AI framework for client brands"
+      ]
+    },
+    {
+      "name": "Byte by Bite - AI Education Series",
+      "description": "Built a multi-chapter ChatGPT orientation video series to improve AI literacy across the agency",
+      "role": "Creator & Educator",
+      "technologies": ["Video Production", "ChatGPT", "Educational Content"],
+      "outcomes": [
+        "Agency-wide AI adoption",
+        "Improved AI understanding and security awareness"
+      ]
+    },
+    {
+      "name": "GA4 Analytics Pipeline with DuckDB",
+      "description": "Guided the end-to-end design of a reusable DuckDB pipeline replacing one-off Excel scripts for multi-brand analytics",
+      "role": "Analytics Architect",
+      "technologies": ["Python", "DuckDB", "pandas", "YAML", "Power Query"],
+      "outcomes": [
+        "Automated analytics reporting",
+        "Standardized multi-brand data processing",
+        "Improved data accuracy and consistency"
+      ]
+    },
+    {
+      "name": "LIPITOR EMR-Based Competitive Messaging",
+      "description": "Pioneered EMR-based competitive blunting triggered messaging capability with AllScripts - first of its kind for Pfizer and the industry",
+      "role": "Innovation Lead",
+      "technologies": ["AllScripts EMR", "Digital Messaging", "Competitive Intelligence"],
+      "outcomes": [
+        "Industry-first implementation",
+        "Real-time competitive response capability",
+        "New standard for pharma digital marketing"
+      ]
+    },
+    {
+      "name": "Pharmetheus GPT Assistant",
+      "description": "Custom GPT assistant integrating with BrandBuilder SQL database containing 15+ years of pharmaceutical brand strategy insights, democratizing institutional knowledge access for brand planners",
+      "role": "Architect & Developer",
+      "period": "2024-Present",
+      "technologies": ["OpenAI GPT-4", "SQL", "Custom Prompt Engineering", "Knowledge Base Architecture"],
+      "outcomes": [
+        "First internal AI tool for brand strategy at Biolumina",
+        "Reduced historical insight retrieval time from hours to seconds",
+        "Democratized access to 15+ years of institutional brand planning knowledge"
+      ],
+      "keywords": ["AI/ML", "Digital Transformation", "Innovation", "Brand Strategy", "Knowledge Management"]
+    },
+    {
+      "name": "ASCO 2025 Congress Reporting Framework",
+      "description": "Standardized 4-pillar reporting structure for medical congress coverage across multiple oncology brands, creating consistent therapeutic area overview, clinical trial analysis, competitive intelligence, and strategic implications sections",
+      "role": "Lead Designer",
+      "period": "2024",
+      "technologies": ["Quarto", "Beamer", "Markdown Workflow", "Templated Report Generation"],
+      "outcomes": [
+        "Consistent reporting across 6 client oncology brands",
+        "Reduced report preparation time by 40% through standardization",
+        "Enhanced strategic value of congress insights for commercial teams"
+      ],
+      "keywords": ["Oncology", "Medical Communications", "Process Optimization", "Operational Excellence"]
+    },
+    {
+      "name": "CX Ecosystem Sunburst Visualizer",
+      "description": "Interactive Streamlit application visualizing complex customer experience ecosystem relationships using hierarchical sunburst charts with dynamic filtering and drill-down capabilities",
+      "role": "Developer",
+      "period": "2024",
+      "technologies": ["Python", "Streamlit", "Plotly", "Sunburst Visualizations", "Advanced State Management"],
+      "outcomes": [
+        "Transformed dense relationship data into intuitive visual navigation",
+        "Adopted by team for CX strategy stakeholder presentations",
+        "Reduced stakeholder confusion about ecosystem complexity"
+      ],
+      "keywords": ["Data Visualization", "Customer Experience", "Stakeholder Communication", "Python"]
+    },
+    {
+      "name": "WebReportingHub Multi-Brand Analytics Platform",
+      "description": "Centralized analytics platform for 9 oncology brand websites using DuckDB for efficient querying of Google Analytics data, providing unified reporting and cross-brand performance benchmarking",
+      "role": "Architect & Lead Developer",
+      "period": "2023-2024",
+      "technologies": ["DuckDB", "Python", "Google Analytics API", "Streamlit", "Data Pipelines"],
+      "outcomes": [
+        "Unified reporting across $2M client portfolio (9 oncology brands)",
+        "Reduced analytics report generation time by 60%",
+        "Enabled self-service analytics for account teams",
+        "Cross-brand performance benchmarking capabilities"
+      ],
+      "keywords": ["Marketing Analytics", "Oncology", "Data Engineering", "Automation", "Commercial Analytics"]
+    },
+    {
+      "name": "Promo Fingerprint Visualizer",
+      "description": "Compliance analytics tool creating unique 'fingerprints' for pharmaceutical promotional material regulatory review histories, identifying patterns and bottlenecks in MLR review processes",
+      "role": "Developer & Analyst",
+      "period": "2023",
+      "technologies": ["Python", "Data Visualization", "Pattern Recognition", "MLR Data Analysis"],
+      "outcomes": [
+        "Identified compliance bottlenecks across multiple brands",
+        "Contributed to 15% reduction in MLR review cycle time through pattern insights",
+        "Enhanced regulatory team efficiency and visibility"
+      ],
+      "keywords": ["MLR Review", "Regulatory Compliance", "FDA Regulations", "Process Optimization", "Data Analytics"]
+    },
+    {
+      "name": "Curiosity-Driven Innovation Initiative",
+      "description": "Internal workshop series and sandbox environment encouraging team exploration of emerging technologies (AI, automation, visualization) applied to pharmaceutical marketing challenges, fostering culture of continuous learning",
+      "role": "Initiative Lead",
+      "period": "2023-2024",
+      "technologies": ["AI Tools", "Automation Platforms", "Data Visualization", "Workshop Facilitation"],
+      "outcomes": [
+        "12 team members participated over 18 months",
+        "Generated 5 client-facing innovations (Pharmetheus, WebReportingHub, others)",
+        "Fostered culture of continuous learning and experimentation",
+        "Positioned team as innovation leaders within agency"
+      ],
+      "keywords": ["Innovation Leadership", "Team Leadership", "Digital Transformation", "Culture Building", "Mentorship"]
+    }
+  ],
+  "keywords": [
+    "pharmaceutical marketing",
+    "oncology marketing",
+    "HCP marketing",
+    "experience planning",
+    "brand management",
+    "AI/ML strategy",
+    "custom GPT development",
+    "Google Analytics",
+    "data analytics",
+    "omnichannel marketing",
+    "digital transformation",
+    "team leadership",
+    "project management",
+    "Python",
+    "data engineering",
+    "CRM optimization",
+    "segmentation",
+    "targeting",
+    "ROI modeling",
+    "IQVIA"
+  ],
+  "pharma_keywords": {
+    "leadership": [
+      "Strategic Planning",
+      "Brand Strategy",
+      "Portfolio Management",
+      "Commercial Strategy",
+      "P&L Management",
+      "Digital Transformation",
+      "Team Leadership",
+      "Cross-functional Collaboration"
+    ],
+    "marketing": [
+      "HCP (Healthcare Professional) Marketing",
+      "DTC (Direct-to-Consumer) Marketing",
+      "KOL (Key Opinion Leader) Engagement",
+      "Patient Journey Mapping",
+      "Omnichannel Marketing",
+      "Formulary Strategy",
+      "Launch Excellence",
+      "Brand Positioning"
+    ],
+    "regulatory_compliance": [
+      "FDA Regulations",
+      "OPDP Guidelines",
+      "MLR (Medical-Legal-Regulatory) Review",
+      "Fair Balance",
+      "GMP/GCP Compliance",
+      "HIPAA",
+      "Sunshine Act Compliance",
+      "Promotional Review"
+    ],
+    "commercial_analytics": [
+      "Veeva CRM",
+      "IQVIA Data",
+      "Symphony Health",
+      "Market Access",
+      "HEOR Integration",
+      "Marketing Mix Modeling",
+      "Sales Force Effectiveness",
+      "ROI Modeling"
+    ],
+    "therapeutic_areas_keywords": [
+      "Oncology",
+      "Immunology",
+      "HIV/AIDS",
+      "Cardiovascular",
+      "Neurology",
+      "Rare Disease",
+      "Respiratory",
+      "Metabolic Disorders"
+    ],
+    "digital_platforms": [
+      "eDetailing",
+      "Closed-Loop Marketing (CLM)",
+      "Multichannel Marketing",
+      "CRM Programming",
+      "Marketing Automation",
+      "Digital Asset Management (DAM)"
+    ]
+  },
+  "therapeutic_areas": [
+    {
+      "area": "Oncology",
+      "years_experience": 4,
+      "start_year": 2021,
+      "brands": ["Multiple oncology brands across 6 clients"],
+      "expertise_level": "Expert",
+      "audiences": ["HCP", "Patient/Caregiver"],
+      "key_achievements": [
+        "Led XP for 9 oncology accounts across 6 clients",
+        "Built GPT specializing in oncology HCP customer journeys",
+        "Designed omnichannel, segmentation, CTV/OTT, and congress frameworks for oncology brands"
+      ]
+    },
+    {
+      "area": "HIV/AIDS",
+      "years_experience": 1,
+      "start_year": 2020,
+      "brands": ["Leading HIV treatment"],
+      "expertise_level": "Proficient",
+      "audiences": ["HCP"],
+      "key_achievements": [
+        "Led multiple tactics comprising new mini-campaign launch for leading HIV treatment"
+      ]
+    },
+    {
+      "area": "Cardiovascular",
+      "years_experience": 4,
+      "start_year": 2008,
+      "brands": ["LIPITOR", "CADUET"],
+      "expertise_level": "Expert",
+      "audiences": ["HCP"],
+      "key_achievements": [
+        "Managed $10M+ LIPITOR/CADUET HCP marketing budget",
+        "Led brand through LOE (Loss of Exclusivity) transition",
+        "Pioneered EMR-based competitive blunting with AllScripts",
+        "Launched first-ever branded podcast for Pfizer"
+      ]
+    },
+    {
+      "area": "Men's Health",
+      "years_experience": 4,
+      "start_year": 2004,
+      "brands": ["VIAGRA"],
+      "expertise_level": "Proficient",
+      "audiences": ["HCP", "DTC"],
+      "key_achievements": [
+        "Supported VIAGRA brand marketing from Administrative Assistant to Associate Marketing Manager",
+        "Managed tactical marketing programs"
+      ]
+    }
+  ],
+  "regulatory_compliance": {
+    "fda_regulations": {
+      "experience": true,
+      "years": "14+",
+      "details": "21 CFR Part 202, OPDP enforcement guidelines, promotional material compliance across print and digital channels"
+    },
+    "mlr_review": {
+      "experience": true,
+      "role": "Review Committee Marketing Captain",
+      "company": "Pfizer",
+      "details": "Led Medical-Legal-Regulatory review process for LIPITOR campaign materials, ensuring compliance with FDA regulations and company policies"
+    },
+    "opdp_guidelines": {
+      "experience": true,
+      "details": "Office of Prescription Drug Promotion guideline compliance for HCP and DTC marketing materials"
+    },
+    "fair_balance": {
+      "experience": true,
+      "details": "Fair balance requirements in promotional materials across print, digital, and multichannel campaigns"
+    },
+    "sunshine_act": {
+      "experience": true,
+      "details": "Compliance with Physician Payments Sunshine Act for KOL relationships and HCP engagements"
+    },
+    "promotional_review": {
+      "experience": true,
+      "details": "Expertise in preparing materials for promotional review committees, addressing regulatory feedback, and ensuring compliant messaging"
+    },
+    "cross_functional_collaboration": {
+      "medical_affairs": true,
+      "regulatory": true,
+      "legal": true,
+      "compliance": true,
+      "r_and_d": false,
+      "market_access": true,
+      "commercial_operations": true
+    }
+  },
+  "resume_versions": {
+    "ats_optimized": {
+      "purpose": "Online job portals, company career sites",
+      "format": "docx",
+      "file_naming": "MarkSchulz_Resume_ATS.docx",
+      "rules": {
+        "layout": "single_column",
+        "fonts": ["Calibri", "Arial", "Georgia"],
+        "font_size_range": "10-12pt",
+        "avoid": ["tables", "text_boxes", "graphics", "columns", "headers_footers_with_contact"],
+        "emphasis_allowed": ["bold", "italics"],
+        "section_headers": "standard",
+        "bullet_points": "standard_round_bullets",
+        "margins": "1_inch_minimum"
+      },
+      "length": "2-3 pages",
+      "priority": "ATS parsing and keyword matching",
+      "keyword_density": "natural_every_3-6_sentences"
+    },
+    "formatted_professional": {
+      "purpose": "Direct recruiter contact, networking, interviews",
+      "format": "pdf",
+      "file_naming": "MarkSchulz_Resume_Professional.pdf",
+      "rules": {
+        "layout": "single_column_with_design",
+        "design_elements": ["bold", "color_headings", "strategic_white_space", "subtle_callout_boxes"],
+        "maintain_ats_readability": true,
+        "color_palette": "professional_blues_grays",
+        "visual_appeal": "executive_level"
+      },
+      "length": "2-3 pages",
+      "priority": "Human impression with ATS compatibility",
+      "export_from": "Word document to PDF"
+    },
+    "linkedin_profile": {
+      "purpose": "Always-on digital presence, recruiter searches",
+      "format": "linkedin",
+      "rules": {
+        "headline": "title_plus_industry_keywords",
+        "about_section": "value_proposition_first_person",
+        "experience": "achievement_focused_bullets",
+        "activity": "thought_leadership_posts",
+        "consistency": "match_resume_dates_and_facts",
+        "profile_photo": "professional_executive_headshot"
+      },
+      "priority": "Searchability and executive presence",
+      "recruiter_focus": "78% C-suite recruiters influenced by visual design"
+    }
+  },
+  "metrics_bank": {
+    "budgets_managed": [
+      {
+        "amount": "$10M+",
+        "context": "LIPITOR/CADUET US HCP marketing budget",
+        "company": "Pfizer",
+        "years": "2008-2012"
+      },
+      {
+        "amount": "$30M+",
+        "context": "Strategic pharmaceutical deals annually",
+        "company": "WebMD/Medscape",
+        "years": "2018-2019"
+      },
+      {
+        "amount": "$1M+",
+        "context": "SOWs drafted and approved (5 per year)",
+        "company": "Patients & Purpose",
+        "years": "2015-2016"
+      }
+    ],
+    "team_sizes_supervised": [
+      {
+        "size": 4,
+        "roles": "2 Sr PMs, 1 PM, 1 Assoc PM, 1 BC",
+        "title": "VP, Project Management, Group Supervisor",
+        "company": "Patients & Purpose",
+        "years": "2015-2016"
+      },
+      {
+        "size": 4,
+        "roles": "3 Assoc. Directors, 1 Analyst",
+        "title": "Team Leader, Sr. Dir., Commercial Clinical Strategy",
+        "company": "WebMD/Medscape",
+        "years": "2018-2019"
+      }
+    ],
+    "accounts_brands": [
+      {
+        "count": 9,
+        "type": "oncology accounts",
+        "context": "across 6 clients, spanning HCP and Patient/Caregiver audiences",
+        "company": "Biolumina",
+        "years": "2021-present"
+      },
+      {
+        "count": 30,
+        "type": "strategic deals",
+        "context": "per year, totaling $30M+ in sales",
+        "company": "WebMD/Medscape",
+        "years": "2018-2019"
+      },
+      {
+        "count": 6,
+        "type": "oncology brands",
+        "context": "ASCO 2025 reporting framework standardization",
+        "company": "Biolumina",
+        "years": "2024"
+      }
+    ],
+    "innovations_firsts": [
+      {
+        "achievement": "First-ever branded podcast for Pfizer",
+        "company": "Pfizer",
+        "year": "2008-2012",
+        "impact": "Industry innovation"
+      },
+      {
+        "achievement": "EMR-based competitive blunting triggered messaging with AllScripts",
+        "company": "Pfizer",
+        "year": "2008-2012",
+        "impact": "First of its kind for Pfizer and the industry"
+      },
+      {
+        "achievement": "First internal AI tool for brand planning",
+        "tool": "Pharmetheus GPT",
+        "company": "Biolumina",
+        "year": "2024",
+        "impact": "Democratized 15+ years of brand strategy insights"
+      },
+      {
+        "achievement": "5 client-facing innovations generated",
+        "context": "Curiosity-Driven Innovation Initiative",
+        "participants": 12,
+        "period": "18 months",
+        "company": "Biolumina",
+        "year": "2023-2024"
+      }
+    ],
+    "improvements": [
+      {
+        "metric": "analytics reporting time",
+        "change": "-60%",
+        "context": "WebReportingHub platform for 9-brand portfolio",
+        "company": "Biolumina",
+        "year": "2023-2024"
+      },
+      {
+        "metric": "congress report prep time",
+        "change": "-40%",
+        "context": "ASCO 2025 framework standardization",
+        "company": "Biolumina",
+        "year": "2024"
+      },
+      {
+        "metric": "MLR review cycle time",
+        "change": "-15%",
+        "context": "Promo Fingerprint Visualizer insights",
+        "company": "Biolumina",
+        "year": "2023"
+      }
+    ],
+    "years_experience": {
+      "total": 26,
+      "pharma_industry": 26,
+      "leadership_roles": 15,
+      "digital_marketing": 20
+    }
+  },
+  "ats_metadata": {
+    "contact_info_placement": "top_of_page_body_not_header",
+    "date_format": "MM/YYYY",
+    "url_display": "full_text_plus_hyperlink",
+    "safe_formatting": {
+      "allowed": ["bold", "italics", "standard_bullets", "color_in_headings", "single_column"],
+      "avoid": ["tables", "multi_columns", "text_boxes", "graphics", "logos", "unusual_bullets", "headers_footers_with_content"]
+    },
+    "section_headers_standard": [
+      "Professional Experience",
+      "Education",
+      "Skills",
+      "Core Competencies",
+      "Certifications"
+    ],
+    "section_headers_alternative": [
+      "Career Highlights",
+      "Work History",
+      "Professional Summary",
+      "Expertise"
+    ],
+    "keyword_optimization": {
+      "strategy": "natural_language_with_context",
+      "include_both": "acronyms_and_full_terms",
+      "example": "HCP (Healthcare Professional) Marketing",
+      "frequency": "every_3-6_sentences",
+      "avoid": "keyword_stuffing"
+    },
+    "file_specifications": {
+      "max_size": "2MB",
+      "min_words": 30,
+      "preferred_ats_format": "docx",
+      "alternative_format": "text_based_pdf",
+      "test": "can_select_and_copy_text"
+    }
+  },
+  "executive_search": {
+    "tier_1_global_firms": [
+      {
+        "name": "Spencer Stuart",
+        "specialty": "C-suite and senior VP pharmaceutical searches",
+        "contact": "",
+        "status": "research"
+      },
+      {
+        "name": "Russell Reynolds Associates",
+        "specialty": "Executive search with pharma practice",
+        "contact": "",
+        "status": "research"
+      },
+      {
+        "name": "Heidrick & Struggles",
+        "specialty": "Pharmaceutical and life sciences executive search",
+        "contact": "",
+        "status": "research"
+      },
+      {
+        "name": "Egon Zehnder",
+        "specialty": "Senior leadership assessment and search",
+        "contact": "",
+        "status": "research"
+      }
+    ],
+    "pharma_specialist_boutiques": [
+      {
+        "name": "Klein Hersh",
+        "specialty": "CMO and VP Marketing in life sciences (25+ years)",
+        "contact": "",
+        "status": "research"
+      },
+      {
+        "name": "Kaye/Bassman",
+        "specialty": "Pharmaceutical/biotech recruiting (40+ years)",
+        "contact": "",
+        "status": "research"
+      },
+      {
+        "name": "Smith Hanley Associates",
+        "specialty": "BioPharma commercial sales and marketing",
+        "contact": "",
+        "status": "research"
+      },
+      {
+        "name": "JRG Partners",
+        "specialty": "Pharmaceutical executive placement (VP, Director, C-suite)",
+        "contact": "",
+        "status": "research"
+      }
+    ],
+    "networking_conferences": [
+      "DTC National",
+      "Eyeforpharma",
+      "DIA (Drug Information Association)"
+    ]
+  }
+}
