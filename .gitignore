@@ -16,3 +16,17 @@ Gemfile.lock
 
 # Resume data backups
 data/resume_backup_*.json
+
+# Raw input files (old resumes, performance reviews, etc.)
+data/raw_inputs/
+
+# Processed files tracking (contains filenames and metadata)
+data/processed_files.json
+
+# Assessment files (personality tests, etc.)
+data/assessments/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

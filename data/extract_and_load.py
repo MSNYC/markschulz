@@ -30,15 +30,79 @@ try:
 except ImportError:
     DocxDocument = None
 
+try:
+    from pdf2image import convert_from_path
+except ImportError:
+    convert_from_path = None
+
+import base64
+
 
 def read_text_file(filepath):
-    """Read plain text file"""
-    with open(filepath, 'r', encoding='utf-8') as f:
+    """Read plain text file with encoding detection"""
+    # Try common encodings in order
+    encodings = ['utf-8', 'latin-1', 'windows-1252', 'iso-8859-1', 'cp1252']
+
+    for encoding in encodings:
+        try:
+            with open(filepath, 'r', encoding=encoding) as f:
+                content = f.read()
+                print(f"  ✅ Read text file with {encoding} encoding")
+                return content
+        except (UnicodeDecodeError, LookupError):
+            continue
+
+    # If all encodings fail, read as binary and decode with 'replace'
+    print("  ⚠️  Warning: Using fallback encoding with error replacement")
+    with open(filepath, 'r', encoding='utf-8', errors='replace') as f:
         return f.read()
 
 
+def is_image_based_pdf(filepath):
+    """Check if PDF is image-based (little to no extractable text)"""
+    if not PyPDF2:
+        return False
+
+    try:
+        with open(filepath, 'rb') as f:
+            pdf_reader = PyPDF2.PdfReader(f)
+            # Check first 3 pages (or all if fewer)
+            pages_to_check = min(3, len(pdf_reader.pages))
+            total_text_length = 0
+
+            for i in range(pages_to_check):
+                text = pdf_reader.pages[i].extract_text()
+                total_text_length += len(text.strip())
+
+            # If average chars per page is < 100, likely image-based
+            avg_chars = total_text_length / pages_to_check if pages_to_check > 0 else 0
+            return avg_chars < 100
+    except Exception as e:
+        print(f"⚠️  Warning: Could not analyze PDF, treating as image-based: {e}")
+        return True
+
+
+def convert_pdf_to_images(filepath):
+    """Convert PDF to list of PIL images"""
+    if not convert_from_path:
+        raise ImportError("pdf2image not installed. Run: pip install pdf2image")
+
+    print(f"🖼️  Converting PDF to images (this may take a moment)...")
+    images = convert_from_path(filepath, dpi=150)  # 150 DPI is good for text recognition
+    print(f"✅ Converted {len(images)} pages to images")
+    return images
+
+
+def encode_image_to_base64(image):
+    """Encode PIL image to base64 string"""
+    from io import BytesIO
+    buffered = BytesIO()
+    image.save(buffered, format="PNG")
+    return base64.b64encode(buffered.getvalue()).decode('utf-8')
+
+
 def read_pdf_file(filepath):
-    """Read PDF file"""
+    """Read PDF file - returns either text (for text PDFs) or 'IMAGE_PDF' marker (for image PDFs)"""
     if not PyPDF2:
         raise ImportError("PyPDF2 not installed. Run: pip install PyPDF2")
 
@@ -47,7 +111,54 @@ def read_pdf_file(filepath):
         pdf_reader = PyPDF2.PdfReader(f)
         for page in pdf_reader.pages:
             text.append(page.extract_text())
-    return '\n\n'.join(text)
+
+    extracted_text = '\n\n'.join(text)
+
+    # Check if this appears to be an image-based PDF
+    if len(extracted_text.strip()) < 100:
+        print("⚠️  Warning: Very little text extracted from PDF - treating as image-based PDF")
+        return 'IMAGE_PDF'
+
+    return extracted_text
+
+
+def read_doc_file_legacy(filepath):
+    """Read legacy .doc file using antiword or textract"""
+    import subprocess
+
+    # Try antiword first (fast, lightweight)
+    try:
+        result = subprocess.run(
+            ['antiword', str(filepath)],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        if result.returncode == 0:
+            print("  ✅ Read .doc file using antiword")
+            return result.stdout
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        pass
+
+    # Try textract as fallback
+    try:
+        import textract
+        text = textract.process(str(filepath)).decode('utf-8')
+        print("  ✅ Read .doc file using textract")
+        return text
+    except ImportError:
+        pass
+    except Exception as e:
+        print(f"  ⚠️  textract failed: {e}")
+
+    # Last resort: suggest conversion
+    raise ValueError(
+        f"Cannot read legacy .doc file: {filepath.name}\n"
+        f"Solutions:\n"
+        f"  1. Convert to .docx: Open in Word and Save As -> .docx format\n"
+        f"  2. Install antiword: brew install antiword (Mac) or apt-get install antiword (Linux)\n"
+        f"  3. Install textract: pip install textract"
+    )
 
 
 def read_docx_file(filepath):
@@ -72,8 +183,11 @@ def read_document(filepath):
         return read_text_file(filepath)
     elif suffix == '.pdf':
         return read_pdf_file(filepath)
-    elif suffix in ['.docx', '.doc']:
+    elif suffix == '.docx':
         return read_docx_file(filepath)
+    elif suffix == '.doc':
+        # Legacy Word format - needs special handling
+        return read_doc_file_legacy(filepath)
     else:
         raise ValueError(f"Unsupported file type: {suffix}")
 
@@ -163,25 +277,86 @@ Extract achievements now. Return ONLY the JSON, nothing else.
     return prompt
 
 
-def extract_with_claude(api_key, document_text, position_info, schema):
-    """Use Claude API to extract achievements"""
+def extract_with_claude(api_key, document_text, position_info, schema, source_filepath=None):
+    """Use Claude API to extract achievements
+
+    Args:
+        api_key: Anthropic API key
+        document_text: Extracted text (or 'IMAGE_PDF' marker for image-based PDFs)
+        position_info: Position metadata dict
+        schema: Extraction schema
+        source_filepath: Original file path (needed for image-based PDFs)
+    """
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    prompt = build_extraction_prompt(document_text, position_info, schema)
+    # Check if we need to use vision for image-based PDF
+    use_vision = document_text == 'IMAGE_PDF'
 
-    print("🤖 Sending to Claude API for extraction...")
+    if use_vision:
+        if not source_filepath:
+            raise ValueError("source_filepath required for image-based PDFs")
 
-    response = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=4096,
-        messages=[
+        print("🤖 Using Claude Vision for image-based PDF extraction...")
+
+        # Convert PDF to images
+        images = convert_pdf_to_images(source_filepath)
+
+        # Build prompt for vision
+        prompt_text = build_extraction_prompt("", position_info, schema)
+        # Remove the SOURCE DOCUMENT section since we're sending images
+        prompt_text = prompt_text.split("SOURCE DOCUMENT:")[0].strip()
+
+        # Build message content with images
+        content_blocks = [
             {
-                "role": "user",
-                "content": prompt
+                "type": "text",
+                "text": prompt_text + "\n\nSOURCE DOCUMENT:\nI will provide the document as images of each page. Please extract achievements from all pages.\n"
             }
         ]
-    )
+
+        # Add each page as an image block
+        for i, image in enumerate(images):
+            print(f"  📄 Encoding page {i+1}/{len(images)}...")
+            image_base64 = encode_image_to_base64(image)
+            content_blocks.append({
+                "type": "image",
+                "source": {
+                    "type": "base64",
+                    "media_type": "image/png",
+                    "data": image_base64
+                }
+            })
+
+        print(f"🤖 Sending {len(images)} pages to Claude Vision API...")
+
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=4096,
+            messages=[
+                {
+                    "role": "user",
+                    "content": content_blocks
+                }
+            ]
+        )
+
+    else:
+        # Text-based extraction (original method)
+        prompt = build_extraction_prompt(document_text, position_info, schema)
+
+        print("🤖 Sending to Claude API for extraction...")
+
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=4096,
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ]
+        )
 
     # Extract text from response
     response_text = response.content[0].text.strip()
@@ -364,7 +539,13 @@ def main():
 
     # Extract with Claude
     try:
-        extracted_data = extract_with_claude(api_key, document_text, position_info, schema)
+        extracted_data = extract_with_claude(
+            api_key,
+            document_text,
+            position_info,
+            schema,
+            source_filepath=source_file
+        )
         print("✅ Claude extraction complete\n")
     except Exception as e:
         print(f"❌ Extraction failed: {e}")

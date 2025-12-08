@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test JSON Fetch</title>
+</head>
+<body>
+    <h1>Testing JSON Fetch</h1>
+    <div id="result"></div>
+
+    <script>
+        async function testFetch() {
+            const resultDiv = document.getElementById('result');
+
+            try {
+                console.log('Fetching resume.json...');
+                const response1 = await fetch('/assets/data/resume.json');
+                console.log('Response 1:', response1.status, response1.statusText);
+                resultDiv.innerHTML += `<p>resume.json: ${response1.status} ${response1.statusText}</p>`;
+
+                if (response1.ok) {
+                    const data1 = await response1.json();
+                    console.log('Parsed resume.json successfully');
+                    resultDiv.innerHTML += `<p>✅ resume.json loaded and parsed!</p>`;
+                }
+
+                console.log('Fetching resume_profiles.json...');
+                const response2 = await fetch('/assets/data/resume_profiles.json');
+                console.log('Response 2:', response2.status, response2.statusText);
+                resultDiv.innerHTML += `<p>resume_profiles.json: ${response2.status} ${response2.statusText}</p>`;
+
+                if (response2.ok) {
+                    const data2 = await response2.json();
+                    console.log('Parsed resume_profiles.json successfully');
+                    resultDiv.innerHTML += `<p>✅ resume_profiles.json loaded and parsed!</p>`;
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML += `<p style="color: red;">❌ Error: ${error.message}</p>`;
+            }
+        }
+
+        testFetch();
+    </script>
+</body>
+</html>
