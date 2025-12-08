@@ -115,17 +115,77 @@ From this databank, you can generate:
 - **[achievement_extraction_schema.json](achievement_extraction_schema.json)** - JSON schema
 
 ### Tools
-- ✅ **`extract_and_load.py`** - AI-powered extraction from PDF/DOCX/TXT
+- ✅ **`batch_process.py`** - 🌟 **NEW!** Automated batch processor - just drop files in `raw_inputs/` and run!
+- ✅ **`extract_and_load.py`** - AI-powered extraction from PDF/DOCX/TXT (supports image-based PDFs!)
 - ✅ **`verify_achievements.py`** - Coverage analysis and gap identification
 - ✅ **`load_achievements.py`** - Manual JSON loader
 
-### Example Usage
+### Quick Start: Batch Processing (Recommended!)
+
+**NEW: Automated batch processing!** Just drop all your files in `raw_inputs/` and run:
+
+```bash
+# 1. Put your PDFs, DOCs, TXT files in raw_inputs/
+ls data/raw_inputs/
+
+# 2. Run the batch processor
+python3 data/batch_process.py
+
+# That's it! Claude will:
+# - Identify which position each document belongs to
+# - Extract achievements automatically
+# - Update resume.json
+# - Handle image PDFs with vision
+```
+
+See **[BATCH_PROCESSING.md](BATCH_PROCESSING.md)** for detailed guide.
+
+### Manual Processing (for specific files)
+
 ```bash
 python extract_and_load.py ~/Documents/old_resume_2019.pdf \
   --company "WebMD/Medscape" \
   --title "Team Leader, Sr. Dir., Commercial Clinical Strategy" \
   --start-date 2018-01 --end-date 2019-12 --exp-id exp_003
 ```
+
+### 🖼️ Image-Based PDF Support
+
+The extraction tool now automatically handles **scanned PDFs** and **image-based PDFs** (where text is not selectable) using Claude's vision capabilities!
+
+**How it works:**
+1. The tool first attempts to extract text using PyPDF2
+2. If little/no text is extracted (< 100 characters), it automatically switches to vision mode
+3. PDF pages are converted to images using `pdf2image`
+4. Images are sent to Claude API with vision for text extraction and analysis
+5. Same extraction quality and schema as text-based PDFs
+
+**System Requirements:**
+```bash
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Install poppler (required by pdf2image)
+# macOS:
+brew install poppler
+
+# Ubuntu/Debian:
+sudo apt-get install poppler-utils
+
+# Windows:
+# Download from https://github.com/oschwartz10612/poppler-windows/releases/
+```
+
+**Usage:**
+No changes needed! Just run the same command with image-based PDFs:
+```bash
+python extract_and_load.py scanned_performance_review.pdf \
+  --company "Company Name" \
+  --title "Your Title" \
+  --start-date 2020-01 --exp-id exp_001
+```
+
+The tool will automatically detect and handle image-based PDFs.
 
 ## Future Enhancements
 

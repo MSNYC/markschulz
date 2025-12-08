@@ -16,8 +16,8 @@
   async function loadData() {
     try {
       const [resumeResponse, profilesResponse] = await Promise.all([
-        fetch('/data/resume.json'),
-        fetch('/data/resume_profiles.json')
+        fetch('/assets/data/resume.json'),
+        fetch('/assets/data/resume_profiles.json')
       ]);
 
       if (!resumeResponse.ok || !profilesResponse.ok) {

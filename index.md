@@ -6,6 +6,12 @@ title: Mark Schulz - Pharmaceutical Marketing Leader
 <link rel="stylesheet" href="{{ '/assets/css/resume-builder.css' | relative_url }}">
 
 <style>
+
+/* ===== CENTER THE TITLE ===== */
+.home h1 {
+  text-align: center;
+}
+
 /* ===== HIDE DEFAULT THEME HEADER ===== */
 .site-header {
   display: none !important;
@@ -512,7 +518,7 @@ html {
 
 <!-- ABOUT ME SECTION -->
 <section id="about">
-  <h2>A Bit About Me (The Human Side)</h2>
+  <h2>About My Approach</h2>
 
   <div class="about-content">
     <p>
@@ -593,8 +599,8 @@ html {
   async function loadData() {
     try {
       const [resumeResponse, profilesResponse] = await Promise.all([
-        fetch('/data/resume.json'),
-        fetch('/data/resume_profiles.json')
+        fetch('/assets/data/resume.json'),
+        fetch('/assets/data/resume_profiles.json')
       ]);
 
       if (!resumeResponse.ok || !profilesResponse.ok) {

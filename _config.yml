@@ -57,6 +57,19 @@ exclude:
   - node_modules
   - vendor/
   - README.md
+  - CLAUDE.md
+  - AGENTS.md
+  # Privacy: Exclude all backend data and scripts from published site
+  - data/
+  - scripts/
+  - docs/
+  - output/
+  - .venv/
+  - .env
+  - .env.example
+  - "*.py"
+  - "*.pyc"
+  - __pycache__/
 
 # RSS Feed Settings (for LinkedIn cross-posting automation)
 feed:
