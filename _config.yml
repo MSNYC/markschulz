@@ -1,6 +1,5 @@
 # Site Settings
 title: Mark Schulz
-email: contact@markschulz.me # Private - do not display publicly
 description: >-
   Pharmaceutical marketing and advertising professional with 20+ years of experience
   spanning Creative Agency, Manufacturer, and Publisher perspectives. Expertise in
@@ -15,7 +14,6 @@ author:
   location: New York, NY
   linkedin: mschulz
   linkedin_url: https://linkedin.com/in/mschulz
-  email: contact@markschulz.me # Private - do not display publicly
 
 # Build Settings
 markdown: kramdown

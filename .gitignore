@@ -30,7 +30,7 @@ output/
 *_backup_*.json
 *BEFORE_DEDUP*
 
-# Workflow documentation
+# Workflow documentation and utility scripts
 ACHIEVEMENT_AUDIT.md
 AUDIT_INSTRUCTIONS.md
 DEDUPLICATION_REPORT.md
@@ -39,6 +39,8 @@ DEDUP_*.txt
 README_DEDUPLICATION.md
 START_HERE.txt
 sync-public-data.sh
+backup-before-cleanup.sh
+cleanup-repo.sh
 
 # Test files
 test-*.html
