@@ -1,10 +1,13 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Resume - Mark Schulz</title>
-  <link rel="stylesheet" href="/assets/css/resume-executive.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/resume-executive.css">
 </head>
 <body>
   <div class="page-controls no-print">
@@ -23,7 +26,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/resume-builder.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/resume-builder.js"></script>
   <script>
   (function() {
     'use strict';
@@ -33,7 +36,7 @@
     const selectedTags = urlParams.get('tags');
 
     if (!selectedTags) {
-      window.location.href = '/#interactive-tool';
+      window.location.href = '{{ site.baseurl }}/#interactive-tool';
       return;
     }
 
@@ -43,8 +46,8 @@
     async function loadAndGenerate() {
       try {
         const [resumeResponse, profilesResponse] = await Promise.all([
-          fetch('/assets/data/resume.json'),
-          fetch('/assets/data/resume_profiles.json')
+          fetch('{{ site.baseurl }}/assets/data/resume.json'),
+          fetch('{{ site.baseurl }}/assets/data/resume_profiles.json')
         ]);
 
         const resumeData = await resumeResponse.json();
