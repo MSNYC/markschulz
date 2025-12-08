@@ -733,7 +733,7 @@
 
 /* Step Description Text */
 .step-description {
-  text-align: center;
+  text-align: left;
   color: var(--builder-text-secondary);
   font-size: 1rem;
   margin-bottom: 2rem;
