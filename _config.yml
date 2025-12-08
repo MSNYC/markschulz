@@ -4,7 +4,7 @@ description: >-
   Pharmaceutical marketing and advertising professional with 20+ years of experience
   spanning Creative Agency, Manufacturer, and Publisher perspectives. Expertise in
   AI/ML integration, brand strategy, and omnichannel engagement.
-baseurl: "/markschulz" # the subpath of your site on GitHub Pages
+baseurl: "" # Empty for custom domain (GitHub Pages serves from root)
 url: "https://markschulz.me" # Production URL (custom domain)
 
 # Author Information
