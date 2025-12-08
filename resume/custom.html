@@ -50,6 +50,40 @@
         const resumeData = await resumeResponse.json();
         const profilesData = await profilesResponse.json();
 
+        // Analyze selected checkboxes from tags
+        const selectedCheckboxes = [];
+        const selectedCategories = {};
+        const customBuilderData = profilesData.custom_builder;
+
+        // Map tags back to checkbox objects
+        if (customBuilderData && customBuilderData.checkbox_categories) {
+          customBuilderData.checkbox_categories.forEach(category => {
+            category.checkboxes.forEach(checkbox => {
+              // Check if any of this checkbox's tags are in the selected tags
+              const hasMatch = checkbox.tags.some(tag => tagsArray.includes(tag));
+              if (hasMatch) {
+                selectedCheckboxes.push({
+                  id: checkbox.id,
+                  label: checkbox.label,
+                  category: category.category,
+                  categoryIcon: category.icon
+                });
+
+                // Count selections per category
+                if (!selectedCategories[category.category]) {
+                  selectedCategories[category.category] = {
+                    count: 0,
+                    icon: category.icon,
+                    checkboxes: []
+                  };
+                }
+                selectedCategories[category.category].count++;
+                selectedCategories[category.category].checkboxes.push(checkbox.label);
+              }
+            });
+          });
+        }
+
         // Create custom profile from selected tags
         const customProfile = {
           id: 'custom',
@@ -61,7 +95,9 @@
           priority_tags: tagsArray,
           focusSkills: [],
           competencies: ['Tailored professional profile based on your selected focus areas'],
-          ideal_for: []
+          ideal_for: [],
+          selectedCheckboxes: selectedCheckboxes,
+          selectedCategories: selectedCategories
         };
 
         // Use ResumeBuilder to filter data

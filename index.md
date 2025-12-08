@@ -565,16 +565,45 @@ html {
   <h2>About My Approach</h2>
 
   <div class="about-content">
+    <h3>Intro</h3>
     <p>
-      Beyond the resume data and professional achievements, I'm someone who genuinely loves the craft of marketing—especially the puzzle of connecting the right message to the right person at the right moment. I get energized by data that tells a story, by AI tools that unlock new possibilities, and by teams that collaborate well.
+      I've been fortunate to work in organizations like Pfizer that take professional development seriously. Through that experience, I've had access to tools such as the Myers-Briggs (ENTJ) and FIRO-B assessments, which offer structured insight into how I think, collaborate, and lead. This section distills those findings into a clear, practical view of my approach to work.
     </p>
 
+    <h3>My Assessment Snapshot</h3>
     <p>
-      I'm also a lifelong learner who believes the best solutions come from understanding multiple perspectives. That's why I've intentionally worked across agency, manufacturer, and publisher roles—each taught me something the others couldn't. And it's why I'm constantly experimenting with new tools (like building this site with Claude Code) to stay ahead of where the industry is heading.
+      As a Myers-Briggs <strong>ENTJ</strong>, I'm wired for strategic thinking, structured problem-solving, and decisive action—traits that shape how I bring order to ambiguity and help teams move forward with clarity and purpose.
+    </p>
+    <p>
+      My FIRO-B profile highlights <strong>Inclusion</strong> as my strongest interpersonal driver. I tend to lead by engaging people, creating alignment, and ensuring teams understand how their work connects to the overarching mission. With lower Control needs and moderate Affection needs, I collaborate by empowering others, emphasizing clarity and fairness, and avoiding unnecessary micromanagement.
+    </p>
+    <p>
+      These results provide a concise, evidence-based understanding of why my professional style is consistently strategic, inclusive, objective, and geared toward building high-performing environments.
     </p>
 
+    <h3>Thinking Strategically, Delivering Clarity</h3>
     <p>
-      When I'm not thinking about pharmaceutical marketing, you'll find me exploring new technologies, diving into data analysis for fun, or figuring out how to automate something that probably doesn't need automating (but should be anyway).
+      I quickly make sense of complex environments and translate insights into actionable direction. I'm energized by big challenges, cross-functional problem-solving, and work that blends analytical rigor with creativity. My focus is always on helping teams move with intention and know exactly where we're headed.
+    </p>
+
+    <h3>Creating Alignment Through Inclusion</h3>
+    <p>
+      Progress accelerates when people feel connected to the mission. I bring teams together early, clarify expectations, and ensure information flows smoothly across functions. I aim to create an environment where people feel informed, valued, and aligned—not just involved.
+    </p>
+
+    <h3>Leading With Objectivity and Fairness</h3>
+    <p>
+      I approach decisions with structure, logic, and a wide-angle view of implications. I value competence, integrity, and transparency, and I hold myself to those same standards. My priority is reducing ambiguity so teams can focus their energy where it matters most.
+    </p>
+
+    <h3>Driving Momentum While Remaining Adaptable</h3>
+    <p>
+      I'm comfortable setting direction and making the tough calls, but equally willing to reassess assumptions and pivot when new information emerges. My leadership is action-oriented, ideas-driven, and aimed at building systems that support sustained performance.
+    </p>
+
+    <h3>Human-Centered, Even When Focused on the Big Picture</h3>
+    <p>
+      While I naturally orient toward logic and efficiency, I'm intentional about how decisions and change affect people. I work to create an environment of openness, recognition, and constructive dialogue—where individuals feel they're part of the journey, not just informed about it.
     </p>
   </div>
 </section>
