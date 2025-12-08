@@ -468,7 +468,8 @@ html {
 
     <!-- Step 2a: Quick Select (Profiles) -->
     <div id="quickSelectPanel" class="profile-selector">
-      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 1.5rem;">Step 2: Select a Profile</h3>
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 2: Select a Profile</h3>
+      <p class="step-description">Click any card below to view that tailored resume</p>
 
       <div class="profile-options">
         <a href="/resume/brand-management/" class="profile-card">
@@ -513,10 +514,6 @@ html {
           </div>
         </a>
       </div>
-
-      <p style="text-align: center; color: var(--builder-text-secondary); margin-top: 1.5rem; font-size: 0.95rem;">
-        Click any card above to view that tailored resume →
-      </p>
     </div>
 
     <!-- Step 2b: Custom Select (Checkboxes) -->
@@ -608,30 +605,42 @@ html {
       These results provide a concise, evidence-based understanding of why my professional style is consistently strategic, inclusive, objective, and geared toward building high-performing environments.
     </p>
 
-    <h3>Thinking Strategically, Delivering Clarity</h3>
-    <p>
-      I quickly make sense of complex environments and translate insights into actionable direction. I'm energized by big challenges, cross-functional problem-solving, and work that blends analytical rigor with creativity. My focus is always on helping teams move with intention and know exactly where we're headed.
-    </p>
+    <div class="approach-cards">
+      <div class="approach-card">
+        <h3>Thinking Strategically, Delivering Clarity</h3>
+        <p>
+          I quickly make sense of complex environments and translate insights into actionable direction. I'm energized by big challenges, cross-functional problem-solving, and work that blends analytical rigor with creativity. My focus is always on helping teams move with intention and know exactly where we're headed.
+        </p>
+      </div>
 
-    <h3>Creating Alignment Through Inclusion</h3>
-    <p>
-      Progress accelerates when people feel connected to the mission. I bring teams together early, clarify expectations, and ensure information flows smoothly across functions. I aim to create an environment where people feel informed, valued, and aligned—not just involved.
-    </p>
+      <div class="approach-card">
+        <h3>Creating Alignment Through Inclusion</h3>
+        <p>
+          Progress accelerates when people feel connected to the mission. I bring teams together early, clarify expectations, and ensure information flows smoothly across functions. I aim to create an environment where people feel informed, valued, and aligned—not just involved.
+        </p>
+      </div>
 
-    <h3>Leading With Objectivity and Fairness</h3>
-    <p>
-      I approach decisions with structure, logic, and a wide-angle view of implications. I value competence, integrity, and transparency, and I hold myself to those same standards. My priority is reducing ambiguity so teams can focus their energy where it matters most.
-    </p>
+      <div class="approach-card">
+        <h3>Leading With Objectivity and Fairness</h3>
+        <p>
+          I approach decisions with structure, logic, and a wide-angle view of implications. I value competence, integrity, and transparency, and I hold myself to those same standards. My priority is reducing ambiguity so teams can focus their energy where it matters most.
+        </p>
+      </div>
 
-    <h3>Driving Momentum While Remaining Adaptable</h3>
-    <p>
-      I'm comfortable setting direction and making the tough calls, but equally willing to reassess assumptions and pivot when new information emerges. My leadership is action-oriented, ideas-driven, and aimed at building systems that support sustained performance.
-    </p>
+      <div class="approach-card">
+        <h3>Driving Momentum While Remaining Adaptable</h3>
+        <p>
+          I'm comfortable setting direction and making the tough calls, but equally willing to reassess assumptions and pivot when new information emerges. My leadership is action-oriented, ideas-driven, and aimed at building systems that support sustained performance.
+        </p>
+      </div>
 
-    <h3>Human-Centered, Even When Focused on the Big Picture</h3>
-    <p>
-      While I naturally orient toward logic and efficiency, I'm intentional about how decisions and change affect people. I work to create an environment of openness, recognition, and constructive dialogue—where individuals feel they're part of the journey, not just informed about it.
-    </p>
+      <div class="approach-card">
+        <h3>Human-Centered, Even When Focused on the Big Picture</h3>
+        <p>
+          While I naturally orient toward logic and efficiency, I'm intentional about how decisions and change affect people. I work to create an environment of openness, recognition, and constructive dialogue—where individuals feel they're part of the journey, not just informed about it.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
