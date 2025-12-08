@@ -36,36 +36,40 @@ class ResumeBuilder {
           for (const item of achievementGroup.items || []) {
             if (typeof item === 'object' && item.text) {
               const score = this.calculateScore(item.tags, priorityTags);
-              scoredAchievements.push({
-                score,
-                text: item.text,
-                tags: item.tags || [],
-                category: achievementGroup.category
-              });
+              // ONLY include achievements that match at least one priority tag
+              if (score > 0) {
+                scoredAchievements.push({
+                  score,
+                  text: item.text,
+                  tags: item.tags || [],
+                  category: achievementGroup.category
+                });
+              }
             }
           }
         }
 
-        // Sort by score (descending)
-        scoredAchievements.sort((a, b) => b.score - a.score);
+        // ONLY include this role if it has matching achievements
+        if (scoredAchievements.length > 0) {
+          // Sort by score (descending)
+          scoredAchievements.sort((a, b) => b.score - a.score);
 
-        // Prefer bullets with tag matches; fallback to top N if none match
-        const topWithTags = scoredAchievements.filter(a => a.score > 0);
-        const chosen = topWithTags.length > 0 ? topWithTags : scoredAchievements;
-        const topBullets = chosen.slice(0, maxBulletsPerRole);
+          // Take top N matching bullets
+          const topBullets = scoredAchievements.slice(0, maxBulletsPerRole);
 
-        filteredExperience.push({
-          company: exp.company,
-          companyParent: exp.company_parent,
-          location: exp.location,
-          title: position.title,
-          startDate: position.start_date,
-          endDate: position.end_date || 'Present',
-          current: position.current,
-          bullets: topBullets,
-          totalBullets: scoredAchievements.length,
-          matchedBullets: topWithTags.length
-        });
+          filteredExperience.push({
+            company: exp.company,
+            companyParent: exp.company_parent,
+            location: exp.location,
+            title: position.title,
+            startDate: position.start_date,
+            endDate: position.end_date || 'Present',
+            current: position.current,
+            bullets: topBullets,
+            totalBullets: scoredAchievements.length,
+            matchedBullets: scoredAchievements.length // All bullets match now
+          });
+        }
       }
     }
 
@@ -80,6 +84,16 @@ class ResumeBuilder {
    */
   getTopAchievements(priorityTags, maxHighlights = 5) {
     const allScoredAchievements = [];
+    const seenTexts = new Set(); // Track achievement texts to avoid exact duplicates
+
+    // Helper function to check if two texts are similar (near-duplicates)
+    const isSimilar = (text1, text2, threshold = 0.7) => {
+      const words1 = new Set(text1.toLowerCase().split(/\s+/));
+      const words2 = new Set(text2.toLowerCase().split(/\s+/));
+      const intersection = new Set([...words1].filter(w => words2.has(w)));
+      const union = new Set([...words1, ...words2]);
+      return intersection.size / union.size >= threshold;
+    };
 
     // Collect and score ALL achievements across all positions
     for (const exp of this.resumeData.experience) {
@@ -87,16 +101,76 @@ class ResumeBuilder {
         for (const achievementGroup of position.achievements || []) {
           for (const item of achievementGroup.items || []) {
             if (typeof item === 'object' && item.text) {
-              const score = this.calculateScore(item.tags, priorityTags);
-              if (score > 0) { // Only include achievements with tag matches
-                allScoredAchievements.push({
-                  score,
-                  text: item.text,
-                  tags: item.tags || [],
-                  category: achievementGroup.category,
-                  company: exp.company,
-                  title: position.title
-                });
+              let score = this.calculateScore(item.tags, priorityTags);
+              const normalizedText = item.text.toLowerCase().trim();
+
+              // BOOST SCORE for brand-specific achievements
+              // When filtering by therapeutic area or audience, achievements mentioning specific brands should rank higher
+              const oncologyBrands = ['tagrisso', 'kisqali', 'brukinsa', 'imfinzi'];
+              const cardioBrands = ['lipitor', 'caduet'];
+              const hivRareBrands = ['biktarvy', 'descovy', 'truvada', 'banzel'];
+              const patientBrands = ['tagrisso', 'banzel', 'lucentis', 'tecfidera', 'lyrica'];
+              const hcpBrands = ['kisqali', 'brukinsa', 'lipitor', 'caduet', 'viagra'];
+              const mensHealthBrands = ['viagra'];
+
+              // Check which tags are in priority
+              const hasOncologyTag = priorityTags.includes('oncology');
+              const hasCardioTag = priorityTags.includes('cardio') || priorityTags.includes('cardiovascular');
+              const hasHivTag = priorityTags.includes('hiv') || priorityTags.includes('rare_disease') || priorityTags.includes('mens_health');
+              const hasPatientTag = priorityTags.includes('patient');
+              const hasHcpTag = priorityTags.includes('hcp');
+
+              // Check which brands are mentioned
+              const mentionsOncologyBrand = oncologyBrands.some(brand => normalizedText.includes(brand));
+              const mentionsCardioBrand = cardioBrands.some(brand => normalizedText.includes(brand));
+              const mentionsHivRareBrand = hivRareBrands.some(brand => normalizedText.includes(brand)) || normalizedText.includes('hiv') || normalizedText.includes('gilead');
+              const mentionsPatientBrand = patientBrands.some(brand => normalizedText.includes(brand));
+              const mentionsHcpBrand = hcpBrands.some(brand => normalizedText.includes(brand));
+              const mentionsMensHealthBrand = mensHealthBrands.some(brand => normalizedText.includes(brand));
+
+              // Apply boosts based on matches
+              if (hasOncologyTag && mentionsOncologyBrand) {
+                score += 3; // Strong boost for oncology brands when filtering by oncology
+              }
+
+              if (hasCardioTag && mentionsCardioBrand) {
+                score += 3; // Strong boost for cardio brands when filtering by cardio
+              }
+
+              if (hasHivTag && (mentionsHivRareBrand || mentionsMensHealthBrand)) {
+                score += 3; // Strong boost for HIV/rare disease brands
+              }
+
+              if (hasPatientTag && mentionsPatientBrand) {
+                score += 2; // Boost patient brand-specific achievements
+              }
+
+              if (hasHcpTag && mentionsHcpBrand) {
+                score += 2; // Boost HCP brand-specific achievements
+              }
+
+              // Only include achievements with tag matches AND not already seen (exact or similar)
+              if (score > 0 && !seenTexts.has(normalizedText)) {
+                // Check if this achievement is similar to any already added
+                let isDuplicate = false;
+                for (const seen of seenTexts) {
+                  if (isSimilar(normalizedText, seen)) {
+                    isDuplicate = true;
+                    break;
+                  }
+                }
+
+                if (!isDuplicate) {
+                  seenTexts.add(normalizedText);
+                  allScoredAchievements.push({
+                    score,
+                    text: item.text,
+                    tags: item.tags || [],
+                    category: achievementGroup.category,
+                    company: exp.company,
+                    title: position.title
+                  });
+                }
               }
             }
           }
@@ -163,12 +237,26 @@ class ResumeBuilder {
     } else if (hasLeadership) {
       parts.push('Marketing Leadership Professional');
     } else {
-      // Fallback: use top 2-3 checkbox labels
-      const topLabels = selectedCheckboxes.slice(0, 2).map(cb => cb.label);
+      // Fallback: use top 2-3 checkbox labels (excluding therapeutic if already added)
+      const remainingCheckboxes = therapeutic
+        ? selectedCheckboxes.filter(cb => cb.id !== therapeutic.id)
+        : selectedCheckboxes;
+      const topLabels = remainingCheckboxes.slice(0, 2).map(cb => cb.label);
       parts.push(...topLabels, 'Specialist');
     }
 
-    return parts.join(' ');
+    // Remove any duplicate words
+    const uniqueParts = [];
+    const seen = new Set();
+    for (const part of parts) {
+      const words = part.split(' ');
+      if (!words.some(word => seen.has(word.toLowerCase()))) {
+        uniqueParts.push(part);
+        words.forEach(word => seen.add(word.toLowerCase()));
+      }
+    }
+
+    return uniqueParts.join(' ');
   }
 
   /**

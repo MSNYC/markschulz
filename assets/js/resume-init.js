@@ -54,6 +54,8 @@
     // Initialize checkbox UI if custom builder is enabled
     if (customBuilderData && customBuilderData.enabled) {
       initializeCheckboxes();
+      // Reset custom selections AFTER checkboxes are built
+      resetCustomSelections();
     }
 
     // Check URL parameters for profile selection
@@ -67,6 +69,39 @@
         // Auto-generate if profile is in URL
         setTimeout(() => generateResume(), 500);
       }
+    }
+  }
+
+  /**
+   * Reset all custom selections (checkboxes and state)
+   */
+  function resetCustomSelections() {
+    // Clear the selected checkboxes array
+    selectedCheckboxes = [];
+
+    // Uncheck all checkbox inputs in the DOM (if they exist)
+    const allCheckboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+    allCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    // Remove 'checked' class from all checkbox items (if they exist)
+    const allCheckboxItems = document.querySelectorAll('.checkbox-item');
+    allCheckboxItems.forEach(item => {
+      item.classList.remove('checked');
+    });
+
+    // Reset the selection count display (if element exists)
+    const countSpan = document.getElementById('selectionCount');
+    if (countSpan) {
+      countSpan.textContent = '(0 selected)';
+    }
+
+    // Disable the generate button (if it exists)
+    const generateBtn = document.getElementById('generateCustomBtn');
+    if (generateBtn && customBuilderData) {
+      const min = customBuilderData.min_selections || 1;
+      generateBtn.disabled = true;
     }
   }
 
@@ -471,7 +506,60 @@
     const max = customBuilderData.max_selections || 8;
     const count = selectedCheckboxes.length;
 
+    // Enable/disable button
     generateBtn.disabled = count < min || count > max;
+
+    // Show/hide validation message
+    let validationMsg = document.getElementById('customValidationMsg');
+
+    if (count > max) {
+      // Too many selections - show warning
+      if (!validationMsg) {
+        validationMsg = document.createElement('div');
+        validationMsg.id = 'customValidationMsg';
+        validationMsg.style.cssText = `
+          margin-top: 0.75rem;
+          padding: 0.75rem 1rem;
+          background: rgba(255, 107, 107, 0.1);
+          border: 1px solid rgba(255, 107, 107, 0.3);
+          border-radius: 8px;
+          color: #ff6b6b;
+          font-size: 0.875rem;
+          line-height: 1.5;
+        `;
+        generateBtn.parentElement.appendChild(validationMsg);
+      }
+      validationMsg.innerHTML = `
+        <strong>⚠️ Too many selections</strong><br>
+        Please select ${max} or fewer focus areas (currently ${count} selected)
+      `;
+    } else if (count < min) {
+      // Too few selections - show info
+      if (!validationMsg) {
+        validationMsg = document.createElement('div');
+        validationMsg.id = 'customValidationMsg';
+        validationMsg.style.cssText = `
+          margin-top: 0.75rem;
+          padding: 0.75rem 1rem;
+          background: rgba(0, 240, 255, 0.1);
+          border: 1px solid rgba(0, 240, 255, 0.3);
+          border-radius: 8px;
+          color: #00F0FF;
+          font-size: 0.875rem;
+          line-height: 1.5;
+        `;
+        generateBtn.parentElement.appendChild(validationMsg);
+      }
+      validationMsg.innerHTML = `
+        <strong>ℹ️ Select focus areas</strong><br>
+        Choose at least ${min} focus area${min > 1 ? 's' : ''} to generate your custom resume
+      `;
+    } else {
+      // Valid selection - remove message if it exists
+      if (validationMsg) {
+        validationMsg.remove();
+      }
+    }
   }
 
   /**
@@ -549,5 +637,15 @@
   } else {
     init();
   }
+
+  // Handle browser back/forward cache (bfcache)
+  // Reset selections when page is restored from cache
+  window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+      // Page was loaded from bfcache (user hit back button)
+      console.log('Page restored from cache, resetting selections...');
+      resetCustomSelections();
+    }
+  });
 
 })();
