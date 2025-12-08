@@ -436,12 +436,41 @@ html {
   </div>
 
   <div class="resume-builder-container">
-    <div class="profile-selector">
+    <!-- Step 1: Choose Your Path -->
+    <div class="selection-method">
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 1: Choose Your Path</h3>
+      <p class="step-description">Pick a quick pre-built profile or customize your own focus areas</p>
+
+      <div class="method-selector">
+        <label class="method-card active" data-method="quick">
+          <input type="radio" name="method" value="quick" checked>
+          <div class="method-content">
+            <div class="method-icon">⚡</div>
+            <h4>Quick Select</h4>
+            <p>Choose from 3 pre-built professional profiles</p>
+          </div>
+        </label>
+
+        <label class="method-card" data-method="custom">
+          <input type="radio" name="method" value="custom">
+          <div class="method-content">
+            <div class="method-icon">🎨</div>
+            <h4>Custom Select</h4>
+            <p>Build your own using checkboxes (1-8 selections)</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Step 2a: Quick Select (Profiles) -->
+    <div id="quickSelectPanel" class="profile-selector">
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 1.5rem;">Step 2: Select a Profile</h3>
+
       <div class="profile-options">
-        <a href="/resume/brand-management/" class="profile-card" target="_blank">
+        <a href="/resume/brand-management/" class="profile-card">
           <div class="card-content">
             <div class="card-icon">💊</div>
-            <h3>Brand Management</h3>
+            <h4>Brand Management</h4>
             <p>Brand strategy, portfolio management, launch excellence, and HCP/patient marketing</p>
             <div class="card-tags">
               <span class="tag">Brand Strategy</span>
@@ -452,10 +481,10 @@ html {
           </div>
         </a>
 
-        <a href="/resume/strategic-planning/" class="profile-card" target="_blank">
+        <a href="/resume/strategic-planning/" class="profile-card">
           <div class="card-content">
             <div class="card-icon">📋</div>
-            <h3>Strategic Planning & Positioning</h3>
+            <h4>Strategic Planning & Positioning</h4>
             <p>Commercial strategy, messaging & positioning, go-to-market planning, and market analysis</p>
             <div class="card-tags">
               <span class="tag">Strategy</span>
@@ -466,10 +495,10 @@ html {
           </div>
         </a>
 
-        <a href="/resume/cx-engagement/" class="profile-card" target="_blank">
+        <a href="/resume/cx-engagement/" class="profile-card">
           <div class="card-content">
             <div class="card-icon">🚀</div>
-            <h3>Customer Experience (CX) & Omnichannel Innovation</h3>
+            <h4>Customer Experience (CX) & Omnichannel Innovation</h4>
             <p>Omnichannel strategy, experience design, AI/ML implementation, and innovative engagement</p>
             <div class="card-tags">
               <span class="tag">CX</span>
@@ -481,9 +510,24 @@ html {
         </a>
       </div>
 
-      <p style="text-align: center; color: var(--builder-text-secondary); margin-top: 1rem; font-size: 0.95rem;">
+      <p style="text-align: center; color: var(--builder-text-secondary); margin-top: 1.5rem; font-size: 0.95rem;">
         Click any card above to view that tailored resume →
       </p>
+    </div>
+
+    <!-- Step 2b: Custom Select (Checkboxes) -->
+    <div id="customSelectPanel" class="checkbox-selector" style="display:none;">
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 2: Select Your Focus Areas</h3>
+      <p class="step-description">Choose 1-8 areas that best match what you're looking for <span id="selectionCount">(0 selected)</span></p>
+
+      <div id="checkboxCategories" class="checkbox-categories">
+        <!-- Dynamically populated from resume_profiles.json -->
+      </div>
+
+      <button id="generateCustomBtn" class="generate-btn" disabled>
+        <span class="btn-text">Generate Custom Resume</span>
+        <span class="btn-icon">→</span>
+      </button>
     </div>
 
   </div>
@@ -586,262 +630,4 @@ html {
 </section>
 
 <script src="{{ '/assets/js/resume-builder.js' | relative_url }}"></script>
-<script>
-// Enhanced resume initialization with new export functions
-(function() {
-  'use strict';
-
-  let resumeBuilder = null;
-  let currentResume = null;
-  let currentProfileId = 'brand_management';
-
-  // Load JSON data files
-  async function loadData() {
-    try {
-      const [resumeResponse, profilesResponse] = await Promise.all([
-        fetch('/assets/data/resume.json'),
-        fetch('/assets/data/resume_profiles.json')
-      ]);
-
-      if (!resumeResponse.ok || !profilesResponse.ok) {
-        throw new Error('Failed to load data files');
-      }
-
-      const resumeData = await resumeResponse.json();
-      const profilesData = await profilesResponse.json();
-
-      return { resumeData, profilesData };
-    } catch (error) {
-      console.error('Error loading data:', error);
-      showError('Failed to load resume data. Please refresh the page.');
-      return null;
-    }
-  }
-
-  // Initialize
-  async function init() {
-    const data = await loadData();
-    if (!data) return;
-
-    resumeBuilder = new ResumeBuilder(data.resumeData, data.profilesData);
-    setupEventListeners();
-
-    // Check URL for profile parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const profileParam = urlParams.get('profile');
-    if (profileParam) {
-      const profileCard = document.querySelector(`input[value="${profileParam}"]`);
-      if (profileCard) {
-        profileCard.checked = true;
-        currentProfileId = profileParam;
-        setTimeout(() => generateResume(), 500);
-      }
-    }
-  }
-
-  // Set up event listeners
-  function setupEventListeners() {
-    document.getElementById('generateBtn').addEventListener('click', generateResume);
-
-    const profileInputs = document.querySelectorAll('input[name="profile"]');
-    profileInputs.forEach(input => {
-      input.addEventListener('change', (e) => {
-        currentProfileId = e.target.value;
-      });
-    });
-
-    // New export buttons
-    document.getElementById('printPdfBtn').addEventListener('click', printToPDF);
-    document.getElementById('copyTextBtn').addEventListener('click', copyToClipboard);
-    document.getElementById('copyLinkBtn').addEventListener('click', copyLink);
-    document.getElementById('regenerateBtn').addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // Generate resume
-  function generateResume() {
-    if (!resumeBuilder) return;
-
-    try {
-      const generateBtn = document.getElementById('generateBtn');
-      const originalText = generateBtn.querySelector('.btn-text').textContent;
-      generateBtn.querySelector('.btn-text').textContent = 'Generating...';
-      generateBtn.disabled = true;
-
-      currentResume = resumeBuilder.generateResume(currentProfileId);
-      const resumeContent = document.getElementById('resumeContent');
-      resumeContent.innerHTML = ResumeRenderer.render(currentResume);
-
-      updateStats(currentResume);
-
-      const preview = document.getElementById('resumePreview');
-      preview.style.display = 'block';
-
-      setTimeout(() => {
-        preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-
-      setTimeout(() => {
-        generateBtn.querySelector('.btn-text').textContent = originalText;
-        generateBtn.disabled = false;
-      }, 500);
-
-    } catch (error) {
-      console.error('Error generating resume:', error);
-      showError('Failed to generate resume. Please try again.');
-    }
-  }
-
-  // Update stats
-  function updateStats(resume) {
-    const statsDiv = document.getElementById('resumeStats');
-    statsDiv.innerHTML = `
-      <div class="stat">
-        <span class="stat-icon">📊</span>
-        <span>${resume.stats.matchRate}% match rate</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon">💼</span>
-        <span>${resume.experience.length} roles</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon">⭐</span>
-        <span>${resume.stats.totalBullets} key achievements</span>
-      </div>
-      <div class="stat">
-        <span class="stat-icon">🚀</span>
-        <span>${resume.projects.length} projects</span>
-      </div>
-    `;
-  }
-
-  // Print to PDF
-  function printToPDF() {
-    if (!currentResume) return;
-    window.print();
-  }
-
-  // Copy to Clipboard
-  function copyToClipboard() {
-    if (!currentResume) return;
-
-    const resumeContent = document.getElementById('resumeContent');
-    const textContent = resumeContent.innerText || resumeContent.textContent;
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(textContent).then(() => {
-        showSuccess('Resume copied to clipboard!');
-      }).catch(err => {
-        console.error('Failed to copy:', err);
-        fallbackCopy(textContent);
-      });
-    } else {
-      fallbackCopy(textContent);
-    }
-  }
-
-  // Fallback copy method
-  function fallbackCopy(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed';
-    textArea.style.left = '-999999px';
-    document.body.appendChild(textArea);
-    textArea.select();
-
-    try {
-      document.execCommand('copy');
-      showSuccess('Resume copied to clipboard!');
-    } catch (err) {
-      console.error('Fallback copy failed:', err);
-      alert('Please manually copy the resume text.');
-    }
-
-    document.body.removeChild(textArea);
-  }
-
-  // Copy shareable link
-  function copyLink() {
-    const url = `${window.location.origin}/?profile=${currentProfileId}#interactive-tool`;
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(() => {
-        showSuccess('Link copied to clipboard!');
-      }).catch(err => {
-        console.error('Failed to copy:', err);
-        fallbackCopy(url);
-      });
-    } else {
-      fallbackCopy(url);
-    }
-  }
-
-  // Show error message
-  function showError(message) {
-    alert('Error: ' + message);
-  }
-
-  // Show success message
-  function showSuccess(message) {
-    const notification = document.createElement('div');
-    notification.textContent = message;
-    notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #00F0FF;
-      color: #0A0E27;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0, 240, 255, 0.4);
-      z-index: 10000;
-      animation: slideIn 0.3s ease;
-    `;
-
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-      notification.style.animation = 'slideOut 0.3s ease';
-      setTimeout(() => {
-        document.body.removeChild(notification);
-      }, 300);
-    }, 3000);
-  }
-
-  // Add CSS animations
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes slideIn {
-      from {
-        transform: translateX(400px);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-    @keyframes slideOut {
-      from {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      to {
-        transform: translateX(400px);
-        opacity: 0;
-      }
-    }
-  `;
-  document.head.appendChild(style);
-
-  // Initialize on page load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-
-})();
-</script>
+<script src="{{ '/assets/js/resume-init.js' | relative_url }}"></script>

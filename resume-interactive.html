@@ -12,8 +12,35 @@ permalink: /resume-interactive/
     <p class="subtitle">Tailor my resume to match your focus area. Select a profile below to see relevant experience, projects, and skills.</p>
   </div>
 
-  <div class="profile-selector">
-    <h2>Choose Your Focus:</h2>
+  <!-- Step 1: Choose Your Path -->
+  <div class="selection-method">
+    <h2>Step 1: Choose Your Path</h2>
+    <p class="step-description">Pick a quick pre-built profile or customize your own focus areas</p>
+
+    <div class="method-selector">
+      <label class="method-card active" data-method="quick">
+        <input type="radio" name="method" value="quick" checked>
+        <div class="method-content">
+          <div class="method-icon">⚡</div>
+          <h3>Quick Select</h3>
+          <p>Choose from 3 pre-built professional profiles</p>
+        </div>
+      </label>
+
+      <label class="method-card" data-method="custom">
+        <input type="radio" name="method" value="custom">
+        <div class="method-content">
+          <div class="method-icon">🎨</div>
+          <h3>Custom Select</h3>
+          <p>Build your own using checkboxes (1-8 selections)</p>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Step 2a: Quick Select (Profiles) -->
+  <div id="quickSelectPanel" class="profile-selector">
+    <h2>Step 2: Select a Profile</h2>
 
     <div class="profile-options">
       <label class="profile-card" data-profile="brand_management">
@@ -64,6 +91,21 @@ permalink: /resume-interactive/
 
     <button id="generateBtn" class="generate-btn">
       <span class="btn-text">Generate Tailored Resume</span>
+      <span class="btn-icon">→</span>
+    </button>
+  </div>
+
+  <!-- Step 2b: Custom Select (Checkboxes) -->
+  <div id="customSelectPanel" class="checkbox-selector" style="display:none;">
+    <h2>Step 2: Select Your Focus Areas</h2>
+    <p class="step-description">Choose 1-8 areas that best match what you're looking for <span id="selectionCount">(0 selected)</span></p>
+
+    <div id="checkboxCategories" class="checkbox-categories">
+      <!-- Dynamically populated from resume_profiles.json -->
+    </div>
+
+    <button id="generateCustomBtn" class="generate-btn" disabled>
+      <span class="btn-text">Generate Custom Resume</span>
       <span class="btn-icon">→</span>
     </button>
   </div>

@@ -175,5 +175,169 @@
     "scoring_algorithm": "sum_of_tag_matches",
     "fallback_behavior": "show_top_bullets_if_no_tag_matches",
     "notes": "Bullets are scored by counting how many priority_tags they match. Higher scores = more relevant. If a role has no tag matches, show the first N bullets as fallback."
+  },
+  "custom_builder": {
+    "enabled": true,
+    "min_selections": 1,
+    "max_selections": 8,
+    "recommended_selections": "3-5",
+    "checkbox_categories": [
+      {
+        "category": "Therapeutic Expertise",
+        "icon": "💊",
+        "checkboxes": [
+          {
+            "id": "oncology",
+            "label": "Oncology",
+            "tags": ["oncology"],
+            "description": "Cancer therapeutics and hematology"
+          },
+          {
+            "id": "cardiovascular",
+            "label": "Cardiovascular",
+            "tags": ["cardio", "cardiovascular"],
+            "description": "Heart disease and vascular conditions"
+          },
+          {
+            "id": "hiv_rare",
+            "label": "HIV / Rare Disease",
+            "tags": ["hiv", "rare_disease", "mens_health"],
+            "description": "Specialty therapeutic areas"
+          }
+        ]
+      },
+      {
+        "category": "Core Marketing Functions",
+        "icon": "📊",
+        "checkboxes": [
+          {
+            "id": "brand_strategy",
+            "label": "Brand Strategy & Portfolio Management",
+            "tags": ["brand", "portfolio", "positioning"],
+            "description": "Brand positioning, planning, portfolio management"
+          },
+          {
+            "id": "launch",
+            "label": "Product Launch Excellence",
+            "tags": ["launch"],
+            "description": "Pre-launch planning, launch execution, uptake acceleration"
+          },
+          {
+            "id": "omnichannel",
+            "label": "Omnichannel Marketing",
+            "tags": ["omnichannel", "cx", "xp", "experience_planning", "journey_mapping"],
+            "description": "Multi-channel orchestration, journey design, CX planning"
+          },
+          {
+            "id": "commercial_strategy",
+            "label": "Commercial Strategy",
+            "tags": ["strategy"],
+            "description": "Go-to-market planning, commercial planning, competitive positioning"
+          },
+          {
+            "id": "media_strategy",
+            "label": "Media Strategy & Planning",
+            "tags": ["media", "targeting", "segmentation"],
+            "description": "Media planning, channel strategy, audience targeting"
+          }
+        ]
+      },
+      {
+        "category": "Audience Focus",
+        "icon": "🎯",
+        "checkboxes": [
+          {
+            "id": "hcp_marketing",
+            "label": "HCP Marketing",
+            "tags": ["hcp"],
+            "description": "Healthcare professional targeting, KOL engagement, medical communications"
+          },
+          {
+            "id": "patient_marketing",
+            "label": "Patient & Caregiver Marketing",
+            "tags": ["patient"],
+            "description": "DTC, patient services, adherence programs"
+          }
+        ]
+      },
+      {
+        "category": "Innovation & Technology",
+        "icon": "🚀",
+        "checkboxes": [
+          {
+            "id": "ai_automation",
+            "label": "AI/ML & Automation",
+            "tags": ["ai", "automation"],
+            "description": "Artificial intelligence, machine learning, process automation, GPT development"
+          },
+          {
+            "id": "digital_transformation",
+            "label": "Digital Transformation",
+            "tags": ["digital", "innovation"],
+            "description": "Digital strategy, channel innovation, modern marketing techniques"
+          },
+          {
+            "id": "data_analytics",
+            "label": "Data & Analytics",
+            "tags": ["analytics", "data_engineering", "roi_modeling"],
+            "description": "Insights generation, data platforms, predictive modeling, business intelligence"
+          },
+          {
+            "id": "martech",
+            "label": "Marketing Technology (MarTech)",
+            "tags": ["innovation", "digital", "crm"],
+            "description": "Platform implementation, CRM, marketing automation, tech stack optimization"
+          }
+        ]
+      },
+      {
+        "category": "Leadership & Operations",
+        "icon": "👥",
+        "checkboxes": [
+          {
+            "id": "team_leadership",
+            "label": "Team Leadership & Development",
+            "tags": ["leadership", "team_management", "mentoring"],
+            "description": "People management, mentoring, organizational development"
+          },
+          {
+            "id": "cross_functional",
+            "label": "Cross-Functional Collaboration",
+            "tags": ["project_management", "partnership", "vendor_management"],
+            "description": "Matrix management, stakeholder alignment, agency partnership"
+          },
+          {
+            "id": "budget_management",
+            "label": "Budget & Resource Management",
+            "tags": ["budget_management", "timeline_management"],
+            "description": "Financial planning, ROI optimization, resource allocation"
+          },
+          {
+            "id": "process_optimization",
+            "label": "Process & Performance Optimization",
+            "tags": ["process_improvement", "roi_modeling", "optimization"],
+            "description": "Workflow efficiency, performance measurement, continuous improvement"
+          }
+        ]
+      },
+      {
+        "category": "Specialized Capabilities",
+        "icon": "⚡",
+        "checkboxes": [
+          {
+            "id": "compliance_regulatory",
+            "label": "Compliance & Regulatory (MLR)",
+            "tags": ["compliance", "mlr", "regulatory"],
+            "description": "MLR review, regulatory compliance, quality assurance"
+          },
+          {
+            "id": "sales_enablement",
+            "label": "Sales Enablement & Training",
+            "tags": ["sales_enablement", "training", "education"],
+            "description": "Sales training, field enablement, commercial education"
+          }
+        ]
+      }
+    ]
   }
 }

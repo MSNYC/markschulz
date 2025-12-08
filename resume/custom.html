@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Resume - Mark Schulz</title>
+  <link rel="stylesheet" href="/assets/css/resume-executive.css">
+</head>
+<body>
+  <div class="page-controls no-print">
+    <div class="controls-inner">
+      <a href="/" class="btn-back">← Back to Home</a>
+      <button onclick="window.print()" class="btn-print">🖨️ Print to PDF</button>
+    </div>
+    <div class="print-tip">
+      💡 <strong>Print Tip:</strong> In the print dialog, uncheck "Headers and footers" for a clean PDF
+    </div>
+  </div>
+
+  <div class="resume-page" id="resumePage">
+    <div style="text-align: center; padding: 2rem; color: #666;">
+      <p>Loading your custom resume...</p>
+    </div>
+  </div>
+
+  <script src="/assets/js/resume-builder.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    // Get selected tags from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedTags = urlParams.get('tags');
+
+    if (!selectedTags) {
+      window.location.href = '/#interactive-tool';
+      return;
+    }
+
+    const tagsArray = selectedTags.split(',');
+
+    // Load resume data and generate custom resume
+    async function loadAndGenerate() {
+      try {
+        const [resumeResponse, profilesResponse] = await Promise.all([
+          fetch('/assets/data/resume.json'),
+          fetch('/assets/data/resume_profiles.json')
+        ]);
+
+        const resumeData = await resumeResponse.json();
+        const profilesData = await profilesResponse.json();
+
+        // Create custom profile from selected tags
+        const customProfile = {
+          id: 'custom',
+          label: 'Custom Resume',
+          shortLabel: 'Custom',
+          description: 'Tailored to your selected focus areas',
+          tagline: 'Custom professional profile based on your selected focus areas',
+          headline: 'Custom Professional Profile',
+          priority_tags: tagsArray,
+          focusSkills: [],
+          competencies: ['Tailored professional profile based on your selected focus areas'],
+          ideal_for: []
+        };
+
+        // Use ResumeBuilder to filter data
+        const builder = new ResumeBuilder(resumeData, profilesData);
+        const filteredResume = builder.generateResumeFromTags(customProfile);
+
+        // Render the resume
+        renderResume(filteredResume);
+
+      } catch (error) {
+        console.error('Error generating custom resume:', error);
+        document.getElementById('resumePage').innerHTML = `
+          <div style="text-align: center; padding: 2rem; color: #cc0000;">
+            <p>Error generating resume. <a href="/">Return to homepage</a></p>
+          </div>
+        `;
+      }
+    }
+
+    function renderResume(resume) {
+      const html = ResumeRenderer.render(resume);
+      document.getElementById('resumePage').innerHTML = html;
+    }
+
+    // Initialize on page load
+    loadAndGenerate();
+  })();
+  </script>
+</body>
+</html>
