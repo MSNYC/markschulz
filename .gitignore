@@ -14,19 +14,39 @@ Gemfile.lock
 .env
 .env.local
 
-# Resume data backups
-data/resume_backup_*.json
+# Python virtual environment (NEVER commit)
+.venv/
+venv/
 
-# Raw input files (old resumes, performance reviews, etc.)
-data/raw_inputs/
+# Private development data
+data/
+scripts/
+docs/
+output/
 
-# Processed files tracking (contains filenames and metadata)
-data/processed_files.json
+# Backup files
+*.backup
+*.backup_*
+*_backup_*.json
+*BEFORE_DEDUP*
 
-# Assessment files (personality tests, etc.)
-data/assessments/
+# Workflow documentation
+ACHIEVEMENT_AUDIT.md
+AUDIT_INSTRUCTIONS.md
+DEDUPLICATION_REPORT.md
+DEDUP_*.md
+DEDUP_*.txt
+README_DEDUPLICATION.md
+START_HERE.txt
+sync-public-data.sh
+
+# Test files
+test-*.html
 
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
+
+# Duplicate pages (index.md is the main page)
+resume-interactive.html
