@@ -4,8 +4,8 @@ description: >-
   Pharmaceutical marketing and advertising professional with 20+ years of experience
   spanning Creative Agency, Manufacturer, and Publisher perspectives. Expertise in
   AI/ML integration, brand strategy, and omnichannel engagement.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.markschulz.me" # Production URL
+baseurl: "/markschulz" # the subpath of your site on GitHub Pages
+url: "https://markschulz.me" # Production URL (custom domain)
 
 # Author Information
 author:

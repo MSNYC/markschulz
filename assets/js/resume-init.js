@@ -590,7 +590,8 @@
 
       // Redirect to custom resume page with tags as URL parameters
       const tagsParam = selectedTags.join(',');
-      window.location.href = `/resume/custom/?tags=${encodeURIComponent(tagsParam)}`;
+      // Use relative path to work with both GitHub Pages and custom domain
+      window.location.href = `resume/custom/?tags=${encodeURIComponent(tagsParam)}`;
 
     } catch (error) {
       console.error('Error generating custom resume:', error);
