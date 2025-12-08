@@ -9,6 +9,9 @@
   let resumeBuilder = null;
   let currentResume = null;
   let currentProfileId = 'brand_management';
+  let customBuilderData = null;
+  let selectedCheckboxes = [];
+  let selectionMethod = 'quick'; // 'quick' or 'custom'
 
   /**
    * Load JSON data files
@@ -43,9 +46,15 @@
     if (!data) return;
 
     resumeBuilder = new ResumeBuilder(data.resumeData, data.profilesData);
+    customBuilderData = data.profilesData.custom_builder;
 
     // Set up event listeners
     setupEventListeners();
+
+    // Initialize checkbox UI if custom builder is enabled
+    if (customBuilderData && customBuilderData.enabled) {
+      initializeCheckboxes();
+    }
 
     // Check URL parameters for profile selection
     const urlParams = new URLSearchParams(window.location.search);
@@ -65,11 +74,29 @@
    * Set up all event listeners
    */
   function setupEventListeners() {
-    // Generate button
-    const generateBtn = document.getElementById('generateBtn');
-    generateBtn.addEventListener('click', generateResume);
+    // Method selector (Quick vs Custom)
+    const methodInputs = document.querySelectorAll('input[name="method"]');
+    methodInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        selectionMethod = e.target.value;
+        toggleSelectionPanels();
+        updateMethodCardStyles();
+      });
+    });
 
-    // Profile selection
+    // Quick Select - Generate button
+    const generateBtn = document.getElementById('generateBtn');
+    if (generateBtn) {
+      generateBtn.addEventListener('click', generateResume);
+    }
+
+    // Custom Select - Generate button
+    const generateCustomBtn = document.getElementById('generateCustomBtn');
+    if (generateCustomBtn) {
+      generateCustomBtn.addEventListener('click', generateCustomResume);
+    }
+
+    // Profile selection (Quick Select)
     const profileInputs = document.querySelectorAll('input[name="profile"]');
     profileInputs.forEach(input => {
       input.addEventListener('change', (e) => {
@@ -78,11 +105,18 @@
       });
     });
 
-    // Action buttons
-    document.getElementById('downloadPdfBtn').addEventListener('click', downloadPDF);
-    document.getElementById('emailBtn').addEventListener('click', emailResume);
-    document.getElementById('copyLinkBtn').addEventListener('click', copyLink);
-    document.getElementById('regenerateBtn').addEventListener('click', scrollToTop);
+    // Action buttons (may not exist until resume is generated)
+    const downloadBtn = document.getElementById('downloadPdfBtn');
+    if (downloadBtn) downloadBtn.addEventListener('click', downloadPDF);
+
+    const emailBtn = document.getElementById('emailBtn');
+    if (emailBtn) emailBtn.addEventListener('click', emailResume);
+
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+    if (copyLinkBtn) copyLinkBtn.addEventListener('click', copyLink);
+
+    const regenerateBtn = document.getElementById('regenerateBtn');
+    if (regenerateBtn) regenerateBtn.addEventListener('click', scrollToTop);
   }
 
   /**
@@ -137,6 +171,8 @@
    */
   function updateStats(resume) {
     const statsDiv = document.getElementById('resumeStats');
+    if (!statsDiv) return; // Stats div is optional
+
     statsDiv.innerHTML = `
       <div class="stat">
         <span class="stat-icon">📊</span>
@@ -295,6 +331,190 @@
         document.body.removeChild(notification);
       }, 300);
     }, 3000);
+  }
+
+  /**
+   * Toggle between Quick Select and Custom Select panels
+   */
+  function toggleSelectionPanels() {
+    const quickPanel = document.getElementById('quickSelectPanel');
+    const customPanel = document.getElementById('customSelectPanel');
+
+    if (selectionMethod === 'quick') {
+      quickPanel.style.display = 'block';
+      customPanel.style.display = 'none';
+    } else {
+      quickPanel.style.display = 'none';
+      customPanel.style.display = 'block';
+    }
+  }
+
+  /**
+   * Update active state on method cards
+   */
+  function updateMethodCardStyles() {
+    const methodCards = document.querySelectorAll('.method-card');
+    methodCards.forEach(card => {
+      const method = card.getAttribute('data-method');
+      if (method === selectionMethod) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+  }
+
+  /**
+   * Initialize checkbox UI from custom_builder data
+   */
+  function initializeCheckboxes() {
+    console.log('initializeCheckboxes called', {
+      customBuilderData: customBuilderData,
+      hasCategories: customBuilderData?.checkbox_categories?.length
+    });
+
+    if (!customBuilderData || !customBuilderData.checkbox_categories) {
+      console.error('No custom builder data or categories found');
+      return;
+    }
+
+    const container = document.getElementById('checkboxCategories');
+    if (!container) {
+      console.error('checkboxCategories container not found');
+      return;
+    }
+
+    console.log('Building checkboxes...');
+
+    customBuilderData.checkbox_categories.forEach(category => {
+      const categoryDiv = document.createElement('div');
+      categoryDiv.className = 'checkbox-category';
+
+      // Category header
+      const header = document.createElement('div');
+      header.className = 'category-header';
+      header.innerHTML = `
+        <span class="category-icon">${category.icon}</span>
+        <h3 class="category-title">${category.category}</h3>
+      `;
+      categoryDiv.appendChild(header);
+
+      // Checkbox grid
+      const grid = document.createElement('div');
+      grid.className = 'checkbox-grid';
+
+      category.checkboxes.forEach(checkbox => {
+        const item = document.createElement('label');
+        item.className = 'checkbox-item';
+        item.setAttribute('data-checkbox-id', checkbox.id);
+
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = `checkbox_${checkbox.id}`;
+        input.value = checkbox.id;
+        input.addEventListener('change', handleCheckboxChange);
+
+        const labelWrapper = document.createElement('div');
+        labelWrapper.className = 'checkbox-label-wrapper';
+        labelWrapper.innerHTML = `
+          <span class="checkbox-label">${checkbox.label}</span>
+          <p class="checkbox-description">${checkbox.description}</p>
+        `;
+
+        item.appendChild(input);
+        item.appendChild(labelWrapper);
+        grid.appendChild(item);
+      });
+
+      categoryDiv.appendChild(grid);
+      container.appendChild(categoryDiv);
+    });
+  }
+
+  /**
+   * Handle checkbox selection changes
+   */
+  function handleCheckboxChange(e) {
+    const checkboxId = e.target.value;
+    const item = e.target.closest('.checkbox-item');
+
+    if (e.target.checked) {
+      selectedCheckboxes.push(checkboxId);
+      item.classList.add('checked');
+    } else {
+      selectedCheckboxes = selectedCheckboxes.filter(id => id !== checkboxId);
+      item.classList.remove('checked');
+    }
+
+    updateCheckboxCount();
+    validateCustomSelection();
+  }
+
+  /**
+   * Update checkbox selection count display
+   */
+  function updateCheckboxCount() {
+    const countSpan = document.getElementById('selectionCount');
+    if (countSpan) {
+      countSpan.textContent = `(${selectedCheckboxes.length} selected)`;
+    }
+  }
+
+  /**
+   * Validate custom selection and enable/disable generate button
+   */
+  function validateCustomSelection() {
+    const generateBtn = document.getElementById('generateCustomBtn');
+    if (!generateBtn) return;
+
+    const min = customBuilderData.min_selections || 1;
+    const max = customBuilderData.max_selections || 8;
+    const count = selectedCheckboxes.length;
+
+    generateBtn.disabled = count < min || count > max;
+  }
+
+  /**
+   * Generate custom resume based on checkbox selections
+   */
+  function generateCustomResume() {
+    if (!resumeBuilder || selectedCheckboxes.length === 0) {
+      showError('Please select at least one focus area');
+      return;
+    }
+
+    try {
+      // Show loading state
+      const generateBtn = document.getElementById('generateCustomBtn');
+      const originalText = generateBtn.querySelector('.btn-text').textContent;
+      generateBtn.querySelector('.btn-text').textContent = 'Generating...';
+      generateBtn.disabled = true;
+
+      // Collect all tags from selected checkboxes
+      const selectedTags = [];
+      customBuilderData.checkbox_categories.forEach(category => {
+        category.checkboxes.forEach(checkbox => {
+          if (selectedCheckboxes.includes(checkbox.id)) {
+            selectedTags.push(...checkbox.tags);
+          }
+        });
+      });
+
+      // Redirect to custom resume page with tags as URL parameters
+      const tagsParam = selectedTags.join(',');
+      window.location.href = `/resume/custom/?tags=${encodeURIComponent(tagsParam)}`;
+
+    } catch (error) {
+      console.error('Error generating custom resume:', error);
+      showError('Failed to generate custom resume. Please try again.');
+
+      // Reset button on error
+      const generateBtn = document.getElementById('generateCustomBtn');
+      if (generateBtn) {
+        generateBtn.querySelector('.btn-text').textContent = 'Generate Custom Resume';
+        generateBtn.disabled = false;
+      }
+    }
   }
 
   // Add CSS animations

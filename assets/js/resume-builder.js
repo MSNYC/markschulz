@@ -115,6 +115,17 @@ class ResumeBuilder {
       throw new Error(`Profile ${profileId} not found`);
     }
 
+    return this.generateResumeFromTags(profile);
+  }
+
+  /**
+   * Generate resume from a custom profile object (used for checkbox selections)
+   */
+  generateResumeFromTags(profile) {
+    if (!profile || !profile.priority_tags) {
+      throw new Error('Invalid profile object');
+    }
+
     const maxBullets = 12; // Increased from 5
     const maxProjects = 6; // Increased from 4
     const maxRoles = 10; // Show ALL roles, not just 3
@@ -214,15 +225,20 @@ class ResumeRenderer {
 
   static renderExecutiveSnapshot(data) {
     const profile = data.profile;
+    const focusSkills = profile.focusSkills || profile.focus_skills || [];
+    const coreStrengths = focusSkills.length > 0
+      ? focusSkills.slice(0, 3).join(' • ')
+      : 'Strategic Planning, Brand Management, Commercial Excellence';
+
     return `
-      <div class="resume-section executive-snapshot">
+      <div class="resume-section">
         <h2 class="section-title">Executive Snapshot</h2>
         <div class="section-content">
-          <p class="snapshot-tagline"><strong>${profile.tagline}</strong></p>
+          <p class="snapshot-tagline"><strong>${profile.tagline || 'Pharmaceutical Marketing Professional'}</strong></p>
 
-          <p class="snapshot-description">${data.summary.long}</p>
+          <p class="snapshot-description">${data.summary?.long || data.summary?.short || ''}</p>
 
-          <p><strong>Core Strengths:</strong> ${profile.focusSkills.slice(0, 3).join(' • ')}</p>
+          <p><strong>Core Strengths:</strong> ${coreStrengths}</p>
         </div>
       </div>
     `;
@@ -231,25 +247,20 @@ class ResumeRenderer {
   static renderTargetedHighlights(data) {
     const profile = data.profile;
     const projects = data.projects.slice(0, 3);
+    const competencies = profile.competencies || [];
 
     return `
-      <div class="resume-section targeted-highlights">
+      <div class="resume-section">
         <h2 class="section-title">Targeted Highlights</h2>
         <div class="section-content">
-          <div class="highlight-item">
-            <p><strong>• Core Fit:</strong> ${profile.competencies[0] || profile.description}</p>
-          </div>
+          <p class="highlight-item"><strong>• Core Fit:</strong> ${competencies[0] || profile.description || 'Pharmaceutical marketing professional with comprehensive expertise'}</p>
 
-          ${profile.competencies.slice(1, 3).map(comp => `
-            <div class="highlight-item">
-              <p><strong>• Key Capability:</strong> ${comp}</p>
-            </div>
+          ${competencies.slice(1, 3).map(comp => `
+            <p class="highlight-item"><strong>• Key Capability:</strong> ${comp}</p>
           `).join('')}
 
           ${projects.length > 0 ? `
-            <div class="highlight-item">
-              <p><strong>• Selected Projects:</strong> ${projects.map(p => p.name).join(', ')}${projects.length > 0 ? '. ' + projects[0].outcomes[0] : ''}</p>
-            </div>
+            <p class="highlight-item"><strong>• Selected Projects:</strong> ${projects.map(p => p.name).join(', ')}${projects.length > 0 && projects[0].outcomes && projects[0].outcomes.length > 0 ? '. ' + projects[0].outcomes[0] : ''}</p>
           ` : ''}
         </div>
       </div>
@@ -260,12 +271,8 @@ class ResumeRenderer {
     const expHtml = data.experience.map(exp => `
       <div class="experience-item">
         <div class="experience-header">
-          <div class="experience-title-line">
-            <span class="experience-title"><strong>${exp.title} — ${exp.company}</strong>${exp.companyParent ? ` (${exp.companyParent})` : ''}</span>
-          </div>
-          <div class="experience-meta">
-            ${exp.location} | ${exp.startDate} – ${exp.endDate}
-          </div>
+          <div class="experience-title"><strong>${exp.title} — ${exp.company}</strong>${exp.companyParent ? ` (${exp.companyParent})` : ''}</div>
+          <div class="experience-meta">${exp.location} | ${exp.startDate} – ${exp.endDate}</div>
         </div>
         <ul class="experience-bullets">
           ${exp.bullets.map(bullet => `
@@ -276,7 +283,7 @@ class ResumeRenderer {
     `).join('');
 
     return `
-      <div class="resume-section experience-section">
+      <div class="resume-section">
         <h2 class="section-title">Experience</h2>
         <div class="section-content">
           ${expHtml}
@@ -336,7 +343,7 @@ class ResumeRenderer {
     `).join('');
 
     return `
-      <div class="resume-section skills-section">
+      <div class="resume-section">
         <h2 class="section-title">Skills</h2>
         <div class="section-content">
           ${skillsHtml}
@@ -347,13 +354,13 @@ class ResumeRenderer {
 
   static renderEducation(data) {
     const eduHtml = data.education.map(edu => `
-      <div class="education-item">
+      <p class="education-item">
         <strong>${edu.degree}</strong> ${edu.field ? `in ${edu.field}` : ''} — ${edu.institution}
-      </div>
+      </p>
     `).join('');
 
     return `
-      <div class="resume-section education-section">
+      <div class="resume-section">
         <h2 class="section-title">Education</h2>
         <div class="section-content">
           ${eduHtml}
