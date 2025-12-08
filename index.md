@@ -1,6 +1,8 @@
 ---
 layout: home
 title: Mark Schulz - Pharmaceutical Marketing Leader
+description: Interactive resume showcasing 20+ years in pharmaceutical marketing across oncology, AI/ML integration, brand strategy, and omnichannel engagement. Filter by role to see relevant experience.
+keywords: pharmaceutical marketing, oncology brand management, AI integration pharma, patient marketing, HCP marketing, omnichannel strategy, brand launch, customer experience pharma
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/resume-builder.css' | relative_url }}">
@@ -70,11 +72,14 @@ html {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-  text-align: center;
+  text-align: left;
   padding: 3rem 1.5rem;
   background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(183, 148, 246, 0.05));
   border-radius: 16px;
   margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -115,8 +120,11 @@ html {
 }
 
 .tool-intro {
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tool-intro h2 {
@@ -128,8 +136,7 @@ html {
 .tool-intro p {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .export-buttons {
@@ -166,12 +173,13 @@ html {
 
 /* ===== BEHIND THE TOOL SECTION ===== */
 #behind-the-tool {
-  margin: 6rem 0;
+  margin: 6rem auto;
   padding: 3rem 2rem;
   background: rgba(26, 31, 58, 0.3);
   border-radius: 12px;
   border-left: 4px solid #B794F6;
   scroll-margin-top: 80px;
+  max-width: 1200px;
 }
 
 #behind-the-tool h2 {
@@ -185,7 +193,7 @@ html {
   line-height: 1.8;
   color: var(--text-secondary, #A0A0C0);
   margin-bottom: 1.5rem;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 #behind-the-tool ul {
@@ -219,13 +227,13 @@ html {
   font-size: 2rem;
   color: #00F0FF;
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .about-content p {
@@ -248,7 +256,7 @@ html {
   font-size: 2rem;
   color: #00F0FF;
   margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-intro {
@@ -417,29 +425,25 @@ html {
 
 <!-- HERO SECTION -->
 <div class="hero-section">
-  <h1 class="hero-title">Find the Experience That Matches Your Role</h1>
+  <h1 class="hero-title">Want to skip the <br>"does this candidate fit?"<br> guesswork?</h1>
 
   <p class="hero-subtitle">
-    This interactive resume filters my background to show the skills, projects, and achievements most relevant to your open position.
-  </p>
-
-  <p class="hero-hook">
-    Select your focus area below to see a tailored view of my experience. Export or share as needed.
+    Instead of reading a one-size-fits-all resume, get a personalized view of my 20+ year career filtered by what matters to you. Pick your focus areas below, and I'll surface the most relevant brand management, strategy, or customer experience work from my background.
   </p>
 </div>
 
 <!-- INTERACTIVE RESUME TOOL -->
 <section id="interactive-tool">
   <div class="tool-intro">
-    <h2>Select Your Focus Area</h2>
-    <p>Choose the role type that best matches your open position. The resume will instantly filter to show the most relevant experience.</p>
+    <h2 style="text-align: left;">Tailor My Resume to Your Role</h2>
+    <p>In two steps, get a resume filtered to your needs: choose a pre-built option or customize your own.</p>
   </div>
 
   <div class="resume-builder-container">
-    <!-- Step 1: Choose Your Path -->
+    <!-- Step 1: Pre-Built or Custom -->
     <div class="selection-method">
-      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 1: Choose Your Path</h3>
-      <p class="step-description">Pick a quick pre-built profile or customize your own focus areas</p>
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 1: Pre-Built or Custom?</h3>
+      <p class="step-description"><strong>Pre-Built:</strong> Pick from 3 resumes optimized for Brand Management, Strategic Planning, or Customer Experience roles.<br><strong>Custom:</strong> Select 1-8 focus areas (therapeutic areas, audiences, skills) that match your open position.</p>
 
       <div class="method-selector">
         <label class="method-card active" data-method="quick">
@@ -535,34 +539,57 @@ html {
 
 <!-- BEHIND THE TOOL SECTION -->
 <section id="behind-the-tool">
-  <h2>Behind the Tool: Why I Built This</h2>
+  <h2 style="text-align: left;">So Why Did I Build This?</h2>
+  <p style="font-size: 1.4rem; font-weight: 700; color: var(--accent-cyan, #00F0FF); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.3;">Because it shows my approach in action</p>
 
   <p>
-    As someone who has hired for pharmaceutical marketing roles, I know the pain: scanning through pages of resume content trying to find evidence of specific skills. "Do they have oncology experience?" "Have they actually used AI tools, or just heard of them?" "Can they think strategically about omnichannel?"
+    I've been on both sides of pharma hiring—evaluating candidates and being evaluated. The frustration is universal: recruiters and hiring managers need specific evidence fast ("Do they have oncology launch experience? Real AI implementation, or just buzzwords?"), while candidates watch their tailored expertise get buried in generic resumes.
   </p>
 
   <p>
-    So I built this interactive resume to solve that problem—for <em>you</em>, the person evaluating candidates. Using <strong>Claude Code</strong> (Anthropic's AI coding assistant) and my basic developer skills, I "vibe-coded" this solution in a few hours. It demonstrates the same approach I bring to marketing challenges: understand the user's pain point, prototype quickly, and deliver something genuinely useful.
+    Most people complain about this. I built a solution.
   </p>
 
   <p>
-    <strong>Here's how it works:</strong>
+    <strong>The Approach: User Problem → Rapid Prototype → Ship It</strong>
   </p>
+
+  <p>
+    This interactive resume isn't a vanity project—it's a functional demonstration of how I work. When I see a user experience problem, I prototype fast, validate the concept, and iterate based on real needs. Using Claude Code (Anthropic's AI assistant) and basic developer skills, I "vibe-coded" this in a weekend. No overthinking, no perfect code—just a working solution that solves the actual problem.
+  </p>
+
+  <p>
+    <strong>How It Actually Works:</strong>
+  </p>
+
+  <p>
+    Every achievement in my career is tagged by skill, therapeutic area, and audience. When you select a focus (Brand Management, Oncology, AI Innovation), the system scores ~200 bullets by relevance and surfaces only what matters to you. The resume generates in real-time from structured JSON—always current, never a stale PDF floating around LinkedIn.
+  </p>
+
+  <p>
+    It's hosted free on GitHub Pages. Vanilla JavaScript. No React, no backend, no complexity for complexity's sake. Just appropriate technology solving a real problem.
+  </p>
+
+  <p>
+    <strong>Why This Matters</strong>
+  </p>
+
   <ul>
-    <li><strong>Tag-based filtering:</strong> Every achievement in my resume databank is tagged (e.g., "ai", "oncology", "brand", "analytics"). When you select a profile, it scores each bullet by relevance.</li>
-    <li><strong>Real-time generation:</strong> The resume you see is generated on-the-fly from a structured JSON databank—always current, never outdated.</li>
-    <li><strong>User-centric design:</strong> Built specifically for recruiters and hiring managers who need to assess fit quickly.</li>
-    <li><strong>Free, modern tools:</strong> Hosted on GitHub Pages (free), built with vanilla JavaScript, styled with CSS. No fancy frameworks, just effective solutions.</li>
+    <li><strong>Empathy first:</strong> I understood your pain (finding signal in resume noise) before building anything</li>
+    <li><strong>Prototype fast:</strong> Weekend project, not a 6-month perfect solution</li>
+    <li><strong>AI as accelerant:</strong> Claude Code didn't replace thinking—it accelerated execution</li>
+    <li><strong>Appropriate tech:</strong> Used the simplest tools that solve the problem</li>
   </ul>
 
   <p>
-    This tool is itself a portfolio piece—it shows how I approach customer experience design, use AI effectively, and solve real problems with appropriate technology. The same skills that built this site are the skills I'd bring to your team: empathy for the end user, comfort with modern AI tools, and the ability to ship useful solutions fast.
+    The same mindset that built this resume builder is what I'd bring to your brand strategy, customer experience design, or omnichannel planning. See a problem, understand the user, ship a solution.
   </p>
 </section>
 
 <!-- ABOUT ME SECTION -->
 <section id="about">
-  <h2>About My Approach</h2>
+  <h2>What's It Like to Work With Me?</h2>
+  <p style="font-size: 1.4rem; font-weight: 700; color: var(--accent-cyan, #00F0FF); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.3;">Strategic, inclusive, innovative—and focused on getting things done</p>
 
   <div class="about-content">
     <h3>Intro</h3>
