@@ -73,6 +73,126 @@ class ResumeBuilder {
   }
 
   /**
+   * Get top-scored achievements across ALL experience (for Targeted Highlights)
+   * @param {Array} priorityTags - Tags to prioritize
+   * @param {Number} maxHighlights - Number of highlights to return
+   * @returns {Array} Top scored achievements with company context
+   */
+  getTopAchievements(priorityTags, maxHighlights = 5) {
+    const allScoredAchievements = [];
+
+    // Collect and score ALL achievements across all positions
+    for (const exp of this.resumeData.experience) {
+      for (const position of exp.positions) {
+        for (const achievementGroup of position.achievements || []) {
+          for (const item of achievementGroup.items || []) {
+            if (typeof item === 'object' && item.text) {
+              const score = this.calculateScore(item.tags, priorityTags);
+              if (score > 0) { // Only include achievements with tag matches
+                allScoredAchievements.push({
+                  score,
+                  text: item.text,
+                  tags: item.tags || [],
+                  category: achievementGroup.category,
+                  company: exp.company,
+                  title: position.title
+                });
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Sort by score (descending) and return top N
+    allScoredAchievements.sort((a, b) => b.score - a.score);
+    return allScoredAchievements.slice(0, maxHighlights);
+  }
+
+  /**
+   * Generate dynamic headline based on selected checkboxes and categories
+   * @param {Array} selectedCheckboxes - Array of selected checkbox objects
+   * @param {Object} selectedCategories - Category analysis object
+   * @returns {String} Dynamic headline
+   */
+  static generateDynamicHeadline(selectedCheckboxes, selectedCategories) {
+    if (!selectedCheckboxes || selectedCheckboxes.length === 0) {
+      return 'Pharmaceutical Marketing Professional';
+    }
+
+    // Extract specific selections
+    const therapeutic = selectedCheckboxes.find(cb =>
+      ['oncology', 'cardio', 'hiv', 'mens_health'].includes(cb.id)
+    );
+    const hasAI = selectedCheckboxes.some(cb => cb.id === 'ai');
+    const hasCX = selectedCheckboxes.some(cb => ['cx', 'xp', 'experience_planning', 'journey_mapping'].includes(cb.id));
+    const hasOmnichannel = selectedCheckboxes.some(cb => cb.id === 'omnichannel');
+    const hasBrand = selectedCheckboxes.some(cb => cb.id === 'brand');
+    const hasStrategy = selectedCheckboxes.some(cb => cb.id === 'strategy');
+    const hasLeadership = selectedCategories['Leadership & Operations']?.count > 0;
+    const hasHCP = selectedCheckboxes.some(cb => cb.id === 'hcp');
+    const hasMedia = selectedCheckboxes.some(cb => cb.id === 'media');
+
+    // Headline generation logic based on combinations
+    const parts = [];
+
+    // Therapeutic area first (if selected)
+    if (therapeutic) {
+      parts.push(therapeutic.label);
+    }
+
+    // Primary expertise
+    if (hasAI && hasCX) {
+      parts.push('AI-Enabled Customer Experience Strategist');
+    } else if (hasAI) {
+      parts.push('AI Innovation & Marketing Technology Leader');
+    } else if (hasCX && hasOmnichannel) {
+      parts.push('Omnichannel Customer Experience Leader');
+    } else if (hasBrand && hasStrategy) {
+      parts.push('Brand Strategy & Commercial Excellence Leader');
+    } else if (hasBrand) {
+      parts.push('Brand Management Leader');
+    } else if (hasStrategy) {
+      parts.push('Strategic Planning & Marketing Leader');
+    } else if (hasCX) {
+      parts.push('Customer Experience Strategist');
+    } else if (hasOmnichannel && hasHCP) {
+      parts.push('Omnichannel HCP Marketing Expert');
+    } else if (hasMedia && hasHCP) {
+      parts.push('HCP Media & Marketing Strategist');
+    } else if (hasLeadership) {
+      parts.push('Marketing Leadership Professional');
+    } else {
+      // Fallback: use top 2-3 checkbox labels
+      const topLabels = selectedCheckboxes.slice(0, 2).map(cb => cb.label);
+      parts.push(...topLabels, 'Specialist');
+    }
+
+    return parts.join(' ');
+  }
+
+  /**
+   * Generate dynamic tagline based on selected checkboxes
+   * @param {Array} selectedCheckboxes - Array of selected checkbox objects
+   * @returns {String} Dynamic tagline
+   */
+  static generateDynamicTagline(selectedCheckboxes) {
+    if (!selectedCheckboxes || selectedCheckboxes.length === 0) {
+      return 'Pharmaceutical marketing professional with comprehensive expertise';
+    }
+
+    const labels = selectedCheckboxes.map(cb => cb.label);
+
+    if (labels.length <= 3) {
+      return `Pharmaceutical marketing professional specializing in ${labels.join(', ')}`;
+    } else {
+      const first = labels.slice(0, 2).join(', ');
+      const last = labels[labels.length - 1];
+      return `Pharmaceutical marketing professional specializing in ${first}, and ${last}`;
+    }
+  }
+
+  /**
    * Filter projects by keyword matches - show more projects
    */
   filterProjects(priorityTags, maxProjects = 6) {
@@ -133,22 +253,35 @@ class ResumeBuilder {
     const filteredExp = this.filterExperience(profile.priority_tags, maxBullets);
     const filteredProjects = this.filterProjects(profile.priority_tags, maxProjects);
     const allSkills = this.getAllSkills();
+    const topHighlights = this.getTopAchievements(profile.priority_tags, 5);
+
+    // Generate dynamic headline and tagline for custom profiles
+    const isCustomProfile = profile.id === 'custom' && profile.selectedCheckboxes;
+    const dynamicHeadline = isCustomProfile
+      ? ResumeBuilder.generateDynamicHeadline(profile.selectedCheckboxes, profile.selectedCategories)
+      : profile.headline;
+    const dynamicTagline = isCustomProfile
+      ? ResumeBuilder.generateDynamicTagline(profile.selectedCheckboxes)
+      : profile.tagline;
 
     return {
       profile: {
         id: profile.id,
         label: profile.label,
-        headline: profile.headline,
-        tagline: profile.tagline,
+        headline: dynamicHeadline,
+        tagline: dynamicTagline,
         description: profile.description,
         competencies: profile.competencies,
         focusSkills: profile.focus_skills,
-        idealFor: profile.ideal_for || []
+        idealFor: profile.ideal_for || [],
+        selectedCheckboxes: profile.selectedCheckboxes || [], // For dynamic headline generation
+        selectedCategories: profile.selectedCategories || {} // For category analysis
       },
       personal: this.resumeData.personal,
       summary: this.resumeData.summary,
       experience: filteredExp.slice(0, maxRoles),
       projects: filteredProjects,
+      topHighlights: topHighlights, // Top 5 scored achievements
       allSkills: allSkills,
       education: this.resumeData.education,
       languages: this.resumeData.languages || [],
@@ -246,6 +379,26 @@ class ResumeRenderer {
 
   static renderTargetedHighlights(data) {
     const profile = data.profile;
+    const isCustomProfile = profile.id === 'custom' && data.topHighlights && data.topHighlights.length > 0;
+
+    // Custom profile: show top-scored achievements from resume data
+    if (isCustomProfile) {
+      const highlightsHtml = data.topHighlights.map(highlight => `
+        <p class="highlight-item"><strong>•</strong> ${highlight.text}</p>
+      `).join('');
+
+      return `
+        <div class="resume-section">
+          <h2 class="section-title">Targeted Highlights</h2>
+          <div class="section-content">
+            <p style="margin-bottom: 1rem; font-style: italic; color: #666;">Key achievements matching your selected focus areas:</p>
+            ${highlightsHtml}
+          </div>
+        </div>
+      `;
+    }
+
+    // Quick select profile: show competencies and projects (original behavior)
     const projects = data.projects.slice(0, 3);
     const competencies = profile.competencies || [];
 
