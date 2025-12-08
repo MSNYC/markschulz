@@ -1,214 +1,138 @@
-# Mark Schulz - Professional Website
+# Mark Schulz - Professional Portfolio
 
-A professional marketing and advertising portfolio website built with Jekyll and hosted on GitHub Pages.
+A single-page interactive portfolio and resume website for pharmaceutical marketing professional Mark Schulz. Built with Jekyll and hosted on GitHub Pages.
 
-## Quick Start
+**Live Site:** [markschulz.me](https://markschulz.me)
 
-### Local Development
+## Features
 
-1. **Install Jekyll and dependencies:**
+- **Interactive Resume Builder**: Visitors can select pre-built profiles (Brand Management, Strategic Planning, Customer Experience) or create custom filtered resumes by choosing specific focus areas
+- **Dynamic Content Filtering**: JavaScript-powered resume filtering based on therapeutic areas, audiences, and skills
+- **Responsive Design**: Mobile-first design with modern card layouts and smooth animations
+- **Privacy-Focused**: No tracking or analytics - visitor privacy is respected
+- **Contact Form**: Integrated Formspree contact form for inquiries
+
+## Tech Stack
+
+- **Static Site Generator**: Jekyll 4.3+
+- **Hosting**: GitHub Pages
+- **Styling**: Custom CSS with CSS Grid and Flexbox
+- **Interactivity**: Vanilla JavaScript (no frameworks)
+- **Form Handling**: Formspree
+- **Theme Base**: Minima (heavily customized)
+
+## Project Structure
+
+```
+├── _includes/          # Reusable components (header, footer, head)
+├── _layouts/           # Page layouts
+├── assets/
+│   ├── css/           # Custom stylesheets
+│   ├── js/            # Resume builder JavaScript
+│   └── data/          # Resume data (JSON)
+├── resume/            # Pre-built profile pages
+├── index.md           # Main single-page site
+└── _config.yml        # Jekyll configuration
+```
+
+## Local Development
+
+### Prerequisites
+
+- Ruby 2.7+ (macOS comes with Ruby)
+- Bundler and Jekyll gems
+
+### Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/markschulz.git
+   cd markschulz
+   ```
+
+2. **Install dependencies:**
    ```bash
    gem install bundler jekyll
    bundle install
    ```
 
-2. **Run the site locally:**
+3. **Run local server:**
    ```bash
    bundle exec jekyll serve
    ```
 
-3. **View in browser:**
+4. **View in browser:**
    Open [http://localhost:4000](http://localhost:4000)
 
-## Deployment to GitHub Pages
+## Content Updates
 
-### Step 1: Create GitHub Repository
+### Updating Resume Data
 
-1. Go to [GitHub](https://github.com) and create a new repository
-2. Name it `markschulz` (or `yourusername.github.io` for a user site)
-3. Set to **Public**
-4. Don't initialize with README (we already have one)
+Resume content is stored in `assets/data/resume.json`. To update:
 
-### Step 2: Push Your Site
+1. Edit `assets/data/resume.json` with new achievements, skills, or experience
+2. Test locally with `bundle exec jekyll serve`
+3. Commit and push to GitHub
+4. Site auto-deploys in 2-3 minutes
 
-```bash
-cd /home/kryphion/coding/markschulz
-git init
-git add .
-git commit -m "Initial commit - professional website"
-git branch -M main
-git remote add origin https://github.com/yourusername/markschulz.git
-git push -u origin main
-```
+### Modifying Styles
 
-### Step 3: Enable GitHub Pages
+- **Main styles**: `assets/css/custom.css`
+- **Resume builder**: `assets/css/resume-builder.css`
+- **Executive resume**: `assets/css/resume-executive.css`
 
-1. Go to your repository on GitHub
-2. Click **Settings** → **Pages**
-3. Under **Source**, select **Deploy from a branch**
-4. Select **main** branch and **/ (root)** folder
-5. Click **Save**
+CSS uses custom properties (CSS variables) for consistent theming:
+- `--accent-cyan`: Primary accent color
+- `--bg-primary`, `--bg-secondary`: Background colors
+- `--text-bright`, `--text-secondary`: Text colors
 
-Your site will be live at `https://yourusername.github.io/markschulz/` in a few minutes!
+## Deployment
 
-### Step 4: Configure Custom Domain (Optional)
+This site deploys automatically via GitHub Pages when changes are pushed to the `main` branch.
 
-1. Purchase your domain (e.g., markschulz.com) from a registrar
-2. Add DNS records at your registrar:
-   ```
-   Type: A
-   Name: @
-   Value: 185.199.108.153
+### Custom Domain Setup
 
-   Type: A
-   Name: @
-   Value: 185.199.109.153
+The site uses a custom domain (`markschulz.me`). DNS configuration:
 
-   Type: A
-   Name: @
-   Value: 185.199.110.153
+**A Records** (point to GitHub Pages):
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
 
-   Type: A
-   Name: @
-   Value: 185.199.111.153
+**CNAME Record**:
+- Name: `www`
+- Value: `yourusername.github.io`
 
-   Type: CNAME
-   Name: www
-   Value: yourusername.github.io
-   ```
+**In Repository**:
+- Create `CNAME` file in root with domain name
+- Enable "Enforce HTTPS" in GitHub Pages settings
 
-3. Create a file named `CNAME` in your repository root:
-   ```bash
-   echo "markschulz.com" > CNAME
-   git add CNAME
-   git commit -m "Add custom domain"
-   git push
-   ```
+## Privacy & Security
 
-4. In GitHub Settings → Pages, add your custom domain
-5. Enable **Enforce HTTPS** (after DNS propagates, 24-48 hours)
+✅ **Public Information:**
+- Professional work history and achievements
+- City/State location (New York, NY)
+- LinkedIn profile link
 
-## Customization Checklist
+❌ **Private Information (NOT included):**
+- Personal email address
+- Phone number
+- Home address
+- Any sensitive personal data
 
-### Essential Updates
+**Contact Methods:**
+- LinkedIn: [linkedin.com/in/mschulz](https://linkedin.com/in/mschulz)
+- Contact form powered by Formspree
 
-- [ ] **_config.yml** - Update all personal information
-  - [ ] Title, email, description
-  - [ ] Author information
-  - [ ] LinkedIn username
-  - [ ] URL (your custom domain)
+## Browser Support
 
-- [ ] **about.md** - Replace placeholder content
-  - [ ] Professional background story
-  - [ ] Complete work history
-  - [ ] Education and certifications
-  - [ ] Add actual resume PDF to `/assets/files/resume.pdf`
-
-- [ ] **index.md** - Customize homepage
-  - [ ] Update introduction
-  - [ ] Tailor expertise areas to your experience
-
-- [ ] **contact.md** - Set up contact form
-  - [ ] Sign up at [Formspree.io](https://formspree.io/)
-  - [ ] Replace `YOUR_FORM_ID` with actual form ID
-  - [ ] Update LinkedIn and email links
-
-- [ ] **Portfolio Items**
-  - [ ] Delete example file: `_portfolio/example-campaign.md`
-  - [ ] Add your actual case studies in `_portfolio/`
-
-- [ ] **Blog Posts**
-  - [ ] Delete example post: `_posts/2024-01-01-welcome-to-my-blog.md`
-  - [ ] Add your articles (or leave empty until ready)
-
-### Optional Enhancements
-
-- [ ] **Analytics** - Uncomment Google Analytics in `_includes/custom-head.html`
-- [ ] **Colors/Branding** - Customize CSS variables in `assets/css/custom.css`
-- [ ] **Favicon** - Add your favicon files to root directory
-- [ ] **Social Images** - Add og:image meta tags for social sharing
-
-## Adding Content
-
-### New Portfolio Item
-
-Create a file in `_portfolio/` with this format:
-
-```markdown
----
-layout: portfolio-item
-title: "Project Name"
-client: Client Name
-industry: Industry
-date: 2024-01-15
-excerpt: "Brief description for portfolio page"
----
-
-# Project Name
-
-Your case study content here...
-```
-
-### New Blog Post
-
-Create a file in `_posts/` with format `YYYY-MM-DD-title.md`:
-
-```markdown
----
-layout: post
-title: "Your Post Title"
-date: 2024-01-15 10:00:00 -0500
-categories: marketing strategy
-excerpt: "Brief excerpt for blog listing"
----
-
-Your blog post content here...
-```
-
-## LinkedIn Cross-Posting Setup
-
-Your site includes an RSS feed at `/feed.xml` for automated LinkedIn posting:
-
-1. **Option 1: Zapier (Recommended)**
-   - Sign up at [Zapier.com](https://zapier.com)
-   - Create new Zap: RSS → LinkedIn
-   - RSS Feed URL: `https://yoursite.com/feed.xml`
-   - Connect your LinkedIn account
-   - Configure posting format
-
-2. **Option 2: Buffer**
-   - Sign up at [Buffer.com](https://buffer.com)
-   - Add RSS feed under "Content" → "RSS Feeds"
-   - Configure LinkedIn posting schedule
-
-3. **Option 3: IFTTT**
-   - Create applet: RSS Feed → LinkedIn
-   - Similar setup to Zapier
-
-## Privacy & Security Best Practices
-
-✅ **Do Include:**
-- Professional email
-- City/State location
-- LinkedIn profile
-- Work history and achievements
-- Professional portfolio samples
-
-❌ **Don't Include:**
-- Full home address
-- Personal phone number (use Google Voice if needed)
-- Full birthdate
-- Social Security Number or other sensitive IDs
-- Personal/family information
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Maintenance
-
-### Updating Content
-
-1. Edit files locally
-2. Test with `bundle exec jekyll serve`
-3. Commit and push to GitHub
-4. Site auto-rebuilds in 1-2 minutes
 
 ### Updating Dependencies
 
@@ -219,29 +143,22 @@ git commit -m "Update dependencies"
 git push
 ```
 
-## Troubleshooting
+### Troubleshooting
 
-**Site not showing changes?**
-- Wait 2-3 minutes for GitHub to rebuild
+**Site not updating after push?**
+- GitHub Pages takes 2-3 minutes to rebuild
 - Check GitHub Actions tab for build errors
 - Clear browser cache
 
-**Custom domain not working?**
-- DNS can take 24-48 hours to propagate
-- Verify DNS records at your registrar
-- Check GitHub Pages settings
-
 **Contact form not working?**
-- Verify Formspree form ID is correct
+- Verify Formspree form ID is correct in `index.md`
 - Check Formspree dashboard for submissions
-- Test form submission logged out
-
-## Support
-
-- **Jekyll Documentation:** [jekyllrb.com](https://jekyllrb.com)
-- **GitHub Pages:** [docs.github.com/pages](https://docs.github.com/en/pages)
-- **Formspree:** [help.formspree.io](https://help.formspree.io)
+- Ensure form action URL is `https://formspree.io/f/mwpgnrjn`
 
 ## License
 
-This is a personal website. All content is copyright Mark Schulz unless otherwise noted.
+All content is © 2025 Mark Schulz. Code structure may be used as reference for educational purposes.
+
+## Built With
+
+This site was developed with assistance from [Claude Code](https://claude.com/claude-code), demonstrating AI-assisted web development workflows.
