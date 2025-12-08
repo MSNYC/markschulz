@@ -2730,29 +2730,6 @@
       ]
     },
     {
-      "name": "ASCO 2025 Congress Reporting Framework",
-      "description": "Standardized 4-pillar reporting structure for medical congress coverage across multiple oncology brands, creating consistent therapeutic area overview, clinical trial analysis, competitive intelligence, and strategic implications sections",
-      "role": "Lead Designer",
-      "period": "2024",
-      "technologies": [
-        "Quarto",
-        "Beamer",
-        "Markdown Workflow",
-        "Templated Report Generation"
-      ],
-      "outcomes": [
-        "Consistent reporting across 6 client oncology brands",
-        "Reduced report preparation time by 40% through standardization",
-        "Enhanced strategic value of congress insights for commercial teams"
-      ],
-      "keywords": [
-        "Oncology",
-        "Medical Communications",
-        "Process Optimization",
-        "Operational Excellence"
-      ]
-    },
-    {
       "name": "CX Ecosystem Sunburst Visualizer",
       "description": "Interactive Streamlit application visualizing complex customer experience ecosystem relationships using hierarchical sunburst charts with dynamic filtering and drill-down capabilities",
       "role": "Developer",
@@ -3161,13 +3138,6 @@
         "context": "per year, totaling $30M+ in sales",
         "company": "WebMD/Medscape",
         "years": "2018-2019"
-      },
-      {
-        "count": 6,
-        "type": "oncology brands",
-        "context": "ASCO 2025 reporting framework standardization",
-        "company": "Biolumina",
-        "years": "2024"
       }
     ],
     "innovations_firsts": [
@@ -3206,13 +3176,6 @@
         "context": "WebReportingHub platform for 9-brand portfolio",
         "company": "Biolumina",
         "year": "2023-2024"
-      },
-      {
-        "metric": "congress report prep time",
-        "change": "-40%",
-        "context": "ASCO 2025 framework standardization",
-        "company": "Biolumina",
-        "year": "2024"
       },
       {
         "metric": "MLR review cycle time",

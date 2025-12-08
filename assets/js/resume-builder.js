@@ -334,7 +334,7 @@ class ResumeBuilder {
       throw new Error('Invalid profile object');
     }
 
-    const maxBullets = 12; // Increased from 5
+    const maxBullets = 6; // Show only most relevant bullets per role
     const maxProjects = 6; // Increased from 4
     const maxRoles = 10; // Show ALL roles, not just 3
 
