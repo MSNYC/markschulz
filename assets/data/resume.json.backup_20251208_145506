@@ -1,9 +1,9 @@
 {
   "meta": {
-    "version": "2.2.0",
-    "last_updated": "2025-12-08",
+    "version": "2.1.0",
+    "last_updated": "2024-12-03",
     "schema_version": "2.0",
-    "notes": "Imported brand-specific achievements from cv-generator experience.yml for KISQALI, BRUKINSA, TAGRISSO, and BEACON initiatives"
+    "notes": "Phase 1 enhancements complete + Document extraction complete: Added pharma keywords taxonomy, therapeutic areas, regulatory compliance tracking, resume version configurations, metrics bank, ATS metadata, executive search firm tracking, and 6 new innovation projects from ChatGPT/Codex histories. Aligned with 2024-2025 executive resume best practices per optimization report."
   },
   "personal": {
     "name": {
@@ -145,39 +145,6 @@
                     "patient",
                     "automation"
                   ]
-                },
-                {
-                  "text": "Founded and led BEACON, Biolumina's enterprise-wide AI enablement initiative, scaling from a 25-user pilot to agency-wide adoption across 500+ employees",
-                  "tags": [
-                    "ai",
-                    "enablement",
-                    "leadership",
-                    "training",
-                    "innovation"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Designed and launched BEACON's internal AI hub (Teams + internal site) offering toolkits, guidance, templates, workflows, and curated examples for safe and effective AI use across disciplines",
-                  "tags": [
-                    "ai",
-                    "training",
-                    "content",
-                    "enablement",
-                    "operations"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Hosted weekly office hours, delivered ongoing workshops, and supported team-level onboardings to accelerate AI fluency and confidence across strategy, creative, editorial, PM, and analytics teams",
-                  "tags": [
-                    "ai",
-                    "enablement",
-                    "leadership",
-                    "facilitation",
-                    "training"
-                  ],
-                  "source": "cv-generator experience.yml"
                 }
               ]
             },
@@ -419,64 +386,6 @@
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
                   "extracted_date": "2025-12-07"
-                }
-              ]
-            },
-            {
-              "category": "Brand-Specific Strategy & Execution",
-              "items": [
-                {
-                  "text": "Built and refined full-funnel engagement ecosystems for KISQALI, mapping behavioral pathways, conversion logic, and channel sequencing across digital, CRM, media, and congress activations",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "cx",
-                    "xp",
-                    "analytics",
-                    "hcp",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Lead Experience Planner for KISQALI (ribociclib), a leading global CDK4/6 breast cancer therapy, driving annual omnichannel planning across both HCP and patient audiences",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "hcp",
-                    "patient",
-                    "strategy",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Developed the TAGRISSO omnichannel experience framework, aligning Patient/Caregiver CRM pathways, messaging architecture, and data-driven journey refinements",
-                  "tags": [
-                    "oncology",
-                    "xp",
-                    "cx",
-                    "crm",
-                    "strategy",
-                    "omnichannel",
-                    "patient",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Served as Lead Experience Planner for BRUKINSA (zanubrutinib) for BeiGene, shaping omnichannel strategy and driving end-to-end HCP experience and conversion planning",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "hcp",
-                    "strategy",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
                 }
               ]
             }
@@ -1148,8 +1057,7 @@
                     "project_management",
                     "leadership",
                     "crm",
-                    "social_media",
-                    "rare_disease"
+                    "social_media"
                   ]
                 },
                 {
@@ -1160,8 +1068,7 @@
                     "brand",
                     "project_management",
                     "omnichannel",
-                    "leadership",
-                    "rare_disease"
+                    "leadership"
                   ]
                 },
                 {

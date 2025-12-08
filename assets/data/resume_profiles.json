@@ -219,8 +219,8 @@
           {
             "id": "launch",
             "label": "Product Launch Excellence",
-            "tags": ["launch"],
-            "description": "Pre-launch planning, launch execution, uptake acceleration"
+            "tags": ["launch", "brand", "strategy"],
+            "description": "New drug/brand launches, pre-launch planning, market entry strategy"
           },
           {
             "id": "omnichannel",

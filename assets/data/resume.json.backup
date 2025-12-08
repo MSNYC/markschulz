@@ -1,9 +1,9 @@
 {
   "meta": {
-    "version": "2.2.0",
-    "last_updated": "2025-12-08",
+    "version": "2.1.0",
+    "last_updated": "2024-12-03",
     "schema_version": "2.0",
-    "notes": "Imported brand-specific achievements from cv-generator experience.yml for KISQALI, BRUKINSA, TAGRISSO, and BEACON initiatives"
+    "notes": "Phase 1 enhancements complete + Document extraction complete: Added pharma keywords taxonomy, therapeutic areas, regulatory compliance tracking, resume version configurations, metrics bank, ATS metadata, executive search firm tracking, and 6 new innovation projects from ChatGPT/Codex histories. Aligned with 2024-2025 executive resume best practices per optimization report."
   },
   "personal": {
     "name": {
@@ -77,8 +77,7 @@
                     "leadership",
                     "oncology",
                     "brand",
-                    "digital",
-                    "patient"
+                    "digital"
                   ]
                 },
                 {
@@ -91,7 +90,7 @@
                   ]
                 },
                 {
-                  "text": "Created internal education materials explaining AI, LLMs, and enterprise privacy/security principles",
+                  "text": "Created internal education materials explaining AI, ML, LLMs, and enterprise privacy/security principles",
                   "tags": [
                     "ai",
                     "leadership",
@@ -145,39 +144,6 @@
                     "patient",
                     "automation"
                   ]
-                },
-                {
-                  "text": "Founded and led BEACON, Biolumina's enterprise-wide AI enablement initiative, scaling from a 25-user pilot to agency-wide adoption across 500+ employees",
-                  "tags": [
-                    "ai",
-                    "enablement",
-                    "leadership",
-                    "training",
-                    "innovation"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Designed and launched BEACON's internal AI hub (Teams + internal site) offering toolkits, guidance, templates, workflows, and curated examples for safe and effective AI use across disciplines",
-                  "tags": [
-                    "ai",
-                    "training",
-                    "content",
-                    "enablement",
-                    "operations"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Hosted weekly office hours, delivered ongoing workshops, and supported team-level onboardings to accelerate AI fluency and confidence across strategy, creative, editorial, PM, and analytics teams",
-                  "tags": [
-                    "ai",
-                    "enablement",
-                    "leadership",
-                    "facilitation",
-                    "training"
-                  ],
-                  "source": "cv-generator experience.yml"
                 }
               ]
             },
@@ -206,7 +172,7 @@
                   ]
                 },
                 {
-                  "text": "Supported TAGRISSO DTC brand initiatives by designing omnichannel CRM, segmentation, CTV/OTT, and experiential congress frameworks for patient/caregiver audiences",
+                  "text": "Supported client brand initiatives by designing omnichannel, segmentation, CTV/OTT, and experiential congress frameworks",
                   "tags": [
                     "strategy",
                     "omnichannel",
@@ -214,19 +180,27 @@
                     "oncology",
                     "experience_planning",
                     "xp",
-                    "launch",
-                    "patient"
+                    "launch"
                   ]
                 },
                 {
-                  "text": "Designed interactive game-based advertising concepts and WebAR strategies with 8th Wall for TAGRISSO patient engagement",
+                  "text": "Designed interactive game-based advertising concepts and WebAR strategies with 8th Wall",
                   "tags": [
                     "innovation",
                     "digital",
                     "cx",
                     "experience_planning",
+                    "oncology"
+                  ]
+                },
+                {
+                  "text": "Contributed to naming and ideation for oncology-branded GPT assistants",
+                  "tags": [
+                    "brand",
                     "oncology",
-                    "patient"
+                    "ai",
+                    "innovation",
+                    "strategy"
                   ]
                 }
               ]
@@ -241,6 +215,15 @@
                     "data_engineering",
                     "innovation",
                     "digital"
+                  ]
+                },
+                {
+                  "text": "Analysis of session segmentation (HCP vs Patient), including weekend behavior",
+                  "tags": [
+                    "analytics",
+                    "hcp",
+                    "patient",
+                    "cx"
                   ]
                 },
                 {
@@ -331,6 +314,15 @@
                   ]
                 },
                 {
+                  "text": "Built Python + BeautifulSoup website crawlers with URL-structured extraction and repeated-section de-duplication",
+                  "tags": [
+                    "automation",
+                    "data_engineering",
+                    "innovation",
+                    "digital"
+                  ]
+                },
+                {
                   "text": "Created processes for converting heavy PDFs, PPTs, and Word files into lighter JSON/XML structures",
                   "tags": [
                     "automation",
@@ -345,6 +337,15 @@
                     "data_engineering",
                     "strategy"
                   ]
+                },
+                {
+                  "text": "Designed Power Automate flows using AI Builder to detect daily mentions and trigger summaries",
+                  "tags": [
+                    "automation",
+                    "ai",
+                    "innovation",
+                    "digital"
+                  ]
                 }
               ]
             },
@@ -357,6 +358,20 @@
                     "data_engineering",
                     "automation",
                     "leadership"
+                  ]
+                },
+                {
+                  "text": "Solved debugging challenges in Python (length mismatch errors, library conflicts)",
+                  "tags": [
+                    "data_engineering",
+                    "innovation"
+                  ]
+                },
+                {
+                  "text": "Ensured secure environments by avoiding Homebrew and managing MacPorts limitations",
+                  "tags": [
+                    "data_engineering",
+                    "strategy"
                   ]
                 },
                 {
@@ -383,6 +398,52 @@
                     "digital",
                     "oncology"
                   ]
+                },
+                {
+                  "text": "Led Curiosity-Driven Innovation Initiative with 12 team members over 18 months, generating 5 client-facing innovations and fostering culture of continuous learning",
+                  "tags": [
+                    "leadership",
+                    "innovation",
+                    "strategy",
+                    "digital",
+                    "oncology"
+                  ]
+                },
+                {
+                  "text": "Built WebReportingHub analytics platform reducing cross-brand reporting time 60% for 9-brand portfolio using DuckDB and Python automation",
+                  "tags": [
+                    "analytics",
+                    "data_engineering",
+                    "automation",
+                    "innovation",
+                    "brand",
+                    "oncology",
+                    "portfolio"
+                  ]
+                }
+              ]
+            },
+            {
+              "category": "Process & Operational Excellence",
+              "items": [
+                {
+                  "text": "Designed ASCO 2025 Congress reporting framework standardizing medical insights delivery across 6 oncology brands, reducing prep time 40%",
+                  "tags": [
+                    "strategy",
+                    "oncology",
+                    "brand",
+                    "automation"
+                  ]
+                },
+                {
+                  "text": "Created Promo Fingerprint Visualizer for MLR compliance tracking, contributing to 15% reduction in review cycle time",
+                  "tags": [
+                    "compliance",
+                    "mlr",
+                    "analytics",
+                    "innovation",
+                    "automation"
+                  ]
                 }
               ]
             },
@@ -392,14 +453,13 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
-                  "text": "Created internal 'Xosystem' (experience ecosystem) process to optimize TAGRISSO DTC tactical planning and execution across omnichannel customer touchpoints",
+                  "text": "Created internal 'Xosystem' (experience ecosystem) process to optimize tactical planning and execution across omnichannel customer touchpoints",
                   "tags": [
                     "experience_planning",
                     "process_improvement",
                     "omnichannel",
                     "innovation",
-                    "oncology",
-                    "patient"
+                    "oncology"
                   ],
                   "metric_type": "process",
                   "source_confidence": "high",
@@ -407,76 +467,17 @@
                   "extracted_date": "2025-12-07"
                 },
                 {
-                  "text": "Built and executed omnichannel customer relationship marketing (CRM) programming for TAGRISSO DTC brand aligned to strategic imperatives",
+                  "text": "Built and executed omnichannel customer relationship marketing (CRM) programming aligned to brand strategic imperatives",
                   "tags": [
                     "crm",
                     "omnichannel",
                     "strategy",
                     "experience_planning",
-                    "oncology",
-                    "patient"
+                    "oncology"
                   ],
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
                   "extracted_date": "2025-12-07"
-                }
-              ]
-            },
-            {
-              "category": "Brand-Specific Strategy & Execution",
-              "items": [
-                {
-                  "text": "Built and refined full-funnel engagement ecosystems for KISQALI, mapping behavioral pathways, conversion logic, and channel sequencing across digital, CRM, media, and congress activations",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "cx",
-                    "xp",
-                    "analytics",
-                    "hcp",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Lead Experience Planner for KISQALI (ribociclib), a leading global CDK4/6 breast cancer therapy, driving annual omnichannel planning across both HCP and patient audiences",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "hcp",
-                    "patient",
-                    "strategy",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Developed the TAGRISSO omnichannel experience framework, aligning Patient/Caregiver CRM pathways, messaging architecture, and data-driven journey refinements",
-                  "tags": [
-                    "oncology",
-                    "xp",
-                    "cx",
-                    "crm",
-                    "strategy",
-                    "omnichannel",
-                    "patient",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Served as Lead Experience Planner for BRUKINSA (zanubrutinib) for BeiGene, shaping omnichannel strategy and driving end-to-end HCP experience and conversion planning",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "hcp",
-                    "strategy",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
                 }
               ]
             }
@@ -543,6 +544,26 @@
                   "extracted_date": "2025-12-07"
                 }
               ]
+            },
+            {
+              "category": "Extracted from RESUME_Mark_Schulz_20220701.pdf",
+              "source": "RESUME_Mark_Schulz_20220701.pdf",
+              "extraction_date": "2025-12-07",
+              "items": [
+                {
+                  "text": "Provided oversight of several tactics comprising a new mini-campaign launch for a leading HIV treatment, ensuring coordinated execution across multiple agency departments",
+                  "tags": [
+                    "launch",
+                    "hiv",
+                    "leadership",
+                    "project_management"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "medium",
+                  "source_document": "RESUME_Mark_Schulz_20220701.pdf",
+                  "extracted_date": "2025-12-07"
+                }
+              ]
             }
           ],
           "skills_used": [
@@ -571,6 +592,12 @@
             "Defined strategy for accounts throughout entire sales lifecycle: ROI modeling, pitch, media configuration, contracting, execution, impact analysis with IQVIA, optimizations, and renewals"
           ],
           "achievements": [
+            {
+              "category": "Extracted from MARK_SCHULZ_Resume_2019R.pdf",
+              "source": "MARK_SCHULZ_Resume_2019R.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
+            },
             {
               "category": "Extracted from Mark_Schulz_RESUME_20191107_final.pdf",
               "source": "Mark_Schulz_RESUME_20191107_final.pdf",
@@ -637,6 +664,53 @@
                   "metric_type": "",
                   "source_confidence": "medium",
                   "source_document": "Mark_Schulz_RESUME_20191107_final.pdf",
+                  "extracted_date": "2025-12-07"
+                }
+              ]
+            },
+            {
+              "category": "Extracted from RESUME_Mark_Schulz.pdf",
+              "source": "RESUME_Mark_Schulz.pdf",
+              "extraction_date": "2025-12-07",
+              "items": [
+                {
+                  "text": "Managed team of 3 Associate Directors and 1 Business Analyst, providing strategic oversight from initial ROI modeling through final campaign impact measurement via NRx/TRx test-versus-control analysis",
+                  "tags": [
+                    "leadership",
+                    "team_management",
+                    "roi_modeling",
+                    "analytics",
+                    "strategy"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Managed portfolio of ~30 strategic deals per year totaling $30M+ in annual sales, focusing on high investment, exposure, or risk campaigns",
+                  "tags": [
+                    "portfolio",
+                    "strategy",
+                    "budget_management",
+                    "roi_modeling"
+                  ],
+                  "metric_type": "revenue",
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Managed ~10 strategic performance-guarantee deals with sales of $19M+ as Director role foundation",
+                  "tags": [
+                    "strategy",
+                    "partnership",
+                    "roi_modeling",
+                    "budget_management"
+                  ],
+                  "metric_type": "revenue",
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz.pdf",
                   "extracted_date": "2025-12-07"
                 }
               ]
@@ -714,6 +788,33 @@
                   "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
                   "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Developed innovative EMR competitive messaging through groundbreaking partnership with AllScripts, integrating clinical decision support into electronic medical records",
+                  "tags": [
+                    "innovation",
+                    "partnership",
+                    "digital",
+                    "hcp",
+                    "positioning"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Executed multi-property web launch within 24 hours of PDUFA approval, coordinating complex cross-departmental resources for rapid market entry",
+                  "tags": [
+                    "launch",
+                    "project_management",
+                    "timeline_management",
+                    "digital",
+                    "regulatory"
+                  ],
+                  "metric_type": "time_saved",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
                 }
               ]
             },
@@ -732,6 +833,31 @@
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Harnessed internal and external data sources to drive campaign ROI optimization across pharmaceutical client partnerships",
+                  "tags": [
+                    "analytics",
+                    "roi_modeling",
+                    "strategy",
+                    "data_engineering"
+                  ],
+                  "metric_type": "percentage",
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Provided strategic oversight from performance modeling through final Rx measurement, establishing end-to-end campaign effectiveness tracking",
+                  "tags": [
+                    "strategy",
+                    "analytics",
+                    "roi_modeling",
+                    "hcp"
+                  ],
+                  "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
                   "extracted_date": "2025-12-07"
                 },
@@ -961,6 +1087,29 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Led PM team of 5 direct reports providing full project management services for major pharmaceutical clients",
+                  "tags": [
+                    "leadership",
+                    "team_management",
+                    "project_management"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Developed and executed annual Statement of Work (SOW) formulation and execution processes for pharmaceutical client engagements",
+                  "tags": [
+                    "project_management",
+                    "budget_management",
+                    "process_improvement"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Innovated financial job tracking system and multi-department resourcing methodology to optimize project delivery efficiency",
                   "tags": [
                     "innovation",
@@ -979,8 +1128,7 @@
                     "compliance",
                     "digital",
                     "timeline_management",
-                    "project_management",
-                    "patient"
+                    "project_management"
                   ],
                   "metric_type": "time_saved",
                   "source_confidence": "high",
@@ -995,12 +1143,63 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Delivered multi-property web launch within 24 hours of PDUFA approval, coordinating complex multi-department resourcing for pharmaceutical client",
+                  "tags": [
+                    "project_management",
+                    "timeline_management",
+                    "digital",
+                    "regulatory",
+                    "leadership"
+                  ],
+                  "metric_type": "time_saved",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Developed groundbreaking group practice adherence program with national sales representative training component for pharmaceutical client",
+                  "tags": [
+                    "innovation",
+                    "sales_enablement",
+                    "training",
+                    "partnership"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Led full project management team for major pharmaceutical client including annual SOW formulation and execution",
+                  "tags": [
+                    "project_management",
+                    "team_management",
+                    "budget_management",
+                    "leadership"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Supervised and drove growth of multiple direct reports while managing complex multi-department resourcing across pharmaceutical projects",
                   "tags": [
                     "leadership",
                     "team_management",
                     "mentoring",
                     "project_management"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Developed innovative partnership with AllScripts for EMR competitive messaging integration",
+                  "tags": [
+                    "innovation",
+                    "partnership",
+                    "digital",
+                    "hcp",
+                    "positioning"
                   ],
                   "source_confidence": "high",
                   "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
@@ -1100,6 +1299,19 @@
                   "extracted_date": "2025-12-07"
                 },
                 {
+                  "text": "Conducted a one-month, inter-agency PM best practice and leadership training secondment to address performance gaps at a sister agency",
+                  "tags": [
+                    "training",
+                    "mentoring",
+                    "leadership",
+                    "process_improvement"
+                  ],
+                  "metric_type": "time_saved",
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz_20220701.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Built and introduced an SOW burn tracker used to enhance estimates, the tracking of actuals, inter-department management of hours, and earlier identification of divergence from forecasts",
                   "tags": [
                     "innovation",
@@ -1133,83 +1345,6 @@
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
                   "extracted_date": "2025-12-07"
-                }
-              ]
-            },
-            {
-              "category": "Brand-Specific Patient Marketing Leadership",
-              "items": [
-                {
-                  "text": "Led project management and digital strategy for BANZEL (epilepsy) patient website, social media campaigns, and email programs as lead PM and digital consultant",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "project_management",
-                    "leadership",
-                    "crm",
-                    "social_media",
-                    "rare_disease"
-                  ]
-                },
-                {
-                  "text": "Oversaw full digital promotion ecosystem for BANZEL brand spanning web, social, and CRM channels with cross-functional team coordination",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "project_management",
-                    "omnichannel",
-                    "leadership",
-                    "rare_disease"
-                  ]
-                },
-                {
-                  "text": "Managed major indication launch for LUCENTIS (wet AMD) treated as full brand launch, overseeing complete website redesign and digital ecosystem overhaul for patient and caregiver audiences",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "launch",
-                    "project_management",
-                    "leadership"
-                  ]
-                },
-                {
-                  "text": "Led cross-functional teams to deliver responsive website and comprehensive digital asset suite for LUCENTIS new indication launch targeting patients and caregivers",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "launch",
-                    "project_management",
-                    "leadership",
-                    "innovation"
-                  ]
-                },
-                {
-                  "text": "Led development of innovative mobile smartphone application for MS patients on TECFIDERA, pioneering one of the first-of-its-kind patient support apps in pharma",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "innovation",
-                    "mobile",
-                    "brand",
-                    "project_management",
-                    "leadership"
-                  ]
-                },
-                {
-                  "text": "Managed full product lifecycle from concept to launch for groundbreaking TECFIDERA mobile app, establishing new standards for digital patient engagement in MS treatment",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "innovation",
-                    "mobile",
-                    "brand",
-                    "launch",
-                    "project_management"
-                  ]
                 }
               ]
             }
@@ -1249,6 +1384,17 @@
                   "source_confidence": "high",
                   "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
                   "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Innovated financial job tracking and multi-department resourcing systems to improve project delivery efficiency across pharmaceutical client engagements",
+                  "tags": [
+                    "innovation",
+                    "process_improvement",
+                    "project_management"
+                  ],
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
                 }
               ]
             },
@@ -1257,6 +1403,19 @@
               "source": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
               "extraction_date": "2025-12-07",
               "items": [
+                {
+                  "text": "Managed complex multi-departmental resourcing for major pharmaceutical client projects, coordinating cross-functional teams to deliver integrated digital solutions",
+                  "tags": [
+                    "project_management",
+                    "team_management",
+                    "leadership",
+                    "digital",
+                    "vendor_management"
+                  ],
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
                 {
                   "text": "Supervised and developed growth of multiple direct reports while formulating and executing annual Statement of Work for major pharmaceutical clients",
                   "tags": [
@@ -1277,6 +1436,18 @@
               "source": "Mark_Schulz_RESUME_20191107_final.pdf",
               "extraction_date": "2025-12-07",
               "items": [
+                {
+                  "text": "Supervised a PM team of 5 including 2 Senior PMs, 1 PM, 1 Associate PM, and 1 Brand Coordinator across pharmaceutical client accounts",
+                  "tags": [
+                    "team_management",
+                    "leadership",
+                    "project_management"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "Mark_Schulz_RESUME_20191107_final.pdf",
+                  "extracted_date": "2025-12-07"
+                },
                 {
                   "text": "Reported billable hour actuals, forecasts and accruals to senior management to manage quarterly and annual closes accurately and meet agency-wide financial reporting rollups to Omnicom/analysts",
                   "tags": [
@@ -1303,6 +1474,18 @@
                   "extracted_date": "2025-12-07"
                 }
               ]
+            },
+            {
+              "category": "Extracted from RESUME_Mark_Schulz.pdf",
+              "source": "RESUME_Mark_Schulz.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
+            },
+            {
+              "category": "Extracted from RESUME_Mark_Schulz_20220701.pdf",
+              "source": "RESUME_Mark_Schulz_20220701.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
             }
           ],
           "skills_used": [
@@ -1347,12 +1530,38 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Launched multi-property web platform within 48 hours of PDUFA approval, demonstrating rapid response capability for critical pharmaceutical regulatory milestones",
+                  "tags": [
+                    "project_management",
+                    "timeline_management",
+                    "digital",
+                    "regulatory"
+                  ],
+                  "metric_type": "time_saved",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Executed complex multi-departmental resource coordination for major pharmaceutical client projects, managing cross-functional teams and stakeholder alignment",
                   "tags": [
                     "project_management",
                     "team_management",
                     "leadership",
                     "vendor_management"
+                  ],
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Managed tablet PC eDetailing implementation as project captain, leading digital transformation of sales force engagement tools",
+                  "tags": [
+                    "digital",
+                    "project_management",
+                    "sales_enablement",
+                    "leadership",
+                    "hcp"
                   ],
                   "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
@@ -1387,13 +1596,25 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Drafted and facilitated review/approval of approximately 5 SOWs valued at $1M+ each per year, totaling $5M+ in annual project value",
+                  "tags": [
+                    "budget_management",
+                    "project_management",
+                    "mlr",
+                    "compliance"
+                  ],
+                  "metric_type": "budget",
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Managed complex timelines to deliver cutting-edge responsive and HTML5 sites for major pharmaceutical clients using advanced web technologies",
                   "tags": [
                     "digital",
                     "innovation",
                     "project_management",
-                    "timeline_management",
-                    "patient"
+                    "timeline_management"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -1423,7 +1644,7 @@
           "current": false,
           "responsibilities": [
             "Managed a $10M+ portion of US HCP LIPITOR & CADUET marketing budget to efficiently target print and digital promotion to US healthcare professionals, ensuring alignment to core brand strategies, particularly for LIPITOR as it approached LOE",
-            "Pioneered digital solutions new to Pfizer and the industry: EMR-based competitive blunting triggered messaging capability with AllScripts",
+            "Pioneered digital solutions new to Pfizer and the industry: EMR-based competitive blunting triggered messaging capability with AllScripts, first-ever branded podcast solution for Pfizer",
             "Brand marketing responsibilities included: Review Committee Marketing Captain, convention management, positioning and new campaign launch, POA rep trainings, savings card, digital multichannel, eDetailing rollout captain"
           ],
           "achievements": [
@@ -1431,6 +1652,8 @@
               "category": "Previous achievements",
               "items": [
                 "Managed $10M+ marketing budget",
+                "Pioneered first-ever branded podcast for Pfizer",
+                "Developed EMR-based competitive messaging with AllScripts (industry first)",
                 "Led digital multichannel transformation for legacy brand approaching LOE"
               ]
             },
@@ -1554,6 +1777,19 @@
                     "targeting"
                   ],
                   "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "MARK.SCHULZ.2011.portfolio.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Managed $10+ million HCP marketing budget while driving share stabilization and optimizing marketing mix during extreme Field Force reductions",
+                  "tags": [
+                    "budget_management",
+                    "hcp",
+                    "cardio",
+                    "strategy"
+                  ],
+                  "metric_type": "budget",
                   "source_confidence": "high",
                   "source_document": "MARK.SCHULZ.2011.portfolio.pdf",
                   "extracted_date": "2025-12-07"
@@ -1707,6 +1943,34 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Pioneered groundbreaking group practice adherence program with national sales representative training for LIPITOR/CADUET, creating new patient engagement model",
+                  "tags": [
+                    "brand",
+                    "innovation",
+                    "sales_enablement",
+                    "training",
+                    "cardio"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Executed multi-property web launch within 24 hours of PDUFA approval, ensuring immediate market presence for brand launch",
+                  "tags": [
+                    "launch",
+                    "digital",
+                    "timeline_management",
+                    "regulatory",
+                    "project_management"
+                  ],
+                  "metric_type": "time_saved",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Managed digital share-of-voice strategy for Pfizer across multiple platforms including QuantiaMD, banner advertising, and SEM campaigns",
                   "tags": [
                     "digital",
@@ -1735,10 +1999,73 @@
               ]
             },
             {
+              "category": "Extracted from MARK_SCHULZ_Resume_2019R.pdf",
+              "source": "MARK_SCHULZ_Resume_2019R.pdf",
+              "extraction_date": "2025-12-07",
+              "items": [
+                {
+                  "text": "Led groundbreaking group practice adherence program and national sales representative training for LIPITOR and CADUET brands",
+                  "tags": [
+                    "brand",
+                    "training",
+                    "sales_enablement",
+                    "patient",
+                    "cardio"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Executed integrated marketing campaigns including Tablet PC eDetailing, savings card programs, media planning, conventions, and speaker programs with MLR compliance oversight",
+                  "tags": [
+                    "digital",
+                    "hcp",
+                    "media",
+                    "mlr",
+                    "compliance",
+                    "brand",
+                    "patient"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                }
+              ]
+            },
+            {
               "category": "Extracted from MARK_SCHULZ_VP_Proj_Mgmt.pdf",
               "source": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
               "extraction_date": "2025-12-07",
               "items": [
+                {
+                  "text": "Launched multi-property web platform within 24 hours of PDUFA approval, demonstrating rapid regulatory response capabilities",
+                  "tags": [
+                    "launch",
+                    "digital",
+                    "regulatory",
+                    "timeline_management",
+                    "project_management"
+                  ],
+                  "metric_type": "time_saved",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Managed digital share of voice initiatives for Pfizer including QuantiaMD banners and SEM campaigns",
+                  "tags": [
+                    "digital",
+                    "media",
+                    "brand",
+                    "hcp",
+                    "analytics"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
                 {
                   "text": "Developed comprehensive savings card and media planning programs with conventions and speaker captain responsibilities",
                   "tags": [
@@ -1801,6 +2128,20 @@
                   "extracted_date": "2025-12-07"
                 },
                 {
+                  "text": "Achieved on-budget, on-schedule delivery of core interactive digital messaging as Tablet PC eDetailing Captain for CADUET during Pfizer's first deployment of digital closed-loop detailing",
+                  "tags": [
+                    "digital",
+                    "hcp",
+                    "brand",
+                    "project_management",
+                    "timeline_management",
+                    "cardio"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "Mark_Schulz_RESUME_20191107_final.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Served as Review Committee (MLR) marketing captain to ease the RC process and ensure marketing had an organized voice in decisions",
                   "tags": [
                     "mlr",
@@ -1815,10 +2156,29 @@
               ]
             },
             {
+              "category": "Extracted from RESUME_Mark_Schulz.pdf",
+              "source": "RESUME_Mark_Schulz.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
+            },
+            {
               "category": "Extracted from RESUME_Mark_Schulz_20220701.pdf",
               "source": "RESUME_Mark_Schulz_20220701.pdf",
               "extraction_date": "2025-12-07",
               "items": [
+                {
+                  "text": "Drove final market testing, review committee approvals, and launch of a two-platform overhaul to the Caduet creative campaign",
+                  "tags": [
+                    "launch",
+                    "brand",
+                    "positioning",
+                    "cardio",
+                    "mlr"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz_20220701.pdf",
+                  "extracted_date": "2025-12-07"
+                },
                 {
                   "text": "Led HCP marketing efforts and conducted national sales rep training for a ground-breaking group practice adherence program that re-invigorated field force reps and unlocked a new front in point-of-care hybrid messaging",
                   "tags": [
@@ -2075,6 +2435,18 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Prepared and managed individual $4.5+ million marketing budget in support of VIAGRA/REVATIO brand goals",
+                  "tags": [
+                    "budget_management",
+                    "brand",
+                    "hcp"
+                  ],
+                  "metric_type": "budget",
+                  "source_confidence": "high",
+                  "source_document": "MARK.SCHULZ.RESUME.1.2012.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Managed tactical pull-through and evolution of PCP and Specialist platforms to drive share stabilization during challenging market conditions",
                   "tags": [
                     "brand",
@@ -2146,6 +2518,18 @@
               ]
             },
             {
+              "category": "Extracted from MARK.SCHULZ.RESUME.2011.11.pdf",
+              "source": "MARK.SCHULZ.RESUME.2011.11.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
+            },
+            {
+              "category": "Extracted from MARK.SCHULZ.RESUME.2011.11.pdf",
+              "source": "MARK.SCHULZ.RESUME.2011.11.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
+            },
+            {
               "category": "Extracted from MARK_SCHULZ_Dir_Mkt_Strat.pdf",
               "source": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
               "extraction_date": "2025-12-07",
@@ -2161,6 +2545,33 @@
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Pioneered first-ever branded podcast solution for Pfizer, establishing new digital engagement channel for healthcare professional audiences",
+                  "tags": [
+                    "innovation",
+                    "digital",
+                    "brand",
+                    "hcp",
+                    "media"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Executed tablet PC eDetailing program as team captain, implementing digital sales enablement tools for field representatives",
+                  "tags": [
+                    "digital",
+                    "sales_enablement",
+                    "innovation",
+                    "leadership",
+                    "hcp"
+                  ],
+                  "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
                   "extracted_date": "2025-12-07"
                 },
@@ -2185,6 +2596,32 @@
               "source": "MARK_SCHULZ_Resume_2019R.pdf",
               "extraction_date": "2025-12-07",
               "items": [
+                {
+                  "text": "Developed first-ever branded podcast solution for Pfizer, pioneering a new digital marketing channel for the company",
+                  "tags": [
+                    "innovation",
+                    "digital",
+                    "brand",
+                    "hcp"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Led groundbreaking group practice adherence program and national sales representative training initiative across VIAGRA portfolio",
+                  "tags": [
+                    "brand",
+                    "training",
+                    "sales_enablement",
+                    "innovation",
+                    "leadership"
+                  ],
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
                 {
                   "text": "Implemented EMR-based competitive messaging and digital-mix share of voice strategies for VIAGRA brand positioning",
                   "tags": [
@@ -2218,6 +2655,35 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Launched groundbreaking group practice adherence program with national sales representative training for VIAGRA, creating first-of-its-kind physician-focused patient retention initiative",
+                  "tags": [
+                    "brand",
+                    "launch",
+                    "innovation",
+                    "hcp",
+                    "training",
+                    "sales_enablement"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Developed innovative partnership with AllScripts for EMR competitive messaging integration, establishing first digital physician workflow solution for VIAGRA brand",
+                  "tags": [
+                    "partnership",
+                    "innovation",
+                    "digital",
+                    "hcp",
+                    "positioning"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Led tablet PC eDetailing implementation as Digital Captain, introducing innovative sales force technology solutions for enhanced HCP engagement",
                   "tags": [
                     "digital",
@@ -2239,6 +2705,20 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Designed, negotiated approvals, and launched the first-ever branded podcast solution for Pfizer, establishing a new digital marketing channel for the organization",
+                  "tags": [
+                    "innovation",
+                    "digital",
+                    "brand",
+                    "launch",
+                    "hcp"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "Mark_Schulz_RESUME_20191107_final.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Led all budgeting, design, creative approvals, rep training and on-site strategic supervision for 3 major convention booths (3,500+ sq ft) targeting healthcare professionals",
                   "tags": [
                     "budget_management",
@@ -2253,6 +2733,33 @@
                   "extracted_date": "2025-12-07"
                 }
               ]
+            },
+            {
+              "category": "Extracted from RESUME_Mark_Schulz.pdf",
+              "source": "RESUME_Mark_Schulz.pdf",
+              "extraction_date": "2025-12-07",
+              "items": [
+                {
+                  "text": "Designed, negotiated approvals, and launched the first-ever branded podcast solution for Pfizer",
+                  "tags": [
+                    "innovation",
+                    "digital",
+                    "launch",
+                    "brand",
+                    "hcp"
+                  ],
+                  "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "RESUME_Mark_Schulz.pdf",
+                  "extracted_date": "2025-12-07"
+                }
+              ]
+            },
+            {
+              "category": "Extracted from RESUME_Mark_Schulz_20220701.pdf",
+              "source": "RESUME_Mark_Schulz_20220701.pdf",
+              "extraction_date": "2025-12-07",
+              "items": []
             },
             {
               "category": "Extracted from SCHULZM_ANNUAL_ASSESSMENT.doc",
@@ -2362,12 +2869,38 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
+                  "text": "Implemented digital share-of-voice strategy across multiple platforms including QuantiaMD, banner advertising, and SEM to increase Pfizer's competitive positioning",
+                  "tags": [
+                    "digital",
+                    "brand",
+                    "positioning",
+                    "media",
+                    "analytics"
+                  ],
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
                   "text": "Developed savings card program and comprehensive media planning initiatives to support brand accessibility and market penetration",
                   "tags": [
                     "brand",
                     "media",
                     "budget_management",
                     "patient"
+                  ],
+                  "source_confidence": "medium",
+                  "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Served as Tablet PC eDetailing Captain, leading digital transformation of sales force presentation capabilities",
+                  "tags": [
+                    "digital",
+                    "innovation",
+                    "sales_enablement",
+                    "leadership",
+                    "hcp"
                   ],
                   "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
@@ -2400,6 +2933,20 @@
                     "cardio"
                   ],
                   "metric_type": "count",
+                  "source_confidence": "high",
+                  "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
+                  "extracted_date": "2025-12-07"
+                },
+                {
+                  "text": "Implemented tablet PC eDetailing solution, savings card programs, media planning, conventions, and speaker programs while serving as MLR lead",
+                  "tags": [
+                    "digital",
+                    "hcp",
+                    "mlr",
+                    "compliance",
+                    "media",
+                    "patient"
+                  ],
                   "source_confidence": "high",
                   "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
                   "extracted_date": "2025-12-07"
@@ -2983,7 +3530,8 @@
       "key_achievements": [
         "Managed $10M+ LIPITOR/CADUET HCP marketing budget",
         "Led brand through LOE (Loss of Exclusivity) transition",
-        "Pioneered EMR-based competitive blunting with AllScripts"
+        "Pioneered EMR-based competitive blunting with AllScripts",
+        "Launched first-ever branded podcast for Pfizer"
       ]
     },
     {
@@ -3000,7 +3548,6 @@
       ],
       "key_achievements": [
         "Supported VIAGRA brand marketing from Administrative Assistant to Associate Marketing Manager",
-        "Launched first-ever branded podcast for Pfizer (VIAGRA)",
         "Managed tactical marketing programs"
       ]
     }
@@ -3172,9 +3719,9 @@
     ],
     "innovations_firsts": [
       {
-        "achievement": "First-ever branded podcast for Pfizer (VIAGRA)",
+        "achievement": "First-ever branded podcast for Pfizer",
         "company": "Pfizer",
-        "year": "2007-2008",
+        "year": "2008-2012",
         "impact": "Industry innovation"
       },
       {

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "version": "2.2.0",
-    "last_updated": "2025-12-08",
+    "version": "2.1.0",
+    "last_updated": "2024-12-03",
     "schema_version": "2.0",
-    "notes": "Imported brand-specific achievements from cv-generator experience.yml for KISQALI, BRUKINSA, TAGRISSO, and BEACON initiatives"
+    "notes": "Phase 1 enhancements complete + Document extraction complete: Added pharma keywords taxonomy, therapeutic areas, regulatory compliance tracking, resume version configurations, metrics bank, ATS metadata, executive search firm tracking, and 6 new innovation projects from ChatGPT/Codex histories. Aligned with 2024-2025 executive resume best practices per optimization report."
   },
   "personal": {
     "name": {
@@ -91,7 +91,7 @@
                   ]
                 },
                 {
-                  "text": "Created internal education materials explaining AI, LLMs, and enterprise privacy/security principles",
+                  "text": "Created internal education materials explaining AI, ML, LLMs, and enterprise privacy/security principles",
                   "tags": [
                     "ai",
                     "leadership",
@@ -145,39 +145,6 @@
                     "patient",
                     "automation"
                   ]
-                },
-                {
-                  "text": "Founded and led BEACON, Biolumina's enterprise-wide AI enablement initiative, scaling from a 25-user pilot to agency-wide adoption across 500+ employees",
-                  "tags": [
-                    "ai",
-                    "enablement",
-                    "leadership",
-                    "training",
-                    "innovation"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Designed and launched BEACON's internal AI hub (Teams + internal site) offering toolkits, guidance, templates, workflows, and curated examples for safe and effective AI use across disciplines",
-                  "tags": [
-                    "ai",
-                    "training",
-                    "content",
-                    "enablement",
-                    "operations"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Hosted weekly office hours, delivered ongoing workshops, and supported team-level onboardings to accelerate AI fluency and confidence across strategy, creative, editorial, PM, and analytics teams",
-                  "tags": [
-                    "ai",
-                    "enablement",
-                    "leadership",
-                    "facilitation",
-                    "training"
-                  ],
-                  "source": "cv-generator experience.yml"
                 }
               ]
             },
@@ -206,7 +173,7 @@
                   ]
                 },
                 {
-                  "text": "Supported TAGRISSO DTC brand initiatives by designing omnichannel CRM, segmentation, CTV/OTT, and experiential congress frameworks for patient/caregiver audiences",
+                  "text": "Supported client brand initiatives by designing omnichannel, segmentation, CTV/OTT, and experiential congress frameworks",
                   "tags": [
                     "strategy",
                     "omnichannel",
@@ -219,7 +186,7 @@
                   ]
                 },
                 {
-                  "text": "Designed interactive game-based advertising concepts and WebAR strategies with 8th Wall for TAGRISSO patient engagement",
+                  "text": "Designed interactive game-based advertising concepts and WebAR strategies with 8th Wall",
                   "tags": [
                     "innovation",
                     "digital",
@@ -227,6 +194,16 @@
                     "experience_planning",
                     "oncology",
                     "patient"
+                  ]
+                },
+                {
+                  "text": "Contributed to naming and ideation for oncology-branded GPT assistants",
+                  "tags": [
+                    "brand",
+                    "oncology",
+                    "ai",
+                    "innovation",
+                    "strategy"
                   ]
                 }
               ]
@@ -241,6 +218,15 @@
                     "data_engineering",
                     "innovation",
                     "digital"
+                  ]
+                },
+                {
+                  "text": "Analysis of session segmentation (HCP vs Patient), including weekend behavior",
+                  "tags": [
+                    "analytics",
+                    "hcp",
+                    "patient",
+                    "cx"
                   ]
                 },
                 {
@@ -331,6 +317,15 @@
                   ]
                 },
                 {
+                  "text": "Built Python + BeautifulSoup website crawlers with URL-structured extraction and repeated-section de-duplication",
+                  "tags": [
+                    "automation",
+                    "data_engineering",
+                    "innovation",
+                    "digital"
+                  ]
+                },
+                {
                   "text": "Created processes for converting heavy PDFs, PPTs, and Word files into lighter JSON/XML structures",
                   "tags": [
                     "automation",
@@ -345,6 +340,15 @@
                     "data_engineering",
                     "strategy"
                   ]
+                },
+                {
+                  "text": "Designed Power Automate flows using AI Builder to detect daily mentions and trigger summaries",
+                  "tags": [
+                    "automation",
+                    "ai",
+                    "innovation",
+                    "digital"
+                  ]
                 }
               ]
             },
@@ -357,6 +361,20 @@
                     "data_engineering",
                     "automation",
                     "leadership"
+                  ]
+                },
+                {
+                  "text": "Solved debugging challenges in Python (length mismatch errors, library conflicts)",
+                  "tags": [
+                    "data_engineering",
+                    "innovation"
+                  ]
+                },
+                {
+                  "text": "Ensured secure environments by avoiding Homebrew and managing MacPorts limitations",
+                  "tags": [
+                    "data_engineering",
+                    "strategy"
                   ]
                 },
                 {
@@ -383,6 +401,54 @@
                     "digital",
                     "oncology"
                   ]
+                },
+                {
+                  "text": "Led Curiosity-Driven Innovation Initiative with 12 team members over 18 months, generating 5 client-facing innovations and fostering culture of continuous learning",
+                  "tags": [
+                    "leadership",
+                    "innovation",
+                    "strategy",
+                    "digital",
+                    "oncology",
+                    "patient"
+                  ]
+                },
+                {
+                  "text": "Built WebReportingHub analytics platform reducing cross-brand reporting time 60% for 9-brand portfolio using DuckDB and Python automation",
+                  "tags": [
+                    "analytics",
+                    "data_engineering",
+                    "automation",
+                    "innovation",
+                    "brand",
+                    "oncology",
+                    "portfolio",
+                    "patient"
+                  ]
+                }
+              ]
+            },
+            {
+              "category": "Process & Operational Excellence",
+              "items": [
+                {
+                  "text": "Designed ASCO 2025 Congress reporting framework standardizing medical insights delivery across 6 oncology brands, reducing prep time 40%",
+                  "tags": [
+                    "strategy",
+                    "oncology",
+                    "brand",
+                    "automation"
+                  ]
+                },
+                {
+                  "text": "Created Promo Fingerprint Visualizer for MLR compliance tracking, contributing to 15% reduction in review cycle time",
+                  "tags": [
+                    "compliance",
+                    "mlr",
+                    "analytics",
+                    "innovation",
+                    "automation"
+                  ]
                 }
               ]
             },
@@ -392,7 +458,7 @@
               "extraction_date": "2025-12-07",
               "items": [
                 {
-                  "text": "Created internal 'Xosystem' (experience ecosystem) process to optimize TAGRISSO DTC tactical planning and execution across omnichannel customer touchpoints",
+                  "text": "Created internal 'Xosystem' (experience ecosystem) process to optimize tactical planning and execution across omnichannel customer touchpoints",
                   "tags": [
                     "experience_planning",
                     "process_improvement",
@@ -407,7 +473,7 @@
                   "extracted_date": "2025-12-07"
                 },
                 {
-                  "text": "Built and executed omnichannel customer relationship marketing (CRM) programming for TAGRISSO DTC brand aligned to strategic imperatives",
+                  "text": "Built and executed omnichannel customer relationship marketing (CRM) programming aligned to brand strategic imperatives",
                   "tags": [
                     "crm",
                     "omnichannel",
@@ -419,64 +485,6 @@
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
                   "extracted_date": "2025-12-07"
-                }
-              ]
-            },
-            {
-              "category": "Brand-Specific Strategy & Execution",
-              "items": [
-                {
-                  "text": "Built and refined full-funnel engagement ecosystems for KISQALI, mapping behavioral pathways, conversion logic, and channel sequencing across digital, CRM, media, and congress activations",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "cx",
-                    "xp",
-                    "analytics",
-                    "hcp",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Lead Experience Planner for KISQALI (ribociclib), a leading global CDK4/6 breast cancer therapy, driving annual omnichannel planning across both HCP and patient audiences",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "hcp",
-                    "patient",
-                    "strategy",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Developed the TAGRISSO omnichannel experience framework, aligning Patient/Caregiver CRM pathways, messaging architecture, and data-driven journey refinements",
-                  "tags": [
-                    "oncology",
-                    "xp",
-                    "cx",
-                    "crm",
-                    "strategy",
-                    "omnichannel",
-                    "patient",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
-                },
-                {
-                  "text": "Served as Lead Experience Planner for BRUKINSA (zanubrutinib) for BeiGene, shaping omnichannel strategy and driving end-to-end HCP experience and conversion planning",
-                  "tags": [
-                    "oncology",
-                    "experience_planning",
-                    "omnichannel",
-                    "hcp",
-                    "strategy",
-                    "brand"
-                  ],
-                  "source": "cv-generator experience.yml"
                 }
               ]
             }
@@ -979,8 +987,7 @@
                     "compliance",
                     "digital",
                     "timeline_management",
-                    "project_management",
-                    "patient"
+                    "project_management"
                   ],
                   "metric_type": "time_saved",
                   "source_confidence": "high",
@@ -1133,83 +1140,6 @@
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
                   "extracted_date": "2025-12-07"
-                }
-              ]
-            },
-            {
-              "category": "Brand-Specific Patient Marketing Leadership",
-              "items": [
-                {
-                  "text": "Led project management and digital strategy for BANZEL (epilepsy) patient website, social media campaigns, and email programs as lead PM and digital consultant",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "project_management",
-                    "leadership",
-                    "crm",
-                    "social_media",
-                    "rare_disease"
-                  ]
-                },
-                {
-                  "text": "Oversaw full digital promotion ecosystem for BANZEL brand spanning web, social, and CRM channels with cross-functional team coordination",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "project_management",
-                    "omnichannel",
-                    "leadership",
-                    "rare_disease"
-                  ]
-                },
-                {
-                  "text": "Managed major indication launch for LUCENTIS (wet AMD) treated as full brand launch, overseeing complete website redesign and digital ecosystem overhaul for patient and caregiver audiences",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "launch",
-                    "project_management",
-                    "leadership"
-                  ]
-                },
-                {
-                  "text": "Led cross-functional teams to deliver responsive website and comprehensive digital asset suite for LUCENTIS new indication launch targeting patients and caregivers",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "brand",
-                    "launch",
-                    "project_management",
-                    "leadership",
-                    "innovation"
-                  ]
-                },
-                {
-                  "text": "Led development of innovative mobile smartphone application for MS patients on TECFIDERA, pioneering one of the first-of-its-kind patient support apps in pharma",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "innovation",
-                    "mobile",
-                    "brand",
-                    "project_management",
-                    "leadership"
-                  ]
-                },
-                {
-                  "text": "Managed full product lifecycle from concept to launch for groundbreaking TECFIDERA mobile app, establishing new standards for digital patient engagement in MS treatment",
-                  "tags": [
-                    "patient",
-                    "digital",
-                    "innovation",
-                    "mobile",
-                    "brand",
-                    "launch",
-                    "project_management"
-                  ]
                 }
               ]
             }
@@ -1392,8 +1322,7 @@
                     "digital",
                     "innovation",
                     "project_management",
-                    "timeline_management",
-                    "patient"
+                    "timeline_management"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
