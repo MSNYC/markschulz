@@ -179,8 +179,8 @@
   "custom_builder": {
     "enabled": true,
     "min_selections": 1,
-    "max_selections": 8,
-    "recommended_selections": "3-5",
+    "max_selections": 5,
+    "recommended_selections": "2-4",
     "checkbox_categories": [
       {
         "category": "Therapeutic Expertise",
@@ -190,19 +190,13 @@
             "id": "oncology",
             "label": "Oncology",
             "tags": ["oncology"],
-            "description": "Cancer therapeutics and hematology"
+            "description": "Cancer therapeutics and hematology marketing"
           },
           {
-            "id": "cardiovascular",
-            "label": "Cardiovascular",
-            "tags": ["cardio", "cardiovascular"],
-            "description": "Heart disease and vascular conditions"
-          },
-          {
-            "id": "hiv_rare",
-            "label": "HIV / Rare Disease",
-            "tags": ["hiv", "rare_disease", "mens_health"],
-            "description": "Specialty therapeutic areas"
+            "id": "cardiovascular_hiv",
+            "label": "Cardiovascular / HIV",
+            "tags": ["cardio", "cardiovascular", "hiv", "mens_health"],
+            "description": "Heart disease, vascular conditions, HIV/AIDS therapeutics"
           }
         ]
       },
@@ -213,32 +207,20 @@
           {
             "id": "brand_strategy",
             "label": "Brand Strategy & Portfolio Management",
-            "tags": ["brand", "portfolio", "positioning"],
-            "description": "Brand positioning, planning, portfolio management"
+            "tags": ["brand", "portfolio", "strategy"],
+            "description": "Brand positioning, planning, portfolio management, commercial strategy"
           },
           {
-            "id": "launch",
-            "label": "Product Launch Excellence",
-            "tags": ["launch", "brand", "strategy"],
-            "description": "New drug/brand launches, pre-launch planning, market entry strategy"
+            "id": "positioning_messaging",
+            "label": "Positioning & Messaging",
+            "tags": ["positioning", "messaging", "mlr", "compliance"],
+            "description": "Brand positioning, message development, MLR/regulatory review, claims strategy"
           },
           {
             "id": "omnichannel",
-            "label": "Omnichannel Marketing",
+            "label": "Omnichannel Marketing & CX",
             "tags": ["omnichannel", "cx", "xp", "experience_planning", "journey_mapping"],
-            "description": "Multi-channel orchestration, journey design, CX planning"
-          },
-          {
-            "id": "commercial_strategy",
-            "label": "Commercial Strategy",
-            "tags": ["strategy"],
-            "description": "Go-to-market planning, commercial planning, competitive positioning"
-          },
-          {
-            "id": "media_strategy",
-            "label": "Media Strategy & Planning",
-            "tags": ["media", "targeting", "segmentation"],
-            "description": "Media planning, channel strategy, audience targeting"
+            "description": "Multi-channel orchestration, journey design, customer experience planning"
           }
         ]
       },
@@ -256,7 +238,7 @@
             "id": "patient_marketing",
             "label": "Patient & Caregiver Marketing",
             "tags": ["patient"],
-            "description": "DTC, patient services, adherence programs"
+            "description": "DTC marketing, patient services, adherence programs, caregiver engagement"
           }
         ]
       },
@@ -267,74 +249,26 @@
           {
             "id": "ai_automation",
             "label": "AI/ML & Automation",
-            "tags": ["ai", "automation"],
+            "tags": ["ai", "automation", "innovation"],
             "description": "Artificial intelligence, machine learning, process automation, GPT development"
           },
           {
-            "id": "digital_transformation",
-            "label": "Digital Transformation",
-            "tags": ["digital", "innovation"],
-            "description": "Digital strategy, channel innovation, modern marketing techniques"
-          },
-          {
-            "id": "data_analytics",
-            "label": "Data & Analytics",
-            "tags": ["analytics", "data_engineering", "roi_modeling"],
-            "description": "Insights generation, data platforms, predictive modeling, business intelligence"
-          },
-          {
-            "id": "martech",
-            "label": "Marketing Technology (MarTech)",
-            "tags": ["innovation", "digital", "crm"],
-            "description": "Platform implementation, CRM, marketing automation, tech stack optimization"
+            "id": "digital_analytics",
+            "label": "Digital Transformation & Analytics",
+            "tags": ["digital", "analytics", "data_engineering", "innovation"],
+            "description": "Digital strategy, data platforms, insights generation, predictive modeling"
           }
         ]
       },
       {
-        "category": "Leadership & Operations",
+        "category": "Leadership",
         "icon": "👥",
         "checkboxes": [
           {
             "id": "team_leadership",
-            "label": "Team Leadership & Development",
-            "tags": ["leadership", "team_management", "mentoring"],
-            "description": "People management, mentoring, organizational development"
-          },
-          {
-            "id": "cross_functional",
-            "label": "Cross-Functional Collaboration",
-            "tags": ["project_management", "partnership", "vendor_management"],
-            "description": "Matrix management, stakeholder alignment, agency partnership"
-          },
-          {
-            "id": "budget_management",
-            "label": "Budget & Resource Management",
-            "tags": ["budget_management", "timeline_management"],
-            "description": "Financial planning, ROI optimization, resource allocation"
-          },
-          {
-            "id": "process_optimization",
-            "label": "Process & Performance Optimization",
-            "tags": ["process_improvement", "roi_modeling", "optimization"],
-            "description": "Workflow efficiency, performance measurement, continuous improvement"
-          }
-        ]
-      },
-      {
-        "category": "Specialized Capabilities",
-        "icon": "⚡",
-        "checkboxes": [
-          {
-            "id": "compliance_regulatory",
-            "label": "Compliance & Regulatory (MLR)",
-            "tags": ["compliance", "mlr", "regulatory"],
-            "description": "MLR review, regulatory compliance, quality assurance"
-          },
-          {
-            "id": "sales_enablement",
-            "label": "Sales Enablement & Training",
-            "tags": ["sales_enablement", "training", "education"],
-            "description": "Sales training, field enablement, commercial education"
+            "label": "Team Leadership & Cross-Functional Collaboration",
+            "tags": ["leadership", "team_management", "project_management", "partnership"],
+            "description": "People management, mentoring, matrix management, stakeholder alignment"
           }
         ]
       }

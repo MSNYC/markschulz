@@ -18,11 +18,11 @@ Gemfile.lock
 .venv/
 venv/
 
-# Private development data
-data/
-scripts/
-docs/
-output/
+# Private development data (top-level only, not assets/data/)
+/data/
+/scripts/
+/docs/
+/output/
 
 # Backup files
 *.backup
@@ -41,6 +41,7 @@ START_HERE.txt
 sync-public-data.sh
 backup-before-cleanup.sh
 cleanup-repo.sh
+LINKEDIN_ARTICLE_BRIEF.md
 
 # Test files
 test-*.html
