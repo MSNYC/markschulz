@@ -11,7 +11,7 @@ This is a single-page portfolio website featuring an interactive resume builder 
 Rather than reading a traditional one-size-fits-all resume, recruiters and hiring managers can:
 
 - **Select pre-built profiles**: Brand Management, Strategic Planning, or Customer Experience & Omnichannel Innovation
-- **Create custom views**: Choose 1-8 focus areas (therapeutic areas, audiences, technical skills) that match their open position
+- **Create custom views**: Choose 1-3 focus areas (therapeutic areas, audiences, technical skills) that match their open position
 - **See relevant experience first**: The tool surfaces the most applicable achievements and projects based on the selected criteria
 
 ## Features
