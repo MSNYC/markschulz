@@ -2,24 +2,28 @@
 layout: resume-executive
 permalink: /resume/strategic-planning/
 profile_id: strategy_positioning
-profile_name: Strategic Planning & Positioning Leader
-headline: Strategic Planning & Positioning Leader | Brand Strategy, Messaging, Competitive Intelligence
-tagline: Strategic Planning Leader crafting compelling brand narratives and competitive positioning in pharmaceutical markets
-summary: Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives • Creative Agency Experience planning, strategic positioning, and brand messaging development • Manufacturer US brand management; positioning strategy, competitive analysis, and go-to-market planning • Publisher Commercial strategy expertise, ROI modeling, partnership strategy, and market analytics
+profile_name: Director, Brand Strategy & Positioning – Pharmaceuticals
+headline: Director, Brand Strategy & Positioning – Pharmaceuticals | Lifecycle Strategy, Competitive Intelligence, Portfolio Leadership
+tagline: Senior brand strategist defining "where to play" and "how to win" through rigorous analytics and customer insight across product lifecycles
+summary: Senior brand strategist with 20+ years spanning manufacturer (Pfizer), agency (Omnicom), and publisher (WebMD/Medscape). Combines deep category experience in oncology and cardiovascular with rigorous analytics and customer insight to shape brand strategies, positioning platforms, and go-to-market plans that drive growth across lifecycles—from launch to loss of exclusivity. Known for integrating complex clinical data, market dynamics, and behavioral insight into clear brand narratives and strategic frameworks that align teams on "where to play" and "how to win."
 core_strengths:
-  - Strategic Planning & Positioning
-  - Message Development & Brand Narrative
+  - Brand Strategy & Positioning
+  - Value Proposition & Messaging Architecture
+  - Lifecycle & LOE Strategy
+  - Portfolio Strategy & Trade-offs
   - Competitive Intelligence & Market Analysis
-  - Business Case Development & ROI Modeling
+  - Strategic Frameworks & Playbooks
+  - Cross-Functional Leadership
+  - Executive Stakeholder Alignment
 highlights:
-  - label: Core Fit
-    text: Develops breakthrough positioning strategies that differentiate brands in crowded therapeutic categories and drive prescriber preference
-  - label: Key Capability
-    text: Crafts compelling messaging platforms that resonate with diverse stakeholders while navigating complex regulatory requirements
-  - label: Key Capability
-    text: Conducts sophisticated competitive intelligence and market analysis to identify strategic opportunities and defend market position
-  - label: Selected Projects
-    text: Led positioning overhaul for CADUET, pioneered EMR-based competitive messaging for LIPITOR, developed omnichannel strategy frameworks for TAGRISSO and KISQALI
+  - label: Lifecycle Strategy
+    text: Helped steer brand strategy for LIPITOR & CADUET with $10M+ budget during critical pre-LOE and LOE period, balancing equity, revenue, and competitive response
+  - label: Portfolio & ROI Strategy
+    text: Led commercial clinical strategy for $30M+ annual portfolio at WebMD/Medscape, building standardized ROI models used to evaluate 60+ opportunities
+  - label: Strategic Frameworks
+    text: Authored strategic frameworks for 9 oncology brands, aligning brand imperatives, positioning, and segmentation with omnichannel engagement plans
+  - label: Competitive Strategy
+    text: Pioneered EMR-based competitive blunting messaging and strategic tools that capture brand insights and competitive learnings for faster strategic planning
 experience:
   - title: VP, Experience Planner
     company: Biolumina

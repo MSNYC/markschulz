@@ -2,24 +2,28 @@
 layout: resume-executive
 permalink: /resume/brand-management/
 profile_id: brand_management
-profile_name: Brand Management Leader
-headline: Brand Management Leader | Portfolio Strategy, Launch Excellence, Campaign Execution
-tagline: Brand Management Leader driving portfolio growth and launch excellence across therapeutic areas
-summary: Accomplished pharmaceutical marketing executive with 20+ years driving brand strategy and commercial excellence across oncology, cardiovascular, and specialty therapeutics • Deep expertise in portfolio management, product launch planning, and integrated campaign execution • Proven track record managing multi-million dollar budgets and delivering measurable business impact through data-driven brand strategies • Strong cross-functional leadership spanning sales, medical affairs, and market access to ensure aligned go-to-market execution
+profile_name: Director, Brand Marketing – Pharmaceuticals
+headline: Director, Brand Marketing – Pharmaceuticals | P&L Management, Lifecycle Strategy, A&P Budget Leadership
+tagline: Senior pharmaceutical brand marketer with proven P&L ownership and multimillion-dollar A&P budget management across product lifecycles
+summary: Senior pharmaceutical brand marketer with 20+ years spanning manufacturer, agency, and publisher. Former US HCP Marketing Manager for LIPITOR and CADUET at Pfizer, now bringing 360° market perspective. Proven track record leading cross-functional brand teams, managing $10M+ A&P budgets, and driving market-shaping initiatives across lifecycle stages—from growth and maturation to loss of exclusivity. Known for integrating data, customer insight, and disciplined execution to build differentiated brands, protect share, and unlock new sources of growth.
 core_strengths:
-  - Brand Marketing & Portfolio Management
-  - Launch Planning & Execution
-  - Campaign Management & Budget Optimization
-  - HCP & Patient Marketing Integration
+  - Brand Strategy & Positioning
+  - Lifecycle & LOE Management
+  - A&P Budget Management ($10M+)
+  - Portfolio & Franchise Strategy
+  - Promotional Strategy & Messaging
+  - Cross-Functional Leadership
+  - Forecasting & Budget Optimization
+  - HCP & Patient Marketing
 highlights:
-  - label: Core Fit
-    text: Manages multi-million dollar brand portfolios with proven track record of exceeding revenue targets and market share growth
-  - label: Key Capability
-    text: Orchestrates successful product launches through meticulous planning, cross-functional coordination, and flawless execution
-  - label: Key Capability
-    text: Develops and executes integrated marketing campaigns across HCP and patient audiences, optimizing budget allocation for maximum ROI
-  - label: Selected Projects
-    text: KISQALI omnichannel ecosystem, TAGRISSO DTC campaign framework, LIPITOR/CADUET $10M+ HCP marketing portfolio
+  - label: P&L Ownership
+    text: Managed $10M+ US HCP budget for LIPITOR/CADUET at Pfizer, leading pivotal marketing initiatives as brands approached loss of exclusivity
+  - label: Portfolio Leadership
+    text: Led commercial clinical strategy for $30M+ annual portfolio at WebMD/Medscape, using ROI modeling and IQVIA analysis to guide brand spend
+  - label: Lifecycle Expertise
+    text: Pioneered EMR-triggered competitive blunting messaging and launched Pfizer's first branded HCP podcast, extending brand impact through LOE
+  - label: Integrated Brand Planning
+    text: Shaped omnichannel strategy for 9 oncology brands across 6 clients, ensuring every tactic tied back to brand imperatives and objectives
 experience:
   - title: VP, Experience Planner
     company: Biolumina
@@ -103,15 +107,15 @@ experience:
 skills:
   - category: Brand & Commercial Strategy
     items:
-      - Brand marketing & positioning
-      - Portfolio management
+      - Brand strategy & positioning
+      - Lifecycle & LOE management
+      - Portfolio & franchise strategy
+      - A&P budget management ($10M+)
+      - Promotional strategy & message architecture
       - Launch planning & execution
-      - Campaign development
-      - Budget management ($10M+)
-      - HCP marketing strategy
-      - Patient marketing programs
-      - Cross-functional leadership
-      - Vendor & agency management
+      - HCP & patient marketing
+      - Cross-functional leadership (sales, medical, access, finance)
+      - Competitive strategy & market shaping
   - category: Analytics & Measurement
     items:
       - ROI modeling & forecasting
