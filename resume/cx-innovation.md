@@ -71,3 +71,40 @@ highlights:
 - Developed multichannel mix of email, direct mail, and web detailing during Lipitor's critical final quarters of patent protection to maintain clinical differentiation and optimize competitive opportunities
 - Built internal digital infrastructure by creating greatstarts.pfizer.com as an internal repository to track program results and activity among group practice customers for MyHeartWise Great Starts program
 - Optimized underperforming Lipitor web banners by reworking messaging and creative content, resulting in click-through and interaction rates that surpassed industry benchmarks
+
+skills:
+  - category: AI & Innovation
+    items:
+      - AI strategy & implementation
+      - Custom GPT development
+      - Machine learning integration
+      - Process automation
+      - Data engineering (Python, DuckDB)
+      - Innovation program leadership
+      - Change management
+      - Training & enablement
+  - category: Customer Experience
+    items:
+      - Omnichannel orchestration
+      - Journey mapping & design
+      - Experience planning
+      - CRM strategy & optimization
+      - Personalization & segmentation
+      - Engagement analytics
+      - A/B testing & optimization
+  - category: Digital & Technical
+    items:
+      - Digital transformation
+      - Marketing technology
+      - Analytics platforms (GA4, Adobe)
+      - Data visualization
+      - Web development & WebAR
+      - API integration
+education:
+  - degree: Master of Business Administration
+    field: Business Administration
+    institution: University of Phoenix
+  - degree: Bachelor of Fine Arts
+    field: Arts
+    institution: New York University, Tisch School of the Arts
+---

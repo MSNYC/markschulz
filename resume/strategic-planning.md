@@ -88,3 +88,39 @@ experience:
       - Served as Review Committee (MLR) marketing captain to ease the RC process and ensure marketing had an organized voice in decisions
       - Led HCP marketing efforts and conducted national sales rep training for a ground-breaking group practice adherence program that re-invigorated field force reps and unlocked a new front in point-of-care hybrid messaging
 ---
+skills:
+  - category: Core Competencies
+    items:
+      - Strategic planning & positioning
+      - Message development & narrative design
+      - Competitive intelligence & analysis
+      - Market segmentation & targeting
+      - Business case development
+      - ROI modeling & forecasting
+      - Regulatory compliance (MLR)
+      - Cross-functional leadership
+  - category: Marketing Expertise
+    items:
+      - Brand strategy & positioning
+      - Omnichannel marketing
+      - HCP & patient engagement
+      - Campaign development
+      - Digital marketing & analytics
+      - Content strategy
+      - Agency & vendor management
+  - category: Therapeutic Experience
+    items:
+      - Oncology (KISQALI, TAGRISSO, BRUKINSA)
+      - Cardiovascular (LIPITOR, CADUET)
+      - HIV therapeutics
+      - Men's health (VIAGRA)
+      - Rare disease (BANZEL)
+      - Multiple sclerosis (TECFIDERA)
+education:
+  - degree: Master of Business Administration
+    field: Business Administration
+    institution: University of Phoenix
+  - degree: Bachelor of Fine Arts
+    field: Arts
+    institution: New York University, Tisch School of the Arts
+---
