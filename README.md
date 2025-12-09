@@ -18,7 +18,7 @@ Rather than reading a traditional one-size-fits-all resume, recruiters and hirin
 
 - **Interactive Resume Filtering**: JavaScript-powered dynamic content filtering
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **Privacy-Focused**: No tracking or analytics
+- **Privacy-Focused**: No cookies, tracking scripts, or client-side analytics
 - **Professional Assessment Integration**: Incorporates insights from Myers-Briggs (ENTJ) and FIRO-B assessments
 
 ## Technology

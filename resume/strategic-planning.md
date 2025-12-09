@@ -1,6 +1,6 @@
 ---
 layout: resume-executive
-permalink: /resume/strategy-positioning/
+permalink: /resume/strategic-planning/
 profile_id: strategy_positioning
 profile_name: Strategic Planning & Positioning Leader
 headline: Strategic Planning & Positioning Leader | Brand Strategy, Messaging, Competitive Intelligence

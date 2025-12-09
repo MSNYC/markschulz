@@ -500,7 +500,7 @@ html {
           </div>
         </a>
 
-        <a href="/resume/cx-engagement/" class="profile-card">
+        <a href="/resume/cx-innovation/" class="profile-card">
           <div class="card-content">
             <div class="card-icon">🚀</div>
             <h4>Customer Experience (CX) & Omnichannel Innovation</h4>
