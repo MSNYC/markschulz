@@ -19,7 +19,49 @@ class ResumeBuilder {
   }
 
   /**
+   * Enhanced scoring with brand diversity and specificity
+   * Prevents single-brand domination and prioritizes specific brand mentions
+   */
+  calculateEnhancedScore(item, priorityTags) {
+    let score = this.calculateScore(item.tags, priorityTags);
+    if (score === 0) return 0;
+
+    const text = item.text.toLowerCase();
+
+    // Define brand families
+    const brands = {
+      oncology: ['kisqali', 'tagrisso', 'brukinsa', 'imfinzi'],
+      cardio: ['lipitor', 'caduet'],
+      hiv: ['biktarvy', 'descovy', 'truvada'],
+      rare: ['banzel', 'tecfidera', 'lucentis'],
+      mens: ['viagra']
+    };
+
+    // Boost for specific brand mentions (combats generic "oncology-focused brands" bullets)
+    let hasBrandMention = false;
+    for (const brandList of Object.values(brands)) {
+      for (const brand of brandList) {
+        if (text.includes(brand)) {
+          score += 2; // Significant boost for brand-specific achievements
+          hasBrandMention = true;
+          break;
+        }
+      }
+      if (hasBrandMention) break;
+    }
+
+    // Small boost for quantified impact (numbers indicate measurable achievement)
+    const hasMetrics = /\d+%|\$\d+|\d+\+|reduced|increased|grew|saved/i.test(item.text);
+    if (hasMetrics) {
+      score += 0.5;
+    }
+
+    return score;
+  }
+
+  /**
    * Filter experience by priority tags - ALWAYS SHOWS ALL POSITIONS
+   * Now with brand diversity to prevent single-brand domination
    * @param {Array} priorityTags - Tags to prioritize
    * @param {Number} maxBulletsPerRole - Max bullets to show per position with matches
    * @param {Number} fallbackBullets - Number of bullets to show for non-matching positions
@@ -33,13 +75,16 @@ class ResumeBuilder {
         const matchingAchievements = [];
         const allAchievements = [];
 
-        // Score all achievements
+        // Score all achievements with enhanced scoring
         for (const achievementGroup of position.achievements || []) {
           for (const item of achievementGroup.items || []) {
             if (typeof item === 'object' && item.text) {
-              const score = this.calculateScore(item.tags, priorityTags);
+              const baseScore = this.calculateScore(item.tags, priorityTags);
+              const enhancedScore = this.calculateEnhancedScore(item, priorityTags);
+
               const achievement = {
-                score,
+                score: enhancedScore,
+                baseScore: baseScore,
                 text: item.text,
                 tags: item.tags || [],
                 category: achievementGroup.category
@@ -49,7 +94,7 @@ class ResumeBuilder {
               allAchievements.push(achievement);
 
               // Track only matching achievements
-              if (score > 0) {
+              if (baseScore > 0) {
                 matchingAchievements.push(achievement);
               }
             }
@@ -60,9 +105,11 @@ class ResumeBuilder {
         let finalBullets = [];
 
         if (matchingAchievements.length > 0) {
-          // Position has relevant achievements - show top matches
+          // Position has relevant achievements - sort by enhanced score
           matchingAchievements.sort((a, b) => b.score - a.score);
-          finalBullets = matchingAchievements.slice(0, maxBulletsPerRole);
+
+          // Apply brand diversity: don't show more than 2 bullets mentioning the same brand
+          finalBullets = this.ensureBrandDiversity(matchingAchievements, maxBulletsPerRole);
         } else if (allAchievements.length > 0) {
           // Position has NO matches - show fallback bullets (highest impact generic achievements)
           // Sort by text length as proxy for impact (longer = more detailed/impressive)
@@ -88,6 +135,47 @@ class ResumeBuilder {
     }
 
     return filteredExperience;
+  }
+
+  /**
+   * Ensure brand diversity - prevent single brand from dominating bullet list
+   * Max 2 bullets per brand to ensure varied portfolio representation
+   */
+  ensureBrandDiversity(sortedAchievements, maxBullets) {
+    const brands = ['kisqali', 'tagrisso', 'brukinsa', 'imfinzi', 'lipitor', 'caduet',
+                    'biktarvy', 'descovy', 'truvada', 'banzel', 'tecfidera', 'lucentis', 'viagra'];
+
+    const brandCounts = {};
+    const selected = [];
+
+    for (const achievement of sortedAchievements) {
+      if (selected.length >= maxBullets) break;
+
+      const text = achievement.text.toLowerCase();
+
+      // Find which brand (if any) is mentioned
+      let mentionedBrand = null;
+      for (const brand of brands) {
+        if (text.includes(brand)) {
+          mentionedBrand = brand;
+          break;
+        }
+      }
+
+      // If no brand mentioned, or brand count under limit, include it
+      if (!mentionedBrand) {
+        selected.push(achievement);
+      } else {
+        const currentCount = brandCounts[mentionedBrand] || 0;
+        if (currentCount < 2) { // Max 2 bullets per brand
+          brandCounts[mentionedBrand] = currentCount + 1;
+          selected.push(achievement);
+        }
+        // else: skip this bullet, brand already has 2 mentions
+      }
+    }
+
+    return selected;
   }
 
   /**
