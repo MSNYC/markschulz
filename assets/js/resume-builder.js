@@ -19,57 +19,71 @@ class ResumeBuilder {
   }
 
   /**
-   * Filter experience by priority tags - NOW RETURNS MORE BULLETS (10-12)
+   * Filter experience by priority tags - ALWAYS SHOWS ALL POSITIONS
    * @param {Array} priorityTags - Tags to prioritize
-   * @param {Number} maxBulletsPerRole - Max bullets to show per position
+   * @param {Number} maxBulletsPerRole - Max bullets to show per position with matches
+   * @param {Number} fallbackBullets - Number of bullets to show for non-matching positions
    * @returns {Array} Filtered experience with scored bullets
    */
-  filterExperience(priorityTags, maxBulletsPerRole = 12) {
+  filterExperience(priorityTags, maxBulletsPerRole = 8, fallbackBullets = 2) {
     const filteredExperience = [];
 
     for (const exp of this.resumeData.experience) {
       for (const position of exp.positions) {
-        const scoredAchievements = [];
+        const matchingAchievements = [];
+        const allAchievements = [];
 
         // Score all achievements
         for (const achievementGroup of position.achievements || []) {
           for (const item of achievementGroup.items || []) {
             if (typeof item === 'object' && item.text) {
               const score = this.calculateScore(item.tags, priorityTags);
-              // ONLY include achievements that match at least one priority tag
+              const achievement = {
+                score,
+                text: item.text,
+                tags: item.tags || [],
+                category: achievementGroup.category
+              };
+
+              // Track all achievements for fallback
+              allAchievements.push(achievement);
+
+              // Track only matching achievements
               if (score > 0) {
-                scoredAchievements.push({
-                  score,
-                  text: item.text,
-                  tags: item.tags || [],
-                  category: achievementGroup.category
-                });
+                matchingAchievements.push(achievement);
               }
             }
           }
         }
 
-        // ONLY include this role if it has matching achievements
-        if (scoredAchievements.length > 0) {
-          // Sort by score (descending)
-          scoredAchievements.sort((a, b) => b.score - a.score);
+        // ALWAYS include this position (even with 0 matches)
+        let finalBullets = [];
 
-          // Take top N matching bullets
-          const topBullets = scoredAchievements.slice(0, maxBulletsPerRole);
-
-          filteredExperience.push({
-            company: exp.company,
-            companyParent: exp.company_parent,
-            location: exp.location,
-            title: position.title,
-            startDate: position.start_date,
-            endDate: position.end_date || 'Present',
-            current: position.current,
-            bullets: topBullets,
-            totalBullets: scoredAchievements.length,
-            matchedBullets: scoredAchievements.length // All bullets match now
-          });
+        if (matchingAchievements.length > 0) {
+          // Position has relevant achievements - show top matches
+          matchingAchievements.sort((a, b) => b.score - a.score);
+          finalBullets = matchingAchievements.slice(0, maxBulletsPerRole);
+        } else if (allAchievements.length > 0) {
+          // Position has NO matches - show fallback bullets (highest impact generic achievements)
+          // Sort by text length as proxy for impact (longer = more detailed/impressive)
+          allAchievements.sort((a, b) => b.text.length - a.text.length);
+          finalBullets = allAchievements.slice(0, fallbackBullets);
         }
+
+        // Always add position to experience list
+        filteredExperience.push({
+          company: exp.company,
+          companyParent: exp.company_parent,
+          location: exp.location,
+          title: position.title,
+          startDate: position.start_date,
+          endDate: position.end_date || 'Present',
+          current: position.current,
+          bullets: finalBullets,
+          totalBullets: allAchievements.length,
+          matchedBullets: matchingAchievements.length,
+          hasMatches: matchingAchievements.length > 0 // Flag for styling
+        });
       }
     }
 
@@ -334,11 +348,12 @@ class ResumeBuilder {
       throw new Error('Invalid profile object');
     }
 
-    const maxBullets = 6; // Show only most relevant bullets per role
+    const maxBullets = 6; // Show top 6 relevant bullets for matching positions
+    const fallbackBullets = 2; // Show 2 bullets for non-matching positions (career continuity)
     const maxProjects = 6; // Increased from 4
     const maxRoles = 10; // Show ALL roles, not just 3
 
-    const filteredExp = this.filterExperience(profile.priority_tags, maxBullets);
+    const filteredExp = this.filterExperience(profile.priority_tags, maxBullets, fallbackBullets);
     const filteredProjects = this.filterProjects(profile.priority_tags, maxProjects);
     const allSkills = this.getAllSkills();
     const topHighlights = this.getTopAchievements(profile.priority_tags, 5);
