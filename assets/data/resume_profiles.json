@@ -1,133 +1,131 @@
 {
   "meta": {
-    "version": "1.0.0",
-    "last_updated": "2024-12-06",
-    "description": "Resume profile definitions for interactive resume builder"
+    "version": "1.1.0",
+    "last_updated": "2025-12-09",
+    "description": "Resume profile definitions for interactive resume builder - v1.1.0 with corrected Strategy profile focus"
   },
   "profiles": [
     {
       "id": "brand_management",
       "label": "Brand Management",
       "shortLabel": "Brand",
-      "description": "Brand strategy, portfolio management, launch excellence, and HCP/patient marketing",
-      "tagline": "Brand Management Leader driving commercial strategy and launch excellence across oncology therapeutics",
-      "headline": "Brand Management Leader | Oncology Strategy, Launch Excellence, Portfolio Management",
+      "description": "Brand marketing, portfolio management, launch excellence, and tactical execution",
+      "tagline": "Brand Management Leader driving portfolio growth and launch excellence across therapeutic areas",
+      "headline": "Brand Management Leader | Portfolio Strategy, Launch Excellence, Campaign Execution",
       "priority_tags": [
         "brand",
-        "strategy",
-        "oncology",
-        "launch",
         "portfolio",
-        "leadership",
+        "launch",
+        "campaign_management",
         "hcp",
         "patient",
-        "analytics",
-        "omnichannel"
+        "budget_management",
+        "oncology",
+        "analytics"
       ],
       "focus_skills": [
-        "Brand Strategy",
+        "Brand Marketing",
         "Portfolio Management",
-        "Launch Excellence",
-        "Oncology Marketing",
-        "HCP Marketing",
-        "Commercial Strategy",
-        "Market Analytics",
-        "Omnichannel Marketing"
+        "Launch Planning",
+        "Campaign Execution",
+        "Budget Management",
+        "HCP Engagement",
+        "Patient Marketing",
+        "Cross-functional Leadership"
       ],
       "competencies": [
-        "Leads integrated oncology brand strategy across HCP and patient audiences, grounded in clinical insights and commercial goals",
-        "Drives portfolio management and launch excellence through data-driven planning and cross-functional collaboration",
-        "Translates market analytics and competitive intelligence into actionable brand positioning and go-to-market strategies",
-        "Builds omnichannel engagement frameworks that align messaging, channels, and customer experience"
+        "Manages multi-million dollar brand portfolios with proven track record of exceeding revenue targets and market share growth",
+        "Orchestrates successful product launches through meticulous planning, cross-functional coordination, and flawless execution",
+        "Develops and executes integrated marketing campaigns across HCP and patient audiences, optimizing budget allocation for maximum ROI",
+        "Partners with sales, medical affairs, and market access teams to ensure aligned brand messaging and tactical implementation"
       ],
       "ideal_for": [
+        "Brand Manager",
+        "Senior Brand Manager",
         "Associate Director, Brand Marketing",
-        "Director, Brand Marketing",
-        "Senior Director, Commercial Strategy",
-        "VP, Brand Management"
+        "Director, Brand Management"
       ]
     },
     {
-      "id": "strategy_innovation",
+      "id": "strategy_positioning",
       "label": "Strategic Planning & Positioning",
       "shortLabel": "Strategy",
-      "description": "Commercial strategy, messaging & positioning, go-to-market planning, and market analysis",
-      "tagline": "Strategic Planning Leader driving commercial strategy, messaging, and positioning in pharmaceutical marketing",
-      "headline": "Strategic Planning & Positioning Leader | Commercial Strategy, Messaging, Go-to-Market Planning",
+      "description": "Brand strategy, messaging development, positioning, competitive strategy, and business planning",
+      "tagline": "Strategic Planning Leader crafting compelling brand narratives and competitive positioning in pharmaceutical markets",
+      "headline": "Strategic Planning & Positioning Leader | Brand Strategy, Messaging, Competitive Intelligence",
       "priority_tags": [
         "strategy",
+        "positioning",
+        "messaging",
+        "brand",
+        "segmentation",
+        "targeting",
+        "mlr",
+        "compliance",
+        "analytics"
+      ],
+      "focus_skills": [
+        "Strategic Planning",
+        "Brand Positioning",
+        "Message Development",
+        "Competitive Analysis",
+        "Market Segmentation",
+        "Business Case Development",
+        "Stakeholder Influence",
+        "Commercial Strategy"
+      ],
+      "competencies": [
+        "Develops breakthrough positioning strategies that differentiate brands in crowded therapeutic categories and drive prescriber preference",
+        "Crafts compelling messaging platforms that resonate with diverse stakeholders while navigating complex regulatory requirements",
+        "Conducts sophisticated competitive intelligence and market analysis to identify strategic opportunities and defend market position",
+        "Builds persuasive business cases and strategic recommendations that secure executive buy-in and drive commercial success"
+      ],
+      "ideal_for": [
+        "Director, Strategic Planning",
+        "VP, Brand Strategy",
+        "Senior Director, Commercial Strategy",
+        "Director, Marketing Strategy"
+      ]
+    },
+    {
+      "id": "cx_innovation",
+      "label": "Customer Experience (CX) & Omnichannel Innovation",
+      "shortLabel": "CX",
+      "description": "Customer experience design, omnichannel orchestration, AI implementation, and digital innovation",
+      "tagline": "CX & Innovation Leader transforming pharmaceutical engagement through AI-powered experiences and omnichannel excellence",
+      "headline": "CX & Omnichannel Innovation Leader | AI Implementation, Digital Transformation, Experience Design",
+      "priority_tags": [
+        "cx",
+        "omnichannel",
         "ai",
         "innovation",
         "digital",
-        "analytics",
-        "data_engineering",
-        "automation",
-        "leadership",
-        "brand"
-      ],
-      "focus_skills": [
-        "AI Strategy",
-        "Digital Transformation",
-        "Innovation Leadership",
-        "Strategic Planning",
-        "Data Engineering",
-        "Analytics & Insights",
-        "Process Automation",
-        "Change Management"
-      ],
-      "competencies": [
-        "Pioneers AI integration in pharmaceutical marketing, from custom GPT development to enterprise-wide education and adoption",
-        "Drives digital transformation initiatives that modernize workflows, enhance capabilities, and deliver measurable efficiency gains",
-        "Architects data engineering solutions (Python, DuckDB, ETL pipelines) that enable advanced analytics and decision-making",
-        "Leads innovation programs fostering continuous learning, experimentation, and client-facing value creation"
-      ],
-      "ideal_for": [
-        "Director, AI & MarTech Innovation",
-        "Senior Director, Digital Strategy",
-        "VP, Innovation & Technology",
-        "Director, Data & Analytics"
-      ]
-    },
-    {
-      "id": "cx_engagement",
-      "label": "Customer Experience (CX) & Omnichannel Innovation",
-      "shortLabel": "CX",
-      "description": "Omnichannel strategy, experience design, AI implementation, and innovative engagement",
-      "tagline": "CX & Omnichannel Innovation Leader designing intelligent customer experiences through AI and innovative engagement strategies",
-      "headline": "CX & Omnichannel Innovation Leader | Experience Design, AI Implementation, Innovative Engagement",
-      "priority_tags": [
-        "cx",
-        "xp",
         "experience_planning",
-        "omnichannel",
         "journey_mapping",
-        "hcp",
-        "patient",
-        "analytics",
-        "digital",
-        "strategy"
+        "automation",
+        "data_engineering"
       ],
       "focus_skills": [
-        "Experience Planning",
-        "Omnichannel Marketing",
-        "Customer Journey Mapping",
-        "CRM Optimization",
-        "Behavioral Design",
-        "Engagement Strategy",
-        "Channel Orchestration",
-        "CX Analytics"
+        "Customer Experience Design",
+        "Omnichannel Strategy",
+        "AI Implementation",
+        "Digital Innovation",
+        "Journey Mapping",
+        "Marketing Automation",
+        "Data Engineering",
+        "Experience Analytics"
       ],
       "competencies": [
-        "Designs end-to-end omnichannel journeys connecting channels, messages, and data into cohesive customer experiences",
-        "Builds journey maps and conversion flows making behavioral drop-offs and optimization opportunities explicit",
-        "Partners with analytics and media teams to align targeting, sequencing, and KPIs with experience goals",
-        "Implements CRM and marketing automation logic supporting segmentation, personalization, and measurement"
+        "Pioneers AI-driven marketing solutions including custom GPT development, automated workflows, and intelligent content generation",
+        "Designs seamless omnichannel experiences that connect digital and personal touchpoints across the customer journey",
+        "Implements advanced data engineering and automation solutions that enhance personalization and drive measurable engagement lift",
+        "Leads digital transformation initiatives that modernize marketing capabilities and establish competitive advantage through innovation"
       ],
       "ideal_for": [
-        "Director, Omnichannel Engagement",
-        "Senior Director, Customer Experience",
-        "VP, Experience Planning",
-        "Director, CX Strategy"
+        "Director, Customer Experience",
+        "VP, Omnichannel Marketing",
+        "Senior Director, Digital Innovation",
+        "Director, Marketing Technology & AI"
       ]
     }
   ],
@@ -189,19 +187,29 @@
           {
             "id": "oncology",
             "label": "Oncology",
-            "tags": ["oncology"],
+            "tags": [
+              "oncology"
+            ],
             "description": "Cancer therapeutics and hematology marketing"
           },
           {
             "id": "cardiovascular",
             "label": "Cardiovascular",
-            "tags": ["cardio", "cardiovascular"],
+            "tags": [
+              "cardio",
+              "cardiovascular"
+            ],
             "description": "Heart disease, vascular conditions, lipid management"
           },
           {
             "id": "rare_disease_hiv",
             "label": "Rare Disease / HIV",
-            "tags": ["hiv", "rare_disease", "epilepsy", "mens_health"],
+            "tags": [
+              "hiv",
+              "rare_disease",
+              "epilepsy",
+              "mens_health"
+            ],
             "description": "HIV/AIDS therapeutics, epilepsy (BANZEL), specialty therapeutic areas"
           }
         ]
@@ -213,19 +221,34 @@
           {
             "id": "brand_strategy",
             "label": "Brand Strategy & Portfolio Management",
-            "tags": ["brand", "portfolio", "strategy"],
+            "tags": [
+              "brand",
+              "portfolio",
+              "strategy"
+            ],
             "description": "Brand positioning, planning, portfolio management, commercial strategy"
           },
           {
             "id": "positioning_messaging",
             "label": "Positioning & Messaging",
-            "tags": ["positioning", "messaging", "mlr", "compliance"],
+            "tags": [
+              "positioning",
+              "messaging",
+              "mlr",
+              "compliance"
+            ],
             "description": "Brand positioning, message development, MLR/regulatory review, claims strategy"
           },
           {
             "id": "omnichannel",
             "label": "Omnichannel Marketing & CX",
-            "tags": ["omnichannel", "cx", "xp", "experience_planning", "journey_mapping"],
+            "tags": [
+              "omnichannel",
+              "cx",
+              "xp",
+              "experience_planning",
+              "journey_mapping"
+            ],
             "description": "Multi-channel orchestration, journey design, customer experience planning"
           }
         ]
@@ -237,13 +260,17 @@
           {
             "id": "hcp_marketing",
             "label": "HCP Marketing",
-            "tags": ["hcp"],
+            "tags": [
+              "hcp"
+            ],
             "description": "Healthcare professional targeting, KOL engagement, medical communications"
           },
           {
             "id": "patient_marketing",
             "label": "Patient & Caregiver Marketing",
-            "tags": ["patient"],
+            "tags": [
+              "patient"
+            ],
             "description": "DTC marketing, patient services, adherence programs, caregiver engagement"
           }
         ]
@@ -255,13 +282,22 @@
           {
             "id": "ai_automation",
             "label": "AI & Automation",
-            "tags": ["ai", "automation", "innovation"],
+            "tags": [
+              "ai",
+              "automation",
+              "innovation"
+            ],
             "description": "Artificial intelligence, machine learning, process automation, GPT development"
           },
           {
             "id": "digital_analytics",
             "label": "Digital Transformation & Analytics",
-            "tags": ["digital", "analytics", "data_engineering", "innovation"],
+            "tags": [
+              "digital",
+              "analytics",
+              "data_engineering",
+              "innovation"
+            ],
             "description": "Digital strategy, data platforms, insights generation, predictive modeling"
           }
         ]
@@ -273,7 +309,12 @@
           {
             "id": "team_leadership",
             "label": "Team Leadership & Cross-Functional Collaboration",
-            "tags": ["leadership", "team_management", "project_management", "partnership"],
+            "tags": [
+              "leadership",
+              "team_management",
+              "project_management",
+              "partnership"
+            ],
             "description": "People management, mentoring, matrix management, stakeholder alignment"
           }
         ]
