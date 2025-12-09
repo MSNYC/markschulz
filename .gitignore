@@ -24,11 +24,13 @@ venv/
 /docs/
 /output/
 
-# Backup files
+# Backup files (keep only master resume.json and resume_profiles.json)
 *.backup
 *.backup_*
 *_backup_*.json
 *BEFORE_DEDUP*
+resume.json.backup*
+**/resume_backup_*.json
 
 # Workflow documentation and utility scripts
 ACHIEVEMENT_AUDIT.md
