@@ -280,9 +280,11 @@ class ResumeBuilder {
       }
     }
 
-    // Sort by score (descending) and return top N
+    // Sort by score (descending)
     allScoredAchievements.sort((a, b) => b.score - a.score);
-    return allScoredAchievements.slice(0, maxHighlights);
+
+    // Apply brand diversity to Targeted Highlights (prevent single-brand domination)
+    return this.ensureBrandDiversity(allScoredAchievements, maxHighlights);
   }
 
   /**
