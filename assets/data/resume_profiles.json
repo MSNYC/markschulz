@@ -66,7 +66,7 @@
         "brand"
       ],
       "focus_skills": [
-        "AI/ML Strategy",
+        "AI Strategy",
         "Digital Transformation",
         "Innovation Leadership",
         "Strategic Planning",
@@ -76,7 +76,7 @@
         "Change Management"
       ],
       "competencies": [
-        "Pioneers AI/ML integration in pharmaceutical marketing, from custom GPT development to enterprise-wide education and adoption",
+        "Pioneers AI integration in pharmaceutical marketing, from custom GPT development to enterprise-wide education and adoption",
         "Drives digital transformation initiatives that modernize workflows, enhance capabilities, and deliver measurable efficiency gains",
         "Architects data engineering solutions (Python, DuckDB, ETL pipelines) that enable advanced analytics and decision-making",
         "Leads innovation programs fostering continuous learning, experimentation, and client-facing value creation"
@@ -92,9 +92,9 @@
       "id": "cx_engagement",
       "label": "Customer Experience (CX) & Omnichannel Innovation",
       "shortLabel": "CX",
-      "description": "Omnichannel strategy, experience design, AI/ML implementation, and innovative engagement",
-      "tagline": "CX & Omnichannel Innovation Leader designing intelligent customer experiences through AI/ML and innovative engagement strategies",
-      "headline": "CX & Omnichannel Innovation Leader | Experience Design, AI/ML Implementation, Innovative Engagement",
+      "description": "Omnichannel strategy, experience design, AI implementation, and innovative engagement",
+      "tagline": "CX & Omnichannel Innovation Leader designing intelligent customer experiences through AI and innovative engagement strategies",
+      "headline": "CX & Omnichannel Innovation Leader | Experience Design, AI Implementation, Innovative Engagement",
       "priority_tags": [
         "cx",
         "xp",
@@ -254,7 +254,7 @@
         "checkboxes": [
           {
             "id": "ai_automation",
-            "label": "AI/ML & Automation",
+            "label": "AI & Automation",
             "tags": ["ai", "automation", "innovation"],
             "description": "Artificial intelligence, machine learning, process automation, GPT development"
           },

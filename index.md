@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Mark Schulz - Pharmaceutical Marketing Leader
-description: Interactive resume showcasing 20+ years in pharmaceutical marketing across oncology, AI/ML integration, brand strategy, and omnichannel engagement. Filter by role to see relevant experience.
+description: Interactive resume showcasing 20+ years in pharmaceutical marketing across oncology, AI integration, brand strategy, and omnichannel engagement. Filter by role to see relevant experience.
 keywords: pharmaceutical marketing, oncology brand management, AI integration pharma, patient marketing, HCP marketing, omnichannel strategy, brand launch, customer experience pharma
 ---
 
@@ -504,11 +504,11 @@ html {
           <div class="card-content">
             <div class="card-icon">🚀</div>
             <h4>Customer Experience (CX) & Omnichannel Innovation</h4>
-            <p>Omnichannel strategy, experience design, AI/ML implementation, and innovative engagement</p>
+            <p>Omnichannel strategy, experience design, AI implementation, and innovative engagement</p>
             <div class="card-tags">
               <span class="tag">CX</span>
               <span class="tag">Omnichannel</span>
-              <span class="tag">AI/ML</span>
+              <span class="tag">AI</span>
               <span class="tag">Innovation</span>
             </div>
           </div>
