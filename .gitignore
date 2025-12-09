@@ -53,6 +53,14 @@ TEST_RESULTS.txt
 # Tagging audit files
 audit_tagging.py
 TAGGING_AUDIT_RESULTS.json
+audit_summary.py
+apply_tagging_changes.py
+
+# Profile analysis files
+analyze_profiles.py
+PROFILE_ANALYSIS.txt
+redesign_profiles.py
+REDESIGNED_PROFILES.json
 
 # Python cache
 __pycache__/
