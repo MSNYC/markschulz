@@ -193,10 +193,16 @@
             "description": "Cancer therapeutics and hematology marketing"
           },
           {
-            "id": "cardiovascular_hiv",
-            "label": "Cardiovascular / HIV",
-            "tags": ["cardio", "cardiovascular", "hiv", "mens_health"],
-            "description": "Heart disease, vascular conditions, HIV/AIDS therapeutics"
+            "id": "cardiovascular",
+            "label": "Cardiovascular",
+            "tags": ["cardio", "cardiovascular"],
+            "description": "Heart disease, vascular conditions, lipid management"
+          },
+          {
+            "id": "rare_disease_hiv",
+            "label": "Rare Disease / HIV",
+            "tags": ["hiv", "rare_disease", "epilepsy", "mens_health"],
+            "description": "HIV/AIDS therapeutics, epilepsy (BANZEL), specialty therapeutic areas"
           }
         ]
       },
