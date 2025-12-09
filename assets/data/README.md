@@ -25,7 +25,14 @@ To update your resume:
 
 ## Version History
 
-Current version: 2.2.0 (2025-12-08)
+Current version: 2.3.0 (2025-12-09)
+- Comprehensive semantic tagging audit via Claude API
+- Added 48 missing tags (cardio, messaging, digital, hcp, etc.)
+- Removed 20 incorrect/over-broad tags
+- Fixed cardiovascular experience surfacing (0 → 35 achievements)
+- Improved oncology tag precision
+
+Previous version: 2.2.0 (2025-12-08)
 - Updated AI/ML references to AI (accurate representation)
 - Streamlined custom select checkboxes to 11 focused options
 - Added epilepsy tags to BANZEL achievements
