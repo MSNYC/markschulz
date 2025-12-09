@@ -47,6 +47,12 @@ LINKEDIN_ARTICLE_BRIEF.md
 
 # Test files
 test-*.html
+test_combinations.js
+TEST_RESULTS.txt
+
+# Tagging audit files
+audit_tagging.py
+TAGGING_AUDIT_RESULTS.json
 
 # Python cache
 __pycache__/
