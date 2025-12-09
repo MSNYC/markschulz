@@ -87,7 +87,6 @@ experience:
       - Developed multichannel mix of email, direct mail, and web detailing during Lipitor's critical final quarters of patent protection to maintain clinical differentiation and optimize competitive opportunities
       - Served as Review Committee (MLR) marketing captain to ease the RC process and ensure marketing had an organized voice in decisions
       - Led HCP marketing efforts and conducted national sales rep training for a ground-breaking group practice adherence program that re-invigorated field force reps and unlocked a new front in point-of-care hybrid messaging
----
 skills:
   - category: Core Competencies
     items:
