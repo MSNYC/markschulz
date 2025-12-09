@@ -2,9 +2,9 @@
 layout: resume-executive
 permalink: /resume/cx-innovation/
 profile_id: cx_innovation
-profile_name: Customer Experience (CX) & Omnichannel Innovation
-headline: CX & Omnichannel Innovation Leader | AI Implementation, Digital Transformation, Experience Design
-tagline: CX & Innovation Leader transforming pharmaceutical engagement through AI-powered experiences and omnichannel excellence
+profile_name: SVP, Omnichannel Customer Engagement & Experience
+headline: SVP, Omnichannel Customer Engagement & Experience | AI Innovation, Digital Transformation, Journey Design
+tagline: Customer experience leader architecting AI-powered omnichannel journeys for 9 oncology brands, driving measurable engagement lift and operational efficiency
 summary: Visionary experience and innovation leader with 20+ years driving digital transformation and customer-centric strategies in pharmaceutical marketing. Pioneer in AI implementation and omnichannel orchestration, with proven expertise in designing seamless customer journeys that connect digital and personal touchpoints. Currently leading enterprise-wide AI enablement at Biolumina while architecting experience ecosystems for leading oncology brands. Combines deep technical fluency in data engineering and automation with strategic vision to deliver measurable engagement lift and competitive advantage through innovation.
 core_strengths:
   - AI Strategy & Implementation
@@ -12,14 +12,14 @@ core_strengths:
   - Digital Innovation & Transformation
   - Customer Journey Orchestration
 highlights:
-  - label: Core Fit
-    text: Pioneers AI-driven marketing solutions including custom GPT development, automated workflows, and intelligent content generation
-  - label: Key Capability
-    text: Designs seamless omnichannel experiences that connect digital and personal touchpoints across the customer journey
-  - label: Key Capability
-    text: Implements advanced data engineering and automation solutions that enhance personalization and drive measurable engagement lift
-  - label: Selected Projects
-    text: BEACON AI enablement initiative (500+ employees), custom GPT development for pharmaceutical brands, WebReportingHub analytics platform
+  - label: AI Innovation Leadership
+    text: Founded and scaled BEACON AI enablement initiative from 25-user pilot to 500+ employees agency-wide, pioneering custom GPT development for pharmaceutical brands
+  - label: Omnichannel Excellence
+    text: Lead CX strategy for 9 oncology brands across 6 clients, designing integrated HCP and patient journeys across CRM, digital, congress, and rep-enabled channels
+  - label: Data & Analytics Impact
+    text: Built WebReportingHub analytics platform reducing cross-brand reporting time by 60% and ASCO congress framework cutting prep time by 40%
+  - label: Digital Transformation
+    text: Created Pharmetheus GPT democratizing 15+ years of brand strategy insights and Promo Fingerprint Visualizer reducing MLR cycle time by 15%
 experience:
   - title: VP, Experience Planner
     company: Biolumina
