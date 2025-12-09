@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": "2.2.0",
-    "last_updated": "2025-12-08",
+    "version": "2.3.0",
+    "last_updated": "2025-12-09",
     "schema_version": "2.0",
     "notes": "Imported brand-specific achievements from cv-generator experience.yml for KISQALI, BRUKINSA, TAGRISSO, and BEACON initiatives"
   },
@@ -86,8 +86,7 @@
                   "tags": [
                     "ai",
                     "innovation",
-                    "data_engineering",
-                    "oncology"
+                    "data_engineering"
                   ]
                 },
                 {
@@ -132,8 +131,7 @@
                     "ai",
                     "innovation",
                     "strategy",
-                    "brand",
-                    "oncology"
+                    "brand"
                   ]
                 },
                 {
@@ -153,7 +151,9 @@
                     "enablement",
                     "leadership",
                     "training",
-                    "innovation"
+                    "innovation",
+                    "strategy",
+                    "digital"
                   ],
                   "source": "cv-generator experience.yml"
                 },
@@ -164,7 +164,9 @@
                     "training",
                     "content",
                     "enablement",
-                    "operations"
+                    "operations",
+                    "innovation",
+                    "digital"
                   ],
                   "source": "cv-generator experience.yml"
                 },
@@ -175,7 +177,8 @@
                     "enablement",
                     "leadership",
                     "facilitation",
-                    "training"
+                    "training",
+                    "team_management"
                   ],
                   "source": "cv-generator experience.yml"
                 }
@@ -201,7 +204,6 @@
                   "tags": [
                     "strategy",
                     "hcp",
-                    "oncology",
                     "analytics"
                   ]
                 },
@@ -296,8 +298,7 @@
                   "tags": [
                     "analytics",
                     "hcp",
-                    "strategy",
-                    "oncology"
+                    "strategy"
                   ]
                 },
                 {
@@ -364,7 +365,7 @@
                   "tags": [
                     "innovation",
                     "digital",
-                    "cx"
+                    "data_engineering"
                   ]
                 }
               ]
@@ -399,7 +400,10 @@
                     "omnichannel",
                     "innovation",
                     "oncology",
-                    "patient"
+                    "patient",
+                    "cx",
+                    "xp",
+                    "brand"
                   ],
                   "metric_type": "process",
                   "source_confidence": "high",
@@ -414,7 +418,10 @@
                     "strategy",
                     "experience_planning",
                     "oncology",
-                    "patient"
+                    "patient",
+                    "cx",
+                    "xp",
+                    "brand"
                   ],
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
@@ -522,7 +529,8 @@
                     "strategy",
                     "hiv",
                     "leadership",
-                    "project_management"
+                    "project_management",
+                    "messaging"
                   ],
                   "metric_type": "count",
                   "source_confidence": "medium",
@@ -536,7 +544,8 @@
                     "positioning",
                     "strategy",
                     "leadership",
-                    "project_management"
+                    "project_management",
+                    "messaging"
                   ],
                   "source_confidence": "medium",
                   "source_document": "RESUME_Mark_Schulz.pdf",
@@ -593,8 +602,7 @@
                   "tags": [
                     "strategy",
                     "portfolio",
-                    "budget_management",
-                    "analytics"
+                    "budget_management"
                   ],
                   "metric_type": "revenue",
                   "source_confidence": "high",
@@ -605,7 +613,6 @@
                   "text": "Established documentation standards, team onboarding training, and annual goal-setting process, enabling a more self-sufficient and sustainable team for the organization",
                   "tags": [
                     "leadership",
-                    "training",
                     "process_improvement",
                     "team_management"
                   ],
@@ -663,9 +670,7 @@
                   "text": "Distilled insights from various data streams to present optimization recommendations to client leaders for campaign performance improvement",
                   "tags": [
                     "analytics",
-                    "strategy",
-                    "data_engineering",
-                    "cx"
+                    "strategy"
                   ],
                   "metric_type": "",
                   "source_confidence": "medium",
@@ -707,8 +712,7 @@
                     "brand",
                     "analytics",
                     "roi_modeling",
-                    "partnership",
-                    "hcp"
+                    "partnership"
                   ],
                   "metric_type": "roi",
                   "source_confidence": "medium",
@@ -728,7 +732,8 @@
                     "strategy",
                     "partnership",
                     "roi_modeling",
-                    "team_management"
+                    "team_management",
+                    "leadership"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -817,7 +822,8 @@
                     "strategy",
                     "analytics",
                     "partnership",
-                    "process_improvement"
+                    "process_improvement",
+                    "hcp"
                   ],
                   "metric_type": "",
                   "source_confidence": "medium",
@@ -873,8 +879,7 @@
                   "tags": [
                     "analytics",
                     "data_engineering",
-                    "optimization",
-                    "hcp"
+                    "optimization"
                   ],
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
@@ -920,8 +925,7 @@
                   "tags": [
                     "leadership",
                     "team_management",
-                    "project_management",
-                    "hcp"
+                    "project_management"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -979,8 +983,7 @@
                     "compliance",
                     "digital",
                     "timeline_management",
-                    "project_management",
-                    "patient"
+                    "project_management"
                   ],
                   "metric_type": "time_saved",
                   "source_confidence": "high",
@@ -1044,7 +1047,8 @@
                   "tags": [
                     "leadership",
                     "project_management",
-                    "team_management"
+                    "team_management",
+                    "partnership"
                   ],
                   "source_confidence": "medium",
                   "source_document": "Mark_Schulz_RESUME_20191107_final.pdf",
@@ -1093,7 +1097,8 @@
                   "tags": [
                     "leadership",
                     "project_management",
-                    "process_improvement"
+                    "partnership",
+                    "team_management"
                   ],
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
@@ -1105,7 +1110,8 @@
                     "innovation",
                     "process_improvement",
                     "project_management",
-                    "analytics"
+                    "analytics",
+                    "budget_management"
                   ],
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
@@ -1296,8 +1302,7 @@
                   "tags": [
                     "process_improvement",
                     "project_management",
-                    "budget_management",
-                    "innovation"
+                    "budget_management"
                   ],
                   "metric_type": "",
                   "source_confidence": "high",
@@ -1373,8 +1378,7 @@
                     "project_management",
                     "digital",
                     "innovation",
-                    "timeline_management",
-                    "patient"
+                    "timeline_management"
                   ],
                   "metric_type": "count",
                   "source_confidence": "medium",
@@ -1394,8 +1398,7 @@
                     "digital",
                     "innovation",
                     "project_management",
-                    "timeline_management",
-                    "patient"
+                    "timeline_management"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -1580,7 +1583,8 @@
                     "omnichannel",
                     "positioning",
                     "hcp",
-                    "cardio"
+                    "cardio",
+                    "digital"
                   ],
                   "source_confidence": "high",
                   "source_document": "MARK.SCHULZ.2011.portfolio.pdf",
@@ -1630,7 +1634,8 @@
                     "patient",
                     "cardio",
                     "positioning",
-                    "digital"
+                    "digital",
+                    "messaging"
                   ],
                   "metric_type": "count",
                   "source_confidence": "medium",
@@ -1644,7 +1649,9 @@
                     "leadership",
                     "vendor_management",
                     "brand",
-                    "strategy"
+                    "strategy",
+                    "messaging",
+                    "cardio"
                   ],
                   "metric_type": "count",
                   "source_confidence": "medium",
@@ -1694,7 +1701,8 @@
                     "leadership",
                     "strategy",
                     "hcp",
-                    "targeting"
+                    "targeting",
+                    "cardio"
                   ],
                   "metric_type": "",
                   "source_confidence": "high",
@@ -1715,7 +1723,8 @@
                     "media",
                     "brand",
                     "strategy",
-                    "hcp"
+                    "hcp",
+                    "cardio"
                   ],
                   "source_confidence": "high",
                   "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
@@ -1728,7 +1737,9 @@
                     "partnership",
                     "digital",
                     "hcp",
-                    "positioning"
+                    "positioning",
+                    "messaging",
+                    "cardio"
                   ],
                   "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_Dir_Mkt_Strat.pdf",
@@ -1748,7 +1759,8 @@
                     "media",
                     "patient",
                     "partnership",
-                    "project_management"
+                    "project_management",
+                    "cardio"
                   ],
                   "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_VP_Proj_Mgmt.pdf",
@@ -1782,7 +1794,9 @@
                     "digital",
                     "hcp",
                     "positioning",
-                    "brand"
+                    "brand",
+                    "messaging",
+                    "cardio"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -1829,7 +1843,9 @@
                     "patient",
                     "sales_enablement",
                     "training",
-                    "innovation"
+                    "innovation",
+                    "cardio",
+                    "messaging"
                   ],
                   "source_confidence": "high",
                   "source_document": "RESUME_Mark_Schulz_20220701.pdf",
@@ -1848,7 +1864,9 @@
                     "hcp",
                     "cardio",
                     "analytics",
-                    "segmentation"
+                    "segmentation",
+                    "messaging",
+                    "digital"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -1860,7 +1878,9 @@
                   "tags": [
                     "budget_management",
                     "vendor_management",
-                    "partnership"
+                    "partnership",
+                    "cardio",
+                    "digital"
                   ],
                   "metric_type": "budget",
                   "source_confidence": "high",
@@ -1873,7 +1893,9 @@
                     "budget_management",
                     "media",
                     "brand",
-                    "cardio"
+                    "cardio",
+                    "digital",
+                    "hcp"
                   ],
                   "metric_type": "budget",
                   "source_confidence": "high",
@@ -1900,7 +1922,8 @@
                     "omnichannel",
                     "roi_modeling",
                     "hcp",
-                    "budget_management"
+                    "budget_management",
+                    "cardio"
                   ],
                   "metric_type": "percentage",
                   "source_confidence": "high",
@@ -1925,7 +1948,8 @@
                   "tags": [
                     "budget_management",
                     "project_management",
-                    "omnichannel"
+                    "omnichannel",
+                    "cardio"
                   ],
                   "metric_type": "percentage",
                   "source_confidence": "high",
@@ -1939,7 +1963,8 @@
                     "hcp",
                     "cardio",
                     "mlr",
-                    "portfolio"
+                    "portfolio",
+                    "digital"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -2043,7 +2068,8 @@
                     "digital",
                     "process_improvement",
                     "brand",
-                    "patient"
+                    "patient",
+                    "hcp"
                   ],
                   "source_confidence": "medium",
                   "source_document": "2010 6 9 MARK_SCHULZ_RESUME.pdf",
@@ -2094,7 +2120,8 @@
                     "strategy",
                     "brand",
                     "sales_enablement",
-                    "process_improvement"
+                    "process_improvement",
+                    "hcp"
                   ],
                   "source_confidence": "medium",
                   "source_document": "MARK.SCHULZ.RESUME.1.2012.pdf",
@@ -2125,7 +2152,8 @@
                   "tags": [
                     "brand",
                     "positioning",
-                    "strategy"
+                    "strategy",
+                    "hcp"
                   ],
                   "metric_type": "",
                   "source_confidence": "medium",
@@ -2206,7 +2234,8 @@
                     "brand",
                     "portfolio",
                     "hcp",
-                    "cardio"
+                    "cardio",
+                    "cardiovascular"
                   ],
                   "source_confidence": "medium",
                   "source_document": "MARK_SCHULZ_Resume_2019R.pdf",
@@ -2306,7 +2335,8 @@
                     "digital",
                     "patient",
                     "media",
-                    "brand"
+                    "brand",
+                    "innovation"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -2399,7 +2429,8 @@
                     "brand",
                     "hcp",
                     "portfolio",
-                    "cardio"
+                    "cardio",
+                    "cardiovascular"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
@@ -2441,7 +2472,6 @@
                   "text": "Helped ensure department quarterly budgets remained within 2% quarterly variance through financial control and tracking processes",
                   "tags": [
                     "budget_management",
-                    "analytics",
                     "process_improvement"
                   ],
                   "metric_type": "percentage",
@@ -2453,9 +2483,7 @@
                   "text": "Formulated and presented a targeted budgeting process for the US Viagra Team including comprehensive spreadsheet consolidating budget Latest Estimates and Actuals to facilitate more accurate forecasting",
                   "tags": [
                     "process_improvement",
-                    "analytics",
-                    "brand",
-                    "innovation"
+                    "brand"
                   ],
                   "metric_type": "count",
                   "source_confidence": "high",
