@@ -443,7 +443,7 @@ html {
     <!-- Step 1: Pre-Built or Custom -->
     <div class="selection-method">
       <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 1: Pre-Built or Custom?</h3>
-      <p class="step-description"><strong>Pre-Built:</strong> Pick from 3 resumes optimized for Brand Management, Strategic Planning, or Customer Experience roles.<br><strong>Custom:</strong> Select 1-8 focus areas (therapeutic areas, audiences, skills) that match your open position.</p>
+      <p class="step-description"><strong>Pre-Built:</strong> Pick from 3 resumes optimized for Brand Management, Strategic Planning, or Customer Experience roles.<br><strong>Custom:</strong> Select 1-3 focus areas (therapeutic areas, audiences, skills) that match your open position.</p>
 
       <div class="method-selector">
         <label class="method-card active" data-method="quick">
@@ -460,7 +460,7 @@ html {
           <div class="method-content">
             <div class="method-icon">🎨</div>
             <h4>Custom Select</h4>
-            <p>Build your own using checkboxes (1-8 selections)</p>
+            <p>Build your own using checkboxes (1-3 selections)</p>
           </div>
         </label>
       </div>
