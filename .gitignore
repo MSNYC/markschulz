@@ -61,6 +61,8 @@ analyze_profiles.py
 PROFILE_ANALYSIS.txt
 redesign_profiles.py
 REDESIGNED_PROFILES.json
+regenerate_static_resumes.py
+apply_profile_redesign.py
 
 # Python cache
 __pycache__/
