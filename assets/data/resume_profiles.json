@@ -179,8 +179,8 @@
   "custom_builder": {
     "enabled": true,
     "min_selections": 1,
-    "max_selections": 5,
-    "recommended_selections": "2-4",
+    "max_selections": 3,
+    "recommended_selections": "2-3",
     "checkbox_categories": [
       {
         "category": "Therapeutic Expertise",

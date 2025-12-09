@@ -519,7 +519,7 @@ html {
     <!-- Step 2b: Custom Select (Checkboxes) -->
     <div id="customSelectPanel" class="checkbox-selector" style="display:none;">
       <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 2: Select Your Focus Areas</h3>
-      <p class="step-description">Choose 1-8 areas that best match what you're looking for <span id="selectionCount">(0 selected)</span></p>
+      <p class="step-description">Choose 1-3 areas that best match what you're looking for (selecting too many produces less focused results) <span id="selectionCount">(0 selected)</span></p>
 
       <div id="checkboxCategories" class="checkbox-categories">
         <!-- Dynamically populated from resume_profiles.json -->
