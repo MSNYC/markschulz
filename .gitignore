@@ -63,6 +63,11 @@ redesign_profiles.py
 REDESIGNED_PROFILES.json
 regenerate_static_resumes.py
 apply_profile_redesign.py
+compare_resumes.py
+RESUME_COMPARISON.txt
+
+# ChatGPT resume comparisons (private)
+chatgpt_resumes/
 
 # Python cache
 __pycache__/
