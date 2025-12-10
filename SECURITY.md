@@ -53,19 +53,24 @@ These files **are in GitHub** (public repo) but are **NOT published** to GitHub 
 ## 🌐 PUBLIC (Published to Website)
 
 ### Published by Jekyll to GitHub Pages
-These files **are visible** on your public website:
+These files **are visible** on your public website (markschulz.me):
 
-- 📄 Website pages: `index.md`, `about.md`, etc.
-- 📁 `_portfolio/` - Portfolio case studies
-- 📁 `_posts/` - Blog posts
+**Main Site:**
+- 📄 `index.md` - Single-page homepage with embedded interactive resume
 - 📁 `assets/` - CSS, JavaScript, images
-- 📄 `resume-interactive.html` - Interactive resume page
-- 📄 `assets/data/resume.json` - **PUBLIC resume data for interactive resume**
+
+**Quick Select Pre-Built Resumes:**
+- 📄 `resume/brand-management.md` - Brand Management static resume
+- 📄 `resume/strategic-planning.md` - Strategic Planning static resume
+- 📄 `resume/cx-innovation.md` - CX Innovation static resume
+
+**Data Files (Used by Interactive Resume):**
+- 📄 `assets/data/resume.json` - **Curated resume data (400+ achievements, tagged and structured)**
 - 📄 `assets/data/resume_profiles.json` - Profile filtering configuration
 
 **Status:** ✅ Publicly accessible (intended)
 
-**Note:** The files in `assets/data/` are PUBLIC copies used by the interactive resume. They contain your professional achievements and are meant to be visible to website visitors. The private backend version in `data/` is excluded.
+**Note:** The interactive resume tool is embedded in `index.md` and uses JavaScript to filter `assets/data/resume.json` in real-time based on user selections. The Quick Select links take users to pre-built static resume pages. The backend version in `data/` (with raw processing scripts) is excluded from the website.
 
 ---
 
