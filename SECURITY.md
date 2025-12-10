@@ -1,6 +1,6 @@
 # Security & Privacy Configuration
 
-**Last Updated:** 2025-12-07
+**Last Updated:** 2025-12-10
 
 This document explains what data is public vs private in this repository and GitHub Pages site.
 
@@ -22,18 +22,31 @@ These files are **never committed** to GitHub:
 
 ---
 
-### Protected by Jekyll `exclude` (In Git, But Not Published)
-These files **are in GitHub** (in the private repo) but are **NOT published** to GitHub Pages:
+### In GitHub Repository (Public)
+These files **are in the public GitHub repo** (visible to anyone) but are **NOT published** to GitHub Pages website:
 
-- ✅ `data/` - All resume data, Python scripts, extraction tools
-- ✅ `scripts/` - Resume manager and other Python utilities
+- 📄 `CLAUDE.md` - Development guidelines for AI-assisted coding
+- 📄 `AGENTS.md` - Repository conventions and build commands
+- 📄 `SECURITY.md` - This security documentation
+- 📄 `README.md` - Repository documentation
+
+**Status:** ⚠️ Public on GitHub, but NOT on markschulz.me website
+
+**Note:** These files contain technical documentation about the site architecture and development workflow. They do not contain sensitive data, passwords, or private information.
+
+---
+
+### Protected by Jekyll `exclude` (In Git, But Not Published)
+These files **are in GitHub** (public repo) but are **NOT published** to GitHub Pages:
+
+- ✅ `data/` - Backend resume data and processing scripts
+- ✅ `scripts/` - Resume manager and Python utilities
 - ✅ `docs/` - Source documents and planning materials
-- ✅ `output/` - Generated resumes and exports
+- ✅ `output/` - Generated resume exports
 - ✅ `.venv/` - Python virtual environment
 - ✅ `*.py` - All Python files
-- ✅ `CLAUDE.md`, `AGENTS.md` - Development documentation
 
-**Status:** ✅ In private repo only, NOT on public website
+**Status:** ⚠️ In public GitHub repo, but NOT on website
 
 ---
 
@@ -184,23 +197,31 @@ If you discover sensitive data is accessible:
 
 ## 🔐 Summary
 
-**PRIVATE:**
+**TRULY PRIVATE (Never in Git):**
 - ✅ API keys (`.env`)
 - ✅ Source documents (`data/raw_inputs/`)
-- ✅ Full resume database (`data/resume.json`)
-- ✅ Python extraction scripts
 - ✅ Personal assessments
+- ✅ Backup files
 
-**PUBLIC:**
+**IN PUBLIC GITHUB REPO (But Not on Website):**
+- ⚠️ Development documentation (`CLAUDE.md`, `AGENTS.md`, `SECURITY.md`)
+- ⚠️ Backend data (`data/resume.json`, Python scripts)
+- ⚠️ Repository guidelines and architecture docs
+
+**PUBLIC ON WEBSITE (markschulz.me):**
 - ✅ Website pages and blog posts
 - ✅ Portfolio case studies
-- ✅ Interactive resume (curated data only)
+- ✅ Interactive resume (`assets/data/resume.json` - curated data only)
 - ✅ CSS, JavaScript, images
 
-**Your data is protected** by multiple layers:
-1. `.gitignore` - keeps sensitive files out of Git entirely
-2. Jekyll `exclude` - keeps backend files out of published site
-3. Private repo - keeps everything private until you choose to publish
-4. Manual curation - you control what goes in the interactive resume
+**Protection layers:**
+1. `.gitignore` - keeps sensitive files (API keys, source docs) out of Git entirely
+2. Jekyll `exclude` - keeps backend files out of published website
+3. Public repo - development files visible on GitHub but not on your site
+4. Manual curation - you control what goes in the public interactive resume
 
-**Bottom line:** Your resume.json and source documents will **never** be publicly accessible, even when using GitHub Pages.
+**Bottom line:**
+- Your source documents, API keys, and assessments are **never** in Git
+- Your backend development files are in the public GitHub repo (technical docs only)
+- Only curated resume data appears on markschulz.me
+- No sensitive personal information is publicly accessible
