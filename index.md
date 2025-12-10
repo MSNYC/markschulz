@@ -425,14 +425,25 @@ html {
 
 <!-- HERO SECTION -->
 <div class="hero-section">
-  <p style="font-size: 1rem; color: var(--text-secondary, #A0A0C0); margin-bottom: 0.5rem; font-weight: 600;">MARK SCHULZ</p>
-  <p style="font-size: 1.1rem; color: #00F0FF; margin-bottom: 2rem; font-weight: 600;">Pharmaceutical Marketing Strategist | CX & AI Innovation Leader</p>
+  <p style="font-size: 1rem; color: var(--text-secondary, #A0A0C0); margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase;">Mark Schulz</p>
 
   <h1 class="hero-title">Want to skip the <br>"does this candidate fit?"<br> guesswork?</h1>
 
   <p class="hero-subtitle">
-    Instead of reading a one-size-fits-all resume, get a personalized view of my 20+ year career filtered by what matters to you. Pick your focus areas below, and I'll surface the most relevant brand management, strategy, or customer experience work from my background.
+    Instead of reading a one-size-fits-all resume, get a personalized view of my 20+ year pharma marketing career filtered by what matters to <em>your</em> role.
   </p>
+
+  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 240, 255, 0.05); border-left: 3px solid #00F0FF; border-radius: 8px;">
+    <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
+      <strong style="color: #00F0FF;">Here's how this works:</strong>
+    </p>
+    <ol style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem; font-size: 0.95rem;">
+      <li><strong>Choose your path:</strong> Pick a pre-built resume (Brand Management, Strategic Planning, or CX Innovation) or build a custom version by selecting focus areas that match your role</li>
+      <li><strong>Get a tailored resume:</strong> See only the experience, skills, and achievements relevant to what you're hiring for</li>
+      <li><strong>Learn more (optional):</strong> Read about my approach, working style, and what drives me</li>
+      <li><strong>Connect:</strong> Reach out via LinkedIn or the contact form if there's a fit</li>
+    </ol>
+  </div>
 </div>
 
 <!-- INTERACTIVE RESUME TOOL -->
