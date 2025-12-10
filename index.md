@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Mark Schulz - Pharmaceutical Marketing Leader
+title: Mark Schulz - Pharma Marketing & Advertising Professional | Interactive Resume
 description: Interactive resume showcasing 20+ years in pharmaceutical marketing across oncology, AI integration, brand strategy, and omnichannel engagement. Filter by role to see relevant experience.
 keywords: pharmaceutical marketing, oncology brand management, AI integration pharma, patient marketing, HCP marketing, omnichannel strategy, brand launch, customer experience pharma
 ---
@@ -31,14 +31,22 @@ keywords: pharmaceutical marketing, oncology brand management, AI integration ph
   margin-bottom: 2rem;
 }
 
-.sticky-nav nav {
+.sticky-nav-inner {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+}
+
+.sticky-nav nav {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  flex: 1;
 }
 
 .sticky-nav a {
@@ -56,6 +64,21 @@ keywords: pharmaceutical marketing, oncology brand management, AI integration ph
   background: rgba(0, 240, 255, 0.1);
 }
 
+.sticky-nav .linkedin-icon {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  color: #00F0FF;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.sticky-nav .linkedin-icon:hover {
+  background: rgba(0, 240, 255, 0.15);
+  transform: scale(1.1);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -67,6 +90,10 @@ html {
   .sticky-nav a {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
+  }
+  .sticky-nav .linkedin-icon {
+    font-size: 1.3rem;
+    padding: 0.4rem;
   }
 }
 
@@ -420,19 +447,24 @@ a[href^="#"]:hover {
 
 <!-- STICKY NAVIGATION -->
 <div class="sticky-nav">
-  <nav>
-    <a href="#top">Home</a>
-    <a href="#interactive-tool">Resume Tool</a>
-    <a href="#behind-the-tool">Behind the Tool</a>
-    <a href="#about">About Me</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="sticky-nav-inner">
+    <nav>
+      <a href="#top">Home</a>
+      <a href="#interactive-tool">Get Resume</a>
+      <a href="#behind-the-tool">Why This?</a>
+      <a href="#about">Working With Me</a>
+      <a href="#contact">Let's Talk</a>
+    </nav>
+    <a href="https://linkedin.com/in/mschulz" target="_blank" rel="noopener" class="linkedin-icon" aria-label="Connect on LinkedIn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </a>
+  </div>
 </div>
 
 <!-- HERO SECTION -->
 <div class="hero-section">
-  <p style="font-size: 1rem; color: var(--text-secondary, #A0A0C0); margin-bottom: 0.5rem; font-weight: 600; text-transform: uppercase;">Mark Schulz</p>
-
   <h1 class="hero-title">Want to skip the <br>"does this candidate fit?"<br> guesswork?</h1>
 
   <p class="hero-subtitle">
