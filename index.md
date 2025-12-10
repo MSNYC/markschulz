@@ -369,6 +369,12 @@ html {
   box-shadow: 0 8px 20px rgba(0, 240, 255, 0.4);
 }
 
+/* ===== CONTINUE BUTTONS HOVER ===== */
+a[href^="#"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.3);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-title {
@@ -444,13 +450,22 @@ html {
       <li><strong>Connect:</strong> Reach out via LinkedIn or the contact form if there's a fit</li>
     </ol>
   </div>
+
+  <!-- START HERE BUTTON -->
+  <div style="text-align: center; margin-top: 3rem;">
+    <a href="#interactive-tool" style="display: inline-block; padding: 1.2rem 2.5rem; background: linear-gradient(135deg, #00F0FF, #B794F6); color: #0A0E27; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);">
+      <span style="display: block; margin-bottom: 0.3rem;">START HERE</span>
+      <span style="font-size: 1.5rem; display: block;">↓</span>
+    </a>
+  </div>
 </div>
 
 <!-- INTERACTIVE RESUME TOOL -->
 <section id="interactive-tool">
   <div class="tool-intro">
-    <h2 style="text-align: left;">Tailor My Resume to Your Role</h2>
-    <p>In two steps, get a resume filtered to your needs: choose a pre-built option or customize your own.</p>
+    <p style="font-size: 0.9rem; color: #00F0FF; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 1: Get Your Tailored Resume</p>
+    <h2 style="text-align: left;">Choose Your Focus Areas</h2>
+    <p>Pick a pre-built profile optimized for a specific role, or build a custom resume by selecting the therapeutic areas, skills, and audiences that matter to your position. Either way, you'll see only the experience relevant to you.</p>
   </div>
 
   <div class="resume-builder-container">
@@ -550,8 +565,9 @@ html {
 
 <!-- BEHIND THE TOOL SECTION -->
 <section id="behind-the-tool">
-  <h2 style="text-align: left;">So Why Did I Build This?</h2>
-  <p style="font-size: 1.4rem; font-weight: 700; color: var(--accent-cyan, #00F0FF); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.3;">Because it shows my approach in action</p>
+  <p style="font-size: 0.9rem; color: #B794F6; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 2: Understand My Approach</p>
+  <h2 style="text-align: left;">Why I Built This (And What It Says About How I Work)</h2>
+  <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.5; font-style: italic;">This tool isn't just a clever resume—it demonstrates how I solve problems: identify user pain, prototype fast, ship a working solution.</p>
 
   <p>
     I've been on both sides of pharma hiring—evaluating candidates and being evaluated. The frustration is universal: recruiters and hiring managers need specific evidence fast ("Do they have oncology launch experience? Real AI implementation, or just buzzwords?"), while candidates watch their tailored expertise get buried in generic resumes.
@@ -595,12 +611,21 @@ html {
   <p>
     The same mindset that built this resume builder is what I'd bring to your brand strategy, customer experience design, or omnichannel planning. See a problem, understand the user, ship a solution.
   </p>
+
+  <!-- CONTINUE BUTTON -->
+  <div style="text-align: center; margin-top: 3rem;">
+    <a href="#about" style="display: inline-block; padding: 1rem 2rem; background: rgba(183, 148, 246, 0.15); border: 2px solid #B794F6; color: #B794F6; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
+      <span style="display: block;">Want to know more about my working style?</span>
+      <span style="font-size: 1.3rem; display: block; margin-top: 0.3rem;">↓</span>
+    </a>
+  </div>
 </section>
 
 <!-- ABOUT ME SECTION -->
 <section id="about">
+  <p style="font-size: 0.9rem; color: #00F0FF; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 3: Get to Know My Working Style</p>
   <h2>What's It Like to Work With Me?</h2>
-  <p style="font-size: 1.4rem; font-weight: 700; color: var(--accent-cyan, #00F0FF); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.3;">Strategic, inclusive, innovative—and focused on getting things done</p>
+  <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.5; font-style: italic;">Based on professional assessments (Myers-Briggs ENTJ, FIRO-B): strategic, inclusive, objective, and action-oriented.</p>
 
   <div class="about-content">
     <h3>Intro</h3>
@@ -656,14 +681,23 @@ html {
       </div>
     </div>
   </div>
+
+  <!-- CONTINUE BUTTON -->
+  <div style="text-align: center; margin-top: 3rem;">
+    <a href="#contact" style="display: inline-block; padding: 1rem 2rem; background: rgba(0, 240, 255, 0.15); border: 2px solid #00F0FF; color: #00F0FF; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
+      <span style="display: block;">Ready to connect?</span>
+      <span style="font-size: 1.3rem; display: block; margin-top: 0.3rem;">↓</span>
+    </a>
+  </div>
 </section>
 
 <!-- CONTACT SECTION -->
 <section id="contact">
-  <h2>Let's Connect</h2>
+  <p style="font-size: 0.9rem; color: #B794F6; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; text-align: left;">Step 4: Let's Talk</p>
+  <h2 style="text-align: left;">See a Fit? Let's Connect</h2>
 
   <p class="contact-intro">
-    Interested in discussing this role further? I'd love to hear from you.
+    If my experience aligns with what you're looking for, I'd love to hear about the role and explore how I can contribute.
   </p>
 
   <div class="contact-options">
