@@ -425,6 +425,9 @@ html {
 
 <!-- HERO SECTION -->
 <div class="hero-section">
+  <p style="font-size: 1rem; color: var(--text-secondary, #A0A0C0); margin-bottom: 0.5rem; font-weight: 600;">MARK SCHULZ</p>
+  <p style="font-size: 1.1rem; color: #00F0FF; margin-bottom: 2rem; font-weight: 600;">Pharmaceutical Marketing Strategist | CX & AI Innovation Leader</p>
+
   <h1 class="hero-title">Want to skip the <br>"does this candidate fit?"<br> guesswork?</h1>
 
   <p class="hero-subtitle">
