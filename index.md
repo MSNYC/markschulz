@@ -469,10 +469,10 @@ a[href^="#"]:hover {
   </div>
 
   <div class="resume-builder-container">
-    <!-- Step 1: Pre-Built or Custom -->
+    <!-- Selection Method -->
     <div class="selection-method">
-      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 1: Pre-Built or Custom?</h3>
-      <p class="step-description"><strong>Pre-Built:</strong> Pick from 3 resumes optimized for Brand Management, Strategic Planning, or Customer Experience roles.<br><strong>Custom:</strong> Select 1-3 focus areas (therapeutic areas, audiences, skills) that match your open position.</p>
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">First: Choose Your Method</h3>
+      <p class="step-description"><strong>Quick Select:</strong> Pick from 3 pre-built resumes optimized for specific roles (Brand Management, Strategic Planning, or Customer Experience).<br><strong>Custom Select:</strong> Build your own by choosing 1-3 focus areas (therapeutic areas, audiences, skills) that match your needs.</p>
 
       <div class="method-selector">
         <label class="method-card active" data-method="quick">
@@ -495,10 +495,10 @@ a[href^="#"]:hover {
       </div>
     </div>
 
-    <!-- Step 2a: Quick Select (Profiles) -->
+    <!-- Quick Select (Profiles) -->
     <div id="quickSelectPanel" class="profile-selector">
-      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 2: Select a Profile</h3>
-      <p class="step-description">Click any card below to view that tailored resume</p>
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Then: Select a Pre-Built Profile</h3>
+      <p class="step-description">Click any card below to view that tailored resume on a new page</p>
 
       <div class="profile-options">
         <a href="/resume/brand-management/" class="profile-card">
@@ -545,10 +545,10 @@ a[href^="#"]:hover {
       </div>
     </div>
 
-    <!-- Step 2b: Custom Select (Checkboxes) -->
+    <!-- Custom Select (Checkboxes) -->
     <div id="customSelectPanel" class="checkbox-selector" style="display:none;">
-      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Step 2: Select Your Focus Areas</h3>
-      <p class="step-description">Choose 1-3 areas that best match what you're looking for (selecting too many produces less focused results) <span id="selectionCount">(0 selected)</span></p>
+      <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Then: Choose Your Focus Areas</h3>
+      <p class="step-description">Select 1-3 areas that match what you're looking for, then click "Generate Custom Resume" to see the tailored results below. (Selecting too many areas produces less focused results.) <span id="selectionCount">(0 selected)</span></p>
 
       <div id="checkboxCategories" class="checkbox-categories">
         <!-- Dynamically populated from resume_profiles.json -->
@@ -560,6 +560,14 @@ a[href^="#"]:hover {
       </button>
     </div>
 
+  </div>
+
+  <!-- CONTINUE BUTTON -->
+  <div style="text-align: center; margin-top: 3rem;">
+    <a href="#behind-the-tool" style="display: inline-block; padding: 1rem 2rem; background: rgba(183, 148, 246, 0.15); border: 2px solid #B794F6; color: #B794F6; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
+      <span style="display: block;">Curious how I approach problem-solving?</span>
+      <span style="font-size: 1.3rem; display: block; margin-top: 0.3rem;">↓</span>
+    </a>
   </div>
 </section>
 
