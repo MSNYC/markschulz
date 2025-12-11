@@ -784,3 +784,4 @@ a[href^="#"]:hover {
 
 <script src="{{ '/assets/js/resume-builder.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/resume-init.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/ga-events.js' | relative_url }}"></script>
