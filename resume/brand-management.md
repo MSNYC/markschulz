@@ -29,81 +29,131 @@ experience:
     company: Biolumina
     company_parent: Omnicom
     location: New York, NY
-    start_date: 2021-01
+    start_date: 2021-04
     end_date: Present
     bullets:
+      - Supported TAGRISSO DTC brand initiatives by designing omnichannel CRM, segmentation, CTV/OTT, and experiential congress frameworks for patient/caregiver audiences
       - Built and refined full-funnel engagement ecosystems for KISQALI, mapping behavioral pathways, conversion logic, and channel sequencing across digital, CRM, media, and congress activations
       - Lead Experience Planner for KISQALI (ribociclib), a leading global CDK4/6 breast cancer therapy, driving annual omnichannel planning across both HCP and patient audiences
+      - Led creation, testing, and deployment of multiple custom GPTs for Biolumina and oncology-focused brands
       - Created internal 'Xosystem' (experience ecosystem) process to optimize TAGRISSO DTC tactical planning and execution across omnichannel customer touchpoints
-      - Built and executed omnichannel customer relationship marketing (CRM) programming for TAGRISSO DTC brand aligned to strategic imperatives
-      - Supported TAGRISSO DTC brand initiatives by designing omnichannel CRM, segmentation, CTV/OTT, and experiential congress frameworks for patient/caregiver audiences
   - title: VP, Group Account Supervisor
     company: Harrison & Star
     company_parent: Omnicom
     location: New York, NY
-    start_date: 2020-01
-    end_date: 2021-01
+    start_date: 2020-10
+    end_date: 2021-02
     bullets:
       - Provided oversight of several tactics comprising a new mini-campaign launch for a leading HIV treatment, aligning strategy and client expectations to tactical executions across all agency departments
       - Drove execution of new tactics leveraging expanded core messaging claims for a leading oncology treatment, managing cross-departmental alignment from strategy through execution
+  - title: Senior Director, Data Strategy & Operations
+    company: WebMD/Medscape
+    company_parent: Internet Brands
+    location: New York, NY
+    start_date: 2019-03
+    end_date: 2019-11
+    bullets:
+      - Designed and launched a new sprint management process that created a nexus for cross-functional senior leadership to collaborate more actively, driving deeper understanding of data procedures, and focusing 300+ hrs per week on the priority initiatives
+      - Analyzed and presented pricing recommendations for customized data services, which cleared a path to $500K+ potential upside for most major accounts
   - title: Team Leader, Sr. Dir., Commercial Clinical Strategy
     company: WebMD/Medscape
     company_parent: Internet Brands
     location: New York, NY
-    start_date: 2018-01
-    end_date: 2019-12
+    start_date: 2017-12
+    end_date: 2019-03
     bullets:
       - Managed a portfolio of ~30 strategic deals (high investment, exposure, or risk) per year, totaling $30M+ in annual sales
-      - Managed a team of 3 Associate Directors and 1 Business Analyst, expanding from individual contributor role to team leadership position
-      - Established documentation standards, team onboarding training, and annual goal-setting process, enabling a more self-sufficient and sustainable team for the organization
       - Conducted best-in-class strategic oversight from initial ROI modeling through final campaign impact measurement via NRx/TRx test-versus-control analysis conducted by IQVIA
       - Distilled key insights and optimizations from analyses, and presented findings to client teams to steer renewal decisions and strengthen account relationships
-  - title: Director, Commercial Clinical Strategy
+  - title: Director, Marketing Strategy & Analytics
     company: WebMD/Medscape
     company_parent: Internet Brands
     location: New York, NY
-    start_date: 2016-01
-    end_date: 2018-01
+    start_date: 2016-05
+    end_date: 2017-12
     bullets:
-      - Built standardized ROI projection and partnership structure analyses, enabling consistent modeling for over 60+ opportunities per year, including a bulk model of all promoted drugs on the market
-      - Managed ~10 strategic, performance-guarantee deals with sales of $19M+
       - Analyzed brand opportunities for WebMD to structure programs with optimal impact and ROI, developing strategic frameworks for pharmaceutical partnership evaluation
-      - Led Commercial Clinical Strategy team of 4 direct reports, implementing risk and reward modeling frameworks to inform key partnership decisions
-      - Aligned all departments to partnership vision and service innovations, driving cross-functional collaboration for commercial clinical initiatives
+      - Partnered across all internal business functions to align the execution of promotion to the strategic vision through data-driven campaign optimizations that would show clear impact on Rx impact results
+      - Built standardized ROI projection and partnership structure analyses, enabling consistent modeling for over 60+ opportunities per year, including a bulk model of all promoted drugs on the market
   - title: VP, Project Management, Group Supervisor
     company: Patients & Purpose
     company_parent: Omnicom
     location: New York, NY
-    start_date: 2015-01
-    end_date: 2016-12
+    start_date: 2014-12
+    end_date: 2016-05
     bullets:
-      - Supervised a PM team of 5 (2 Senior PM's, 1 PM, 1 Associate PM, and 1 Brand Coordinator)
-      - Drafted and facilitated review/approval of ~5 $1M+ SOWs per year
-      - Led project management and digital strategy for BANZEL (epilepsy) patient website, social media campaigns, and email programs as lead PM and digital consultant
       - Managed major indication launch for LUCENTIS (wet AMD) treated as full brand launch, overseeing complete website redesign and digital ecosystem overhaul for patient and caregiver audiences
-      - Led development of innovative mobile smartphone application for MS patients on TECFIDERA, pioneering one of the first-of-its-kind patient support apps in pharma
-  - title: Marketing Manager - LIPITOR / CADUET
+      - Led cross-functional teams to deliver responsive website and comprehensive digital asset suite for LUCENTIS new indication launch targeting patients and caregivers
+      - Managed full product lifecycle from concept to launch for groundbreaking TECFIDERA mobile app, establishing new standards for digital patient engagement in MS treatment
+      - Built and introduced an SOW burn tracker used to enhance estimates, the tracking of actuals, inter-department management of hours, and earlier identification of divergence from forecasts
+      - Led project management and digital strategy for BANZEL (epilepsy) patient website, social media campaigns, and email programs as lead PM and digital consultant
+  - title: Project Management, Group Supervisor
+    company: Patients & Purpose
+    company_parent: Omnicom
+    location: New York, NY
+    start_date: 2014-01
+    end_date: 2014-11
+    bullets:
+      - Supervised and developed growth of multiple direct reports while formulating and executing annual Statement of Work for major pharmaceutical clients
+      - Reported billable hour actuals, forecasts and accruals to senior management to manage quarterly and annual closes accurately and meet agency-wide financial reporting rollups to Omnicom/analysts
+      - Built new comprehensive SOW and multi-department billable resource tracker and workflows that increased accuracy of forecasts and the tracking of actuals, eliminating last-minute identification of financial variances from forecast
+  - title: Senior Project Manager
+    company: Patients & Purpose
+    company_parent: Omnicom
+    location: New York, NY
+    start_date: 2012-02
+    end_date: 2013-12
+    bullets:
+      - Managed full PM team for major pharmaceutical clients with 5 direct reports, overseeing annual SOW formulation and execution
+      - Executed complex multi-departmental resource coordination for major pharmaceutical client projects, managing cross-functional teams and stakeholder alignment
+      - Managed complex timelines to deliver cutting-edge responsive and HTML5 sites for consumer digital asset creative & web development projects
+  - title: Marketing Manager, LIPITOR / CADUET
     company: Pfizer
     location: New York, NY
-    start_date: 2008-01
+    start_date: 2010-01
     end_date: 2012-01
     bullets:
+      - Managed combined CV franchise marketing budget exceeding $10 million+ for both Lipitor and Caduet HCP marketing initiatives across multiple channels
+      - Launched new Live-Rep Video Detailing platform for Caduet, expanding digital engagement capabilities for healthcare professional interactions
+      - Managed Professional Media Plan execution across CV franchise, coordinating media space allocation and campaign delivery
+      - Managed $10+ million HCP marketing budget for CADUET brand, optimizing marketing mix amid extreme field force reductions to drive share stabilization
       - Managed a $10M+ portion of US HCP marketing budget to efficiently target print and digital promotion to US healthcare professionals for Lipitor and Caduet
-      - Delivered Medscape speaker events reaching 3,370 physicians with positive survey feedback, driving MML message and adherence messaging following CARPE-M and CARPE-V clinical data
-      - Negotiated $100K credit from WebMD by incorporating SSCG team support and delegating production to CDMi, demonstrating vendor management and cost optimization
-      - Managed $1.8M professional media campaign covering online banner advertisements and print, coordinating with CDM and SSCG teams while making strategic adjustments for 'Male Recall' content
-      - Led Caduet budget reduction initiative by $5M in Q4 2009, analyzing and prioritizing spend while identifying cost reduction areas in response to senior management buy-down requests
-  - title: Associate Marketing Manager, VIAGRA
+  - title: Associate Marketing Manager, CADUET
     company: Pfizer
     location: New York, NY
-    start_date: 2004-01
-    end_date: 2008-01
+    start_date: 2009-01
+    end_date: 2009-12
     bullets:
+      - Tablet PC Detailing Captain, SOV digital initiatives, Journal ad development and launch, Platform evolution and pull-through, Managing internal competition for bandwidth
+  - title: Associate Marketing Manager, VIAGRA / REVATIO
+    company: Pfizer
+    location: New York, NY
+    start_date: 2007-07
+    end_date: 2008-12
+    bullets:
+      - Managed savings card program, media planning, conventions and speaker captain initiatives for VIAGRA brand portfolio
       - Prepared and managed individual $4.5-million+ marketing budget for VIAGRA brand HCP marketing initiatives
-      - Led all budgeting, design, creative approvals, rep training and on-site strategic supervision for 3 major convention booths (3,500+ sq ft) targeting healthcare professionals
-      - Led Viagra team to achieve smallest budget variance from forecast across all Steere business unit teams in Q3 close by implementing new forecasting tool and training framework
-      - Negotiated $200k cost avoidance in Power Letter program for 2008 by restructuring targeting strategy from 700 per LAT per month to 30 per rep per month focused on MVDs
-      - Launched monthly Viagra podcast program from May 2007 through April 2008, successfully aligning content to satisfaction messaging and value card program changes
+      - Managed online voucher ordering system for VIAGRA brand, streamlining distribution and tracking processes
+      - Managed online voucher ordering system for VIAGRA brand, coordinating marketing efforts across physicians, customers, management, and cross-functional colleagues
+      - Developed and launched journal advertisement campaigns as part of comprehensive HCP marketing strategy
+  - title: Administrative Assistant, VIAGRA / REVATIO
+    company: Pfizer
+    location: New York, NY
+    start_date: 2001-07
+    end_date: 2007-07
+    bullets:
+      - Developed savings card program and comprehensive media planning initiatives to support brand accessibility and market penetration
+      - Managed comprehensive personal and non-personal HCP marketing campaigns across 4 major brands: VIAGRA, LIPITOR, CADUET, and REVATIO
+      - Coordinated conventions and speaker captain programs to enhance healthcare professional engagement and brand education
+      - Project managed select high priority premium budgets in excess of $500K for Viagra marketing campaigns
+      - Problem solved for Worldwide Professional Relations manager on projects often $1M+, managing multi-departmental coordination and holding account expense reconciliation
+  - title: Temporary Administrative Assistant
+    company: Pfizer
+    location: New York, NY
+    start_date: 1998-05
+    end_date: 2001-06
+    bullets:
+      - Multiple temporary administrative assistant assignments on several marketing teams at Pfizer including ZOLOFT, NORVASC, GLUCOTROL XL, and VIAGRA
 skills:
   - category: Brand & Commercial Strategy
     items:
