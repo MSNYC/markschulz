@@ -143,7 +143,7 @@ experience:
     end_date: 2007-07
     bullets:
       - Developed savings card program and comprehensive media planning initiatives to support brand accessibility and market penetration
-      - Managed comprehensive personal and non-personal HCP marketing campaigns across 4 major brands: VIAGRA, LIPITOR, CADUET, and REVATIO
+      - "Managed comprehensive personal and non-personal HCP marketing campaigns across 4 major brands: VIAGRA, LIPITOR, CADUET, and REVATIO"
       - Coordinated conventions and speaker captain programs to enhance healthcare professional engagement and brand education
       - Project managed select high priority premium budgets in excess of $500K for Viagra marketing campaigns
       - Problem solved for Worldwide Professional Relations manager on projects often $1M+, managing multi-departmental coordination and holding account expense reconciliation
