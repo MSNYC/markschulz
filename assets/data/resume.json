@@ -2811,24 +2811,23 @@
     },
     {
       "name": "Promo Fingerprint Visualizer",
-      "description": "Compliance analytics tool creating unique 'fingerprints' for pharmaceutical promotional material regulatory review histories, identifying patterns and bottlenecks in MLR review processes",
+      "description": "Planning and analysis framework mapping planned vs. actual customer experience execution across messaging balance, audience focus, channel mix, and sentiment—enabling gap analysis and continuous optimization",
       "role": "Developer & Analyst",
       "period": "2023",
       "technologies": [
         "Python",
         "Data Visualization",
         "Pattern Recognition",
-        "MLR Data Analysis"
+        "Performance Analytics"
       ],
       "outcomes": [
-        "Identified compliance bottlenecks across multiple brands",
-        "Contributed to 15% reduction in MLR review cycle time through pattern insights",
-        "Enhanced regulatory team efficiency and visibility"
+        "Enabled systematic comparison of planned vs. actual customer experience execution",
+        "Established framework for identifying gaps and optimizing campaign performance"
       ],
       "keywords": [
-        "MLR Review",
-        "Regulatory Compliance",
-        "FDA Regulations",
+        "Customer Experience",
+        "Campaign Planning",
+        "Performance Measurement",
         "Process Optimization",
         "Data Analytics"
       ]
@@ -3206,13 +3205,6 @@
         "context": "WebReportingHub platform for 9-brand portfolio",
         "company": "Biolumina",
         "year": "2023-2024"
-      },
-      {
-        "metric": "MLR review cycle time",
-        "change": "-15%",
-        "context": "Promo Fingerprint Visualizer insights",
-        "company": "Biolumina",
-        "year": "2023"
       }
     ],
     "years_experience": {

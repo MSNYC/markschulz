@@ -19,7 +19,7 @@ highlights:
   - label: Data & Analytics Impact
     text: Built WebReportingHub analytics platform reducing cross-brand reporting time by 60% and ASCO congress framework cutting prep time by 40%
   - label: Digital Transformation
-    text: Created Pharmetheus GPT democratizing 15+ years of brand strategy insights and Promo Fingerprint Visualizer reducing MLR cycle time by 15%
+    text: Pioneered AI integration with Pharmetheus GPT assistant, democratizing 15+ years of brand strategy insights—first internal AI tool for brand planning at agency. Developed Promo Fingerprint Visualizer framework mapping planned vs. actual customer experience execution across messaging balance, audience focus, channel mix, and sentiment—enabling gap analysis and continuous optimization
 experience:
   - title: VP, Experience Planner
     company: Biolumina
