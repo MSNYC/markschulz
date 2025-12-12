@@ -31,7 +31,7 @@
   },
   "summary": {
     "short": "Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives: Creative Agency, Manufacturer, and Publisher.",
-    "long": "Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives:\n• Creative Agency: Experience planning, account, and digital project management\n• Manufacturer: US brand management; HCP strategy, positioning, and execution across all channels\n• Publisher: Media expertise, Rx impact analysis, partnership strategy, ROI modeling, and advanced targeting",
+    "long": "Versatile life sciences leader with 20+ years of experience spanning three major industry perspectives:\n\u2022 Creative Agency: Experience planning, account, and digital project management\n\u2022 Manufacturer: US brand management; HCP strategy, positioning, and execution across all channels\n\u2022 Publisher: Media expertise, Rx impact analysis, partnership strategy, ROI modeling, and advanced targeting",
     "perspectives": [
       {
         "category": "Creative Agency",
@@ -56,7 +56,7 @@
       "positions": [
         {
           "title": "VP, Experience Planner",
-          "start_date": "2021-01",
+          "start_date": "2021-04",
           "end_date": null,
           "current": true,
           "responsibilities": [
@@ -374,7 +374,7 @@
               "category": "Innovation & Digital Transformation",
               "items": [
                 {
-                  "text": "Pioneered AI integration with Pharmetheus GPT assistant, democratizing 15+ years of brand strategy insights—first internal AI tool for brand planning at agency",
+                  "text": "Pioneered AI integration with Pharmetheus GPT assistant, democratizing 15+ years of brand strategy insights\u2014first internal AI tool for brand planning at agency",
                   "tags": [
                     "ai",
                     "innovation",
@@ -510,8 +510,8 @@
       "positions": [
         {
           "title": "VP, Group Account Supervisor",
-          "start_date": "2020-01",
-          "end_date": "2021-01",
+          "start_date": "2020-10",
+          "end_date": "2021-02",
           "current": false,
           "responsibilities": [
             "Led multiple tactics comprising a new mini-campaign launch for a leading HIV treatment"
@@ -570,9 +570,35 @@
       "location": "New York, NY",
       "positions": [
         {
+          "title": "Senior Director, Data Strategy & Operations",
+          "start_date": "2019-03",
+          "end_date": "2019-11",
+          "current": false,
+          "responsibilities": [
+            "Led customer data discussions, improved business intelligence workflows and productized custom data procedures",
+            "Designed and launched a new sprint management process that created a nexus for cross-functional senior leadership to collaborate more actively",
+            "Analyzed and presented pricing recommendations for customized data services"
+          ],
+          "achievements": [
+            {
+              "category": "Data Strategy & Operations Leadership",
+              "items": [
+                {
+                  "text": "Designed and launched a new sprint management process that created a nexus for cross-functional senior leadership to collaborate more actively, driving deeper understanding of data procedures, and focusing 300+ hrs per week on the priority initiatives",
+                  "tags": ["leadership", "operations", "process", "analytics"]
+                },
+                {
+                  "text": "Analyzed and presented pricing recommendations for customized data services, which cleared a path to $500K+ potential upside for most major accounts",
+                  "tags": ["analytics", "strategy", "revenue", "pricing"]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "Team Leader, Sr. Dir., Commercial Clinical Strategy",
-          "start_date": "2018-01",
-          "end_date": "2019-12",
+          "start_date": "2017-12",
+          "end_date": "2019-03",
           "current": false,
           "responsibilities": [
             "Managed ~30 strategic deals (those of high investment, exposure, or risk) per year, totaling $30M+ in sales",
@@ -690,9 +716,9 @@
           ]
         },
         {
-          "title": "Director, Commercial Clinical Strategy",
-          "start_date": "2016-01",
-          "end_date": "2018-01",
+          "title": "Director, Marketing Strategy & Analytics",
+          "start_date": "2016-05",
+          "end_date": "2017-12",
           "current": false,
           "responsibilities": [
             "Managed strategic pharmaceutical partnerships",
@@ -905,8 +931,8 @@
       "positions": [
         {
           "title": "VP, Project Management, Group Supervisor",
-          "start_date": "2015-01",
-          "end_date": "2016-12",
+          "start_date": "2014-12",
+          "end_date": "2016-05",
           "current": false,
           "responsibilities": [
             "PM team served as digital evangelists and solution consultants in addition to handling all brand staffing, finances, and timelines",
@@ -1234,7 +1260,7 @@
         {
           "title": "Project Management, Group Supervisor",
           "start_date": "2014-01",
-          "end_date": "2015-01",
+          "end_date": "2014-11",
           "current": false,
           "responsibilities": [
             "Supervised project management team for pharmaceutical brands",
@@ -1320,8 +1346,8 @@
         },
         {
           "title": "Senior Project Manager",
-          "start_date": "2012-01",
-          "end_date": "2014-01",
+          "start_date": "2012-02",
+          "end_date": "2013-12",
           "current": false,
           "responsibilities": [
             "Managed digital projects for pharmaceutical clients",
@@ -1422,8 +1448,8 @@
       "location": "New York, NY",
       "positions": [
         {
-          "title": "Marketing Manager - LIPITOR / CADUET",
-          "start_date": "2008-01",
+          "title": "Marketing Manager, LIPITOR / CADUET",
+          "start_date": "2010-01",
           "end_date": "2012-01",
           "current": false,
           "responsibilities": [
@@ -2013,9 +2039,33 @@
           ]
         },
         {
-          "title": "Associate Marketing Manager, VIAGRA",
-          "start_date": "2004-01",
-          "end_date": "2008-01",
+          "title": "Associate Marketing Manager, CADUET",
+          "start_date": "2009-01",
+          "end_date": "2009-12",
+          "current": false,
+          "responsibilities": [
+            "Tablet PC Detailing Captain",
+            "SOV digital initiatives",
+            "Journal ad development and launch",
+            "Platform evolution and pull-through",
+            "Managing internal competition for bandwidth"
+          ],
+          "achievements": [
+            {
+              "category": "Digital Marketing & Brand Management",
+              "items": [
+                {
+                  "text": "Tablet PC Detailing Captain, SOV digital initiatives, Journal ad development and launch, Platform evolution and pull-through, Managing internal competition for bandwidth",
+                  "tags": ["digital", "hcp", "strategy", "cv"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Associate Marketing Manager, VIAGRA / REVATIO",
+          "start_date": "2007-07",
+          "end_date": "2008-12",
           "current": false,
           "responsibilities": [
             "Supported VIAGRA brand marketing initiatives",
@@ -2379,9 +2429,9 @@
           ]
         },
         {
-          "title": "Administrative Assistant, VIAGRA",
-          "start_date": "1998-01",
-          "end_date": "2004-01",
+          "title": "Administrative Assistant, VIAGRA / REVATIO",
+          "start_date": "2001-07",
+          "end_date": "2007-07",
           "current": false,
           "responsibilities": [
             "Provided administrative support to VIAGRA brand team",
@@ -2507,6 +2557,26 @@
             "Administrative Support",
             "Operations Coordination",
             "Brand Team Support"
+          ]
+        },
+        {
+          "title": "Temporary Administrative Assistant",
+          "start_date": "1998-05",
+          "end_date": "2001-06",
+          "current": false,
+          "responsibilities": [
+            "Multiple temporary administrative assistant assignments on several marketing teams at Pfizer including ZOLOFT, NORVASC, GLUCOTROL XL, and VIAGRA"
+          ],
+          "achievements": [
+            {
+              "category": "Administrative Support & Operations",
+              "items": [
+                {
+                  "text": "Multiple temporary administrative assistant assignments on several marketing teams at Pfizer including ZOLOFT, NORVASC, GLUCOTROL XL, and VIAGRA",
+                  "tags": ["operations", "administration", "support"]
+                }
+              ]
+            }
           ]
         }
       ]
@@ -2811,7 +2881,7 @@
     },
     {
       "name": "Promo Fingerprint Visualizer",
-      "description": "Planning and analysis framework mapping planned vs. actual customer experience execution across messaging balance, audience focus, channel mix, and sentiment—enabling gap analysis and continuous optimization",
+      "description": "Planning and analysis framework mapping planned vs. actual customer experience execution across messaging balance, audience focus, channel mix, and sentiment\u2014enabling gap analysis and continuous optimization",
       "role": "Developer & Analyst",
       "period": "2023",
       "technologies": [
