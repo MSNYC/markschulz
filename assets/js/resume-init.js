@@ -3,6 +3,26 @@
  * Handles data loading, user interactions, and resume generation
  */
 
+// Early scroll restoration - run IMMEDIATELY to prevent flash
+(function() {
+  // Check for both custom and quick select states
+  const customState = sessionStorage.getItem('customResumeState');
+  const quickState = sessionStorage.getItem('quickSelectState');
+
+  const savedState = customState || quickState;
+
+  if (savedState) {
+    try {
+      const state = JSON.parse(savedState);
+      if (state.scrollPosition) {
+        window.scrollTo(0, state.scrollPosition);
+      }
+    } catch (e) {
+      // Silently fail
+    }
+  }
+})();
+
 (function() {
   'use strict';
 
@@ -54,8 +74,82 @@
     // Initialize checkbox UI if custom builder is enabled
     if (customBuilderData && customBuilderData.enabled) {
       initializeCheckboxes();
-      // Reset custom selections AFTER checkboxes are built
-      resetCustomSelections();
+
+      // Check if we're returning from a custom resume (restore state)
+      const savedState = sessionStorage.getItem('customResumeState');
+      if (savedState) {
+        try {
+          const state = JSON.parse(savedState);
+
+          // Restore checkbox selections
+          if (state.selectedCheckboxes && state.selectedCheckboxes.length > 0) {
+            selectedCheckboxes = state.selectedCheckboxes;
+
+            // Switch to custom select view
+            selectionMethod = 'custom';
+            const customRadio = document.querySelector('input[value="custom"]');
+            if (customRadio) {
+              customRadio.checked = true;
+            }
+            // Toggle the panels to show custom select
+            toggleSelectionPanels();
+            updateMethodCardStyles();
+
+            // Re-check the checkboxes in the DOM
+            state.selectedCheckboxes.forEach(checkboxId => {
+              const checkbox = document.getElementById(`checkbox_${checkboxId}`);
+              if (checkbox) {
+                checkbox.checked = true;
+                const item = checkbox.closest('.checkbox-item');
+                if (item) item.classList.add('checked');
+              }
+            });
+
+            // Update the counter and button state
+            updateCheckboxCount();
+            validateCustomSelection();
+
+            // Restore scroll position immediately (no animation)
+            window.scrollTo(0, state.scrollPosition);
+          }
+
+          // Clear the saved state so it doesn't persist
+          sessionStorage.removeItem('customResumeState');
+        } catch (e) {
+          console.error('Error restoring state:', e);
+          resetCustomSelections();
+        }
+      } else {
+        // No saved state - reset as normal
+        resetCustomSelections();
+      }
+    }
+
+    // Check if we're returning from a Quick Select resume (restore state)
+    const quickState = sessionStorage.getItem('quickSelectState');
+    if (quickState) {
+      try {
+        const state = JSON.parse(quickState);
+
+        // Restore Quick Select view
+        if (state.viewMode === 'quick') {
+          selectionMethod = 'quick';
+          const quickRadio = document.querySelector('input[value="quick"]');
+          if (quickRadio) {
+            quickRadio.checked = true;
+          }
+          toggleSelectionPanels();
+          updateMethodCardStyles();
+
+          // Restore scroll position
+          window.scrollTo(0, state.scrollPosition);
+        }
+
+        // Clear the saved state
+        sessionStorage.removeItem('quickSelectState');
+      } catch (e) {
+        console.error('Error restoring quick select state:', e);
+      }
     }
 
     // Check URL parameters for profile selection
@@ -94,7 +188,7 @@
     // Reset the selection count display (if element exists)
     const countSpan = document.getElementById('selectionCount');
     if (countSpan) {
-      countSpan.textContent = '(0 selected)';
+      countSpan.textContent = '(0 of 3 selected)';
     }
 
     // Disable the generate button (if it exists)
@@ -137,6 +231,19 @@
       input.addEventListener('change', (e) => {
         currentProfileId = e.target.value;
         updateURL();
+      });
+    });
+
+    // Quick Select profile cards - save state when clicked
+    const profileCards = document.querySelectorAll('.profile-card');
+    profileCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Save state before navigating to quick select resume
+        sessionStorage.setItem('quickSelectState', JSON.stringify({
+          scrollPosition: window.scrollY,
+          viewMode: 'quick',
+          profileId: card.href.split('/').filter(Boolean).pop() // Extract profile ID from URL
+        }));
       });
     });
 
@@ -265,7 +372,7 @@
     const subject = encodeURIComponent(`Mark Schulz Resume - ${profile.label}`);
     const body = encodeURIComponent(
       `Hi,\n\nI've generated a tailored resume for Mark Schulz focused on ${profile.label}.\n\n` +
-      `View it here: ${window.location.origin}/resume-interactive/?profile=${currentProfileId}\n\n` +
+      `View it here: ${window.location.origin}/?profile=${currentProfileId}\n\n` +
       `Profile highlights:\n${profile.competencies.slice(0, 2).map(c => `• ${c}`).join('\n')}\n\n` +
       `Best regards`
     );
@@ -277,7 +384,7 @@
    * Copy shareable link
    */
   function copyLink() {
-    const url = `${window.location.origin}/resume-interactive/?profile=${currentProfileId}`;
+    const url = `${window.location.origin}/?profile=${currentProfileId}`;
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(() => {
@@ -491,7 +598,7 @@
   function updateCheckboxCount() {
     const countSpan = document.getElementById('selectionCount');
     if (countSpan) {
-      countSpan.textContent = `(${selectedCheckboxes.length} selected)`;
+      countSpan.textContent = `(${selectedCheckboxes.length} of 3 selected)`;
     }
   }
 
@@ -563,6 +670,54 @@
   }
 
   /**
+   * Show loading overlay with sparkle effect
+   */
+  function showLoadingOverlay(onComplete) {
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'resume-loading-overlay';
+
+    const content = document.createElement('div');
+    content.className = 'loading-content';
+
+    const icon = document.createElement('div');
+    icon.className = 'loading-icon';
+    icon.textContent = '✨';
+
+    const text = document.createElement('div');
+    text.className = 'loading-text';
+    text.textContent = 'Tailoring your resume...';
+
+    const subtext = document.createElement('div');
+    subtext.className = 'loading-subtext';
+    subtext.textContent = '';
+
+    content.appendChild(icon);
+    content.appendChild(text);
+    content.appendChild(subtext);
+    overlay.appendChild(content);
+    document.body.appendChild(overlay);
+
+    // Stage 1: Tailoring (0-700ms)
+    setTimeout(() => {
+      text.textContent = 'Filtering experience...';
+    }, 700);
+
+    // Stage 2: Filtering (700-1500ms)
+    setTimeout(() => {
+      icon.textContent = '✅';
+      icon.classList.add('done');
+      text.textContent = 'Done!';
+      subtext.textContent = 'Loading your custom resume...';
+    }, 1500);
+
+    // Stage 3: Complete (1500-2500ms, then callback)
+    setTimeout(() => {
+      onComplete();
+    }, 2500);
+  }
+
+  /**
    * Generate custom resume based on checkbox selections
    */
   function generateCustomResume() {
@@ -572,12 +727,6 @@
     }
 
     try {
-      // Show loading state
-      const generateBtn = document.getElementById('generateCustomBtn');
-      const originalText = generateBtn.querySelector('.btn-text').textContent;
-      generateBtn.querySelector('.btn-text').textContent = 'Generating...';
-      generateBtn.disabled = true;
-
       // Collect all tags from selected checkboxes
       const selectedTags = [];
       customBuilderData.checkbox_categories.forEach(category => {
@@ -588,10 +737,18 @@
         });
       });
 
-      // Redirect to custom resume page with tags as URL parameters
-      const tagsParam = selectedTags.join(',');
-      // Use relative path to work with both GitHub Pages and custom domain
-      window.location.href = `resume/custom/?tags=${encodeURIComponent(tagsParam)}`;
+      // Save state before navigating (so we can restore when they come back)
+      sessionStorage.setItem('customResumeState', JSON.stringify({
+        selectedCheckboxes: selectedCheckboxes,
+        scrollPosition: window.scrollY,
+        viewMode: 'custom'
+      }));
+
+      // Show sparkle loading effect, then redirect
+      showLoadingOverlay(() => {
+        const tagsParam = selectedTags.join(',');
+        window.location.href = `resume/custom/?tags=${encodeURIComponent(tagsParam)}`;
+      });
 
     } catch (error) {
       console.error('Error generating custom resume:', error);
@@ -650,3 +807,4 @@
   });
 
 })();
+

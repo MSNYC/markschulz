@@ -97,8 +97,8 @@ experience:
     end_date: 2013-12
     bullets:
       - Managed complex timelines to deliver cutting-edge responsive and HTML5 sites for consumer digital asset creative & web development projects
-      - Managed complex timelines to deliver cutting-edge responsive and HTML5 sites for major pharmaceutical clients using advanced web technologies
       - Managed full PM team for major pharmaceutical clients with 5 direct reports, overseeing annual SOW formulation and execution
+      - Executed complex multi-departmental resource coordination for major pharmaceutical client projects, managing cross-functional teams and stakeholder alignment
   - title: Marketing Manager, LIPITOR / CADUET
     company: Pfizer
     location: New York, NY

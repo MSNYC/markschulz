@@ -4,17 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a professional portfolio website built with Jekyll for Mark Schulz, a pharmaceutical marketing and advertising professional. The site is structured around a data-driven resume system that maintains a single source of truth (`data/resume.json`) and generates various outputs including web pages, markdown resumes, and an interactive resume builder.
+This is a professional portfolio website built with Jekyll for Mark Schulz, a pharmaceutical marketing and advertising professional. The site is structured around a data-driven resume system that maintains a single source of truth (`assets/data/resume.json`) and generates various outputs including web pages, markdown resumes, and an interactive resume builder.
 
 ## Key Architecture
 
 ### Resume Databank System
 
-The core architecture centers on **`data/resume.json`** as the single source of truth for all professional information:
+The core architecture centers on **`assets/data/resume.json`** as the single source of truth for all professional information:
 
 - **Structure**: Comprehensive JSON schema containing personal info, experience, skills, projects, education, therapeutic areas, and more
 - **Version controlled**: Uses semantic versioning (major.minor.patch) tracked in `meta.version`
 - **Achievement categorization**: Grouped into categories like "AI Innovation & Enterprise Enablement", "Strategy & Marketing Expertise", etc.
+- **Web-accessible location**: Stored in `assets/` folder so Jekyll can serve it (the `data/` folder is excluded from builds for privacy)
 
 ### Python Scripts
 
@@ -34,7 +35,7 @@ Located in `scripts/`:
 ### Interactive Resume
 
 - **`resume-interactive.html`** - Client-side interactive resume that filters experience/skills based on role profiles
-- **`data/resume_profiles.json`** - Defines three role profiles (Brand Management, Strategy & Innovation, CX & Engagement) with priority tags and filtering rules
+- **`assets/data/resume_profiles.json`** - Defines three role profiles (Brand Management, Strategy & Innovation, CX & Engagement) with priority tags and filtering rules
 - Uses tag matching algorithm to dynamically filter and score resume bullets by relevance to selected profile
 
 ### Jekyll Site Structure
@@ -96,7 +97,7 @@ python3 scripts/resume_manager.py summary
 
 When adding new achievements, skills, or projects:
 
-1. **Update `data/resume.json` directly** - This is the single source of truth
+1. **Update `assets/data/resume.json` directly** - This is the single source of truth
 2. **Increment `meta.version`** appropriately:
    - Major (X.0.0): New job or major career change
    - Minor (1.X.0): New project, significant achievement
@@ -109,7 +110,7 @@ Detailed workflow in `data/UPDATE_WORKFLOW.md`.
 
 ## Achievement Guidelines
 
-When adding achievements to `data/resume.json`:
+When adding achievements to `assets/data/resume.json`:
 
 - **Quantify everything**: Include percentages, dollar amounts, time savings
 - **Use action verbs**: Led, Managed, Developed, Optimized, Increased, etc.
@@ -137,13 +138,14 @@ The interactive resume uses a tag-based filtering system:
 
 ## Important File Paths
 
-- **Resume databank**: `data/resume.json`
-- **Resume profiles**: `data/resume_profiles.json`
+- **Resume databank** (SINGLE SOURCE OF TRUTH): `assets/data/resume.json`
+- **Resume profiles**: `assets/data/resume_profiles.json`
 - **Jekyll config**: `_config.yml`
 - **Homepage**: `index.md`
 - **Interactive resume**: `resume-interactive.html`
 - **About page**: `about.md`
 - **Python scripts**: `scripts/`
+- **Data processing workspace**: `data/` (excluded from web build - contains processing scripts, raw inputs, old backups)
 - **Documentation**: `data/README.md`, `data/UPDATE_WORKFLOW.md`
 - **Supporting docs**: `docs/` (performance reviews, source materials)
 - **Generated output**: `output/`
@@ -178,7 +180,7 @@ git push
 
 - **Portfolio items**: Create files in `_portfolio/` with frontmatter (title, client, industry, date, excerpt)
 - **Blog posts**: Create files in `_posts/` with format `YYYY-MM-DD-title.md`
-- **Resume updates**: Always edit `data/resume.json` first, then regenerate other formats
+- **Resume updates**: Always edit `assets/data/resume.json` first, then regenerate other formats
 - **Skills**: Maintain consistent categorization in JSON (core_competencies, technical, marketing_specialized, leadership, methodologies)
 
 ## Specialized Knowledge
