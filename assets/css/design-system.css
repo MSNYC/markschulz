@@ -1,0 +1,348 @@
+/**
+ * Design System - Dark Mode with Retro Accents
+ * Inspired by image_markschulz_me.png
+ * Base: Dark backgrounds with Coral, Teal, Cream accents
+ */
+
+:root {
+  /* Primary Color Palette from Image */
+  --coral-primary: #E84A34;
+  --coral-light: #FF6B52;
+  --coral-dark: #C73828;
+
+  --teal-primary: #2B6B6B;
+  --teal-light: #3D8B8B;
+  --teal-dark: #1D4A4A;
+
+  --cream-primary: #EAE3D2;
+  --cream-light: #F5F0E6;
+  --cream-dark: #D5CCBA;
+
+  --tan-primary: #C4A77D;
+  --tan-light: #D9C299;
+  --tan-dark: #A88E65;
+
+  /* Dark Mode Base Colors */
+  --bg-dark-primary: #0F1419;
+  --bg-dark-secondary: #1A1F2E;
+  --bg-dark-tertiary: #232A3B;
+
+  /* Text Colors for Dark Mode */
+  --text-primary: #F5F0E6;
+  --text-secondary: #C4B5A0;
+  --text-tertiary: #8A8A8A;
+
+  /* Functional Colors */
+  --accent-primary: var(--coral-primary);
+  --accent-secondary: var(--teal-primary);
+  --accent-tertiary: var(--tan-primary);
+
+  /* Shadows for Dark Mode */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --glow-coral: 0 0 20px rgba(232, 74, 52, 0.3);
+  --glow-teal: 0 0 20px rgba(43, 107, 107, 0.3);
+}
+
+/* Force Dark Mode Base */
+body {
+  background-color: var(--bg-dark-primary) !important;
+  color: var(--text-primary) !important;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(232, 74, 52, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(43, 107, 107, 0.05) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Override Minima Theme Defaults */
+.site-header,
+.site-footer {
+  background-color: var(--bg-dark-secondary) !important;
+  border-color: var(--coral-primary) !important;
+}
+
+.wrapper {
+  background: transparent !important;
+}
+
+/* Sections with Dark Backgrounds */
+section {
+  background: var(--bg-dark-secondary) !important;
+  color: var(--text-primary) !important;
+  padding: 4rem 2rem !important;
+  margin: 2rem 0 !important;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+section:nth-child(even) {
+  background: var(--bg-dark-tertiary) !important;
+}
+
+/* Add subtle geometric accents to sections */
+section::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+section:nth-child(odd)::before {
+  background: var(--coral-primary);
+  top: -50px;
+  right: 10%;
+}
+
+section:nth-child(even)::before {
+  background: var(--teal-primary);
+  bottom: -50px;
+  left: 10%;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--cream-light) !important;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: var(--cream-primary) !important;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--tan-light) !important;
+}
+
+p {
+  color: var(--text-secondary) !important;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--coral-light) !important;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--coral-primary) !important;
+  text-decoration: none;
+}
+
+/* Hero Image Integration - Large and Prominent */
+.hero-section {
+  background: linear-gradient(135deg, var(--bg-dark-secondary) 0%, var(--bg-dark-tertiary) 100%) !important;
+  border: 2px solid var(--coral-primary);
+  box-shadow: var(--shadow-lg);
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('/assets/images/image_markschulz_me.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 0;
+  mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, transparent 100%);
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    min-height: 400px;
+  }
+
+  .hero-section::before {
+    width: 100%;
+    opacity: 0.12;
+  }
+}
+
+/* Cards and Interactive Elements */
+.profile-card,
+.approach-card,
+.card {
+  background: var(--bg-dark-tertiary) !important;
+  border: 2px solid var(--teal-dark) !important;
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-card:hover,
+.card:hover {
+  border-color: var(--coral-primary) !important;
+  box-shadow: var(--glow-coral);
+  transform: translateY(-4px);
+}
+
+.profile-card h3,
+.approach-card h3 {
+  color: var(--coral-light) !important;
+}
+
+/* Tags */
+.tag {
+  background: rgba(43, 107, 107, 0.2) !important;
+  color: var(--teal-light) !important;
+  border: 1px solid var(--teal-primary) !important;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tag.priority {
+  background: rgba(232, 74, 52, 0.2) !important;
+  color: var(--coral-light) !important;
+  border-color: var(--coral-primary) !important;
+}
+
+/* Buttons */
+button,
+.btn,
+.generate-btn {
+  background: var(--coral-primary) !important;
+  color: var(--cream-light) !important;
+  border: 2px solid var(--coral-primary) !important;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+button:hover:not(:disabled),
+.btn:hover,
+.generate-btn:hover:not(:disabled) {
+  background: var(--coral-dark) !important;
+  box-shadow: var(--glow-coral);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Code Blocks */
+code,
+pre {
+  background: var(--bg-dark-primary) !important;
+  color: var(--teal-light) !important;
+  border: 1px solid var(--teal-dark) !important;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Checkbox Categories */
+.checkbox-categories {
+  background: var(--bg-dark-primary) !important;
+  border: 2px solid var(--teal-dark);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.category-group {
+  background: var(--bg-dark-tertiary) !important;
+  border-left: 4px solid var(--coral-primary);
+}
+
+.category-title {
+  color: var(--cream-primary) !important;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  accent-color: var(--coral-primary);
+}
+
+/* Lists */
+ul li, ol li {
+  color: var(--text-secondary) !important;
+}
+
+ul li::marker {
+  color: var(--coral-primary);
+}
+
+/* Contact Form Styling */
+.contact-intro {
+  color: var(--text-secondary) !important;
+}
+
+/* Subtle Texture Overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.02) 2px,
+      rgba(255, 255, 255, 0.02) 4px
+    );
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* Geometric Accent Dividers */
+.section-divider {
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--coral-primary) 0%,
+    var(--teal-primary) 50%,
+    var(--tan-primary) 100%
+  );
+  margin: 3rem auto;
+  max-width: 80%;
+  border-radius: 2px;
+  box-shadow: var(--glow-coral);
+}
+
+/* Loading Overlay Dark Mode */
+.resume-loading-overlay {
+  background: rgba(15, 20, 25, 0.98) !important;
+}
+
+.loading-text {
+  color: var(--cream-primary) !important;
+}

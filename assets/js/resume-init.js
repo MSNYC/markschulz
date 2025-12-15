@@ -488,6 +488,19 @@
     } else {
       quickPanel.style.display = 'none';
       customPanel.style.display = 'block';
+
+      // Scroll to custom panel to show checkbox categories from the top
+      // Use setTimeout to ensure panel is rendered before scrolling
+      setTimeout(() => {
+        const headerOffset = 100; // Account for sticky nav + some padding
+        const elementPosition = customPanel.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 50);
     }
   }
 
