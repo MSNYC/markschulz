@@ -5,6 +5,7 @@ description: Interactive resume showcasing 20+ years in pharmaceutical marketing
 keywords: pharmaceutical marketing, oncology brand management, AI integration pharma, patient marketing, HCP marketing, omnichannel strategy, brand launch, customer experience pharma
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/design-system.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/resume-builder.css' | relative_url }}">
 
 <style>
@@ -24,9 +25,9 @@ keywords: pharmaceutical marketing, oncology brand management, AI integration ph
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10, 14, 39, 0.95);
+  background: rgba(26, 26, 26, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  border-bottom: 2px solid var(--coral-primary);
   padding: 1rem 0;
   margin-bottom: 2rem;
 }
@@ -50,51 +51,57 @@ keywords: pharmaceutical marketing, oncology brand management, AI integration ph
 }
 
 .sticky-nav a {
-  color: var(--text-secondary, #A0A0C0);
+  color: var(--cream-primary);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 6px;
 }
 
 .sticky-nav a:hover {
-  color: #00F0FF;
-  background: rgba(0, 240, 255, 0.1);
+  color: var(--coral-primary);
+  background: rgba(232, 74, 52, 0.1);
 }
 
 .sticky-nav .linkedin-icon {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
-  color: #00F0FF;
+  padding: 0.6rem 1.2rem;
+  background: #E84A34 !important;
+  color: #FFFFFF !important;
   font-size: 1.5rem;
   transition: all 0.3s ease;
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .sticky-nav .linkedin-icon:hover {
-  background: rgba(0, 240, 255, 0.15);
-  transform: scale(1.1);
+  background: #FF6B52 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(232, 74, 52, 0.6);
 }
 
 .sticky-nav .why-build-button {
-  background: rgba(183, 148, 246, 0.9);
-  color: #0A0E27;
+  background: #E84A34 !important;
+  color: #FFFFFF !important;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid #B794F6;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .sticky-nav .why-build-button:hover {
-  background: #B794F6;
+  background: #FF6B52 !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(183, 148, 246, 0.4);
+  box-shadow: 0 4px 16px rgba(232, 74, 52, 0.6);
 }
 
 html {
@@ -116,46 +123,31 @@ html {
 }
 
 /* ===== HERO SECTION ===== */
-.hero-section {
-  text-align: left;
-  padding: 3rem 1.5rem;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(183, 148, 246, 0.05));
-  border-radius: 16px;
-  margin-bottom: 4rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* Hero styling now handled by design-system.css */
 .hero-title {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #00F0FF, #B794F6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #F5F0E6 !important;
   line-height: 1.3;
+  text-shadow: 0 0 40px rgba(232, 74, 52, 0.2625), 0 0 80px rgba(234, 227, 210, 0.1875), 0 4px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.3);
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  color: var(--text-secondary, #A0A0C0);
+  font-size: 1.3rem;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.6;
 }
 
 .hero-hook {
   font-size: 1rem;
-  color: #ff6b6b;
+  color: var(--coral-light);
   font-style: italic;
   margin-bottom: 2rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ===== INTERACTIVE TOOL SECTION ===== */
@@ -175,7 +167,7 @@ html {
 .tool-intro h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #00F0FF;
+  color: var(--coral-primary);
 }
 
 .tool-intro p {
@@ -194,9 +186,9 @@ html {
 
 .export-btn {
   padding: 0.8rem 1.5rem;
-  border: 2px solid #00F0FF;
-  background: rgba(0, 240, 255, 0.1);
-  color: #00F0FF;
+  border: 2px solid var(--coral-primary);
+  background: rgba(232, 74, 52, 0.1);
+  color: var(--coral-primary);
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -207,13 +199,89 @@ html {
 }
 
 .export-btn:hover {
-  background: #00F0FF;
-  color: #0A0E27;
+  background: var(--coral-primary);
+  color: #FFFFFF;
   transform: translateY(-2px);
 }
 
 .export-btn .icon {
   font-size: 1.2rem;
+}
+
+/* ===== FULL-WIDTH CTA BUTTONS ===== */
+.cta-button-container {
+  width: 100%;
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  display: block;
+  width: 61.8%;
+  max-width: 800px;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button .cta-text {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.cta-button .cta-arrow {
+  font-size: 1.4rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+/* All CTA buttons use coral background with bright white text for maximum contrast */
+.cta-coral,
+.cta-teal,
+.cta-tan,
+.cta-cream {
+  background: #E84A34 !important;
+  color: #FFFFFF !important;
+}
+
+.cta-coral:hover,
+.cta-teal:hover,
+.cta-tan:hover,
+.cta-cream:hover {
+  background: #FF6B52 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 30px rgba(232, 74, 52, 0.6);
+}
+
+/* Down arrow version for continue buttons */
+.cta-button .cta-arrow-down {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow-down {
+  transform: translateY(3px);
 }
 
 /* ===== BEHIND THE TOOL SECTION ===== */
@@ -222,14 +290,14 @@ html {
   padding: 3rem 2rem;
   background: rgba(26, 31, 58, 0.3);
   border-radius: 12px;
-  border-left: 4px solid #B794F6;
+  border-left: 4px solid var(--tan-primary);
   scroll-margin-top: 80px;
   max-width: 1200px;
 }
 
 #behind-the-tool h2 {
   font-size: 2rem;
-  color: #B794F6;
+  color: var(--tan-primary);
   margin-bottom: 1.5rem;
 }
 
@@ -255,11 +323,40 @@ html {
 }
 
 #behind-the-tool li:before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: #B794F6;
-  font-weight: bold;
+  content: "";
+  display: none;
+}
+
+/* Style as cards with slow ambient glow - consistent with approach cards */
+#behind-the-tool li {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: var(--space-lg) !important;
+  padding-left: 1.5rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  transition: box-shadow 1.5s ease, border-color 1.5s ease !important;
+  transform: none !important;
+}
+
+#behind-the-tool li:hover {
+  /* Slow, subtle ambient glow - matches approach cards exactly */
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(232, 74, 52, 0.18),
+    0 0 70px rgba(234, 227, 210, 0.12) !important;
+  border-color: rgba(234, 227, 210, 0.25) !important;
+  transform: none !important;
+  background: var(--bg-secondary) !important;
+}
+
+/* Remove the animated gradient bar */
+#behind-the-tool li::before {
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 /* ===== ABOUT ME SECTION ===== */
@@ -270,7 +367,7 @@ html {
 
 #about h2 {
   font-size: 2rem;
-  color: #00F0FF;
+  color: var(--teal-primary);
   margin-bottom: 1.5rem;
   text-align: left;
 }
@@ -292,14 +389,14 @@ html {
 #contact {
   margin: 6rem 0;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(183, 148, 246, 0.05));
+  background: linear-gradient(135deg, rgba(232, 74, 52, 0.05), rgba(43, 107, 107, 0.05));
   border-radius: 16px;
   scroll-margin-top: 80px;
 }
 
 #contact h2 {
   font-size: 2rem;
-  color: #00F0FF;
+  color: var(--coral-primary);
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -328,7 +425,7 @@ html {
 }
 
 .contact-card h3 {
-  color: #00F0FF;
+  color: var(--coral-light);
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
@@ -342,17 +439,20 @@ html {
 .contact-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #00F0FF, #B794F6);
-  color: #0A0E27;
+  background: #E84A34 !important;
+  color: #FFFFFF !important;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 700;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .contact-btn:hover {
+  background: #FF6B52 !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(232, 74, 52, 0.6);
 }
 
 .contact-form {
@@ -369,7 +469,7 @@ html {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #00F0FF;
+  color: var(--coral-light);
   font-weight: 600;
 }
 
@@ -388,7 +488,7 @@ html {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #00F0FF;
+  border-color: var(--coral-primary);
 }
 
 .form-group textarea {
@@ -399,19 +499,22 @@ html {
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #00F0FF, #B794F6);
-  color: #0A0E27;
+  background: #E84A34 !important;
+  color: #FFFFFF !important;
   border: none;
   border-radius: 8px;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .submit-btn:hover {
+  background: #FF6B52 !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(232, 74, 52, 0.6);
 }
 
 /* ===== CONTINUE BUTTONS HOVER ===== */
@@ -491,9 +594,9 @@ a[href^="#"]:hover {
     Instead of reading a one-size-fits-all resume, get a personalized view of my 20+ year pharma marketing career filtered by what matters to <em>your</em> role.
   </p>
 
-  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 240, 255, 0.05); border-left: 3px solid #00F0FF; border-radius: 8px;">
+  <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(232, 74, 52, 0.05); border-left: 3px solid var(--coral-primary); border-radius: 8px;">
     <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6;">
-      <strong style="color: #00F0FF;">Here's how this works:</strong>
+      <strong style="color: var(--coral-primary);">Here's how this works:</strong>
     </p>
     <ol style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem; font-size: 0.95rem;">
       <li><strong>Choose your path:</strong> Pick a pre-built resume (Brand Management, Strategic Planning, or CX Innovation) or build a custom version by selecting focus areas that match your role</li>
@@ -504,18 +607,18 @@ a[href^="#"]:hover {
   </div>
 
   <!-- START HERE BUTTON -->
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="#interactive-tool" style="display: inline-block; padding: 1.2rem 2.5rem; background: linear-gradient(135deg, #00F0FF, #B794F6); color: #0A0E27; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);">
-      <span style="display: block; margin-bottom: 0.3rem;">START HERE</span>
-      <span style="font-size: 1.5rem; display: block;">↓</span>
-    </a>
-  </div>
+</div>
+
+<div class="cta-button-container">
+  <a href="#interactive-tool" class="cta-button cta-coral">
+    START HERE
+  </a>
 </div>
 
 <!-- INTERACTIVE RESUME TOOL -->
 <section id="interactive-tool">
   <div class="tool-intro">
-    <p style="font-size: 0.9rem; color: #00F0FF; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 1: Get Your Tailored Resume</p>
+    <p style="font-size: 0.9rem; color: var(--coral-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 1: Get Your Tailored Resume</p>
     <h2 style="text-align: left;">Choose Your Focus Areas</h2>
     <p>Pick a pre-built profile optimized for a specific role, or build a custom resume by selecting the therapeutic areas, skills, and audiences that matter to your position. Either way, you'll see only the experience relevant to you.</p>
   </div>
@@ -614,18 +717,17 @@ a[href^="#"]:hover {
 
   </div>
 
-  <!-- CONTINUE BUTTON -->
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="#about" style="display: inline-block; padding: 1rem 2rem; background: rgba(0, 240, 255, 0.15); border: 2px solid #00F0FF; color: #00F0FF; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
-      <span style="display: block;">Want to know my working style?</span>
-      <span style="font-size: 1.3rem; display: block; margin-top: 0.3rem;">↓</span>
-    </a>
-  </div>
 </section>
+
+<div class="cta-button-container">
+  <a href="#about" class="cta-button cta-teal">
+    Want to know my working style?
+  </a>
+</div>
 
 <!-- ABOUT ME SECTION -->
 <section id="about">
-  <p style="font-size: 0.9rem; color: #00F0FF; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 2: Get to Know My Working Style</p>
+  <p style="font-size: 0.9rem; color: var(--teal-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 2: Get to Know My Working Style</p>
   <h2>What's It Like to Work With Me?</h2>
   <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.5; font-style: italic;">Based on professional assessments (Myers-Briggs ENTJ, FIRO-B): strategic, inclusive, objective, and action-oriented.</p>
 
@@ -684,18 +786,17 @@ a[href^="#"]:hover {
     </div>
   </div>
 
-  <!-- CONTINUE BUTTON -->
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="#behind-the-tool" style="display: inline-block; padding: 1rem 2rem; background: rgba(183, 148, 246, 0.15); border: 2px solid #B794F6; color: #B794F6; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
-      <span style="display: block;">Curious how I approach problem-solving?</span>
-      <span style="font-size: 1.3rem; display: block; margin-top: 0.3rem;">↓</span>
-    </a>
-  </div>
 </section>
+
+<div class="cta-button-container">
+  <a href="#behind-the-tool" class="cta-button cta-tan">
+    Curious how I approach problem-solving?
+  </a>
+</div>
 
 <!-- BEHIND THE TOOL SECTION -->
 <section id="behind-the-tool">
-  <p style="font-size: 0.9rem; color: #B794F6; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 3: Understand My Approach</p>
+  <p style="font-size: 0.9rem; color: var(--tan-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Step 3: Understand My Approach</p>
   <h2 style="text-align: left;">Why I Built This (And What It Says About How I Work)</h2>
   <p style="font-size: 1.1rem; color: var(--text-secondary); margin-top: 0.5rem; margin-bottom: 2rem; line-height: 1.5; font-style: italic;">This tool isn't just a clever resume—it demonstrates how I solve problems: identify user pain, prototype fast, ship a working solution.</p>
 
@@ -742,18 +843,17 @@ a[href^="#"]:hover {
     The same mindset that built this resume builder is what I'd bring to your brand strategy, customer experience design, or omnichannel planning. See a problem, understand the user, ship a solution.
   </p>
 
-  <!-- CONTINUE BUTTON -->
-  <div style="text-align: center; margin-top: 3rem;">
-    <a href="#contact" style="display: inline-block; padding: 1rem 2rem; background: rgba(0, 240, 255, 0.15); border: 2px solid #00F0FF; color: #00F0FF; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
-      <span style="display: block;">Ready to connect?</span>
-      <span style="font-size: 1.3rem; display: block; margin-top: 0.3rem;">↓</span>
-    </a>
-  </div>
 </section>
+
+<div class="cta-button-container">
+  <a href="#contact" class="cta-button cta-cream">
+    Ready to connect?
+  </a>
+</div>
 
 <!-- CONTACT SECTION -->
 <section id="contact">
-  <p style="font-size: 0.9rem; color: #B794F6; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; text-align: left;">Step 4: Let's Talk</p>
+  <p style="font-size: 0.9rem; color: var(--coral-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; text-align: left;">Step 4: Let's Talk</p>
   <h2 style="text-align: left;">See a Fit? Let's Connect</h2>
 
   <p class="contact-intro">
