@@ -245,10 +245,17 @@ html {
     display: none !important;
   }
 
-  .hamburger-btn,
-  .mobile-menu-overlay,
-  .mobile-menu {
+  .hamburger-btn {
     display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  /* Only show overlay when menu is active */
+  .mobile-menu-overlay.active {
+    display: block;
   }
 
   .sticky-nav {
