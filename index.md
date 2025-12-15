@@ -108,17 +108,151 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Hamburger Menu Button (Mobile Only) */
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  background: #E84A34;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(232, 74, 52, 0.6);
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background: #FF6B52;
+  transform: scale(1.05);
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.98);
+  backdrop-filter: blur(20px);
+  border-left: 2px solid var(--coral-primary);
+  z-index: 1000;
+  padding: 5rem 2rem 2rem;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  display: block;
+  color: var(--cream-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.mobile-menu a:hover {
+  color: var(--coral-primary);
+  background: rgba(232, 74, 52, 0.1);
+}
+
+/* Spacing before button section */
+.mobile-menu .why-build-button {
+  margin-top: 1.5rem;
+}
+
+/* Button treatment for last two items */
+.mobile-menu .why-build-button,
+.mobile-menu .linkedin-icon {
+  background: #E84A34 !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem !important;
+  text-align: center;
+}
+
+.mobile-menu .why-build-button:hover,
+.mobile-menu .linkedin-icon:hover {
+  background: #FF6B52 !important;
+  color: #FFFFFF !important;
+}
+
 @media (max-width: 768px) {
-  .sticky-nav nav {
-    gap: 0.5rem;
+  /* Hide desktop nav, show hamburger */
+  .sticky-nav nav,
+  .sticky-nav-inner > div {
+    display: none !important;
   }
-  .sticky-nav a {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
+
+  .hamburger-btn,
+  .mobile-menu-overlay,
+  .mobile-menu {
+    display: flex;
   }
-  .sticky-nav .linkedin-icon {
-    font-size: 1.3rem;
-    padding: 0.4rem;
+
+  .sticky-nav {
+    padding: 0.75rem 0;
   }
 }
 
@@ -586,6 +720,29 @@ a[href^="#"]:hover {
   </div>
 </div>
 
+<!-- MOBILE HAMBURGER MENU -->
+<button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#top" class="mobile-menu-link">Home</a>
+  <a href="#interactive-tool" class="mobile-menu-link">Customize Resume</a>
+  <a href="#about" class="mobile-menu-link">What's my style?</a>
+  <a href="#contact" class="mobile-menu-link">Contact Me</a>
+  <a href="#behind-the-tool" class="mobile-menu-link why-build-button">Why build this?</a>
+  <a href="https://linkedin.com/in/mschulz" target="_blank" rel="noopener" class="mobile-menu-link linkedin-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+    LinkedIn
+  </a>
+</nav>
+
 <!-- HERO SECTION -->
 <div class="hero-section">
   <h1 class="hero-title">Want to skip the <br>"does this candidate fit?"<br> guesswork?</h1>
@@ -905,3 +1062,60 @@ a[href^="#"]:hover {
 <script src="{{ '/assets/js/resume-builder.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/resume-init.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/ga-events.js' | relative_url }}"></script>
+
+<script>
+// Mobile hamburger menu functionality
+(function() {
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+  function toggleMenu() {
+    hamburgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    mobileMenuOverlay.classList.toggle('active');
+
+    // Prevent body scroll when menu is open
+    if (mobileMenu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  function closeMenu() {
+    hamburgerBtn.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Toggle menu on hamburger click
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', toggleMenu);
+  }
+
+  // Close menu on overlay click
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener('click', closeMenu);
+  }
+
+  // Close menu when any link is clicked
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Only auto-close for internal links (not LinkedIn)
+      if (this.getAttribute('href').startsWith('#')) {
+        closeMenu();
+      }
+    });
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+})();
+</script>
