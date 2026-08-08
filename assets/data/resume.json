@@ -1,9 +1,9 @@
 {
   "meta": {
-    "version": "2.3.0",
-    "last_updated": "2025-12-09",
+    "version": "3.0.0",
+    "last_updated": "2026-08-08",
     "schema_version": "2.0",
-    "notes": "Imported brand-specific achievements from cv-generator experience.yml for KISQALI, BRUKINSA, TAGRISSO, and BEACON initiatives"
+    "notes": "Added Invivo Brands (VP Group Director, CX Architecture & Innovation) as current position; closed out Biolumina end date to 2025-12."
   },
   "personal": {
     "name": {
@@ -49,6 +49,175 @@
   },
   "experience": [
     {
+      "id": "exp_006",
+      "company": "Invivo Brands",
+      "company_parent": null,
+      "location": "New York, NY",
+      "positions": [
+        {
+          "title": "VP Group Director, Customer Experience Architecture & Innovation",
+          "start_date": "2026-02",
+          "end_date": null,
+          "current": true,
+          "responsibilities": [
+            "Architect and lead the agency's Customer Experience (CX) discipline, including its operating model, governance structure, and cross-account delivery framework",
+            "Lead AI governance, tooling strategy, and internal AI literacy programs across the agency, including hands-on development of custom AI applications",
+            "Serve as embedded CX strategist across pharmaceutical and consumer-health accounts, translating strategy into omnichannel experience and measurement plans"
+          ],
+          "achievements": [
+            {
+              "category": "AI Innovation & Systems Architecture",
+              "items": [
+                {
+                  "text": "Conceived, self-coded, and deployed a custom AI-driven brand intelligence monitoring system \u2014 architected independently and hosted on a personal server \u2014 delivering automated weekly briefings across six monitors; led its QA and migration into agency infrastructure",
+                  "tags": [
+                    "ai",
+                    "innovation",
+                    "data_engineering",
+                    "automation"
+                  ]
+                },
+                {
+                  "text": "Designed and built a CLI/GUI reporting automation tool, including a multi-client database architecture, to replace manual programmatic reporting workflows",
+                  "tags": [
+                    "ai",
+                    "automation",
+                    "data_engineering",
+                    "process_improvement"
+                  ]
+                },
+                {
+                  "text": "Proposed a tiered AI risk classification and governance framework with IT and agency leadership to structure responsible AI experimentation",
+                  "tags": [
+                    "ai",
+                    "strategy",
+                    "process",
+                    "leadership"
+                  ]
+                },
+                {
+                  "text": "Explored and proposed a secure cloud environment architecture for scaffolding new AI and programmatic tools within enterprise IT constraints",
+                  "tags": [
+                    "ai",
+                    "data_engineering",
+                    "strategy",
+                    "innovation"
+                  ]
+                },
+                {
+                  "text": "Piloted and evaluated emerging AI platforms for avatar/video generation and personalization, including enterprise trial management and licensing/cost modeling",
+                  "tags": [
+                    "ai",
+                    "innovation",
+                    "vendor_management"
+                  ]
+                },
+                {
+                  "text": "Authored an AI-enablement point of view that was adopted as the foundation for agency-wide AI workstreams",
+                  "tags": [
+                    "ai",
+                    "strategy",
+                    "enablement",
+                    "leadership"
+                  ]
+                }
+              ]
+            },
+            {
+              "category": "CX Operating Model & Discipline Leadership",
+              "items": [
+                {
+                  "text": "Architected and launched the agency's first formal CX Operating System \u2014 a five-module framework providing scalable knowledge and delivery infrastructure for the discipline",
+                  "tags": [
+                    "cx",
+                    "strategy",
+                    "innovation",
+                    "leadership"
+                  ]
+                },
+                {
+                  "text": "Built and launched a centralized CX knowledge hub housing frameworks, templates, case studies, and POVs to prevent knowledge fragmentation across accounts",
+                  "tags": [
+                    "cx",
+                    "digital",
+                    "enablement"
+                  ]
+                },
+                {
+                  "text": "Designed and delivered \u201cCX Foundations\u201d education, including an agency-wide session at the quarterly all-agency meeting and a recorded onboarding series",
+                  "tags": [
+                    "cx",
+                    "education",
+                    "leadership"
+                  ]
+                },
+                {
+                  "text": "Partnered with Operations and Project Management leadership to formalize CX intake and lifecycle triggers, embedding the discipline into agency process maps",
+                  "tags": [
+                    "cx",
+                    "process",
+                    "operations",
+                    "strategy"
+                  ]
+                }
+              ]
+            },
+            {
+              "category": "Analytics, Reporting & Measurement Automation",
+              "items": [
+                {
+                  "text": "Built programmatic data pipelines to automate analytics reporting, replacing manual report-building with repeatable, scalable workflows",
+                  "tags": [
+                    "analytics",
+                    "automation",
+                    "data_engineering"
+                  ]
+                },
+                {
+                  "text": "Designed always-on dashboards for HCP and patient audiences, eliminating recurring manual web reporting",
+                  "tags": [
+                    "analytics",
+                    "digital",
+                    "hcp",
+                    "patient"
+                  ]
+                },
+                {
+                  "text": "Defined a standardized KPI and reporting framework adopted across active engagements",
+                  "tags": [
+                    "analytics",
+                    "strategy",
+                    "process"
+                  ]
+                }
+              ]
+            },
+            {
+              "category": "Cross-Functional Strategic Support",
+              "items": [
+                {
+                  "text": "Delivered omnichannel planning, journey mapping, and audience-segmentation frameworks across multiple accounts",
+                  "tags": [
+                    "cx",
+                    "omnichannel",
+                    "journey_mapping",
+                    "strategy"
+                  ]
+                },
+                {
+                  "text": "Conducted competitive landscape research on major enterprise health-tech platforms to inform future opportunity planning",
+                  "tags": [
+                    "strategy",
+                    "analytics"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "exp_001",
       "company": "Biolumina",
       "company_parent": "Omnicom",
@@ -57,8 +226,8 @@
         {
           "title": "VP, Experience Planner",
           "start_date": "2021-04",
-          "end_date": null,
-          "current": true,
+          "end_date": "2025-12",
+          "current": false,
           "responsibilities": [
             "Planned strategic alignment of channel activations and tactic types to brand imperatives and segmentation",
             "Led XP for 9 oncology accounts across 6 clients, spanning HCP and Patient/Caregiver audiences",
@@ -585,11 +754,21 @@
               "items": [
                 {
                   "text": "Designed and launched a new sprint management process that created a nexus for cross-functional senior leadership to collaborate more actively, driving deeper understanding of data procedures, and focusing 300+ hrs per week on the priority initiatives",
-                  "tags": ["leadership", "operations", "process", "analytics"]
+                  "tags": [
+                    "leadership",
+                    "operations",
+                    "process",
+                    "analytics"
+                  ]
                 },
                 {
                   "text": "Analyzed and presented pricing recommendations for customized data services, which cleared a path to $500K+ potential upside for most major accounts",
-                  "tags": ["analytics", "strategy", "revenue", "pricing"]
+                  "tags": [
+                    "analytics",
+                    "strategy",
+                    "revenue",
+                    "pricing"
+                  ]
                 }
               ]
             }
@@ -2056,7 +2235,12 @@
               "items": [
                 {
                   "text": "Tablet PC Detailing Captain, SOV digital initiatives, Journal ad development and launch, Platform evolution and pull-through, Managing internal competition for bandwidth",
-                  "tags": ["digital", "hcp", "strategy", "cv"]
+                  "tags": [
+                    "digital",
+                    "hcp",
+                    "strategy",
+                    "cv"
+                  ]
                 }
               ]
             }
@@ -2573,7 +2757,11 @@
               "items": [
                 {
                   "text": "Multiple temporary administrative assistant assignments on several marketing teams at Pfizer including ZOLOFT, NORVASC, GLUCOTROL XL, and VIAGRA",
-                  "tags": ["operations", "administration", "support"]
+                  "tags": [
+                    "operations",
+                    "administration",
+                    "support"
+                  ]
                 }
               ]
             }
