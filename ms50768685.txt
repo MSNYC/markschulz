@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "markschulz.me",
-  "Id": "98d966f0-f43a-491c-b4d4-1b75ea3e87d4"
-}
