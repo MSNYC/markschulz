@@ -8,6 +8,8 @@ keywords: pharmaceutical marketing, oncology brand management, AI integration ph
 <link rel="stylesheet" href="{{ '/assets/css/design-system.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/resume-builder.css' | relative_url }}">
 
+<link rel="stylesheet" href="{{ '/assets/css/aequum-section.css' | relative_url }}">
+
 <style>
 
 /* ===== CENTER THE TITLE ===== */
@@ -715,6 +717,7 @@ a[href^="#"]:hover {
       <a href="#interactive-tool">Customize Resume</a>
       <a href="#about">What's my style?</a>
       <a href="#contact">Contact Me</a>
+      <a href="#aequum-labs">Aequum Labs</a>
     </nav>
     <div style="display: flex; align-items: center; gap: 1rem;">
       <a href="#behind-the-tool" class="why-build-button">Why build this?</a>
@@ -741,6 +744,7 @@ a[href^="#"]:hover {
   <a href="#interactive-tool" class="mobile-menu-link">Customize Resume</a>
   <a href="#about" class="mobile-menu-link">What's my style?</a>
   <a href="#contact" class="mobile-menu-link">Contact Me</a>
+  <a href="#aequum-labs" class="mobile-menu-link">Aequum Labs</a>
   <a href="#behind-the-tool" class="mobile-menu-link why-build-button">Why build this?</a>
   <a href="https://linkedin.com/in/mschulz" target="_blank" rel="noopener" class="mobile-menu-link linkedin-icon">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -749,6 +753,20 @@ a[href^="#"]:hover {
     LinkedIn
   </a>
 </nav>
+
+<!-- AEQUUM LABS -->
+<section id="aequum-labs" class="aequum-portal" aria-labelledby="aequum-heading">
+  <div class="aequum-portal__brand">
+    <img src="{{ '/assets/images/aequum-labs-logo.svg' | relative_url }}" alt="AEQUUM LABS" width="280" height="100">
+    <p class="aequum-portal__role">Mark Schulz · Founder &amp; Principal</p>
+  </div>
+  <div class="aequum-portal__content">
+    <h2 id="aequum-heading">Bringing strategy, experience, and AI together.</h2>
+    <p>I've founded Aequum Labs to help pharmaceutical, biotech, and healthcare brand teams and agencies strengthen how they work—from brand strategy and customer experience to activation planning and analytics.</p>
+    <p>Through consulting and AI-powered solutions, I'm focused on connecting expertise, technology, and workflows to help teams move from strategy to execution more effectively.</p>
+    <a class="aequum-portal__link" href="https://aequumlabs.com" target="_blank" rel="noopener">Explore Aequum Labs <span aria-hidden="true">→</span><span class="aequum-portal__sr"> (opens in a new tab)</span></a>
+  </div>
+</section>
 
 <!-- HERO SECTION -->
 <div class="hero-section">

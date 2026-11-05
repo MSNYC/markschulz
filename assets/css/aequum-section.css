@@ -1,0 +1,39 @@
+/* Aequum Labs brand styles stay inside the portfolio section. */
+.aequum-portal {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr);
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #101D32;
+  color: #F5F3EE;
+  border: 1px solid #A7D2EE;
+  border-radius: .5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  scroll-margin-top: 7rem;
+}
+.aequum-portal .aequum-portal__brand img { display: block; width: 100%; max-width: 220px; height: auto; }
+.aequum-portal .aequum-portal__role { margin: .75rem 0 0; color: #A7D2EE; font-size: .85rem; line-height: 1.6; }
+.aequum-portal h2 { margin: 0 0 .75rem; color: #F5F3EE; font-family: inherit; font-size: clamp(1.35rem, 2.5vw, 1.75rem); line-height: 1.2; text-align: left; letter-spacing: -.02em; }
+.aequum-portal p { color: #F5F3EE; font-family: inherit; margin: 0 0 .75rem; font-size: .95rem; line-height: 1.6; }
+.aequum-portal a.aequum-portal__link { display: inline-flex; align-items: center; gap: .75rem; margin-top: .25rem; padding: .65rem 1rem; min-height: 44px; box-sizing: border-box; font-size: .9rem; border: 2px solid #F0753E; border-radius: .5rem; background: #F0753E; color: #101D32; font-weight: 650; text-decoration: none; }
+.aequum-portal a.aequum-portal__link:hover { background: #F5F3EE; border-color: #F5F3EE; color: #101D32; }
+.aequum-portal a.aequum-portal__link:focus-visible { outline: 3px solid #F5F3EE; outline-offset: 4px; }
+.aequum-portal .aequum-portal__sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 640px) {
+  .aequum-portal { grid-template-columns: 1fr; gap: 1rem; scroll-margin-top: 1rem; }
+  .aequum-portal .aequum-portal__brand { padding-bottom: 1rem; border-bottom: 1px solid #A7D2EE; }
+  .aequum-portal .aequum-portal__brand img { max-width: 190px; }
+}
+
+/* The portfolio's global link colors use !important; keep this brand CTA
+   readable in every state without changing links elsewhere on the page. */
+.aequum-portal a.aequum-portal__link,
+.aequum-portal a.aequum-portal__link:link,
+.aequum-portal a.aequum-portal__link:visited,
+.aequum-portal a.aequum-portal__link:hover,
+.aequum-portal a.aequum-portal__link:focus,
+.aequum-portal a.aequum-portal__link:active {
+  color: #101D32 !important;
+}
+.aequum-portal a.aequum-portal__link span { color: inherit !important; }
